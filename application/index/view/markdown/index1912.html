@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="mobile-agent" content="format=html5;url=https://m.ask2.cn/"/>
+    <title>充值记录 - 662p开源网</title>
+    <meta name="applicable-device" content="pc"/>
+
+    <link href="/static/ask/css/zui.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" media="all" href="/static/ask/css/animate.min.css"/>
+
+    <link rel="stylesheet" media="all" href="/static/ask/css/greenzhongchou.css"/>
+
+    <link rel="stylesheet" media="all" href="/static/ask/css/greencommon.css"/>
+
+    <link rel="stylesheet" href="/static/sweetalert/sweetalert2.css">
+
+    <link rel="stylesheet" href="/static/ask/css/whatsns.css" media="screen" type="text/css">
+
+    <link rel="stylesheet" media="all" href="/static/ask/css/greencustom.css"/>
+
+    <link href="/static/ask/css/font-awesome.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="/static/ask/css/green_main.css">
+
+    <link rel="stylesheet" href="/static/ask/css/slider.css">
+
+    <link rel="stylesheet" href="/static/ask/css/basepage.css">
+
+    <link rel="stylesheet" media="all" href="/static/ask/css/index.css"/>
+
+    <link rel="icon" href="/favicon.ico" type="image/gif"/>
+
+    <link href="__ARTICLE__/css/css.css" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="/static/index/css/index.css"/>
+
+    <!--<script src="/static/ask/js/jquery-1.11.3.min.js" type="text/javascript"></script>-->
+
+    <script src="/static/admin/style/jquery_002.js"></script>
+
+    <script src="/static/layer/layer.js"></script>
+
+    <script src="/static/sweetalert/sweetalert2.js"></script>
+
+    <script src="/static/ask/js/ie.js" type="text/javascript"></script>
+
+    <!-- ZUI Javascript组件 -->
+
+    <script src="/static/ask/js/zui.min.js" type="text/javascript"></script>
+    <script src="/static/ask/js/jquery.qrcode.min.js" type="text/javascript"></script>
+
+        <link rel="stylesheet" href="/static/markdown/examples/css/style.css" />
+    <link rel="stylesheet" href="/static/markdown/css/editormd.css" />
+    <link rel="stylesheet" href="/static/layui/css/layui.css">
+
+    <!--[if lt IE 9]>
+
+    <script src="/static/ask/js/html5shiv.js" type="text/javascript"></script>
+
+    <script src="/static/ask/js/respond.js" type="text/javascript"></script>
+
+    <script src="__ARTICLE__/js/js.js" type="text/javascript"></script>
+
+    <script src="/static/index/js/carousel.js" type="text/javascript" charset="utf-8"></script>
+
+    <![endif]-->
+
+    <style>
+
+        #body {
+
+            padding-bottom: 0px;
+
+        }
+
+        .pagination{
+
+            margin: 0px;
+
+        }
+
+
+
+        .form-control {
+
+            padding-left: 5px;
+
+        }
+
+
+
+        .navigation-v3 h2 {
+
+            height: 48px;
+
+        }
+
+
+
+        .navigation-v3 a {
+
+            line-height: 48px;
+
+        }
+
+    </style>
+
+</head>
+
+<body style="overflow: hidden;">
+
+{include file="common/header1" /}
+
+<div id="body" style="height: 100%;">
+
+
+
+
+
+    <div class="main-wrapper index">
+
+        <div class="container person">
+
+
+
+            <div class="row " style="margin-top: 20px;">
+
+                {include file="user/userLeft" /}
+
+                <div class="col-md-16">
+
+                    <h4>消费记录</h4>
+
+                    <hr>
+
+                    <table class="table">
+
+                        <thead>
+
+                        <tr>
+
+                            <td>源码id</td>
+
+                            <td>源码名称</td>
+
+                            <td>下载积分</td>
+
+                            <td>下载时间</td>
+
+                        </tr>
+
+                        </thead>
+
+                        <tbody>
+
+                        {volist name="$data" id="foo"}
+
+                        <tr>
+
+                            <td>{$foo.softid}</td>
+
+                            <td>{$foo.softname}</td>
+
+                            <td>{$foo.downfen}</td>
+
+                            <td>{$foo.downtime}</td>
+
+                        </tr>
+
+                        {/volist}
+
+                        </tbody>
+
+                    </table>
+
+                    {$data->render()}
+
+                </div>
+
+
+
+            </div>
+
+
+
+
+
+        </div>
+
+
+
+
+
+        <!--用户中心结束-->
+
+        <link rel="stylesheet" type="text/css"
+
+              href="https://www.ask2.cn/static/js/neweditor/code/styles/tomorrow-night-eighties.css">
+
+        <script src="https://www.ask2.cn/static/js/neweditor/code/highlight.pack.js" type="text/javascript"></script>
+
+        <script>hljs.initHighlightingOnLoad();</script>
+
+        <script src="https://www.ask2.cn/static/js/jquery.lazyload.min.js" type="text/javascript"></script>
+
+        <script>
+
+
+
+            $("a").attr("target", "_self");
+
+
+
+            $("img.lazy").lazyload({effect: "fadeIn"});
+
+
+
+        </script>
+
+
+
+        <div class="side-tool" id="to_top" style="display: none;">
+
+            <ul>
+
+                <li data-placement="left" data-toggle="tooltip" data-container="body" data-original-title="回到顶部">
+
+                    <a href="#" class="function-button"><i class="fa fa-angle-up"></i></a>
+
+                </li>
+
+
+
+
+
+            </ul>
+
+        </div>
+
+
+
+        <script>
+
+            function check(){
+
+
+
+                t = 0;
+
+
+
+                $('input[name=id]').each(function(){
+
+
+
+                    if($(this).is(':checked')){
+
+
+
+                        t=1;
+
+
+
+                    }
+
+
+
+                });
+
+
+
+                if(t!==1){
+
+
+
+                    layer.msg('请选择充值金额！',{icon:7,time:1500});
+
+
+
+                    return false;
+
+
+
+                }
+
+
+
+                return true;
+
+
+
+            }
+
+            function submitForm() {
+
+                formData = new FormData();
+
+                //真实姓名
+
+                real_name = $('input[name=real_name]').val();
+
+                if (real_name) {
+
+                    formData.append('real_name', real_name);
+
+                }
+
+                //工作地点
+
+                work_place = $('input[name=work_place]').val();
+
+                if (work_place) {
+
+                    formData.append('work_place', work_place);
+
+                }
+
+                //消息通知
+
+                news = '';
+
+                $('input[name=news]').each(function () {
+
+                    news += $(this).val() + ',';
+
+                })
+
+                $.trim(news, ',');
+
+                formData.append('news', news);
+
+                //生日
+
+                birthday = $('input[name=birthday]').val();
+
+                if (birthday) {
+
+                    formData.append('birthday', birthday);
+
+                }
+
+                //手机号
+
+                mobile = $('input[name=mobile]').val()
+
+                if (mobile) {
+
+                    if (!isPhone(mobile)) {
+
+                        layer.tips('手机号码格式不正确！', $('input[name=mobile]'), {tips: [2, '#ff0000'], time: 1500})
+
+                        return false;
+
+                    }
+
+                    // formData.append('mobile',mobile);
+
+                }
+
+                //email
+
+                email = $('input[name=email]').val()
+
+                if (email) {
+
+                    if (!email.match(/^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+((\.[a-zA-Z0-9_-]{2,3}){1,2})$/)) {
+
+                        layer.tips('email格式不正确！', $('input[name=email]'), {tips: [2, '#ff0000'], time: 1500})
+
+                        return false;
+
+                    }
+
+                    // formData.append('email',email);
+
+                }
+
+                //签名
+
+                signature = $('input[name=signature]').val()
+
+                if (signature) {
+
+                    formData.append('signature', signature);
+
+                }
+
+                //身份介绍
+
+                describe = $('textarea[name=describe]').val()
+
+                if (describe) {
+
+                    formData.append('describe', describe);
+
+                }
+
+                id = $('input[name=userid]').val()
+
+                formData.append('id', id);
+
+                $.ajax({
+
+                    url: '',
+
+                    type: 'post',
+
+                    data: formData,
+
+                    contentType: false,
+
+                    processData: false,
+
+                    beforeSend: function () {
+
+                        layer.load()
+
+                    },
+
+                    success: function (msg) {
+
+                        console.log(msg);
+
+                        layer.closeAll('loading')
+
+                        if (msg.code) {
+
+                            swal({
+
+                                title: '',
+
+                                text: msg.info,
+
+                                type: "success",
+
+                                timer: 1500,
+
+                                showConfirmButton: false
+
+                            })
+
+                            setTimeout(function () {
+
+                                window.location.reload()
+
+                            }, 1500)
+
+                        } else {
+
+                            swal({
+
+                                title: '',
+
+                                text: msg.info,
+
+                                type: "warning",
+
+                                timer: 1500,
+
+                                showConfirmButton: false
+
+                            })
+
+                            return false;
+
+                        }
+
+                    }
+
+                })
+
+            }
+
+
+
+            function isPhone(str) {
+
+                var regMobile = /^0{0,1}(13[0-9]|14[0-9]|15[0-9]|18[0-9])[0-9]{8}$/;
+
+                if (regMobile.test(str)) {
+
+                    return true;
+
+                } else {
+
+                    return false;
+
+                }
+
+            }
+
+
+
+            window.onload = function () {
+
+                $(".edui-upload-video").attr("preload", "");
+
+                var oTop = document.getElementById("to_top");
+
+
+
+                var screenw = document.documentElement.clientWidth || document.body.clientWidth;
+
+                var screenh = document.documentElement.clientHeight || document.body.clientHeight;
+
+                window.onscroll = function () {
+
+                    var scrolltop = document.documentElement.scrollTop || document.body.scrollTop;
+
+
+
+                    if (scrolltop <= screenh) {
+
+                        oTop.style.display = "none";
+
+                    } else {
+
+                        oTop.style.display = "block";
+
+                    }
+
+                    if (scrolltop > 30) {
+
+
+
+                        $(".scrollshow").show();
+
+                    } else {
+
+                        $(".scrollshow").hide();
+
+                    }
+
+                }
+
+                oTop.onclick = function () {
+
+                    document.documentElement.scrollTop = document.body.scrollTop = 0;
+
+                }
+
+            }
+
+
+
+        </script>
+
+
+
+    </div>
+
+    {include file="common/footer" /}
+
+</body>
+
+</html>
+

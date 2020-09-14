@@ -1,0 +1,195 @@
+HTML {
+	
+}
+.mod-gallery DIV {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+.mod-gallery UL {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+.mod-gallery LI {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+.mod-gallery UL {
+	LIST-STYLE-TYPE: none; LIST-STYLE-IMAGE: none
+}
+.mod-gallery IMG {
+	BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; BORDER-TOP: medium none; BORDER-RIGHT: medium none
+}
+.mod-gallery .clearfix {
+	
+}
+.mod-gallery .clearfix:after {
+	DISPLAY: block; HEIGHT: 0px; VISIBILITY: hidden; CLEAR: both; OVERFLOW: hidden; CONTENT: "."
+}
+.mod-gallery {
+	BACKGROUND: #222; COLOR: #b4b4b4; FONT-SIZE: 12px
+}
+.mod-gallery .gallery-title {
+	TEXT-ALIGN: center; MARGIN: 20px 0px
+}
+.mod-gallery .gallery-title H2 {
+	DISPLAY: inline; FONT-SIZE: 26px
+}
+.mod-gallery .gallery-title SPAN {
+	
+}
+.mod-gallery .gallery-description {
+	BACKGROUND-COLOR: #111; COLOR: #fff
+}
+.mod-gallery .gallery-toolbar {
+	LINE-HEIGHT: 20px; MARGIN: 5px 0px; HEIGHT: 20px; OVERFLOW: hidden
+}
+.mod-gallery .gallery-toolbar A {
+	OUTLINE-STYLE: none; OUTLINE-COLOR: invert; OUTLINE-WIDTH: medium; TEXT-DECORATION: none
+}
+.mod-gallery .gallery-content {
+	PADDING-BOTTOM: 5px; MARGIN: 0px auto 1px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; BACKGROUND: #fff; PADDING-TOP: 5px
+}
+.mod-gallery .gallery-photo-description {
+	LINE-HEIGHT: 21px; MARGIN: 10px 0px 5px; COLOR: #000
+}
+.mod-gallery .gallery-photo-description P {
+	PADDING-BOTTOM: 0px; TEXT-INDENT: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+.mod-gallery {
+	BORDER-BOTTOM: #d6d6d6 1px solid; POSITION: relative; TEXT-ALIGN: left; BORDER-LEFT: #d6d6d6 1px solid; PADDING-BOTTOM: 0px; MARGIN: 15px auto; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; BACKGROUND: #fff; OVERFLOW: hidden; BORDER-TOP: #d6d6d6 1px solid; BORDER-RIGHT: #d6d6d6 1px solid; PADDING-TOP: 0px
+}
+.mod-gallery A {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; BORDER-TOP: 0px; BORDER-RIGHT: 0px
+}
+.mod-gallery .gallery-loading {
+	POSITION: absolute; TEXT-ALIGN: center; FILTER: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#99000000', EndColorStr='#99000000'); MARGIN-TOP: -40px; WIDTH: 80px; HEIGHT: 80px; MARGIN-LEFT: -40px; TOP: 50%; LEFT: 50%; -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; border-radius: 5px
+}
+.mod-gallery .gallery-loading SPAN {
+	MARGIN-TOP: 24px; WIDTH: 32px; DISPLAY: inline-block; BACKGROUND: url(white/loading.gif) no-repeat center center; HEIGHT: 32px; _zoom: 1
+}
+.mod-gallery .gallery-photo {
+	POSITION: relative; TEXT-ALIGN: center; MIN-HEIGHT: 300px; CLEAR: both; VERTICAL-ALIGN: middle; _height: 300px; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none
+}
+.mod-gallery .gallery-end {
+	POSITION: absolute; DISPLAY: none; -webkit-touch-callout: text; -webkit-user-select: text; -khtml-user-select: text; -moz-user-select: text; -ms-user-select: text; user-select: text
+}
+.mod-gallery .gallery-photo-items {
+	TEXT-ALIGN: left
+}
+.mod-gallery .gallery-photo-items IMG {
+	POSITION: relative
+}
+.mod-gallery .gallery-photo-prev {
+	POSITION: absolute; DISPLAY: block; BACKGROUND: url(black/trans.gif); HEIGHT: 100%; TOP: 0px; CURSOR: pointer
+}
+.mod-gallery .gallery-photo-next {
+	POSITION: absolute; DISPLAY: block; BACKGROUND: url(black/trans.gif); HEIGHT: 100%; TOP: 0px; CURSOR: pointer
+}
+.mod-gallery .gallery-photo-prev {
+	LEFT: 0px
+}
+.mod-gallery .gallery-photo-next {
+	RIGHT: 0px
+}
+.mod-gallery .gallery-photo-prev A {
+	POSITION: absolute; MARGIN-TOP: -22px; TEXT-INDENT: -9999em; OUTLINE-STYLE: none; OUTLINE-COLOR: invert; OUTLINE-WIDTH: medium; WIDTH: 44px; DISPLAY: none; BACKGROUND: no-repeat center center; HEIGHT: 45px; OVERFLOW: hidden; TOP: 50%; CURSOR: pointer
+}
+.mod-gallery .gallery-photo-next A {
+	POSITION: absolute; MARGIN-TOP: -22px; TEXT-INDENT: -9999em; OUTLINE-STYLE: none; OUTLINE-COLOR: invert; OUTLINE-WIDTH: medium; WIDTH: 44px; DISPLAY: none; BACKGROUND: no-repeat center center; HEIGHT: 45px; OVERFLOW: hidden; TOP: 50%; CURSOR: pointer
+}
+.mod-gallery .gallery-photo-prev A {
+	BACKGROUND-IMAGE: url(white/prev.png); LEFT: 35px; _background-image: url(white/prev.png)
+}
+.mod-gallery .gallery-photo-next A {
+	BACKGROUND-IMAGE: url(white/next.png); RIGHT: 35px; _background-image: url(white/next.png)
+}
+.mod-gallery .gallery-footer {
+	PADDING-BOTTOM: 10px; PADDING-LEFT: 15px; PADDING-RIGHT: 15px; BACKGROUND: #f4f4f4; BORDER-TOP: #fff 1px solid; PADDING-TOP: 10px
+}
+.mod-gallery .gallery-thumb {
+	OVERFLOW: hidden
+}
+.mod-gallery .gallery-thumbs {
+	MARGIN: 0px 30px; MIN-HEIGHT: 1px; _height: 1px
+}
+.mod-gallery .gallery-thumb-prev {
+	FLOAT: left; PADDING-TOP: 3px
+}
+.mod-gallery .gallery-thumb-prev A {
+	OUTLINE-STYLE: none; OUTLINE-COLOR: invert; OUTLINE-WIDTH: medium; WIDTH: 18px; DISPLAY: block; BACKGROUND: url(white/icon.png) no-repeat 0px 0px; HEIGHT: 62px; CURSOR: pointer; _background-image: url(white/icon-ie6.png)
+}
+.mod-gallery .gallery-thumb-prev A:hover {
+	OUTLINE-STYLE: none; OUTLINE-COLOR: invert; OUTLINE-WIDTH: medium; WIDTH: 18px; DISPLAY: block; BACKGROUND: url(white/icon.png) no-repeat 0px 0px; HEIGHT: 62px; CURSOR: pointer; _background-image: url(white/icon-ie6.png)
+}
+.mod-gallery .gallery-thumb-prev A.disable {
+	OUTLINE-STYLE: none; OUTLINE-COLOR: invert; OUTLINE-WIDTH: medium; WIDTH: 18px; DISPLAY: block; BACKGROUND: url(white/icon.png) no-repeat 0px 0px; HEIGHT: 62px; CURSOR: pointer; _background-image: url(white/icon-ie6.png)
+}
+.mod-gallery .gallery-thumb-next {
+	FLOAT: right; PADDING-TOP: 3px
+}
+.mod-gallery .gallery-thumb-next A {
+	OUTLINE-STYLE: none; OUTLINE-COLOR: invert; OUTLINE-WIDTH: medium; WIDTH: 18px; DISPLAY: block; BACKGROUND: url(white/icon.png) no-repeat -27px 0px; HEIGHT: 62px; CURSOR: pointer; _background-image: url(white/icon-ie6.png)
+}
+.mod-gallery .gallery-thumb-next A:hover {
+	OUTLINE-STYLE: none; OUTLINE-COLOR: invert; OUTLINE-WIDTH: medium; WIDTH: 18px; DISPLAY: block; BACKGROUND: url(white/icon.png) no-repeat -27px 0px; HEIGHT: 62px; CURSOR: pointer; _background-image: url(white/icon-ie6.png)
+}
+.mod-gallery .gallery-thumb-next A.disable {
+	OUTLINE-STYLE: none; OUTLINE-COLOR: invert; OUTLINE-WIDTH: medium; WIDTH: 18px; DISPLAY: block; BACKGROUND: url(white/icon.png) no-repeat -27px 0px; HEIGHT: 62px; CURSOR: pointer; _background-image: url(white/icon-ie6.png)
+}
+.mod-gallery .gallery-thumb-list {
+	POSITION: relative; PADDING-BOTTOM: 0px; WIDTH: 100%; OVERFLOW: hidden
+}
+.mod-gallery .gallery-thumb-items {
+	POSITION: relative; DISPLAY: none; OVERFLOW: hidden; LEFT: 0px
+}
+.mod-gallery .gallery-thumb-items LI {
+	TEXT-ALIGN: center; PADDING-BOTTOM: 2px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; FLOAT: left; OVERFLOW: hidden; PADDING-TOP: 2px
+}
+.mod-gallery .gallery-thumb-items LI I {
+	DISPLAY: none
+}
+.mod-gallery .gallery-thumb-items LI A {
+	MARGIN: auto; DISPLAY: block
+}
+.mod-gallery .gallery-thumb-items LI IMG {
+	MARGIN: auto; DISPLAY: block
+}
+.mod-gallery .gallery-thumb-items LI A {
+	BORDER-BOTTOM: #f4f4f4 2px solid; POSITION: relative; BORDER-LEFT: #f4f4f4 2px solid; OUTLINE-STYLE: none; OUTLINE-COLOR: invert; OUTLINE-WIDTH: medium; BORDER-TOP: #f4f4f4 2px solid; BORDER-RIGHT: #f4f4f4 2px solid; TEXT-DECORATION: none
+}
+.mod-gallery .gallery-thumb-items LI IMG {
+	FILTER: alpha(opacity=40); opacity: 0.4
+}
+.mod-gallery .gallery-thumb-items LI.current I {
+	DISPLAY: none
+}
+.mod-gallery .gallery-thumb-items LI.current A {
+	BORDER-BOTTOM-COLOR: #cc0000; BORDER-TOP-COLOR: #cc0000; BORDER-RIGHT-COLOR: #cc0000; BORDER-LEFT-COLOR: #cc0000
+}
+.mod-gallery .gallery-thumb-items LI A:hover IMG {
+	FILTER: alpha(opacity=100); opacity: 1
+}
+.mod-gallery .gallery-thumb-items LI.current IMG {
+	FILTER: alpha(opacity=100); opacity: 1
+}
+.mod-gallery .gallery-thumb-items LI SPAN {
+	POSITION: absolute; TEXT-ALIGN: center; FILTER: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#cc000000', EndColorStr='#cc000000'); PADDING-BOTTOM: 0px; LINE-HEIGHT: 20px; PADDING-LEFT: 5px; BOTTOM: 0px; PADDING-RIGHT: 5px; DISPLAY: block; HEIGHT: 20px; COLOR: #fff; RIGHT: 0px; PADDING-TOP: 0px
+}
+.mod-gallery .gallery-thumb-items LI SPAN B {
+	FONT-WEIGHT: normal
+}
+.mod-gallery .gallery-overlay {
+	Z-INDEX: 3; POSITION: absolute; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; WIDTH: 100%; PADDING-RIGHT: 0px; BACKGROUND: url(white/loading.gif) #fff no-repeat center center; HEIGHT: 100%; TOP: 0px; PADDING-TOP: 0px; LEFT: 0px
+}
+.mod-gallery .gallery-end {
+	DISPLAY: none
+}
+.mod-bar {
+	DISPLAY: none
+}
+.mod-gallery .gallery-photolist {
+	DISPLAY: none
+}
+.mod-page {
+	DISPLAY: none
+}
+.mod-btn {
+	DISPLAY: none
+}

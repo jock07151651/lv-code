@@ -1,0 +1,43 @@
+{dede:include filename="header.htm"/}
+
+	<div class="topsearchBar"><form target="_blank" action="/plus/search.php" method="post" ><label for="sBook">全站搜索</label><input type="text" class="tt" name="keyword" onclick="this.value='';this.style.color='#000000';" value="输入关键词.." /> <input type="submit" value="" class="tb" /></form></div>
+
+</div><!--//channel-->
+<div class="w960 clear center">
+
+	<div class="tags_list">
+		<dl class="tbox">
+			<dt><strong>最新标签</strong></dt>
+			<dd>
+            {dede:tag row='100' sort='new'}
+            <a href='[field:link/]' class='tagc[field:highlight /]'>[field:tag /]</a>
+            {/dede:tag}
+			</dd>
+		</dl>
+	</div>
+	
+	<div class="tags_list mt1">
+		<dl class="tbox">
+			<dt><strong>当月热门标签</strong></dt>
+			<dd>
+            {dede:tag row='100' sort='month'}
+            <a href='[field:link/]' class='tagc[field:highlight /]'>[field:tag /]</a>
+            {/dede:tag}
+			</dd>
+		</dl>
+	</div>
+	
+	<div class="tags_list mt1">
+		<dl class="tbox">
+			<dt><strong>随机标签</strong></dt>
+			<dd>
+            {dede:tag row='100' sort='rand'}
+            <a href='[field:link/]' class='tagc[field:highlight /]'>[field:tag /]</a>
+            {/dede:tag}
+			</dd>
+		</dl>
+	</div>
+	
+
+</div>
+{dede:include filename="footer.htm"/}

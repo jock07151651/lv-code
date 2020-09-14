@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+
+<html><head>
+
+        <meta charset="utf-8">
+
+    <title>ThinkPHP5.0</title>
+
+
+
+    <meta name="description" content="Dashboard">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <!--Basic Styles-->
+
+    <link href="__ADMIN__/style/bootstrap.css" rel="stylesheet">
+
+    <link href="__ADMIN__/style/font-awesome.css" rel="stylesheet">
+
+    <link href="__ADMIN__/style/weather-icons.css" rel="stylesheet">
+
+
+
+    <!--Beyond styles-->
+
+    <link id="beyond-link" href="__ADMIN__/style/beyond.css" rel="stylesheet" type="text/css">
+
+    <link href="__ADMIN__/style/demo.css" rel="stylesheet">
+
+    <link href="__ADMIN__/style/typicons.css" rel="stylesheet">
+
+    <link href="__ADMIN__/style/animate.css" rel="stylesheet">
+
+    <script src="__ADMIN__/ueditor/ueditor.config.js"></script>
+
+    <script src="__ADMIN__/ueditor/ueditor.all.min.js"></script>
+
+    <script src="__ADMIN__/ueditor/lang/zh-cn/zh-cn.js"></script>
+
+
+
+    
+
+</head>
+
+<body>
+
+    <!-- 头部 -->
+
+    {include file="public/top" /} 
+
+    <!-- /头部 -->
+
+    
+
+    <div class="main-container container-fluid">
+
+        <div class="page-container">
+
+            <!-- Page Sidebar -->
+
+            {include file="public/left" /} 
+
+            <!-- /Page Sidebar -->
+
+            <!-- Page Content -->
+
+            <div class="page-content">
+
+                <!-- Page Breadcrumb -->
+
+                <div class="page-breadcrumbs">
+
+                    <ul class="breadcrumb">
+
+                                        <li>
+
+                        <a href="#">系统</a>
+
+                    </li>
+
+                                        <li>
+
+                        <a href="{:url('lst')}">文章管理</a>
+
+                    </li>
+
+                                        <li class="active">修改文章</li>
+
+                                        </ul>
+
+                </div>
+
+                <!-- /Page Breadcrumb -->
+
+
+
+                <!-- Page Body -->
+
+                <div class="page-body">
+
+                    
+
+<div class="row">
+
+    <div class="col-lg-12 col-sm-12 col-xs-12">
+
+        <div class="widget">
+
+            <div class="widget-header bordered-bottom bordered-blue">
+
+                <span class="widget-caption">添加文章</span>
+
+            </div>
+
+            <div class="widget-body">
+
+                <div id="horizontal-form">
+
+                    <form class="form-horizontal" id="form1" onsubmit="return check()" role="form" action="" method="post" enctype="multipart/form-data" >
+
+                        <input type="hidden" name="softid" value="">
+
+                        <div class="form-group">
+
+                            <label for="username" class="col-sm-2 control-label no-padding-right">标题</label>
+                            <div class="col-sm-6">
+                                <input class="form-control"  placeholder=""  value="" name="softname" required="" type="text">
+                            </div>
+                            <p class="help-block col-sm-4 red">* 必填</p>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">版本</label>
+                            <div class="col-sm-6">
+                                <input style="width: 150px;" class="form-control"  name="soft_version" type="text">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">作者信息</label>
+                            <div class="col-sm-6">
+                                <select onchange="a_mess(this)" name="userid">
+                                    {volist name="author" id="foo"}
+                                    <option value="{$foo.userid}">{$foo.username}</option>
+                                    {/volist}
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+
+                            <label for="username" class="col-sm-2 control-label no-padding-right">作者名称</label>
+
+                            <div class="col-sm-6">
+
+                                <input class="form-control"  placeholder=""  value="匿名" name="writer" type="text">
+
+                            </div>
+
+                            <p class="help-block col-sm-4 red">* 必填</p>
+
+                        </div>
+
+
+
+                        <div class="form-group">
+
+                            <label for="username" class="col-sm-2 control-label no-padding-right">关键词</label>
+
+                            <div class="col-sm-6">
+
+                                <input class="form-control"  placeholder=""  value="" name="keyboard" type="text">
+
+                            </div>
+
+                            <p class="help-block col-sm-4 red">* 必填</p>
+
+                        </div>
+
+
+
+                        <div class="form-group">
+
+                            <label for="username" class="col-sm-2 control-label no-padding-right">演示网站</label>
+
+                            <div class="col-sm-6">
+
+                                <input class="form-control"  placeholder="" name="demo"  value="" type="text">
+
+                            </div>
+
+                            <p class="help-block col-sm-4 red">* 必填</p>
+
+                        </div>
+
+
+
+                        <div class="form-group">
+
+                            <label for="username" class="col-sm-2 control-label no-padding-right">运行环境</label>
+
+                            <div class="col-sm-6">
+
+                                <input class="form-control"  placeholder="" name="soft_fj"  value="" type="text">
+
+                            </div>
+
+                            <p class="help-block col-sm-4 red">* 必填</p>
+
+                        </div>
+
+
+
+                        <div class="form-group">
+
+                            <label for="username" class="col-sm-2 control-label no-padding-right">官方网</label>
+
+                            <div class="col-sm-6">
+
+                                <input class="form-control"  placeholder="" name="homepage"  value="http://www.662p.com" type="text">
+
+                            </div>
+
+                            <p class="help-block col-sm-4 red">* 必填</p>
+
+                        </div>
+
+
+
+                        <div class="form-group">
+
+                            <label for="username" class="col-sm-2 control-label no-padding-right">描述</label>
+
+                            <div class="col-sm-6">
+
+                                <textarea name="describes" class="form-control"></textarea>
+
+                            </div>
+
+                            <p class="help-block col-sm-4 red">* 必填</p>
+
+                        </div>
+
+
+
+                        <div class="form-group">
+
+                            <label for="username" class="col-sm-2 control-label no-padding-right">缩略图</label>
+
+                            <div class="col-sm-6">
+
+                                <input style="float:left;width: 600px;" id="softPic" name="thumbImg" class="form-control J_softPic"  placeholder="" type="text">
+
+                                <label class="showThumbPicSize" style="display: none;cursor: pointer;padding: 9px 5px;">20.268KB</label>
+
+                                <label onclick="SoftPicClick(1)" style="cursor: pointer;padding: 9px 5px;">上传</label>
+
+                                <label onclick="del(1,'softPic')" style="cursor: pointer;padding: 9px 5px;">删除</label>
+
+                                <input onchange="uploadSoftPic(1,'softPic')" style="display:none;float:left;"  placeholder="" name="softpic" type="file">
+
+                            </div>
+
+                            <p class="help-block col-sm-4 red">* 必填</p>
+
+                        </div>
+
+
+
+                        <div class="form-group">
+
+                            <label for="username" class="col-sm-2 control-label no-padding-right">水印图</label>
+
+                            <div class="col-sm-6">
+
+                                <input style="float:left;width: 600px;" disabled class="form-control" id="water" placeholder="" type="text">
+
+                                <label class="showWaterSize" style="display: none;cursor: pointer;padding: 9px 5px;">20.268KB</label>
+
+                                <label onclick="SoftPicClick(2)" style="cursor: pointer;padding: 9px 5px;">上传</label>
+
+                                <!--<label onclick="del(2,'water')" style="cursor: pointer;padding: 9px 5px;">删除</label>-->
+
+                                <input onchange="uploadSoftPic(2,'water')" style="display:none;float:left;"  placeholder="" name="water" type="file">
+
+                            </div>
+
+                            <p class="help-block col-sm-4 red">* 必填</p>
+
+                        </div>
+
+
+
+                        <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">软件包</label>
+                            <div class="col-sm-6">
+                                <input style="float:left;width: 600px;" class="form-control J_downpath" name="softSrc" id="softpath" placeholder="" type="text">
+                                <input type="text" style="display: none;" id="softsize" name="size" value=""/>
+                                <label class="showSoftSize" style="display: none;cursor: pointer;padding: 9px 5px;">20.268KB</label>
+                                <label onclick="SoftPicClick(3)" style="cursor: pointer;padding: 5px 5px;">上传</label>
+                                <label onclick="del(3,'softpath')" style="cursor: pointer;padding: 9px 5px;">删除</label>
+                                <input onchange="uploadSoftPic(3,'softpath')" style="display:none;float:left;"  placeholder="" name="downpath" type="file">
+                            </div>
+                            <p class="help-block col-sm-4 red">* 必填</p>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">文件大小</label>
+                            <div class="col-sm-6">
+                                <input style="width: 100px;"  class="form-control"  name="filesize" type="text">
+                            </div>
+                            <p class="help-block col-sm-4 red">不填系统自动获取上传文件的大小</p>
+                        </div>
+
+
+
+                        <div class="form-group">
+
+                            <label for="username" class="col-sm-2 control-label no-padding-right">文字水印</label>
+
+                            <div class="col-sm-6">
+
+                                <input style="float:left;padding-left: 5px;"  placeholder="" name="waterword" type="text" value="662p开源网">
+
+                            </div>
+
+                            <p class="help-block col-sm-4 red">* 必填</p>
+
+                        </div>
+
+
+
+
+
+                        <!--<div class="form-group">-->
+
+                            <!--<label for="username" class="col-sm-2 control-label no-padding-right">软件包</label>-->
+
+                            <!--<div class="col-sm-6">-->
+
+                                <!--<input style="float:left;"  placeholder="" name="downpath" type="file">-->
+
+                            <!--</div>-->
+
+                            <!--<p class="help-block col-sm-4 red">* 必填</p>-->
+
+                        <!--</div>-->
+
+
+
+                        <div class="form-group">
+
+                            <label for="username" class="col-sm-2 control-label no-padding-right">是否推荐</label>
+
+                            <div class="col-sm-6">
+
+                                <label style="margin-right:15px;">
+
+                                    <input name="isgood" value="1" type="radio">
+
+                                    <span class="text">是</span>
+
+                                </label>
+
+                                <label style="margin-right:15px;">
+
+                                    <input class="inverted" name="isgood" value="0" type="radio">
+
+                                    <span class="text">否</span>
+
+                                </label>
+
+                            </div>
+
+                            <p class="help-block col-sm-4 red">* 必填</p>
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <label for="username" class="col-sm-2 control-label no-padding-right">所属栏目</label>
+
+                            <div class="col-sm-6">
+
+                                <select class="J_classid" name="classid" onchange="FirstChange()">
+
+                                    <option value="0">--请选择栏目--</option>
+
+                                    {volist name="downClass" id="foo"}
+
+                                    <option value="{$foo.classid}">{$foo.classname}</option>
+
+                                    {/volist}
+
+                                </select>
+
+                                <select onchange="SecondChange()" style="display: none;" class="J_secondClass" name="classid">
+
+
+
+                                </select>
+
+                                <select style="display: none;" class="J_thirdClass" name="classid">
+
+
+
+                                </select>
+
+                            </div>
+
+                            <p class="help-block col-sm-4 red">* 必填</p>
+
+                        </div>
+                        <!--<div class="form-group">-->
+
+                            <!--<label for="username" class="col-sm-2 control-label no-padding-right">源码类型</label>-->
+
+                            <!--<div class="col-sm-6">-->
+
+                                <!--<select name="softtype">-->
+
+                                    <!--<option value="0">&#45;&#45;请选择类型&#45;&#45;</option>-->
+
+                                    <!--{volist name="softtype" id="foo"}-->
+
+                                    <!--<option value="{$foo.softtypeid}">{$foo.softtype}</option>-->
+
+                                    <!--{/volist}-->
+
+                                <!--</select>-->
+                            <!--</div>-->
+
+                            <!--<p class="help-block col-sm-4 red">* 必填</p>-->
+
+                        <!--</div>-->
+                        <div class="form-group">
+
+                            <label for="username" class="col-sm-2 control-label no-padding-right">所属语言</label>
+
+                            <div class="col-sm-6">
+
+                                <select name="language">
+
+                                    {volist name="language" id="foo"}
+
+                                    <option value="{$foo.languageid}">{$foo.language}</option>
+
+                                    {/volist}
+
+                                </select>
+
+                            </div>
+
+                            <p class="help-block col-sm-4 red">* 必填</p>
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <label for="username" class="col-sm-2 control-label no-padding-right">下载所需点数</label>
+
+                            <div class="col-sm-6">
+
+                                <input style="width: 100px;" value="0" class="form-control"  placeholder=""  value="" name="downfen" type="number" min="0">
+
+                            </div>
+
+                            <p class="help-block col-sm-4 red">* 必填</p>
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <label for="username" class="col-sm-2 control-label no-padding-right">内容</label>
+
+                            <div class="col-sm-6">
+
+                                <textarea id="content" name="softsay"></textarea>
+
+                            </div>
+
+                            <p class="help-block col-sm-4 red">* 必填</p>
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <div class="col-sm-offset-2 col-sm-10">
+
+                                <button type="submit" class="btn btn-default">保存信息</button>
+
+                            </div>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+                </div>
+
+                <!-- /Page Body -->
+
+            </div>
+
+            <!-- /Page Content -->
+
+        </div>  
+
+    </div>
+
+
+
+        <!--Basic Scripts-->
+
+    <script src="__ADMIN__/style/jquery_002.js"></script>
+
+    <script src="__ADMIN__/style/bootstrap.js"></script>
+
+    <script src="__ADMIN__/style/jquery.js"></script>
+
+
+
+    <!--Beyond Scripts-->
+
+    <script src="__ADMIN__/style/beyond.js"></script>
+
+    <script type="text/javascript" src="/static/layer/layer.js"></script>
+
+    <script type="text/javascript">
+        function a_mess(obj){
+            val = $(obj).find('option:selected').text()
+            $('input[name=writer]').val(val);
+        }
+        function SoftPicClick(type){
+
+            if(type==1){
+
+                $('input[name=softpic]').click();
+
+            }else if(type==2){
+
+                $('input[name=water]').click();
+
+            }else{
+
+                $('input[name=downpath]').click();
+
+            }
+
+        }
+
+        function uploadSoftPic(type,name){
+
+            formData = new FormData();
+
+            if(type==1){
+
+                formData.append('softpic',$('input[name=softpic]').get(0).files[0]);
+
+            }else if(type==2){
+
+                formData.append('water',$('input[name=water]').get(0).files[0]);
+
+                formData.append('imgSrc',$('#softPic').val())
+
+            }else{
+
+                formData.append('downpath',$('input[name=downpath]').get(0).files[0]);
+
+            }
+
+            formData.append('type',type);
+
+            $.ajax({
+
+                url:'/SoftUpload',
+
+                type:'post',
+
+                contentType:false,
+
+                processData:false,
+
+                data:formData,
+
+                beforeSend:function(){
+
+                    // layer.load()
+
+                },
+
+                success:function(msg){
+
+                    layer.closeAll('loading')
+                    if(!msg){
+                        layer.msg('上传出错，请重新上传！',{icon:0,time:1500});
+                    }
+                    if(msg.code){
+
+                        $('#'+name).val(msg.url);
+
+                        if(type==3){
+
+                            $('#softsize').val(msg.fileSize);
+
+                            $('.showSoftSize').text(msg.size);
+
+                            $('.showSoftSize').css('display','inline-block');
+
+                        }else if(type==2){
+
+                            $('.showWaterSize').text(msg.size)
+
+                            $('.showWaterSize').css('display','inline-block');
+
+                        }else{
+
+                            $(".showThumbPicSize").text(msg.size)
+
+                            $('.showThumbPicSize').css('display','inline-block');
+
+                        }
+
+                        layer.msg(msg.info,{icon:1,time:1500})
+
+                    }else{
+
+                        layer.msg(msg.info,{icon:7,time:1500})
+
+                    }
+
+                }
+
+            })
+
+        }
+
+        function del(type,name){
+
+            if(type==1){
+
+                url = $('#softPic').val()
+
+                $('.showThumbPicSize').css('display','none');
+
+            }else if(type==2){
+
+                url = $('#water').val()
+
+                $('.showWaterSize').css('display','none');
+
+            }else{
+
+                url = $('#softpath').val()
+
+                $('.showSoftSize').css('display','none');
+
+            }
+
+            if(url==''){
+
+                layer.msg('删除失败，文件尚未上传',{icon:0,time:1500});
+
+                return false;
+
+            }
+
+            $.ajax({
+
+                url:'/DeleteOne',
+
+                data:{src:url,type:type},
+
+                type:'post',
+
+                beforeSend:function () {
+
+                    layer.load()
+
+                },
+
+                success:function (msg) {
+
+                    layer.closeAll('loading')
+
+                    if(msg.code){
+
+                        $('#'+name).val('');
+
+                        layer.msg(msg.info,{icon:1,time:1500})
+
+
+
+                    }else{
+
+                        layer.msg(msg.info,{icon:0,time:1500})
+
+                    }
+
+                }
+
+            })
+
+        }
+
+        function check(){
+
+            first = $('.J_classid').val();
+
+            second = $('.J_secondClass').val();
+
+            if(first == 0||first==undefined||first==null){
+
+                onTopClick('.J_classid');
+
+                layer.tips('请选择分类', '.J_classid', {
+
+                    tips: [1, '#F44336'],
+
+                    time: 2000
+
+                });
+
+                $('html, body').animate({
+
+                    scrollTop: $(".J_classid").offset().top
+
+                }, 800);
+
+                return false;
+
+            }
+
+
+            if($('.J_secondClass').css('display')=='inline-block'){
+
+                if($('.J_secondClass').val()==0){
+
+                    onTopClick('.J_secondClass');
+
+                    layer.tips('请选择分类', '.J_secondClass', {
+
+                        tips: [1, '#F44336'],
+
+                        time: 2000
+
+                    });
+
+                    $('html, body').animate({
+
+                        scrollTop: $(".J_secondClass").offset().top
+
+                    }, 800);
+
+                    return false;
+
+                }
+
+            }
+
+            if($('.J_thirdClass').css('display')=='inline-block'){
+
+                if($('.J_thirdClass').val()==0){
+
+                    onTopClick('.J_thirdClass');
+
+                    layer.tips('请选择分类', '.J_thirdClass', {
+
+                        tips: [1, '#F44336'],
+
+                        time: 2000
+
+                    });
+
+                    $('html, body').animate({
+
+                        scrollTop: $(".J_thirdClass").offset().top
+
+                    }, 800);
+
+                    return false;
+
+                }
+
+            }
+
+            return true;
+
+        }
+
+        function onTopClick(id) {
+
+            window.location.hash = id;
+
+        }
+
+        function FirstChange() {
+
+            classid = $('.J_classid').val();
+
+            if (classid==0){
+
+                $('.J_secondClass').css('display','none');
+
+                $('.J_secondClass').html('');
+
+                $('.J_thirdClass').css('display','none');
+
+                $('.J_thirdClass').html('');
+
+                return false;
+
+            }
+
+            $.ajax({
+
+                url:'/getDownClass',
+
+                data:{classid:classid},
+
+                type:'post',
+
+                beforeSend:function () {
+
+                    layer.load()
+
+                },
+
+                success:function (msg) {
+
+                    layer.closeAll('loading');
+
+                    if(msg.code){
+
+                        $('.J_secondClass').css({'display':'inline-block'});
+
+                        $('.J_thirdClass').css('display','none');
+
+                        list = '<option value="0">--请选择栏目--</option>';
+
+                        $.each(msg.data,function(key,val){
+
+                            list += "<option value="+val.classid+">"+val.classname+"</option>";
+
+                        })
+
+                        $('.J_secondClass').html(list);
+
+                    }else{
+
+                        $('.J_secondClass').css('display','none');
+
+                        $('.J_secondClass').html('');
+
+                        $('.J_thirdClass').css('display','none');
+
+                        $('.J_thirdClass').html('');
+
+                    }
+
+                }
+
+            })
+
+        }
+
+        function SecondChange() {
+
+            classid = $('.J_secondClass').val();
+
+            if (classid==0){
+
+                $('.J_thirdClass').css('display','none');
+
+                $('.J_thirdClass').html('');
+
+                return false;
+
+            }
+
+            $.ajax({
+
+                url:'/getDownClass',
+
+                data:{classid:classid},
+
+                type:'post',
+
+                beforeSend:function () {
+
+                    layer.load()
+
+                },
+
+                success:function (msg) {
+
+                    layer.closeAll('loading');
+
+                    if(msg.code){
+
+                        $('.J_thirdClass').css('display','inline-block');
+
+                        list = '<option value="0">--请选择栏目--</option>';
+
+                        $.each(msg.data,function(key,val){
+
+                            list += "<option value="+val.classid+">"+val.classname+"</option>";
+
+                        })
+
+                        $('.J_thirdClass').html(list);
+
+                    }else{
+
+                        $('.J_thirdClass').css('display','none');
+
+                        $('.J_thirdClass').html('');
+
+                    }
+
+                }
+
+            })
+
+        }
+
+    </script>
+
+    <script type="text/javascript">
+
+
+
+    //实例化编辑器
+
+    //建议使用工厂方法getEditor创建和引用编辑器实例，如果在某个闭包下引用该编辑器，直接调用UE.getEditor('editor')就能拿到相关的实例
+
+    UE.getEditor('content',{initialFrameWidth:800,initialFrameHeight:400,});
+
+    </script>
+
+
+
+
+
+</body></html>

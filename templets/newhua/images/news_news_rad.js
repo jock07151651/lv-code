@@ -1,0 +1,1 @@
+document.writeln('<a href="http://huodong.feixin.10086.cn/newyear/2012/index.aspx?s=xc" target="_blank"><img src="http://www.newhua.com/adimg/feixin.jpg" width="250" height="230" /></a>');   

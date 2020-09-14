@@ -1,0 +1,129 @@
+
+
+                        <div class="ui basic segment article-list" id="newestBlogList">
+
+                            <div class="ui relaxed divided items list-container space-list-container">
+                                {volist name="user_article" id="foo"}
+                                 <div class="item blog-item" data-id="3107478">
+                                    <div class="content">
+                                        <a class="header" href="http://www.662p.com/article/{$foo.id}.html" target="_blank">
+                                            <!-- <div class="ui blue label horizontal" data-tooltip="置顶">顶</div>
+                                            <div class="ui teal label horizontal" data-tooltip="原创">原</div>
+                                            <div class="ui orange label horizontal" data-tooltip="推荐">荐</div>  -->
+                                        {$foo.title}</a>
+                                        <div class="description">
+                                            <p class="line-clamp">{$foo.content|mb_substr=0,200,'utf-8'}...</p>
+                                        </div>
+                                        <div class="extra">
+                                            <div class="ui horizontal list">
+                                                <div class="item">
+                                                    {if condition="$foo['keywords'] neq ''"}<a class="ui horizontal label">{$foo.keywords}</a>{else /} {/if}
+                                                </div>
+                                               
+                                            </div>
+
+                                            <div>
+
+                                                <div class="ui horizontal small list">
+                                                    <div class="item">
+                                                        <a href="https://my.662p.com/{$user_info.userid}" class="catalog-name-link">博客</a>
+                                                    </div>
+                                                    <div class="item">
+                                                        {$foo.time|date='Y-m-d H:i:s',###}
+                                                    </div>
+                                                    <div class="item">
+                                                        <i class="eye icon"></i>  {$foo.click}
+                                                    </div>
+                                                    <div class="item">
+                                                        <a href="https://my.662p.com/liyuj/blog/3107478#comments" target="_blank"><i class="comment outline icon"></i>   </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {if condition="$foo['thumb'] neq ''"}
+                                    <div class="images">
+                                        <a class="ui small image" href="http://www.662p.com/article/{$foo.id}.html" target="_blank"> <img src="{$foo.thumb}" alt="" data-img-render="" /> </a>
+                                                                         </div>{else /} {/if}  
+                                </div>{/volist}    
+                            
+                              <!-- <div class="item blog-item" data-id="3099914">
+                                    <div class="content">
+                                        <a class="header" href="https://my.662p.com/liyuj/blog/3099914" target="_blank">
+                                            <div class="ui blue label horizontal" data-tooltip="置顶">
+                                                顶
+                                            </div>
+                                            <div class="ui teal label horizontal" data-tooltip="原创">
+                                                原
+                                            </div> Kafka连接器之在2.3版本中的改进 </a>
+                                        <div class="description">
+                                            <p class="line-clamp">在Kafka的2.3版本中，对Kafka连接器做了很大的改进。首先就是在添加和删除连接器时，修改了Kafka连接器处理任务的方式。之前这个动作造成了整个系统的停顿，这是一直被开发和运维人员诟病的地...</p>
+                                        </div>
+                                        <div class="extra">
+                                            <div class="ui horizontal list">
+                                                <div class="item">
+                                                    <a class="ui horizontal label" href="https://my.662p.com/liyuj?q=curl">curl</a>
+                                                    <a class="ui horizontal label" href="https://my.662p.com/liyuj?q=ElasticSearch">ElasticSearch</a>
+                                                    <a class="ui horizontal label" href="https://my.662p.com/liyuj?q=jq">jq</a>
+                                                    <a class="ui horizontal label" href="https://my.662p.com/liyuj?q=Elastic">Elastic</a>
+                                                    <a class="ui horizontal label" href="https://my.662p.com/liyuj?q=Kafka">Kafka</a>
+                                                </div>
+
+                                            </div>
+
+                                            <div>
+
+                                                <div class="ui horizontal small list">
+
+                                                    <div class="item">
+
+                                                        <a href="https://my.662p.com/liyuj?tab=newest&amp;catalogId=6400291" class="catalog-name-link">Kafka</a>
+
+                                                    </div>
+
+                                                    <div class="item">
+
+                                                        08/30 16:57
+
+                                                    </div>
+
+                                                    <div class="item">
+
+                                                        <i class="eye icon"></i> 44
+
+                                                    </div>
+
+                                                    <div class="item">
+
+                                                        <a href="https://my.662p.com/liyuj/blog/3099914#comments" target="_blank"><i class="comment outline icon"></i> 0</a>
+
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                    <div class="images">
+                                        <a class="ui small image" href="https://my.662p.com/liyuj/blog/3099914" target="_blank"> <img src="/static/member/picture/kibana_rebalance_kafka_2.2_vs_2.3.png" alt="" data-img-render="" /> </a>
+                                    </div>
+                                </div>  -->
+
+                                
+
+                            </div>
+                            <div class="page-load-status">
+                                <p class="infinite-scroll-request"> <i class="ui active small inline loader"></i> </p>
+                                <p class="infinite-scroll-last">没有更多内容</p>
+                                <p class="infinite-scroll-error">加载失败，请刷新页面</p>
+                            </div>
+
+                            <a class="ui fluid button load-more-button" style="display: none">加载更多</a>
+
+                            <p class="pagination"> <a class="pagination__next" style="display: none" href="https://my.662p.com/liyuj/widgets/_space_index_newest_blog?catalogId=0&amp;q=&amp;p=2&amp;type=ajax">下一页</a> </p>
+
+                        </div>
+                    </div>
+                </div>

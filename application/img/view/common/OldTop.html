@@ -1,0 +1,14 @@
+<style type="text/css">
+
+    a:hover {text-decoration:none !important;cursor: pointer;}
+
+</style>
+
+<div class="toolbar clear">
+
+    <div class="log l">    <a href="http://yun.662p.com"  target="_blank">云服务</a>   <a href="http://android.662p.com"  target="_blank">安卓教程</a>  <a href="http://ios.662p.com"  target="_blank">IOS教程</a>  <a href="http://wp.662p.com"  target="_blank">WP教程</a>  <a href="http://php.662p.com"  target="_blank">PHP教程</a> <a href="http://java.662p.com"  target="_blank">JAVA教程</a></div>
+
+    <h2 class="r"><a href="/buygroup">充值</a> {eq name="Think.session.user_id" value=""}| <a href="/register/" target="_blank">注册</a>{else/}{/eq} |  <a href="/list/class.html">软件分类</a> | <a href="http://code.662p.com/AddSoft/index.php">软件投稿</a>{eq name="$Think.session.user_id" value=''}<a href="/Login"> | 登录</a>{else/}<a href="/cp" style="position: relative"> | {eq name="$Think.session.userpic" value=""}{$Think.session.username}{else/}<img style="position:absolute;left:99%;top:-18%;width: 28px;height: 24px;" src="{$Think.session.userpic}">{/eq}</a>{/eq}{eq name="$Think.session.user_id" value=""}{else/} | <a href="/logout">注销登录</a>{/eq}</h2>
+
+</div>
+

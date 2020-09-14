@@ -1,0 +1,61 @@
+#friendlinks {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 0px; WIDTH: 960px; PADDING-RIGHT: 0px; CLEAR: both;margin: 0 auto; PADDING-TOP: 9px
+}
+#friendlinks DIV {
+	BORDER-BOTTOM: #d0dbe7 1px solid; BORDER-LEFT: #d0dbe7 1px solid; PADDING-BOTTOM: 5px; PADDING-LEFT: 0px; WIDTH: 958px; PADDING-RIGHT: 0px; BORDER-TOP: #d0dbe7 1px solid; BORDER-RIGHT: #d0dbe7 1px solid; PADDING-TOP: 2px
+}
+#friendlinks H2 {
+	TEXT-ALIGN: center; MARGIN: 0px 15px; BACKGROUND: url(../images/bottomdot.gif) repeat-x 0px 50%; HEIGHT: 28px
+}
+#friendlinks H2 SPAN {
+	LINE-HEIGHT: 28px; MARGIN: 0px auto; WIDTH: 140px; DISPLAY: block; BACKGROUND: #f8fbff; COLOR: #1f376d; FONT-SIZE: 13px; FONT-WEIGHT: bold
+}
+#friendlinks P {
+	TEXT-ALIGN: left; LINE-HEIGHT: 22px; MARGIN: 0px 10px; COLOR: #003494; OVERFLOW: hidden
+}
+#friendlinks A {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 10px; FONT-FAMILY: Verdana,ËÎÌו; FONT-SIZE: 12px; PADDING-TOP: 0px
+}
+#friendlinks .noborder {
+	BORDER-RIGHT-STYLE: none
+}
+
+#footer {
+	LINE-HEIGHT: 38px; MARGIN: 8px auto 0px; WIDTH: 970px; BACKGROUND: url(../images/endnav_bg.jpg) left -67px; HEIGHT: 37px; FONT-SIZE: 12px; OVERFLOW: hidden
+}
+#footer .footright {
+	WIDTH: 8px; DISPLAY: block; BACKGROUND: url(../images/endnav_bg.jpg) no-repeat right -141px; FLOAT: right; HEIGHT: 37px; OVERFLOW: hidden
+}
+#footer .footnav {
+	LINE-HEIGHT: 38px; BACKGROUND: url(../images/endnav_bg.jpg) no-repeat left -30px; FLOAT: left; HEIGHT: 37px; COLOR: #1e50a2; OVERFLOW: hidden
+}
+#footer .footnav A {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 13px; PADDING-RIGHT: 5px; BACKGROUND: url(../images/endnav_bg.jpg) no-repeat 4px -104px; FLOAT: left; PADDING-TOP: 0px
+}
+#footer .footnav .firstNode {
+	BACKGROUND: none transparent scroll repeat 0% 0%
+}
+#footer .goHome {
+	TEXT-INDENT: -19em; MARGIN: 8px 5px 0px 0px; WIDTH: 85px; BACKGROUND: url(../images/endnav_bg.jpg) no-repeat left -178px; FLOAT: right; HEIGHT: 23px; OVERFLOW: hidden
+}
+#footer .footnav A {
+	COLOR: #1e50a2
+}
+#footer .footnav A:visited {
+	COLOR: #1e50a2
+}
+#footer .footnav A:hover {
+	COLOR: #ba2636
+}
+#footer .footsearch {
+	MARGIN: 9px 13px 0px 0px; WIDTH: 128px; DISPLAY: none; FLOAT: right; HEIGHT: 20px; OVERFLOW: hidden
+}
+#footer .footsearch .textBox {
+	BORDER-BOTTOM-STYLE: none; PADDING-BOTTOM: 0px; LINE-HEIGHT: 20px; BORDER-RIGHT-STYLE: none; TEXT-INDENT: 4px; PADDING-LEFT: 0px; WIDTH: 106px; PADDING-RIGHT: 0px; BORDER-TOP-STYLE: none; BACKGROUND: url(../images/endnav_bg.jpg) no-repeat right -202px; FLOAT: left; HEIGHT: 20px; COLOR: #666; BORDER-LEFT-STYLE: none; PADDING-TOP: 0px
+}
+#footer .footsearch .footsearchbtn {
+	BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; TEXT-INDENT: -100em; WIDTH: 22px; BORDER-TOP-STYLE: none; BACKGROUND: url(../images/endnav_bg.jpg) no-repeat left -222px; FLOAT: left; HEIGHT: 20px; BORDER-LEFT-STYLE: none; CURSOR: pointer
+}
+#copyright {
+	TEXT-ALIGN: center; PADDING-BOTTOM: 5px; LINE-HEIGHT: 22px; MARGIN: 0px auto; PADDING-LEFT: 0px; WIDTH: 960px; PADDING-RIGHT: 0px; FONT-FAMILY: Verdana,ËÎÌו; COLOR: #515151; FONT-SIZE: 12px; PADDING-TOP: 6px
+}

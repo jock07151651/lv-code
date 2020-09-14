@@ -1,0 +1,445 @@
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+
+    <!-- Start of Baidu Transcode -->
+
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+
+    <meta http-equiv="Cache-Control" content="no-transform">
+
+    <meta name="applicable-device" content="pc,mobile">
+
+    <meta name="MobileOptimized" content="width">
+
+    <meta name="HandheldFriendly" content="true">
+    <!-- End of Baidu Transcode -->
+
+    <meta name="description" content="">
+    <meta property="qc:admins" content="104102651453316562112116375">
+
+    <meta property="qc:admins" content="11635613706305617">
+
+    <meta property="qc:admins" content="1163561616621163056375">
+
+    <meta name="google-site-verification" content="cV4-qkUJZR6gmFeajx_UyPe47GW9vY6cnCrYtCHYNh4">
+
+    <meta name="google-site-verification" content="HF7lfF8YEGs1qtCE-kPml8Z469e2RHhGajy6JPVy5XI">
+
+    <meta http-equiv="mobile-agent" content="format=html5; url=https://www.jianshu.com/sign_in">
+
+
+
+    <!-- Apple -->
+
+    <meta name="apple-mobile-web-app-title" content="开发吗">
+
+
+
+
+
+    <title>用户登录 - 662p开源网</title>
+
+
+
+    <meta name="csrf-param" content="authenticity_token">
+
+    <meta name="csrf-token"
+
+          content="zeqp995UqEGK7Trg57vQNF86VpeA7yX3IVPupUjU8MNNHPvVTDHXjx0ZMt2N/9zkJM1ufIJHkjJbaYK6hmwBDQ==">
+
+
+
+    <link rel="stylesheet" media="all" href="/static/index/jianshu/css/web-d8f364aa94534f48835a.css">
+
+
+
+    <link rel="stylesheet" media="all" href="/static/index/jianshu/css/entry-725103a0668ccb1789d4.css">
+
+
+
+    <!--<link href="//cdn2.jianshu.io/assets/favicons/favicon-e743bfb1821442341c3ab15bdbe804f7ad97676bd07a770ccc9483473aa76f06.ico"
+
+          rel="shortcut icon" type="image/x-icon">-->
+
+    <link rel="apple-touch-icon-precomposed"
+
+          href="//cdn2.jianshu.io/assets/apple-touch-icons/57-a6f1f1ee62ace44f6dc2f6a08575abd3c3b163288881c78dd8d75247682a4b27.png"
+
+          sizes="57x57">
+
+    <link rel="apple-touch-icon-precomposed"
+
+          href="//cdn2.jianshu.io/assets/apple-touch-icons/72-fb9834bcfce738fd7b9c5e31363e79443e09a81a8e931170b58bc815387c1562.png"
+
+          sizes="72x72">
+
+    <link rel="apple-touch-icon-precomposed"
+
+          href="//cdn2.jianshu.io/assets/apple-touch-icons/76-49d88e539ff2489475d603994988d871219141ecaa0b1a7a9a1914f4fe3182d6.png"
+
+          sizes="76x76">
+
+    <link rel="apple-touch-icon-precomposed"
+
+          href="//cdn2.jianshu.io/assets/apple-touch-icons/114-24252fe693524ed3a9d0905e49bff3cbd0228f25a320aa09053c2ebb4955de97.png"
+
+          sizes="114x114">
+
+    <link rel="apple-touch-icon-precomposed"
+
+          href="//cdn2.jianshu.io/assets/apple-touch-icons/120-1bb7371f5e87f93ce780a5f1a05ff1b176828ee0d1d130e768575918a2e05834.png"
+
+          sizes="120x120">
+
+    <link rel="apple-touch-icon-precomposed"
+
+          href="//cdn2.jianshu.io/assets/apple-touch-icons/152-bf209460fc1c17bfd3e2b84c8e758bc11ca3e570fd411c3bbd84149b97453b99.png"
+
+          sizes="152x152">
+
+
+
+    <!-- Start of 访问统计 -->
+
+    <script src="https://zz.bdstatic.com/linksubmit/push.js"></script>
+
+    <!--<script src="//hm.baidu.com/hm.js?0c0e9d9b1e7d617b3e6842e85b9fb068"></script>-->
+
+    <script>
+
+        var _hmt = _hmt || [];
+
+        (function () {
+
+            var hm = document.createElement("script");
+
+            hm.src = "//hm.baidu.com/hm.js?0c0e9d9b1e7d617b3e6842e85b9fb068";
+
+            var s = document.getElementsByTagName("script")[0];
+
+            s.parentNode.insertBefore(hm, s);
+
+        })();
+
+    </script>
+
+
+
+    <!-- End of 访问统计 -->
+
+</head>
+
+
+
+<body class="no-padding reader-black-font" lang="zh-CN">
+
+<div class="sign">
+
+    <div class="logo"><a href="/"><img style="width: 180px;" src="/static/article/picture/logo.gif"
+
+                                       alt="Logo"></a></div>
+
+    <div class="main">
+
+
+
+        <h4 class="title">
+
+            <div class="normal-title">
+
+                <a class="active" href="/login">登录</a>
+
+                <b>·</b>
+
+                <a id="js-sign-up-btn" class="" href="/register">注册</a>
+
+            </div>
+
+        </h4>
+
+        <div class="js-sign-in-container">
+
+            <form id="new_session" action="/sessions" accept-charset="UTF-8" method="post"><input name="utf8"
+
+                                                                                                  type="hidden"
+
+                                                                                                  value="✓"><input
+
+                    type="hidden" name="authenticity_token"
+
+                    value="zeqp995UqEGK7Trg57vQNF86VpeA7yX3IVPupUjU8MNNHPvVTDHXjx0ZMt2N/9zkJM1ufIJHkjJbaYK6hmwBDQ==">
+
+
+
+                <!-- 正常登录登录名输入框 -->
+
+                <div class="input-prepend restyle js-normal">
+
+                    <input placeholder="手机号或邮箱" type="text" name="session[email_or_mobile_number]"
+
+                           id="session_email_or_mobile_number">
+
+                    <i class="iconfont ic-user"></i>
+
+                </div>
+
+
+
+                <!-- 海外登录登录名输入框 -->
+
+
+
+                <div class="input-prepend">
+
+                    <input placeholder="密码" type="password" name="session[password]" id="session_password">
+
+                    <i class="iconfont ic-password"></i>
+
+                </div>
+
+                <input value="false" type="hidden" name="session[oversea]" id="session_oversea">
+
+                <div>
+
+                    <input id="sign-in-form-captcha-challenge" name="captcha[validation][challenge]" autocomplete="off"
+
+                           type="hidden">
+
+                    <input id="sign-in-form-captcha-gt" name="captcha[validation][gt]" autocomplete="off" type="hidden">
+
+                    <input id="sign-in-form-captcha-validate" name="captcha[validation][validate]" autocomplete="off"
+
+                           type="hidden">
+
+                    <input id="sign-in-form-captcha-seccode" name="captcha[validation][seccode]" autocomplete="off"
+
+                           type="hidden">
+
+                </div>
+
+                <div class="remember-btn">
+
+                    <input type="checkbox" value="true" checked="checked" name="session[remember_me]"
+
+                           id="session_remember_me"><span>记住我</span>
+
+                </div>
+
+                <div class="forget-btn">
+
+                    <a class="" data-toggle="dropdown" href="">登录遇到问题?</a>
+
+                    <ul class="dropdown-menu">
+
+                        <li><a href="/users/password/mobile_reset">用手机号重置密码</a></li>
+
+                        <li><a href="/users/password/email_reset">用邮箱重置密码</a></li>
+
+                        <li><a target="_blank" href="/p/9058d0b8711d">无法用海外手机号登录</a></li>
+
+                        <li><a target="_blank" href="/p/498a9fa7da08">无法用 Google 帐号登录</a></li>
+
+                    </ul>
+
+                </div>
+
+                <button class="sign-in-button" id="sign-in-form-submit-btn" type="button">
+
+                    <span id="sign-in-loading"></span>
+
+                    登录
+
+                </button>
+
+            </form>
+
+            <!-- 更多登录方式 -->
+
+            <div class="more-sign">
+
+                <h6>社交帐号登录</h6>
+
+                <ul>
+
+                    <li id="weibo-link-wrap" class="">
+
+                        <a class="weibo" id="weibo-link">
+
+                            <i class="iconfont ic-weibo"></i>
+
+                        </a>
+
+                    </li>
+
+                    <li><a id="weixin" class="weixin" target="_blank" href="/users/auth/wechat"><i
+
+                            class="iconfont ic-wechat"></i></a></li>
+
+                    <li><a id="qq" class="qq" target="_blank" href="/qqLogin"><i
+
+                            class="iconfont ic-qq_connect"></i></a></li>
+
+                    <li class="js-more-method" id="more"><a href="javascript:void(0);"><i class="iconfont ic-more"></i></a>
+
+                    </li>
+
+                    <li class="js-hide-method hide"><a class="douban" target="_blank" href="/users/auth/douban"><i
+
+                            class="iconfont ic-douban"></i></a></li>
+
+                </ul>
+
+
+
+                <div class="weibo-geetest-captcha"></div>
+
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+</div>
+
+
+
+<!-- Javascripts
+
+================================================== -->
+
+<!-- Placed at the end of the document so the pages load faster -->
+
+<script type="application/json" data-name="page-data">{
+
+    "user_signed_in": false,
+
+    "locale": "zh-CN",
+
+    "os": "windows",
+
+    "read_mode": "day",
+
+    "read_font": "font2"
+
+}</script>
+
+
+
+<script src="//cdn2.jianshu.io/assets/web-base-614eb17d081760c1920e.js" crossorigin="anonymous"></script>
+
+<!--<script src="//cdn2.jianshu.io/assets/web-7830963d3e6f819a2d60.js" crossorigin="anonymous"></script>-->
+
+<!--<script src="//cdn2.jianshu.io/assets/web/pages/common/signin/entry-f7e14e2f1268430af7b9.js"
+
+        crossorigin="anonymous"></script>-->
+
+<script>
+
+    // (function () {
+
+    //     var bp = document.createElement('script');
+
+    //     var curProtocol = window.location.protocol.split(':')[0];
+
+    //     if (curProtocol === 'https') {
+
+    //         bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+
+    //     } else {
+
+    //         bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+
+    //     }
+
+    //     var s = document.getElementsByTagName("script")[0];
+
+    //     s.parentNode.insertBefore(bp, s);
+
+    // })();
+
+</script>
+
+
+
+
+
+<div class="geetest_panel geetest_wind" style="display: none;">
+
+    <div class="geetest_panel_ghost"></div>
+
+    <div class="geetest_panel_box">
+
+        <div class="geetest_other_offline geetest_panel_offline"></div>
+
+        <div class="geetest_panel_loading">
+
+            <div class="geetest_panel_loading_icon"></div>
+
+            <div class="geetest_panel_loading_content">智能验证检测中</div>
+
+        </div>
+
+        <div class="geetest_panel_success">
+
+            <div class="geetest_panel_success_box">
+
+                <div class="geetest_panel_success_show">
+
+                    <div class="geetest_panel_success_pie"></div>
+
+                    <div class="geetest_panel_success_filter"></div>
+
+                    <div class="geetest_panel_success_mask"></div>
+
+                </div>
+
+                <div class="geetest_panel_success_correct">
+
+                    <div class="geetest_panel_success_icon"></div>
+
+                </div>
+
+            </div>
+
+            <div class="geetest_panel_success_title">通过验证</div>
+
+        </div>
+
+        <div class="geetest_panel_error">
+
+            <div class="geetest_panel_error_icon"></div>
+
+            <div class="geetest_panel_error_title">网络超时</div>
+
+            <div class="geetest_panel_error_content">请点击此处重试</div>
+
+            <div class="geetest_panel_error_code"></div>
+
+        </div>
+
+        <div class="geetest_panel_footer" style="display: none;">
+
+            <div class="geetest_panel_footer_logo"></div>
+
+            <div class="geetest_panel_footer_copyright">由极验提供技术支持</div>
+
+        </div>
+
+        <div class="geetest_panel_next"></div>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

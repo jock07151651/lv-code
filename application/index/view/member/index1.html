@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{$title} - 662p开源网</title>
+    <meta name="keywords" content="{$keywords}"/>
+   <meta name="description" content="{$description}"/>
+    <meta name="applicable-device" content="pc"/>
+
+    <!--<link href="/static/ask/css/zui.min.css" rel="stylesheet">-->
+
+    <link rel="stylesheet" media="all" href="/static/ask/css/animate.min.css"/>
+
+    <!--<link rel="stylesheet" media="all" href="/static/ask/css/greenzhongchou.css"/>-->
+
+    <!--<link rel="stylesheet" media="all" href="/static/ask/css/greencommon.css"/>-->
+
+
+
+    <link rel="stylesheet" href="/static/ask/css/whatsns.css" media="screen" type="text/css">
+
+    <!--<link rel="stylesheet" media="all" href="/static/ask/css/greencustom.css"/>-->
+
+    <link href="/static/ask/css/font-awesome.css" rel="stylesheet">
+
+    <!--<link rel="stylesheet" href="/static/ask/css/green_main.css">-->
+
+    <link rel="stylesheet" href="/static/ask/css/slider.css">
+
+    <link rel="stylesheet" href="/static/ask/css/basepage.css">
+
+    <link rel="stylesheet" media="all" href="/static/ask/css/index.css"/>
+
+    <link rel="icon" href="/favicon.ico" type="image/gif"/>
+    <link href="__ARTICLE__/css/css.css" rel="stylesheet">
+    <link href="/static/icon/iconfont.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/static/index/css/index.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/member/css/semantic.min.css" />
+    <link type="text/css" rel="stylesheet" href="/static/member/css/space.975be7e2.css" />
+    <script src="__ARTICLE__/js/jquery_002.js" type="text/javascript"></script>
+
+
+
+    <script src="http://dup.baidustatic.com/js/ds.js"></script>
+    <script src="__ARTICLE__/js/js.js" type="text/javascript"></script>
+    <script src="/static/index/js/carousel.js" type="text/javascript" charset="utf-8"></script>
+    <style>
+
+        #body{
+            padding-bottom: 0px;
+        }
+        .navigation-v3 h2 {
+            height: 48px;
+        }
+        .navigation-v3 a{
+            line-height: 48px;
+        }
+        .template,#top{
+            display: none;
+        }
+        .space-sidebar .header{
+            background: none !important;
+        }
+        .content .header{
+            background: none !important;
+        }
+        #mainScreen{
+
+            background: transparent;
+
+        }
+
+        .dropdown-more{
+
+            top: 14px;
+
+        }
+
+        .statistic{
+
+            background: transparent;
+
+            border: none;
+
+        }
+
+        .icon-shixiangxiajiantou-{
+
+            margin-left: 0.5em;
+
+        }
+
+        .icon-combinedshapecopy2{
+
+            margin-right: 0.3em;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+{include file="common/header1" /}
+
+
+<div id="mainScreen">
+
+    <div class="ui container">
+
+        <val data-name="g_space_title" data-value="{$user_info.username}的个人主页"></val>
+        <x-foo-define data-define="space-home-index"></x-foo-define>
+        <div class="ui grid space-home">
+            <div class="row">
+                <div class="five wide computer five wide tablet sixteen wide mobile column">
+                    <!-- <val data-name="gitee_contributions_url" data-value="https://gitee.com/contributions.js?email=4BDAE0D3D30F2F2DEB1D27193C3298AC1B6EF279179BAA1B"></val> -->
+                    <div class="space-sidebar">
+                        <div class="ui basic center aligned segment sidebar-section user-info">
+                            <div class="avatar-wrap">
+                                <a class="ui small circular image avatar" href="https://my.662p.com/{$user_info.userid}">
+                                    <div class="osc-avatar large-portrait _120x120" title="{$user_info.username}" data-user-id="1259554">
+                                        {if condition="$user_info['userpic'] neq ''"}
+                                                    <img src="{$user_info.userpic}" alt="{$user_info.username}" title="{$user_info.username}">
+                                                    {else /}
+                                                    <img src="/static/member/images/nopic.gif" alt="{$user_info.username}" title="{$user_info.username}">
+                                                    {/if}
+
+                                    </div> </a>
+
+                                <div class="gender ui large teal circular label">
+
+                                    <i class="mars icon"></i>
+
+                                </div>
+
+                            </div>
+
+                            <div class="ui header">
+
+                                <h3>{$user_info.username}</h3>
+
+                                <div class="sub header user-signature">
+                                  {$user_info.signature}
+                                </div>
+                                <br />
+
+                            </div>
+
+                            <div class="ui mini images medals">
+
+                                <!-- <img class="ui image popup-oscer" src="/static/member/picture/slogo1541993084965.png" alt="" />
+                                <div class="ui flowing popup hidden items">
+                                    <div class="medal-popup-box item">
+                                        <img class="ui image" src="/static/member/picture/logo1541993084863.png" />
+                                        <div class="content">
+                                            <h3 class="header">原创作者</h3>
+                                            <div class="desc text">
+                                                “
+                                                <a href="#">源创会</a>”在线下联结了各位，推广开源项目和理念，很荣幸有你的参与~
+                                            </div>
+                                            <div class="extra text">
+                                                领取时间：2017/10/21
+                                                <div class="text">
+                                                    领取条件：参与过662p开源网“源创会”的 可以领取
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                               <img class="ui image popup-oscer" src="/static/member/picture/slogo1541993084965.png" alt="" />
+                                <div class="ui flowing popup hidden items">
+                                    <div class="medal-popup-box item">
+                                        <img class="ui image" src="/static/member/picture/logo1541993084863.png" />
+                                        <div class="content">
+                                            <h3 class="header">原创作者</h3>
+                                            <div class="desc text">
+                                                “
+                                                <a href="#">源创会</a>”在线下联结了各位，推广开源项目和理念，很荣幸有你的参与~
+                                            </div>
+                                            <div class="extra text">
+                                                领取时间：2017/10/21
+                                                <div class="text">
+                                                    领取条件：参与过662p开源网“源创会”的 可以领取
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> -->
+
+
+                            </div>
+
+                            <div class="ui three tiny statistics user-statistics">
+                                <a class="statistic" href="#" target="_blank">
+                                    <div class="value">452</div>
+                                    <div class="label">积分</div> </a>
+                                <a class="statistic" href="#">
+                                    <div class="value" data-user-id="1259554" data-followers-count="379" data-format="true">
+                                        379
+                                    </div>
+                                    <div class="label">
+                                        粉丝
+                                    </div> </a>
+
+                                <a class="statistic" href="#">
+
+                                    <div class="value" data-user-id="1259554" data-following-count="9" data-format="true">
+
+                                        9
+
+                                    </div>
+
+                                    <div class="label">
+
+                                        关注
+
+                                    </div> </a>
+
+                            </div>
+
+                            <div class="item action clearfix">
+
+
+
+                                <!-- <a class="ui green button follow-btn" data-user-id="1259554" data-follow-status="1"><i class="heart outline icon"></i><span class="text">关注</span></a>
+
+                                <a class="ui green basic button send-message-btn" data-user-id="1259554" data-user-name="李玉珏"><i class="envelope outline icon"></i>私信</a>
+
+                                <div class="ui basic dropdown more dropdown-more">
+
+                                    <div class="ui icon green basic button menu-btn">
+
+                                        <i class="bars icon"></i>
+
+                                    </div>
+
+                                    <div class="menu">
+
+                                        <a class="item" href="https://www.oschina.net/question/ask?user=1259554" target="_blank"><i class="comment outline icon"></i>提问</a>
+
+                                        <a class="item" user-block="" data-id="1259554" data-status="0"><i class="ban icon"></i><span class="text">加灰</span></a>
+
+                                        <a class="item ban" ban-report="" data-id="1259554" data-obj-type="32" data-url="https://my.662p.com/liyuj"> <i class="flag icon"></i>举报 </a>
+                                    </div>
+                                </div> -->
+
+                               <!-- <a class="ui green small button write-btn" href="http://my.662p.com/mdeditor"><i class="iconfont icon-combinedshapecopy2"></i><span class="text">写博客</span></a>
+                               <a class="ui basic small button" href="#"><i class="folder outline icon"></i><span class="text">草稿箱 (0)</span></a> -->
+                            </div>
+
+                        </div>
+
+                        <div class="ui basic segment sidebar-section">
+                            <h3 class="header">其他信息</h3>
+                            <div class="ui list">
+                                <div class="item">
+                                    <b>会员组：</b>{$user_info.groupname}
+                                </div>
+                                <div class="item">
+                                    <b>从事行业：</b>{$jobs_info.job_name}
+                                </div>
+                                <div class="item">
+                                    <b>开发平台：</b> Java EE, Java SE, Linux/Unix
+                                </div>
+                            </div>
+                            <div class="content panel-skills-radar">
+                                <div class="skills-radar">
+                                    <div class="radar-wrap" radar="" data-user-id="1259554" data-skills-num="5" data-detail-url="#" data-container=".panel-skills-radar" data-empty-show="">
+                                        <div class="radar-map"></div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="ui basic segment sidebar-section">
+                            <h3 class="header">统计</h3>
+                            <div class="ui list">
+                                <div class="item">
+                                    本月访问：2864
+                                </div>
+                                <div class="item">加入时间：2013/09/03 09:02</div>
+                            </div>
+                        </div>
+                        <div class="ui basic segment sidebar-section">
+                            <h3 class="header">文章排行</h3>
+                            <div class="ui list">
+                               {volist name="latestArticle" id="foo"}
+                               <div class="item"><a href="http://www.662p.com/article/{$foo.id}.html" target="_blank">.{$foo.title|mb_substr=0,20,'utf-8'}</a></div>
+                               {/volist}
+                                
+                                
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="eleven wide computer eleven wide tablet sixteen wide mobile column">
+
+                    <div class="ui inverted dimmer space-index-container-loader">
+
+                        <div class="ui text loader">
+
+                            加载中
+
+                        </div>
+
+                    </div>
+
+                    <div class="space-index-container">
+
+                        <div class="hidden-scroll global-mb ">
+
+                            <div class="ui green pointing secondary big menu space-tab">
+
+                                <input type="hidden" name="currentTab" value="newest" />
+
+                                <div class="ui dropdown item active blog-dropdown">
+
+                                    <input name="catalogId" type="hidden" value="0" />
+
+                                    <div class="text">
+
+                                        动态
+
+                                    </div>
+
+                                    <i class="iconfont icon-shixiangxiajiantou-"></i>
+
+                                    <div class="menu">
+
+                                        <a href="?tab=newest&amp;catalogId=0" class="item" data-value="0"> <span class="description">78</span> <span class="text">动态</span> </a>
+
+                                        <a href="?tab=newest&amp;catalogId=3378059" class="item" data-value="3378059"> <span class="description">54</span> <span class="text" title="Ignite">Ignite</span> </a>
+
+                                        <a href="?tab=newest&amp;catalogId=389172" class="item" data-value="389172"> <span class="description">0</span> <span class="text" title="日常记录">日常记录</span> </a>
+
+                                        <a href="?tab=newest&amp;catalogId=389173" class="item" data-value="389173"> <span class="description">0</span> <span class="text" title="转贴的文章">转贴的文章</span> </a>
+
+                                        <a href="?tab=newest&amp;catalogId=3587124" class="item" data-value="3587124"> <span class="description">5</span> <span class="text" title="Activiti">Activiti</span> </a>
+
+                                    </div>
+
+                                </div>
+
+                                <a href="?tab=popular" class=" item">博客<span>({$artcount})</span></a>
+                                <a href="?tab=tweet" class=" item">源码<span>(0)</span></a>
+
+                                <div class="ui secondary right large menu search-form-wrap">
+
+                                    <form class="item search-form">
+
+                                        <div class="ui icon small input">
+
+                                            <input type="text" placeholder="搜索{$user_info.username}的博客" name="q" value="" />
+
+                                            <i class="search link icon"></i>
+
+                                        </div>
+
+                                    </form>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="ui basic segment article-list" id="newestBlogList">
+
+                            <div class="ui relaxed divided items list-container space-list-container">
+                                {volist name="user_article" id="foo"}
+                                 <div class="item blog-item" data-id="3107478">
+                                    <div class="content">
+                                        <a class="header" href="http://www.662p.com/article/{$foo.id}.html" target="_blank">
+                                            <!-- <div class="ui blue label horizontal" data-tooltip="置顶">顶</div>
+                                            <div class="ui teal label horizontal" data-tooltip="原创">原</div>
+                                            <div class="ui orange label horizontal" data-tooltip="推荐">荐</div>  -->
+                                        {$foo.title}</a>
+                                        <div class="description">
+                                            <p class="line-clamp">{$foo.content|mb_substr=0,200,'utf-8'}...</p>
+                                        </div>
+                                        <div class="extra">
+                                            <div class="ui horizontal list">
+                                                <div class="item">
+                                                    {if condition="$foo['keywords'] neq ''"}<a class="ui horizontal label">{$foo.keywords}</a>{else /} {/if}
+                                                </div>
+                                               
+                                            </div>
+
+                                            <div>
+
+                                                <div class="ui horizontal small list">
+                                                    <div class="item">
+                                                        <a href="https://my.662p.com/{$user_info.userid}" class="catalog-name-link">博客</a>
+                                                    </div>
+                                                    <div class="item">
+                                                        {$foo.time|date='Y-m-d H:i:s',###}
+                                                    </div>
+                                                    <div class="item">
+                                                        <i class="eye icon"></i>  {$foo.click}
+                                                    </div>
+                                                    <div class="item">
+                                                        <a href="https://my.662p.com/liyuj/blog/3107478#comments" target="_blank"><i class="comment outline icon"></i>   </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {if condition="$foo['thumb'] neq ''"}
+                                    <div class="images">
+                                        <a class="ui small image" href="http://www.662p.com/article/{$foo.id}.html" target="_blank"> <img src="{$foo.thumb}" alt="" data-img-render="" /> </a>
+                                                                         </div>{else /} {/if}  
+                                </div>{/volist}    
+                            
+                              <!-- <div class="item blog-item" data-id="3099914">
+                                    <div class="content">
+                                        <a class="header" href="https://my.662p.com/liyuj/blog/3099914" target="_blank">
+                                            <div class="ui blue label horizontal" data-tooltip="置顶">
+                                                顶
+                                            </div>
+                                            <div class="ui teal label horizontal" data-tooltip="原创">
+                                                原
+                                            </div> Kafka连接器之在2.3版本中的改进 </a>
+                                        <div class="description">
+                                            <p class="line-clamp">在Kafka的2.3版本中，对Kafka连接器做了很大的改进。首先就是在添加和删除连接器时，修改了Kafka连接器处理任务的方式。之前这个动作造成了整个系统的停顿，这是一直被开发和运维人员诟病的地...</p>
+                                        </div>
+                                        <div class="extra">
+                                            <div class="ui horizontal list">
+                                                <div class="item">
+                                                    <a class="ui horizontal label" href="https://my.662p.com/liyuj?q=curl">curl</a>
+                                                    <a class="ui horizontal label" href="https://my.662p.com/liyuj?q=ElasticSearch">ElasticSearch</a>
+                                                    <a class="ui horizontal label" href="https://my.662p.com/liyuj?q=jq">jq</a>
+                                                    <a class="ui horizontal label" href="https://my.662p.com/liyuj?q=Elastic">Elastic</a>
+                                                    <a class="ui horizontal label" href="https://my.662p.com/liyuj?q=Kafka">Kafka</a>
+                                                </div>
+
+                                            </div>
+
+                                            <div>
+
+                                                <div class="ui horizontal small list">
+
+                                                    <div class="item">
+
+                                                        <a href="https://my.662p.com/liyuj?tab=newest&amp;catalogId=6400291" class="catalog-name-link">Kafka</a>
+
+                                                    </div>
+
+                                                    <div class="item">
+
+                                                        08/30 16:57
+
+                                                    </div>
+
+                                                    <div class="item">
+
+                                                        <i class="eye icon"></i> 44
+
+                                                    </div>
+
+                                                    <div class="item">
+
+                                                        <a href="https://my.662p.com/liyuj/blog/3099914#comments" target="_blank"><i class="comment outline icon"></i> 0</a>
+
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                    <div class="images">
+                                        <a class="ui small image" href="https://my.662p.com/liyuj/blog/3099914" target="_blank"> <img src="/static/member/picture/kibana_rebalance_kafka_2.2_vs_2.3.png" alt="" data-img-render="" /> </a>
+                                    </div>
+                                </div>  -->
+
+                                
+
+                                
+
+                            </div>
+
+                            <div class="page-load-status">
+
+                                <p class="infinite-scroll-request"> <i class="ui active small inline loader"></i> </p>
+
+                                <p class="infinite-scroll-last">没有更多内容</p>
+
+                                <p class="infinite-scroll-error">加载失败，请刷新页面</p>
+
+                            </div>
+
+                            <a class="ui fluid button load-more-button" style="display: none">加载更多</a>
+
+                            <p class="pagination"> <a class="pagination__next" style="display: none" href="https://my.662p.com/liyuj/widgets/_space_index_newest_blog?catalogId=0&amp;q=&amp;p=2&amp;type=ajax">下一页</a> </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+        <div class="ui mini delete-blog modal">
+            <div class="header">
+                删除文章
+            </div>
+            <div class="content">
+                <p>文章删除后无法恢复，确定删除此文章吗？</p>
+            </div>
+            <div class="actions">
+                <div class="ui cancel button">
+                    取消
+                </div>
+
+                <div class="ui red ok button">
+
+                    确定
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="ui mini delete-tweet modal">
+
+            <div class="header">
+
+                删除动弹
+
+            </div>
+
+            <div class="content">
+
+                <p>动弹删除后，数据将无法恢复</p>
+
+            </div>
+
+            <div class="actions">
+
+                <div class="ui cancel button">
+
+                    取消
+
+                </div>
+
+                <div class="ui red ok button">
+
+                    确定
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="ui mini delete-tweet-comment modal">
+
+            <div class="header">
+
+                删除一条评论
+
+            </div>
+
+            <div class="content">
+
+                <p>评论删除后，数据将无法恢复</p>
+
+            </div>
+
+            <div class="actions">
+
+                <div class="ui cancel button">
+
+                    取消
+
+                </div>
+
+                <div class="ui red ok button">
+
+                    确定
+
+                </div>
+
+            </div>
+
+        </div>
+
+    
+
+    </div>
+
+</div>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="back-to-top back-to-top-toggle">
+
+    <div class="icon">
+
+        <img src="/static/member/picture/back-to-top.svg" alt="返回顶部" />
+
+    </div>
+
+    <div class="text">
+
+        顶部
+
+    </div>
+
+</div>
+
+<!-- <script src="/static/member/js/semantic.min.js"></script>
+
+<script src="/static/member/js/jweixin-1.2.0.js"></script>
+
+<script type="text/javascript" src="/static/member/js/space.9864f7b8.js"></script> 
+    <script type="text/javascript" src="/static/member/js/831ad044d2c04e488eaa1e9e5ad8f460.js"></script>
+-->
+
+{include file="common/footer" /}
+</body>
+</html>
+

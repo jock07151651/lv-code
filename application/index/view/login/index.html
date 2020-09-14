@@ -1,0 +1,418 @@
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+
+
+
+    <!-- Start of Baidu Transcode -->
+
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+
+    <meta http-equiv="Cache-Control" content="no-transform">
+
+    <meta name="applicable-device" content="pc,mobile">
+
+    <meta name="MobileOptimized" content="width">
+
+    <meta name="HandheldFriendly" content="true">
+    <!-- End of Baidu Transcode -->
+
+
+
+    <meta name="description" content="">
+
+
+
+    <meta name="360-site-verification" content="604a14b53c6b871206001285921e81d8">
+
+    <meta property="wb:webmaster" content="294ec9de89e7fadb">
+
+    <meta property="qc:admins" content="104102651453316562112116375">
+
+    <meta property="qc:admins" content="11635613706305617">
+
+    <meta property="qc:admins" content="1163561616621163056375">
+
+    <meta name="google-site-verification" content="cV4-qkUJZR6gmFeajx_UyPe47GW9vY6cnCrYtCHYNh4">
+
+    <meta name="google-site-verification" content="HF7lfF8YEGs1qtCE-kPml8Z469e2RHhGajy6JPVy5XI">
+
+    <!-- Apple -->
+
+    <meta name="apple-mobile-web-app-title" content="开发吗">
+
+
+
+
+
+    <title>{$sefltitle}111- {$titleConf}</title>
+    <meta name="csrf-param" content="authenticity_token">
+    <meta name="csrf-token"
+          content="zeqp995UqEGK7Trg57vQNF86VpeA7yX3IVPupUjU8MNNHPvVTDHXjx0ZMt2N/9zkJM1ufIJHkjJbaYK6hmwBDQ==">
+    <link rel="stylesheet" media="all" href="/static/index/jianshu/css/web-d8f364aa94534f48835a.css">
+    <link rel="stylesheet" media="all" href="/static/index/jianshu/css/entry-725103a0668ccb1789d4.css">
+    <link rel="stylesheet" href="/static/sweetalert/sweetalert2.css">
+
+
+
+
+
+    <!--<link href="//cdn2.jianshu.io/assets/favicons/favicon-e743bfb1821442341c3ab15bdbe804f7ad97676bd07a770ccc9483473aa76f06.ico"
+
+          rel="shortcut icon" type="image/x-icon">-->
+
+
+
+    <!-- Start of 访问统计 -->
+
+    <script src="https://zz.bdstatic.com/linksubmit/push.js"></script>
+
+    <!--<script src="//hm.baidu.com/hm.js?0c0e9d9b1e7d617b3e6842e85b9fb068"></script>-->
+
+    <script>
+
+        var _hmt = _hmt || [];
+
+        (function () {
+
+            var hm = document.createElement("script");
+
+            hm.src = "//hm.baidu.com/hm.js?0c0e9d9b1e7d617b3e6842e85b9fb068";
+
+            var s = document.getElementsByTagName("script")[0];
+
+            s.parentNode.insertBefore(hm, s);
+
+        })();
+
+    </script>
+
+
+
+    <!-- End of 访问统计 -->
+
+    <!--<script charset="UTF-8" async=""
+
+            src="https://api.geetest.com/gettype.php?gt=ec47641997d5292180681a247db3c92e&amp;callback=geetest_1557286623704"></script>-->
+
+</head>
+
+
+
+<body class="no-padding reader-black-font" lang="zh-CN">
+
+<div class="sign">
+
+    <div class="logo"><a href="/"><img style="width: 156px;" src="/static/article/picture/logo.gif"
+
+                                       alt="Logo"></a></div>
+
+    <div class="main">
+
+
+
+
+
+        <h4 class="title">
+
+            <div class="normal-title">
+
+                <a class="active" href="/login">登录</a>
+
+                <b>·</b>
+
+                <a id="js-sign-up-btn" class="" href="/register">注册</a>
+
+            </div>
+
+        </h4>
+
+        <div class="js-sign-in-container">
+
+            <form id="new_session" onsubmit="return false" action="/sessions" accept-charset="UTF-8" method="post"><input name="utf8"
+
+                                                                                                  type="hidden"
+
+                                                                                                  value="✓"><input
+
+                    type="hidden" name="authenticity_token"
+
+                    value="zeqp995UqEGK7Trg57vQNF86VpeA7yX3IVPupUjU8MNNHPvVTDHXjx0ZMt2N/9zkJM1ufIJHkjJbaYK6hmwBDQ==">
+
+
+
+                <!-- 正常登录登录名输入框 -->
+
+                <div class="input-prepend restyle js-normal">
+
+                    <input placeholder="账户名或邮箱或手机号" value="{eq name='Think.cookie.username' value=''}{else/}{$Think.cookie.username}{/eq}" type="text" name="username"
+
+                           id="session_email_or_mobile_number">
+
+                    <i class="iconfont ic-user"></i>
+
+                </div>
+
+
+
+                <!-- 海外登录登录名输入框 -->
+
+
+
+                <div class="input-prepend">
+
+                    <input placeholder="密码" value="{eq name='Think.cookie.password' value=''}{else/}{$Think.cookie.password}{/eq}" type="password" name="password" id="session_password">
+
+                    <i class="iconfont ic-password"></i>
+
+                </div>
+
+                <div class="remember-btn">
+
+                    <input type="checkbox" {eq name="Think.cookie.username" value="" }{else/}checked{/eq} name="remember"
+
+                           id="session_remember_me"><span>记住我</span>
+
+                </div>
+
+                <div class="forget-btn">
+
+                    <a class="" data-toggle="dropdown" onclick="showMenu()" href="javascript:void(0);">登录遇到问题?</a>
+
+                    <ul style="display: none;" class="dropdown-menu">
+
+                        <li><a href="http://code.662p.com/reset/2">用邮箱重置密码</a></li>
+
+                        <li><a href="http://code.662p.com/reset/1">用手机号重置密码</a></li>
+
+                        <!--<li><a target="_blank" href="/p/9058d0b8711d">无法用海外手机号登录</a></li>-->
+
+                        <!--<li><a target="_blank" href="/p/498a9fa7da08">无法用 Google 帐号登录</a></li>-->
+
+                    </ul>
+
+                </div>
+
+                <button onclick="submitForm()" class="sign-in-button" id="sign-in-form-submit-btn" type="button">
+
+                    <span id="sign-in-loading"></span>
+
+                    登录
+
+                </button>
+
+            </form>
+
+            <!-- 更多登录方式 -->
+
+            <div class="more-sign">
+
+                <h6>社交帐号登录</h6>
+
+                <ul>
+
+                    <li id="weibo-link-wrap" class="">
+
+                        <a class="weibo" id="weibo-link">
+
+                            <i class="iconfont ic-weibo"></i>
+
+                        </a>
+
+                    </li>
+
+                    <li><a id="weixin" class="weixin" target="_blank" href="/users/auth/wechat"><i
+
+                            class="iconfont ic-wechat"></i></a></li>
+
+                    <li><a id="qq" class="qq" target="_blank" href="/qqLogin"><i
+
+                            class="iconfont ic-qq_connect"></i></a></li>
+
+                    <li class="js-more-method" id="more"><a href="javascript:void(0);"><i class="iconfont ic-more"></i></a>
+
+                    </li>
+
+                    <li class="js-hide-method hide"><a class="douban" target="_blank" href="/users/auth/douban"><i
+
+                            class="iconfont ic-douban"></i></a></li>
+
+                </ul>
+
+
+
+                <div class="weibo-geetest-captcha"></div>
+
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+</div>
+
+
+
+<!-- Javascripts
+
+================================================== -->
+
+<!-- Placed at the end of the document so the pages load faster -->
+
+<script type="application/json" data-name="page-data">{
+
+    "user_signed_in": false,
+
+    "locale": "zh-CN",
+
+    "os": "windows",
+
+    "read_mode": "day",
+
+    "read_font": "font2"
+
+}</script>
+
+
+
+<!--<script src="//cdn2.jianshu.io/assets/web-base-614eb17d081760c1920e.js" crossorigin="anonymous"></script>-->
+
+<!--<script src="//cdn2.jianshu.io/assets/web-7830963d3e6f819a2d60.js" crossorigin="anonymous"></script>-->
+
+<!--<script src="//cdn2.jianshu.io/assets/web/pages/common/signin/entry-f7e14e2f1268430af7b9.js"
+
+        crossorigin="anonymous"></script>-->
+
+
+
+
+
+<script src="/static/admin/style/jquery_002.js"></script>
+
+<script src="/static/layer/layer.js"></script>
+
+<script src="/static/sweetalert/sweetalert2.js"></script>
+
+<script>
+
+    function showMenu(){
+
+        $('.dropdown-menu').toggle()
+
+    }
+
+    function submitForm(){
+
+        var formData = new FormData($('form')[0]);
+
+        username = $('input[name=username]').val()
+
+        password = $('input[name=password]').val();
+
+        username = $.trim(username);
+
+        password = $.trim(password);
+
+        if(!username){
+
+            layer.tips('请输入用户名！',$('input[name=username]'),{tips:[2,'#ff0000'],time:1500})
+
+            return false;
+
+        }
+
+
+
+        if(!password){
+
+            layer.tips('请输入密码！',$('input[name=password]'),{tips:[2,'#ff0000'],time:1500})
+
+            return false;
+
+        }
+
+
+
+
+
+        $.ajax({
+
+            url:"http://code.662p.com/login",
+
+            data:formData,
+
+            type:'post',
+
+            processData:false,
+
+            contentType:false,
+
+            beforeSend:function () {
+
+                layer.load()
+
+            },
+
+            success:function(msg){
+
+                layer.closeAll('loading')
+
+                if(msg.code){
+
+                    swal({
+
+                        title:'',
+
+                        text:msg.info,
+
+                        type:"success",
+
+                        timer:1500,
+
+                        showConfirmButton:false
+
+                    });
+
+                    setTimeout(function(){
+
+                        window.location.href="/"
+
+                    },1500)
+
+                }else{
+
+                    swal({
+
+                        title:'',
+
+                        text:msg.info,
+
+                        type:"warning",
+
+                        timer:2000,
+
+                        showConfirmButton:false
+
+                    });
+
+                }
+
+            }
+
+        })
+
+    }
+
+</script>
+
+</body>
+
+</html>

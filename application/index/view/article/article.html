@@ -1,0 +1,356 @@
+﻿
+{include file="public/head_view"}
+
+{include file="public/head_lv_body"}
+
+<div style="text-align: center;"><a href='#'>主页</a> >
+                        {volist name="posArr" id="posCate"}
+                         <a href='{:url('artlist/index',array('cateid'=>$posCate['id']))}'>{$posCate.catename}</a> > 
+                        {/volist}
+                    </div>
+<div class="aw-container-wrap">
+    <div class="container">
+        <div class="row">
+            <div class="aw-content-wrap clearfix">
+                <div class="col-sm-12 col-md-9 aw-main-content aw-article-content">
+                    <div class="aw-mod aw-topic-bar" id="question_topic_editor" data-type="article" data-id="63">
+                        <div class="tag-bar clearfix">
+                            <a id="fontsize" class="pull-left">A+</a>
+                                                                                    <span class="topic-tag" data-id="53">
+                                <a class="text" href="http://www.yirenji.com/topic/meinv">美女</a>
+                            </span>
+                                                        <span class="topic-tag" data-id="52">
+                                <a class="text" href="http://www.yirenji.com/topic/pic">图片</a>
+                            </span>
+                                                        
+                                                    </div>
+                    </div>
+                    <div class="aw-mod aw-question-detail">
+                        <div class="mod-head">
+                        <div class="biaoboxs pull-right hidden-xs">
+                                                    </div>
+                            <h1>
+                                <span class="font24">{$articles.title}</span>
+                            </h1>
+
+                                                    </div>
+                        <div class="mod-body">
+                            <div id="content-fox" class="content markitup-box font18 line-bigs">
+                                {$articles.content}
+                                
+                                                            </div>
+                            <div class="banquan hidden-sm hidden-xs">
+                                <p>免责声明：本网站所收集的部分公开资料来源于互联网，转载的目的在于传递更多信息及用于网络分享，并不代表本站赞同其观点和对其真实性负责，也不构成任何其他建议。如果您发现网站上有侵犯您的知识产权的作品，请与我们取得联系，我们会及时修改或删除。</p>
+                            </div>
+                            <style>
+@media (max-width:800px){.to-tip{display:none!important}
+}
+@keyframes myfirst
+{
+0%   {background:#FF7F24;}
+25%  {background:#FF3E96;}
+50%  {background:#6B8E23;}
+100% {background:#00B2E;}
+}
+
+@-moz-keyframes myfirst /* Firefox */
+{
+0%   {background:#FF7F24;}
+25%  {background:#FF3E96;}
+50%  {background:#6B8E23;}
+100% {background:#00B2E;}
+}
+
+@-webkit-keyframes myfirst /* Safari and Chrome */
+{
+0%   {background:#FF7F24;}
+25%  {background:#FF3E96;}
+50%  {background:#6B8E23;}
+100% {background:#00B2E;}
+}
+
+@-o-keyframes myfirst /* Opera */
+{
+0%   {background:#FF7F24;}
+25%  {background:#FF3E96;}
+50%  {background:#6B8E23;}
+100% {background:#00B2E;}
+}
+.to-tip{border-top:1px solid #eee;border-bottom:1px solid #eee;background:#fff;text-align:center;position:relative;}
+.to-tip .inner{display:inline-block;margin:40px 0;}
+.to-tip .top-tip-shap{border-radius:100%}
+.to-tip .top-tip-shap a{display:block;width:60px;height:60px;border:1px solid #eee;border-radius:100%;background:#FF5E52;color:#fff;font-size:24px;line-height:58px;text-align:center;}
+.to-tip .top-tip-shap a:hover{background:#dd3030}
+.to-tip .top-tip-shap a:hover .to_code{display:block;}
+.to-tip .top-tip-shap a cite{display:block;color:#666;font-size:12px;line-height:20px;}
+.to-tip .to_code{display:none;position:absolute;left:50%;top:0px;min-width:500px;text-align:center;height:180px;border:0 solid #e6e6e6;background-color:#fff;line-height:14px;transform:translate3d(-50%,0,0);-webkit-transform:translate3d(-50%,0,0);}
+.to-tip .to_code img{width:120px;height:120px}
+.to-tip .to_code b{color:#333;font-weight:400;font-size:12px}
+.to-tip .to_code .shang{text-align:center;color:#666;}
+.to-tip .to_code .shang cite{margin:20px 0 0 0;height:50px;padding:0 10px;border:1px solid #eee;border-radius:40px;background:#FF5E52;color:#fff;font-size:24px;line-height:50px;animation:myfirst 5s;
+-moz-animation:myfirst 5s; /* Firefox */
+-webkit-animation:myfirst 5s; /* Safari and Chrome */
+-o-animation:myfirst 5s; /* Opera */}
+.qianbox{display:none;}
+.qianbox .dashang_gu{margin-bottom:10px;}
+.qianbox .m-body{margin-bottom:10px;padding:10px 0;}
+.qianbox .dashang_gu .btn{min-width:80px;margin:5px;}
+.qianbox .dashang_gu .dingyi a{font-size:14px;color:#f60;text-align:center;line-height:36px;}
+.qianbox span{color:#ff6600;}
+.shangput{width:80px;height:30px;color:#ff6600;border:1px solid #ddd;border-radius:4px;padding:0px 8px;-moz-appearance:textfield;-webkit-appearance: none !important;}
+.mod-shang-box{padding:5px 0;}
+.mod-shang-box a{margin:5px;}
+</style>
+<section class="to-tip">
+<div class="inner">
+    <div class="top-tip-shap" id="shangbox">
+    <a class="aw-icon-thank-tips">赏 
+    <div class="to_code row">
+        <div class="col-md-4">
+        <img alt="支付宝打赏" src="/static/alipayma.png"><br /><b>支付宝 扫一扫</b>
+        </div>
+        <div class="col-md-4">
+            <div class="shang">
+            <cite>打赏</cite>
+            <br /><button onclick="showqianbao();" id="bao" class="btn btn-xs btn-danger">使用钱包打赏</button>
+                        </div>
+        </div>
+        <div class="col-md-4">
+        <img alt="微信打赏" src="/static/wxpayma.png"><br /><b>微信 暂未开通</b>
+        </div>
+    </div>
+        <cite>0.01</cite>
+        </a>
+    </div>
+        <div class="qianbox" id="qianbaobox">
+        <div class="dashang_gu row">
+            <div class="m-body">
+            您的钱包存有：<span>0.00</span> 元， <button onclick="chongzhi();" id="chong" class="btn btn-xs btn-info">在线充值</button>
+            </div>
+            <div class="m-body">
+                <div class="col-md-3"><a onclick="AWS.ajax_request(G_BASE_URL + '/dashang/ajax/shanghim/', 'itemid=63&touid=316&shangnum=1');" class="btn btn-xs btn-warning">1 元</a></div>
+                <div class="col-md-3"><a onclick="AWS.ajax_request(G_BASE_URL + '/dashang/ajax/shanghim/', 'itemid=63&touid=316&shangnum=2');" class="btn btn-xs btn-warning">2 元</a></div>
+                <div class="col-md-3"><a onclick="AWS.ajax_request(G_BASE_URL + '/dashang/ajax/shanghim/', 'itemid=63&touid=316&shangnum=5');" class="btn btn-xs btn-warning">5 元</a></div>
+                <div class="col-md-3"><a onclick="AWS.ajax_request(G_BASE_URL + '/dashang/ajax/shanghim/', 'itemid=63&touid=316&shangnum=10');" class="btn btn-xs btn-warning">10 元</a></div>
+                <div class="col-md-3"><a onclick="AWS.ajax_request(G_BASE_URL + '/dashang/ajax/shanghim/', 'itemid=63&touid=316&shangnum=20');" class="btn btn-xs btn-warning">20 元</a></div>
+                <div class="col-md-3"><a onclick="AWS.ajax_request(G_BASE_URL + '/dashang/ajax/shanghim/', 'itemid=63&touid=316&shangnum=50');" class="btn btn-xs btn-warning">50 元</a></div>
+                <div class="col-md-3"><a onclick="AWS.ajax_request(G_BASE_URL + '/dashang/ajax/shanghim/', 'itemid=63&touid=316&shangnum=100');" class="btn btn-xs btn-warning">100 元</a></div>
+                <div class="col-md-3"><a onclick="AWS.ajax_request(G_BASE_URL + '/dashang/ajax/shanghim/', 'itemid=63&touid=316&shangnum=200');" class="btn btn-xs btn-warning">200 元</a></div>
+            </div>
+            <div class="m-body">
+                <div class="dingyi"><a onclick="showdy();">自定义打赏金额</a></div>
+            </div>
+        </div>
+        <div id="formbox" class="m-body hide">
+            <form id="shanghim" action="http://www.yirenji.com/dashang/ajax/shanghim/" method="post" onsubmit="return false;">
+            <input name="touid" id="touid" type="hidden" value="316">
+            <input name="itemid" id="itemid" type="hidden" value="63">
+            打赏作者<input name="shangnum" id="shangnum" class="shangput" type="text" value="1">元
+            &nbsp;
+            <button onclick="shanghim();" id="bao" class="btn btn-small btn-danger">确认打赏</button>
+            </form>
+        <div class="m-body">
+    </div>
+    </div>
+</section>
+<script>
+    function showqianbao(){
+        $("#shangbox").hide();
+        $("#qianbaobox").fadeIn();
+    }
+    function shanghim(){
+        $("#qianbaobox").hide();
+        $("#shangbox").fadeIn();
+        AWS.ajax_post($('#shanghim')); return false;
+    }
+    function chongzhi(){
+        var url=G_BASE_URL+'/charge/charge/';
+        window.location.href=url;
+    }
+    function baologin(){
+        var url=G_BASE_URL+'/account/login/';
+        window.location.href=url;
+    }
+    function showdy(){
+        $("#formbox").fadeIn();
+    }
+
+</script>
+<div class="mod-head">
+谨代表作者感谢下列打赏者：
+</div>
+<div class="mod-body bs-callout bs-callout-danger">
+    <div class="mod-shang-box">
+        <a class="text-color-999 invite-list-user aw-user-name" data-id="2" href="http://www.yirenji.com/people/xiaowuge20181102" data-title="0.01" data-placement="top" data-toggle="tooltip"><img src="http://www.yirenji.com/uploads/avatar/000/00/00/02_avatar_mid.jpg"></a>
+        </div>
+</div>
+                            <div class="meta clearfix">
+                                <div class="aw-article-vote pull-left">
+                                    <a href="javascript:;" class="agree" onclick="AWS.User.article_vote($(this), 63, 1);"><i class="icon icon-agree"></i> <b>0</b></a>
+                                                                        <a href="javascript:;" class="disagree" onclick="AWS.User.article_vote($(this), 63, -1);"><i class="icon icon-disagree"></i></a>
+                                                                    </div>
+
+                                <span class="pull-right  more-operate">
+                                    
+                                    <a href="javascript:;" onclick="AWS.dialog('favorite', {item_id:63, item_type:'article'});" class="text-color-999"><i class="icon icon-favor"></i> 收藏</a>
+                                    <a class="text-color-999 dropdown-toggle" data-toggle="dropdown">
+                                        <i class="icon icon-share"></i> 分享                                    </a>
+                                    <div aria-labelledby="dropdownMenu" role="menu" class="aw-dropdown shareout pull-right">
+                                        <ul class="aw-dropdown-list">
+                                            <li><a onclick="AWS.User.share_out('tsina');"><i class="icon icon-weibo"></i> 微博</a></li>
+                                            <li><a onclick="AWS.User.share_out('qzone');"><i class="icon icon-qzone"></i> QZONE</a></li>
+                                            <li><a onclick="AWS.User.share_out('weixin');"><i class="icon icon-wechat"></i> 微信</a></li>
+                                        </ul>
+                                    </div>
+
+                                    <em class="text-color-999">2016-04-07</em>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="mod-footer">
+                                                    </div>
+                    </div>
+
+                    <!-- 文章评论 -->
+                    <div class="aw-mod">
+                        <div class="mod-head common-head">
+                            <h2>0 个评论</h2>
+                        </div>
+
+                        <div class="mod-body aw-feed-list">
+                                                    </div>
+
+                        
+                                            </div>
+                    <!-- end 文章评论 -->
+
+                    <!-- 回复编辑器 -->
+                    <div class="aw-mod aw-article-replay-box">
+                        <a name="answer_form"></a>
+                                                <form action="http://www.yirenji.com/article/ajax/save_comment/" onsubmit="return false;" method="post" id="answer_form">
+                        <input type="hidden" name="post_hash" value="4ed14804b7a9024c" />
+                        <input type="hidden" name="article_id" value="63" />
+                        <div class="mod-head">
+                            <a href="http://www.yirenji.com/people/" class="aw-user-name"><img alt="IT狂人" src="http://www.yirenji.com/uploads/avatar/000/00/14/08_avatar_mid.jpg" /></a>
+                        </div>
+                        <div class="mod-body">
+                            <textarea rows="3" name="message" id="comment_editor" class="form-control autosize" placeholder="写下你的评论..."  /></textarea>
+                        </div>
+                        <div class="mod-footer clearfix">
+                            <a href="javascript:;" onclick="AWS.ajax_post($('#answer_form'), AWS.ajax_processer, 'reply');" class="btn btn-normal btn-success pull-right btn-submit btn-reply">回复</a>
+                                                    </div>
+                        </form>
+                                            </div>
+                    <!-- end 回复编辑器 -->
+                </div>
+                <!-- 侧边栏 -->
+                <div class="col-sm-12 col-md-3 aw-side-bar hidden-sm hidden-xs">
+                    <!-- 发起人 -->
+                                        <div class="aw-mod user-detail">
+                        <div class="mod-head">
+                            <h3>发起人</h3>
+                        </div>
+                        <div class="mod-body">
+                            <dl>
+                                <dt class="pull-left aw-border-radius-5">
+                                    <a href="http://www.yirenji.com/people/melody"><img alt="melody" src="http://www.yirenji.com/uploads/avatar/000/00/03/16_avatar_mid.jpg" /></a>
+                                </dt>
+                                <dd class="pull-left">
+                                    <a class="aw-user-name" href="http://www.yirenji.com/people/melody" data-id="316">{$articles.author}</a>
+                                    
+                                                                        <a class="icon-inverse follow tooltips icon icon-plus " onclick="AWS.User.follow($(this), 'user', 316);"></a>
+                                                                        <p></p>
+                                </dd>
+                            </dl>
+                            <ul style="font-size:12px;"> 
+                                                        <li><i class="icon icon-location" style="font-size:14px;margin-right:4px;"></i> 坐标 : <em class="aw-text-color-orange">云南省昆明市</em></li>
+                                                        <li><i class="icon icon-prestige"></i> 威望 : <em class="aw-text-color-orange">0</em></li>
+                            <li><i class="icon icon-score"></i> 积分 : <em class="aw-text-color-orange">2000</em></li>
+                            <li><i class="icon icon-user" style="font-size:14px;margin-right:4px;"></i> 粉丝 : <em class="aw-text-color-orange">0</em></li>
+                            <li><i class="icon icon-beat" style="font-size:14px;margin-right:4px;"></i> 签到 : <em class="aw-text-color-orange">0</em></li>
+                            </ul>
+                        </div>
+                        <div class="mod-footer clearfix">
+                                                    </div>
+                    </div>
+                                        <!-- end 发起人 -->
+                    <div class="aw-mod aw-text-align-justify">
+    <div class="mod-head">
+        <h3>TA 的专栏</h3>
+    </div>
+    <div class="mod-body">
+            
+        <dl>
+            <dt class="pull-left aw-border-radius-5">
+                <a href="http://www.yirenji.com/zhuanlan/details/prettygirl">
+                                <img src="http://www.yirenji.com/uploads/avatar/000/00/03/16_avatar_mid.jpg" alt="">
+                                </a>
+            </dt>
+            <dd class="pull-left">
+                <a href="http://www.yirenji.com/zhuanlan/details/prettygirl" target="_blank">为美人写字的地方</a>
+                <p class="signature" style="color:#999;font-size:12px;">一个只为为美人写字的地方。</p>
+            </dd>
+        </dl>
+            </div>
+</div>
+                                                            <!-- 推荐内容 -->
+                    <div class="aw-mod">
+                        <div class="mod-head">
+                            <h3>热点内容</h3>
+                        </div>
+                        <div class="mod-body">
+                            <ul>
+                                 {volist name="hotRes" id="hotRes"}
+                                                                <li>
+                                                                        <a href="{:url('Article/index',array('artid'=>$hotRes['id']))}">{$hotRes.title}</a>
+                                                                    </li>
+                                                                    {/volist}
+            
+                                                            </ul>
+                        </div>
+                    </div>
+                    <!-- end 推荐内容 -->
+                    
+                                        <!-- 相关问题 -->
+                    <div class="aw-mod aw-text-align-justify question-related-list">
+                        <div class="mod-head">
+                            <h3>相关问题</h3>
+                        </div>
+                        <div class="mod-body font-size-12">
+                            <ul>
+                                                                <li><a href="http://www.yirenji.com/question/915">揭秘 女人结婚后为何变成黄脸婆</a></li>
+                                                                <li><a href="http://www.yirenji.com/question/87">女人要学会保养自己</a></li>
+                                                                <li><a href="http://www.yirenji.com/question/377">姐夫将我从懵懂少女脱变成女人</a></li>
+                                                                <li><a href="http://www.yirenji.com/question/798">说到底，这就是一个比烂的世界</a></li>
+                                                                <li><a href="http://www.yirenji.com/question/74">美丽的女人最伤人</a></li>
+                                                                <li><a href="http://www.yirenji.com/question/95">女人只要当了妈，那生活真是大不同了</a></li>
+                                                                <li><a href="http://www.yirenji.com/question/112">女人绝对不能动情的七类男人</a></li>
+                                                                <li><a href="http://www.yirenji.com/question/167">女人爱情宝典：对症下药 掌握爱情主动权</a></li>
+                                                            </ul>
+                        </div>
+                    </div>
+                    <!-- end 相关问题 -->
+                                    </div>
+                <!-- end 侧边栏 -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    var ANSWER_EDIT_TIME = 30;
+
+    $(document).ready(function () {
+        if ($('.aw-article-vote.disabled').length)
+        {
+            $('.aw-article-vote.disabled a').attr('onclick', '');
+        }
+
+        AWS.at_user_lists('#wmd-input');
+
+        AWS.Init.init_article_comment_box($('.aw-article-comment'));
+    });
+</script>
+
+
+{include file="public/footer"}

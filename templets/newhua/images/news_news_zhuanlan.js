@@ -1,0 +1,13 @@
+﻿document.writeln('<div class="col_box">');
+document.writeln('<ul>');
+document.writeln('<li><a href="">冀勇庆</a>┊<a href="http://www.newhua.com/2013/0123/194824.shtml" target="_blank">任正非之女孟晚舟为何此时走到前台</a></li>');
+document.writeln('<li><a href="">李成东</a>┊<a href="http://www.newhua.com/2013/0123/194875.shtml" target="_blank">下一个阿里 腾讯应全力出击移动电商</a></li>');
+document.writeln('<li><a href="">毛启盈</a>┊<a href="http://www.newhua.com/2012/0410/154351.shtml" target="_blank">知识产生话语权—一大国崛起的故事</a></li>');
+document.writeln('<li><a href="">陈永东</a>┊<a href="http://www.newhua.com/2012/0410/154352.shtml" target="_blank">火车票能否网络代购成了糊涂账？</a></li>');
+document.writeln('<li><a href="">师北宸</a>┊<a href="http://www.newhua.com/2012/0410/154353.shtml" target="_blank">Facebook的搜索野心</a></li>');
+document.writeln('</ul><ol>');
+document.writeln('<li><a href="">杨  涛</a>┊<a href="http://www.newhua.com/2013/0118/193913.shtml" target="_blank">独立科技媒体：成熟尚远，路在何方？</a></li>');
+document.writeln('<li><a href="">骆轶航</a>┊<a href="http://www.newhua.com/2013/0115/193229.shtml" target="_blank">从乌龙采访看苹果在中国的公关闹剧</a></li>');
+document.writeln('<li><a href="">魏武挥</a>┊<a href="http://www.newhua.com/2013/0123/194881.shtml" target="_blank">科技博客冷思考：三年大限前该做什么</a></li>');
+document.writeln('<li><a href="">孙永杰</a>┊<a href="http://www.newhua.com/2012/0410/154359.shtml" target="_blank">退出与开源：PC厂商溃败移动互联网？</a></li>');
+document.writeln('</ol></div>');    

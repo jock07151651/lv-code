@@ -1,0 +1,195 @@
+/*全局样式*/
+body,ul,ol,dl,dt,dd,li,p,h1,h2,h3,h4,h5,h6,form,fieldset,table,td,img,div{margin:0;padding:0;border:0;}
+body,ul,ol,li,p,form,fieldset,table,td{font-family:"宋体"; font-weight:normal;}
+body{color:#fff; background:#f6f6f6;background:#e9e9e9 url(http://pic.newhua.com/newindex/images/bg.gif) repeat-y top center;}
+td,p,li,select,input,textarea,div{font-size:12px; text-align:left; color: #000; line-height: 24px;}
+ul{list-style-type:none; color: #000000;}
+ol{list-style-type:none; color: #000000;}
+select,input{vertical-align:middle;}
+a{text-decoration:none;}
+a:link{color:#333; text-decoration:none}
+a:visited{color:#333;text-decoration: none;}
+a:hover,a:active,a:focus{color:#c00; text-decoration:underline; position: relative; bottom: 0px;}
+.clearit{clear:both;}
+.focusimg img { padding:4px; border:1px solid #dcdcdc; background:#fff; }
+.focusimg, .focusimg:hover { text-decoration:none; position:relative; display:block; }
+a.focusimg:hover img { border:1px solid #015bbb; }
+.allsite {width:100%; background:#e9e9e9 url(http://pic.newhua.com/newindex/images/bg.gif) repeat-y top center; margin:0px auto; clear:both; padding-top:10px;}
+h3 {font-size:14px;}
+.bold {font-weight:bold;}
+/*顶部样式*/
+.head {width:100%; height:31px; background:url(http://pic.newhua.com/newindex/images/headBg.png) repeat-x;}
+.head_txt {width:960px; height:31px; margin:0px auto;}
+.head_txt h2 {width:700px; height:31px; float:left; line-height:31px; font-size:12px; font-weight:normal; color:#999;}
+.head_txt h2 a:link{color:#333; text-decoration:none}
+.head_txt h2 a:visited{color:#333;text-decoration: none;}
+.head_txt h2 a:hover,a:active,a:focus{color:#c00;text-decoration:none; position: relative; bottom: 0px;}
+.head_txt h3 {width:240px; height:31px; line-height:31px; font-size:12px; font-weight:normal; float:right; text-align:right;}
+.search-input {width:100px; height:17px; line-height:17px; border:1px solid #dbdbdb;}
+.select {height:21px; line-height:21px; border:1px solid #dbdbdb;}
+/*广告专区*/
+.ad_top {width:960px; height:90px; margin:10px auto; margin-top:0px;}
+.ad_top_l {width:145px; height:88px; float:left; border:1px solid #ccc;}
+.ad_top_c {width:640px; height:90px; float:left; margin:0px 13px;}
+.ad_top_r {width:145px; height:88px; float:left; border:1px solid #ccc;}
+.adtop {width:140px; height:88px; float:left; padding-left:4px;}
+.adtop li {width:140px; height:22px; float:left; font-size:12px; line-height:22px;}
+.adtop li a:link{color:#666; text-decoration:none}
+.adtop li a:visited{color:#666;text-decoration: none;}
+.adtop li a:hover,a:active,a:focus{color:#0082cb;text-decoration:none; position: relative; bottom: 0px;}
+.adc {width:960px; height:100px; margin:0px auto; margin-top:10px;}
+/*菜单导航*/
+.hd-nav,.nav-l,.nav-r,.nav-list li,.nav-list li a.current,.nav-list li a:hover,.arw-1,.arw-2{background-image:url(http://pic.newhua.com/newindex/images/mhead.png);background-repeat:no-repeat;}
+.g-hd{padding:8px 5px 0;width:980px;margin:0 auto;}
+.hd-logo{margin:0 10px;height:32px;position:relative; z-index:3;}
+.hd-logo h1,.hd-logo h1 a{float:left;width:213px;height:25px;background-position:0 0;}
+.hd-logo h1 {margin:0 15px 0 5px;display:inline;}
+.hd-logo h1 a{overflow:hidden;text-indent:-99em;}
+.mlogo {float:left; width:106px; height:25px; padding-right:50px;}
+.Hotwods {float:left; width:300px; height:25px; line-height:25px; color:#666; padding-left:50px;}
+.hd-more{float:left; margin:0px 0px 0px 20px; height:25px;}
+.hd-logo .top_search{margin-top:30px;position:relative;z-index:7;}
+.hd-nav{clear:both;position:relative;z-index:2;height:32px;margin:0;padding:0 10px;background-position:0 -125px;background-repeat:repeat-x;}
+.nav-l,.nav-r {position:absolute;top:-10px;width:5px;height:42px;}
+.nav-l {left:-5px;background-position:-24px -63px;}
+.nav-r {right:-5px;background-position:-33px -63px;}
+.nav-list {height:32px; float:left; width:860px;}
+.nav-list li {float:left; height:32px; padding:0px 15px; text-align:center; line-height:32px; background-position:-209px -83px;}
+.nav-list li.first{background:none;}
+.nav-list li a:link{color:#fff; text-decoration:none}
+.nav-list li a:visited {color:#fff;}
+.nav-list li a:hover {color:#fff; text-decoration:underline;}
+.arw-1{padding:3px 15px 0 0;cursor:pointer;background-position:55px -57px;}
+.ch-list{position:absolute;display:none;z-index:2;width:80px;padding:5px 0;text-align:center;border:1px solid #ccc; background:#fff;}
+.ch-list li{ height:21px; line-height:21px; text-align:center;}
+.ch-list a,.ch-list a:visited{ display:block; color:#0263c6;}
+.ch-list a:hover{ color:#fff; text-decoration:none; background:#0263c6;}
+.ch-list .line{display:block;overflow:hidden;width:60px;height:10px;margin:0 10px;border-bottom:1px solid #0263c6;}
+.hd-cld {position:relative;z-index:8;float:right;padding:5px 10px 0 0;color:#fff;}
+.arw-1{cursor:pointer;background-position:55px -57px; line-height:15px; height:20px; padding-top:5px;}
+.arw-2{ background-position:-198px -58px; padding-left:20px; cursor:pointer;}
+.nav_o {float:right; width:300px; height:25px; line-height:25px; color:#666; padding-left:50px;}
+.nav_o ul {width:260px; height:24px; float:right; margin-left:10px; line-height:24px; font-size:12px; font-weight:normal; color:#999;}
+.nav_o li {height:24px; float:right; line-height:24px; font-size:12px; font-weight:normal; color:#333;}
+.nav_o i {display: block; float: left; height: 20px; width: 24px; font-size:14px; line-height:25px; font-style:normal; margin-top:2px;}
+
+/*focus*/
+.focus {width:960px; height:795px; margin:0px auto; margin-top:10px;}
+.focus .l {width:300px; height:795px; float:left; margin-right:10px;}
+.focus .c {width:370px; height:795px; float:left; margin-right:10px; padding:0px 0px 0px 10px; background:url(http://pic.newhua.com/newindex/images/mline.gif) repeat-y left;}
+.focus .r {width:250px; height:795px; float:left; padding-left:10px; background:url(http://pic.newhua.com/newindex/images/mline.gif) repeat-y left;}
+
+.MphotoList{width:278px; height:253px;float:left; border:1px solid #D9D9D9; padding:10px;}
+.MphotoList .photo{width:278px;float:left;}
+.MphotoList .photo img{width:278px; height:200px;}
+.MphotoList .photo h4{width:268px; font-size:12px; float:left; padding:4px 0 6px 10px; line-height:18px; background:url(http://pic.newhua.com/newindex/images/icon_04.gif) no-repeat 0 10px;}
+.MphotoList .btPhoto{ width:105px; height:27px; float:left; padding-left:8px;}
+.MphotoList .btPhoto .bt02, .MphotoList .btPhoto .bt03, .MphotoList .btPhoto .bt04, .MphotoList .btPhoto .bt05, .MphotoList .btPhoto .bt06{ background:url(http://pic.newhua.com/newindex/images/icon_03.gif) no-repeat; width:9px; height:9px; margin:5px; display:inline; float:left; cursor:pointer }
+.MphotoList .btPhoto li.current { background:url(http://pic.newhua.com/newindex/images/icon_02.gif) no-repeat; width:9px; height:9px; margin:5px; display:inline; float:left; cursor:pointer }
+
+.topic {width:300px; height:250px; float:left; margin-top:10px;}
+.l_t {width:300px; height:25px; float:left; background:url(http://pic.newhua.com/newindex/images/l_t.gif) no-repeat;}
+.l_t h2 {height:25px; float:left; line-height:23px; font-size:12px; padding-left:25px;}
+.l_t h2 a:link{color:#015bbb; text-decoration:none}
+.l_t h2 a:visited{color:#015bbb;text-decoration: none;}
+.l_t h2 a:hover,a:active,a:focus{color:#c00;text-decoration:none; position: relative; bottom: 0px;}
+.l_t h3 {height:25px; width:100px; float:left;}
+.topic .box {width:300px; height:225px; float:left;}
+.topic .box ul {width:300px; height:100px; float:left; padding:10px 0px;}
+.topic .box ul h2 {width:130px; height:100px; float:left; margin-right:10px;}
+.topic .box ul h3 {width:160px; height:25px; float:left; font-size:12px; line-height:25px;}
+.topic .box ul p {width:160px; height:75px; float:left; font-size:12px; line-height:25px; color:#999;}
+.topic .box ol {width:300px; height:100px; float:left;}
+.topic .box ol li {width:140px; height:25px; float:left; line-height:25px; font-size:12px; background:url(http://pic.newhua.com/newindex/images/dot.gif) no-repeat left center; padding-left:10px;}
+
+.focusnews {width:370px; height:275px; float:left; background:url(http://pic.newhua.com/newindex/images/dot_h.gif) repeat-x bottom;}
+.focusnews i, .focusnews i a {color: #9F9E9E; font-size: 12px; text-indent: 0px; padding:0px; margin:0px;}
+.focusnews i {float: right; font-size: 12px; font-style:normal;}
+.focusnews ul {width:370px; height:50px; float:left; background:url(http://pic.newhua.com/newindex/images/dot_h.gif) repeat-x bottom; padding-bottom:10px; margin-bottom:10px;}
+.focusnews ul li {width:370px; height:25px; float:left; font-family:微软雅黑,黑体; font-size:16px; line-height:25px; text-align:center;}
+.focusnews ul p {width:370px; height:25px; float:left; font-size:12px; line-height:25px; text-align:center; color:#d6d6d6;}
+.focusnews ul li a:link{color:#c00; text-decoration:none}
+.focusnews ul li a:visited{color:#c00;text-decoration: none;}
+.focusnews ul li a:hover,a:active,a:focus{color:#c00; text-decoration:underline;}
+.focusnews ul p a:link{color:#666; text-decoration:none}
+.focusnews ul p a:visited{color:#666;text-decoration: none;}
+.focusnews ul p a:hover,a:active,a:focus{color:#c00; text-decoration:underline;}
+.focusnews ol {width:370px; float:left; margin-top:10px;}
+.focusnews ol li {width:360px; height:25px; float:left; font-size:14px; line-height:25px; background:url(http://pic.newhua.com/newindex/images/dot.gif) no-repeat left center; padding-left:10px;}
+.focusnews h6 {width:370px; height:30px; float:left; background:#f6f6f6; text-indent:10px; line-height:30px; color:#0082cb; font-size:14px; margin-bottom:10px;}
+
+.focusbox {width:370px; height:250px; float:left; margin-top:10px;}
+.focusbox i, .focusbox i a {color: #9F9E9E; font-size: 12px; text-indent: 0px; padding:0px; margin:0px;}
+.focusbox i {float: right; font-size: 12px; font-style:normal;}
+.focusbox h2 {width:370px; height:25px; float:left; line-height:25px; font-size:14px; text-indent:25px;}
+.focusbox h2 span {height:25px; text-indent:0px; position:absolute;}
+.focusbox h2 a:link{color:#015bbb; text-decoration:none}
+.focusbox h2 a:visited{color:#015bbb;text-decoration: none;}
+.focusbox h2 a:hover,a:active,a:focus{color:#c00; text-decoration:underline;}
+.focusbox ul {width:370px; float:left; margin-top:8px;}
+.focusbox ul li {width:360px; height:25px; float:left; font-size:14px; line-height:25px; background:url(http://pic.newhua.com/newindex/images/dot.gif) no-repeat left center; padding-left:10px;}
+
+.Tnewslist {width:250px; height:275px; float:left; background:url(http://pic.newhua.com/newindex/images/line6.jpg) no-repeat left;}
+.Tnewslist_t {width:250px; height:25px; float:left; background:url(http://pic.newhua.com/newindex/images/marticle.png) no-repeat;}
+.Tnewslist_t h2 {height:25px; float:left; line-height:23px; font-size:12px; padding-left:25px;}
+.Tnewslist_t h2 a:link{color:#015bbb; text-decoration:none}
+.Tnewslist_t h2 a:visited{color:#15bbb;text-decoration: none;}
+.Tnewslist_t h2 a:hover,a:active,a:focus{color:#c00;text-decoration:none; position: relative; bottom: 0px;}
+.Tnewslist_t h3 {height:25px; width:100px; float:left;}
+.Tnewslist .box {width:250px; height:250px; float:left; padding:0px; background:url(http://pic.newhua.com/newindex/images/mlist.jpg) no-repeat left;}
+.Tnewslist .box ul {width:250px; float:left;}
+.Tnewslist .box ul li {width:230px; height:25px; float:left; font-size:12px; line-height:25px; padding-left:20px;}
+
+.siter {width:250px; height:250px; float:left; margin-top:10px;}
+.siter_t {width:250px; height:25px; float:left; background:url(http://pic.newhua.com/newindex/images/l_t.gif) no-repeat;}
+.siter_t h2 {height:25px; float:left; line-height:23px; font-size:12px; padding-left:25px;}
+.siter_t h2 a:link{color:#015bbb; text-decoration:none}
+.siter_t h2 a:visited{color:#15bbb;text-decoration: none;}
+.siter_t h2 a:hover,a:active,a:focus{color:#c00;text-decoration:none; position: relative; bottom: 0px;}
+.siter_t h3 {height:25px; width:100px; float:left;}
+.siter .box {width:250px; height:215px; float:left; padding:10px 0 0;}
+.siter .box ul {width:250px; height:100px; float:left; margin-bottom:5px;}
+.siter .box ul h2 {width:100px; height:75px; float:left; margin-right:10px; margin-top:10px;}
+.siter .box ul h3 {width:140px; height:25px; float:left; line-height:25px; font-size:12px;}
+.siter .box ul p {width:140px; height:75px; float:left; line-height:25px; font-size:12px; color:#999;}
+.siter .box ol {width:250px; height:100px; float:left;}
+.siter .box ol li {width:240px; height:25px; float:left; font-size:12px; line-height:25px; background:url(http://pic.newhua.com/newindex/images/dot.gif) no-repeat left center; padding-left:10px;}
+
+.sitel {width:300px; height:250px; float:left; margin-top:10px;}
+.sitel .box {width:300px; height:225px; float:left;}
+.sitel .box ul {width:300px; height:100px; float:left; padding:10px 0px;}
+.sitel .box ul h2 {width:130px; height:96px; float:left; margin-right:10px;}
+.sitel .box ul h3 {width:160px; height:25px; float:left; font-size:12px; line-height:25px;}
+.sitel .box ul p {width:160px; height:75px; float:left; font-size:12px; line-height:25px; color:#999;}
+.sitel .box ol {width:300px; height:100px; float:left;}
+.sitel .box ol li {width:290px; height:25px; float:left; line-height:25px; font-size:12px; background:url(http://pic.newhua.com/newindex/images/dot.gif) no-repeat left center; padding-left:10px;}
+.sitel i, .mtest i a {color: #9F9E9E; font-size: 12px; text-indent: 0px; padding:0px; margin:0px;}
+.sitel i {float: right; font-size: 12px; font-style:normal;}
+
+/*焦点企业*/
+.picnews {width:960px; height:228px; margin:10px auto;}
+.picnews_t {width:959px; height:40px; float:left; background:url(http://pic.newhua.com/newindex/images/pep_t.png) no-repeat; border-right:1px solid #d5dde8;}
+.picnews_t h2 {width:100px; height:40px; float:left; margin-left:10px; font-size:14px; line-height:40px; color:#015bbb; text-indent:20px;}
+.picnews_box {width:958px; height:186px; float:left; border:1px solid #d5dde8; border-top:none;}
+.picnews_box ul {width:170px; height:150px; float:left; margin-left:18px; margin-top:18px;}
+.picnews_box ul h2 {width:170px; height:120px; float:left;}
+.picnews_box ul p {width:170px; height:25px; float:left; line-height:25px; font-size:12px; text-align:center; margin-top:5px;}
+.t_stxt {padding:10px; padding-bottom:0px; line-height:25px; float:right; text-align:right; font-size:12px; color:#ccc; font-weight:normal; padding-right:20px; padding-top:9px;}
+/*底部信息*/
+.hezuo {width: 958px; margin:0px auto 0px auto; height: 35px; border:1px solid #dbdbdb; border-bottom:none; background:#fff; margin-top:10px;}
+.hezuo h1 {width: 100px; margin-right: auto; margin-left: auto; height: 33px; margin-top:1px; line-height:33px; float:left; margin-left:20px;}
+.link {width: 960px; margin-right: auto; margin-left: auto; margin-bottom:10px; height: 70px;}
+.Linkfrided {background:#fff none repeat scroll 0 0;border:1px solid #DCDDDD;line-height:25px;padding:10px 22px;text-align:left; background:#fafafa; color:#ccc;}
+.banquan {width: 960px; margin-right: auto; margin-left: auto; background:#fff;}
+.banquan h1 {width:890px; height:auto; line-height:28px; margin:6px auto 0px auto; font-size:12px; border-bottom:1px solid #999; font-weight:normal; text-align:center; color:#ccc;	text-align: center;}
+.banquan h2 {width:890px; height:auto; line-height:28px; margin:0px auto; font-size:12px; font-weight:normal; text-align:center; color:#484848; text-align: center;}
+.Linkfrided a:link{color:#484848;text-decoration:none;}
+.Linkfrided a:visited{color:#800080;text-decoration:none}
+.Linkfrided a:hover{color:#c00;text-decoration:underline;}
+.banquan h1 a:link{color:#484848;text-decoration:none;}
+.banquan h1 a:visited{color:#800080;text-decoration:none}
+.banquan h1 a:hover{color:#c00;text-decoration:underline;}
+.banquan h2 a:link{color:#484848;text-decoration:none;}
+.banquan h2 a:visited{color:#800080;text-decoration:none}
+.banquan h2 a:hover{color:#c00;text-decoration:underline;}
+.footer {width: 960px; margin-right: auto; margin-left: auto; background:#fff; border:1px solid #dbdbdb; padding-bottom:10px;}

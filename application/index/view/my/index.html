@@ -1,0 +1,582 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<link rel="shortcut icon" href="__INDEX__/https://img.jinsom.cn/set_files/2017/08/icon.png"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<title>lianw-LightSNS</title>
+<meta name="keywords" content="lianw" />
+<meta name="description" content="https://q.jinsom.cn/" />
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='style-css'  href='__INDEX__/css/style.css' type='text/css' media='all' />
+<link rel='stylesheet' id='layui-css'  href='__INDEX__/css/layui.css' type='text/css' media='all' />
+<link rel='stylesheet' id='all-css'  href='__INDEX__/css/all.css' type='text/css' media='all' />
+<link rel='stylesheet' id='jinsom-css'  href='__INDEX__/css/jinsom.css' type='text/css' media='all' />
+<script type='text/javascript' src='js/jinsom.js'></script>
+<link rel="icon" href="__INDEX__/https://img.jinsom.cn/set_files/2017/08/cropped-icon.png?x-oss-process=image/resize,m_fill,w_32,h_32" sizes="32x32" />
+<link rel="icon" href="__INDEX__/https://img.jinsom.cn/set_files/2017/08/cropped-icon.png?x-oss-process=image/resize,m_fill,w_192,h_192" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="__INDEX__/https://img.jinsom.cn/set_files/2017/08/cropped-icon.png?x-oss-process=image/resize,m_fill,w_180,h_180" />
+<meta name="msapplication-TileImage" content="https://img.jinsom.cn/set_files/2017/08/cropped-icon.png?x-oss-process=image/resize,m_fill,w_270,h_270" />
+<link id="jinsom-bg-style" rel="stylesheet" type="text/css" href="__INDEX__/css/default1111.css">
+<link id="jinsom-space-style" rel="stylesheet" type="text/css" href="__INDEX__/css/bbs-post-space-on.css">
+<link id="jinsom-sidebar-style" rel="stylesheet" type="text/css" href="__INDEX__/css/sidebar-style-right.css">
+<style type="text/css">
+.jinsom-slider{width: 1065px;margin-top: 20px;border-radius: 2px;}.jinsom-slider{overflow: visible !important;}
+/*折叠高度*/
+.jinsom-post-content.hidden{max-height: 150px;}
+
+/*金币图标*/
+
+
+
+
+/*菜单导航*/
+.jinsom-menu ul li{font-size: 15px;}
+.jinsom-menu ul li a {font-size: 15px;color: #999999;}
+.jinsom-menu ul li.current-menu-item a {color: #fff !important;}
+.jinsom-menu ul li.menu-item a:hover {color: #fff45c !important;}
+
+
+
+/*右上角按钮颜色*/
+.jinsom-header-right .search i {color: #a4a4a4;}
+#jinsom-notice i {color: #a4a4a4;}
+.jinsom-header-right .publish {color: #5fb878;}
+
+
+/*消息闪动颜色*/
+@keyframes tiping{
+0%{opacity: 0;color: #a4a4a4;}
+100%{opacity: 1;color: #ff5722;}
+}
+
+
+
+.jinsom-header-menu-avatar>p{color:#999999;}.jinsom-header-right .login{color:#ffffff;background: #6d89bb;}.jinsom-header-right .reg{color:#ffffff;background: #5fb878;}.jinsom-menu ul li.menu-item-has-children ul li a{color: #999999 !important;}.jinsom-menu ul li ul li:hover{background: #5fb878;}.jinsom-menu ul li ul li.menu-item a:hover{color: #ffffff !important;}.jinsom-menu ul li ul li.current-menu-item a {color: #000 !important;}
+
+.gengxin a {
+    color: #FF5722 !important;
+}/*//自定义css*/ 
+</style>
+<link rel="stylesheet" type="text/css" href="__INDEX__/">
+<script type="text/javascript" src=""></script><script type="text/javascript">
+if(jinsom.is_login&&!jinsom.is_admin&&!jinsom.perfect){
+layui.use(["layer"],function(){jinsom_perfect_form();});
+}
+</script>
+</head>
+<body>
+<!-- 菜单 -->
+<div class="jinsom-header">
+<div class="jinsom-header-content clear">
+<div class="logo"><a href="__INDEX__/" ></a></div>
+<div class="jinsom-menu"><ul id="menu-menu-1" class="clear"><li id="menu-item-683" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-683"><a href="__INDEX__/http://q.jinsom.cn/"><i class="fa fa-home"></i> 首页</a></li>
+<li id="menu-item-6182" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6182"><a href="__INDEX__/https://q.jinsom.cn/bbs"><i class="fa fa-comments-o"></i> 论坛</a></li>
+<li id="menu-item-3779" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-3779"><a href="__INDEX__/https://q.jinsom.cn/bbs/answer">问答</a></li>
+<li id="menu-item-6184" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6184"><a href="__INDEX__/https://q.jinsom.cn/topic">话题</a></li>
+<li id="menu-item-1916" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1916"><a href="__INDEX__/https://q.jinsom.cn/test">卡密</a></li>
+<li id="menu-item-1331" class="gengxin menu-item menu-item-type-post_type menu-item-object-page menu-item-1331"><a href="__INDEX__/https://q.jinsom.cn/juanzhu">捐助</a></li>
+<li id="menu-item-3928" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3928"><a href="__INDEX__/https://q.jinsom.cn/links">案例</a></li>
+<li id="menu-item-1362" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1362"><a href="__INDEX__/#">更多</a>
+<ul class="sub-menu">
+	<li id="menu-item-6190" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6190"><a href="__INDEX__/https://q.jinsom.cn/bbs/lightsns">LightSNS官方</a></li>
+	<li id="menu-item-6189" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6189"><a href="__INDEX__/https://q.jinsom.cn/bbs/bug">bug反馈</a></li>
+	<li id="menu-item-6191" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6191"><a href="__INDEX__/https://q.jinsom.cn/bbs/use">使用教程</a></li>
+	<li id="menu-item-6192" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6192"><a href="__INDEX__/https://q.jinsom.cn/bbs/case">案例申请</a></li>
+	<li id="menu-item-6193" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6193"><a href="__INDEX__/https://q.jinsom.cn/bbs/verify">认证申请</a></li>
+</ul>
+</li>
+</ul></div> 
+
+<div class="jinsom-header-right">
+<li class="search"><i class="jinsom-icon">&#xe68f;</i></li><li class="jinsom-member-desc">{$Request.session.username}</li>
+</div>
+</div>
+</div><!-- menu-bar -->
+<div class="jinsom-menu-fixed"></div><div class="jinsom-member-main" data="13197" style="background-color: #003442">
+<div class="jinsom-member-bg" style="background-image: url(images/04.jpg);background-attachment: scroll;">
+<div class="jinsom-member-content">
+
+<div class="jinsom-member-header">
+<div class="jinsom-member-avatar other">
+<p><img src="{$member.userpic}" class="avatar opacity" width="40" height="40" /></p>
+</div>
+<div class="jinsom-member-username">
+<h1>{$Request.session.username}</h1>
+<span class="jinsom-mark jinsom-girl"><i class="fa fa-venus"></i></span><span class="jinsom-mark jinsom-lv" title="经验：38" style="background-color:#ffb800;">Lv.1</span></div>
+<div class="jinsom-member-desc">
+个人说明：https://q.jinsom.cn/</div>
+<div class="jinsom-member-follow-info">
+<span class="follow no opacity" onclick='jinsom_pop_login_style();'><i class="jinsom-icon">&#xe68e;</i>关注</span>
+<span onclick='jinsom_pop_login_style();' class="opacity"><i class="jinsom-icon">&#xe612;</i> 聊天</span>
+<span>
+<i class="jinsom-icon">&#xe611;</i>
+<div class="jinsom-member-follow-box">
+<li onclick='jinsom_add_blacklist("add",13197,this)'>拉黑</li><li onclick="layer.msg('暂未开启！');">举报</li>
+</div>
+</span>
+</div>
+</div>
+
+
+
+<div class="jinsom-member-menu clear"><li class="on" onclick="jinsom_ajax_get_my_posts(this)" user_id="13197">全部</li><li onclick='jinsom_get_post_data("words",this)' user_id="13197">动态</li><li onclick='jinsom_get_post_data("music",this)' user_id="13197">音乐</li><li onclick='jinsom_get_post_data("single",this)' user_id="13197">文章</li><li onclick='jinsom_get_post_data("video",this)' user_id="13197">视频</li><li onclick='jinsom_get_post_data("bbs",this)' user_id="13197">帖子</li><li class="like" onclick="jinsom_ajax_get_like_posts(this);" user_id="13197">喜欢</li><li onclick='jinsom_get_my_buy_posts(this)' user_id="13197">已购买</li></div>
+
+
+<div class="jinsom-member-content-list clear">
+<div class="jinsom-member-left">
+<div class="jinsom-member-left-follow clear">
+<li>
+<strong>2</strong>
+<span>关注</span>
+</li>
+<li>
+<strong>1</strong>
+<span>粉丝</span>
+</li>
+<li onclick="jinsom_ajax_get_like_posts(this);" user_id="13197">
+<strong>1</strong>
+<span>喜欢</span>
+</li>
+<li>
+<strong>
+2</strong>
+<span>人气</span>
+</li>
+</div>
+
+
+
+<div class="jinsom-member-left-profile">
+<h3>资料简介</h3>
+<li>I&nbsp;&nbsp;&nbsp;&nbsp;D：<span>13197<span></li>
+<li>昵称：<span>lianw<span></li>
+<li>性别：
+<span>
+女生<span></li>
+<li>位置：<span><span></li>
+<li>说明：<span>
+https://q.jinsom.cn/<span></li>	
+<li>Q Q：<span>{$member.qq}<span></li>	
+	<div class="jinsom-member-left-profile-hide">
+<li>微信：<span><span></li>	
+<li>微博：<span><span></li>	
+<li>注册：<span>2周前<span></li>
+</div>
+<div class="jinsom-member-left-profile-more">查看更多 <i class="fa fa-angle-right"></i></div>
+</div>
+
+<div class="jinsom-member-left-visitor clear">
+<h3>最近访客</h3>
+<li><a href="__INDEX__/https://q.jinsom.cn/author/1" title="访问时间：5天前"><span class="jinsom-vip-icon"></span><img src="picture/avatar_1510736698.jpg" class="avatar opacity" width="40" height="40" /><p><font style="color:#FF5722;">jinsom</font></p></a><i class="jinsom-verify jinsom-verify-a" title="个人认证"></i></li><li><a href="__INDEX__/https://q.jinsom.cn/author/13219" title="访问时间：5天前"><img src="picture/9ae945d510e94985987fc4c6722840ad.gif" class="avatar opacity" width="40" height="40" /><p>Sudden3</p></a><i class="jinsom-verify jinsom-verify-a" title="个人认证"></i></li></div>
+
+</div>
+
+
+
+
+<div class="jinsom-member-right">
+<div class="jinsom-post-list">
+<div  class="jinsom-posts-list single bg-028" data="6684">
+<div class="jinsom-post-user-info single">
+<div class="jinsom-post-user-info-avatar" user-data="13197">
+<a href="__INDEX__/https://q.jinsom.cn/author/13197" style="display: inline-block;">
+<img src="picture/avatar_1543500766.png" class="avatar opacity" width="40" height="40" /></a>
+<div class="jinsom-user-info-card"></div>
+</div>
+
+<div class="jinsom-post-user-info-name">
+<a href="__INDEX__/https://q.jinsom.cn/author/13197" target="_blank">lianw</a><span class="jinsom-mark jinsom-lv" title="经验：38" style="background-color:#ffb800;">Lv.1</span></div>
+
+<div class="jinsom-post-user-info-time" title="2018-12-08 23:16">
+今天 23:16<span>电脑端</span><i class="jinsom-icon" title="公开内容">&#xe62c;</i></div>
+
+</div><!-- 作者信息 -->
+
+
+
+
+
+
+<div class="jinsom-post-setting single">
+<i class="fa fa-angle-down"></i>
+<div  class="jinsom-post-setting-box">
+<li onclick="jinsom_post_link(this);" data="https://q.jinsom.cn/6684.html">查看全文</li>
+<li onclick="jinsom_post_link(this);" data="https://q.jinsom.cn/author/13197">查看作者</li>
+</div>
+</div>
+
+
+
+
+<div style="clear: both;"></div>
+<h1 class="single">
+<a href="__INDEX__/https://q.jinsom.cn/6684.html" target="_blank">这个是LightSNS测试</a>
+</h1>
+
+<div class="jinsom-post-single-content b">
+
+<div class="jinsom-post-single-excerp">
+<a href="__INDEX__/https://q.jinsom.cn/6684.html" target="_blank">
+这个是LightSNS测试这个是LightSNS测试这个是LightSNS测试这个是LightSNS测试这个是LightSNS测试这个是LightSNS测试这个是LightSNS测试这个是LightS...</a>
+</div>
+
+
+<!-- 文章列表工具栏 -->
+
+<div class="jinsom-post-single-bar single">
+<li class="author">
+<a href="__INDEX__/https://q.jinsom.cn/author/13197" target="_blank">
+<img src="picture/avatar_1543500766.png" class="avatar opacity" width="40" height="40" /><span><a href="__INDEX__/https://q.jinsom.cn/author/13197" target="_blank">lianw</a></span>
+</a>
+</li>
+
+<li class="jinsom-no-like like" onclick='jinsom_like_posts(6684,this,"post");'>
+<i class="jinsom-icon">&#xe608;</i> <span>0</span>
+</li>
+
+<li><a href="__INDEX__/https://q.jinsom.cn/6684.html" target="_blank"><i class="jinsom-icon">&#xe633;</i> 1</a></li>
+
+
+<li onclick='jinsom_pop_login_style();'>
+<i class="jinsom-icon">&#xe926;</i> <span>0</span>
+</li>
+
+
+<li>
+<i class="jinsom-icon">&#xe602;</i> <span>1</span>
+</li>
+
+
+</div>
+</div>
+
+
+<div class="jinsom-post-footer-bar">
+<span title="2018-12-08 23:16:41">
+今天 23:16</span>
+<span>电脑端</span><i class="jinsom-icon" title="公开内容">&#xe62c;</i></div>
+
+</div><!-- posts_list --><div  class="jinsom-posts-list normal bg-bbs" data="6422">
+<div class="jinsom-post-user-info bbs">
+<div class="jinsom-post-user-info-avatar" user-data="13197">
+<a href="__INDEX__/https://q.jinsom.cn/author/13197" style="display: inline-block;">
+<img src="picture/avatar_1543500766.png" class="avatar opacity" width="40" height="40" /></a>
+<div class="jinsom-user-info-card">
+<div class="info_card_loading"><img src="picture/spinner.gif"><p>资料加载中...</p>
+</div>
+</div>
+</div>
+
+<div class="jinsom-post-user-info-name">
+<a href="__INDEX__/https://q.jinsom.cn/author/13197" target="_blank">lianw</a></div>
+
+
+
+</div><!-- 作者信息 -->
+
+
+
+<div class="jinsom-post-setting single">
+<i class="fa fa-angle-down"></i>
+<div  class="jinsom-post-setting-box">
+<li onclick="jinsom_post_link(this);" data="https://q.jinsom.cn/6422.html">查看全文</li>
+<li onclick="jinsom_post_link(this);" data="https://q.jinsom.cn/author/13197">查看作者</li>
+</div>
+</div>
+
+
+<h1 class="single">
+<a href="__INDEX__/https://q.jinsom.cn/6422.html" target="_blank">申请认证</a>
+</h1>
+
+<div class="jinsom-post-single-content b">
+
+<div class="jinsom-post-single-excerp">
+<a href="__INDEX__/https://q.jinsom.cn/6422.html" target="_blank">
+申请认证...</a>
+</div>
+
+<!-- 缩略图 -->
+<div class="jinsom-post-single-thum">
+	
+</div>
+
+<div class="jinsom-post-single-bar single">
+<li class="author">
+<a href="__INDEX__/https://q.jinsom.cn/author/13197" target="_blank">
+<img src="picture/avatar_1543500766.png" class="avatar opacity" width="40" height="40" /><span><a href="__INDEX__/https://q.jinsom.cn/author/13197" target="_blank">lianw</a></span>
+</a>
+</li>
+
+<li><a href="__INDEX__/https://q.jinsom.cn/6422.html" target="_blank"><i class="jinsom-icon">&#xe633;</i> 1</a></li>
+
+<li><i class="jinsom-icon">&#xe602;</i> <span>186</span></li>
+
+<li>
+<i class="jinsom-icon">&#xe615;</i> <span><a href="__INDEX__/https://q.jinsom.cn/bbs/verify">认证申请</a></span>
+</li>
+
+<li class="right">
+12-03 18:05 
+<span>电脑端</span></li>
+
+</div>
+
+</div>
+
+
+
+</div><!-- posts_list --><div  class="jinsom-posts-list words bg-028" data="6169">
+<!-- 动态内容部分，包括列表 -->
+<div class="jinsom-post-user-info">
+<div class="jinsom-post-user-info-avatar" user-data="13197">
+<a href="__INDEX__/https://q.jinsom.cn/author/13197" style="display: inline-block;">
+<img src="picture/avatar_1543500766.png" class="avatar opacity" width="40" height="40" /></a>
+<div class="jinsom-user-info-card"></div>
+</div>
+
+<div class="jinsom-post-user-info-name">
+<a href="__INDEX__/https://q.jinsom.cn/author/13197" target="_blank">lianw</a><span class="jinsom-mark jinsom-lv" title="经验：38" style="background-color:#ffb800;">Lv.1</span></div>
+
+<div class="jinsom-post-user-info-time" title="2018-11-30 09:20">
+11-30 09:20<span>电脑端</span><i class="jinsom-icon" title="公开内容">&#xe62c;</i></div>
+
+</div><!-- 作者信息 -->
+
+
+
+
+
+
+<div class="jinsom-post-setting">
+<i class="fa fa-angle-down"></i>
+<div  class="jinsom-post-setting-box">
+<li onclick="jinsom_post_link(this);" data="https://q.jinsom.cn/6169.html">查看全文</li>
+<li onclick="jinsom_post_link(this);" data="https://q.jinsom.cn/author/13197">查看作者</li>
+</div>
+</div>
+
+
+
+
+
+
+<div class="jinsom-post-content ">
+<a class="post_list_link" href="__INDEX__/https://q.jinsom.cn/6169.html" target="_blank"><p><jin class="jinsom-post-link" type="link" data="https://img.jinsom.cn/user_files/13197/publish/file/file-2018-11-30-09-18-16.ziphttps://img.jinsom.cn/user_files/13197/publish/file/file-2018-11-30-09-18-16.ziphttps://img.jinsom.cn/user_files/13197/publish/file/file-2018-11-30-09-18-16.zip" onclick="jinsom_post_link(this);"><i class="fa fa-link"></i> 网站链接</jin></p>
+</a>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="jinsom-post-bar">
+
+<li class="jinsom-no-like" onclick='jinsom_like_posts(6169,this);'>
+<i class="jinsom-icon">&#xe608;</i> <span>0</span>
+</li>
+
+<li onclick="jinsom_comment_toggle(this)">
+<i class="jinsom-icon">&#xe633;</i> <span>0</span>
+</li>
+
+<li onclick='jinsom_pop_login_style();'>
+<i class="jinsom-icon">&#xe926;</i> <span>0</span>
+</li>
+
+
+<li>
+<i class="jinsom-icon">&#xe602;</i> <span>1.8k</span>
+</li>
+
+<li class="tag clear">
+#<a href="__INDEX__/https://q.jinsom.cn/topic/q" title="q" class="opacity">q</a><a href="__INDEX__/https://q.jinsom.cn/topic/%e7%99%be%e5%b9%b4%e5%9b%bd%e8%80%bb" title="百年国耻" class="opacity">百年国耻</a><a href="__INDEX__/https://q.jinsom.cn/topic/%e9%9a%8f%e4%be%bf%e4%b8%80%e8%af%b4" title="随便一说" class="opacity">随便一说</a></li>
+
+
+</div>
+
+<!-- 喜欢列表 -->
+<div class="jinsom-post-like clear"><div class="jinsom-post-like-list"></div></div>
+<div class="jinsom-comment-form" style="display:none;">
+<div class="jinsom-comment-no-login">
+<a onclick='jinsom_pop_login_style();'>登录</a>后才能发表评论</div>
+ <div class="jinsom-post-comment-list">
+</div>
+
+</div>
+
+<div class="jinsom-post-footer-bar">
+<span title="2018-11-30 09:20:55">
+11-30 09:20</span>
+<span>电脑端</span><i class="jinsom-icon" title="公开内容">&#xe62c;</i></div>
+
+</div><!-- posts_list --><div  class="jinsom-posts-list single bg-028" data="6168">
+<div class="jinsom-post-user-info single">
+<div class="jinsom-post-user-info-avatar" user-data="13197">
+<a href="__INDEX__/https://q.jinsom.cn/author/13197" style="display: inline-block;">
+<img src="picture/avatar_1543500766.png" class="avatar opacity" width="40" height="40" /></a>
+<div class="jinsom-user-info-card"></div>
+</div>
+
+<div class="jinsom-post-user-info-name">
+<a href="__INDEX__/https://q.jinsom.cn/author/13197" target="_blank">lianw</a><span class="jinsom-mark jinsom-lv" title="经验：38" style="background-color:#ffb800;">Lv.1</span></div>
+
+<div class="jinsom-post-user-info-time" title="2018-11-30 09:19">
+11-30 09:19<span>电脑端</span><i class="jinsom-icon" title="公开内容">&#xe62c;</i></div>
+
+</div><!-- 作者信息 -->
+
+
+
+
+
+
+<div class="jinsom-post-setting single">
+<i class="fa fa-angle-down"></i>
+<div  class="jinsom-post-setting-box">
+<li onclick="jinsom_post_link(this);" data="https://q.jinsom.cn/6168.html">查看全文</li>
+<li onclick="jinsom_post_link(this);" data="https://q.jinsom.cn/author/13197">查看作者</li>
+</div>
+</div>
+
+
+
+
+<div style="clear: both;"></div>
+<h1 class="single">
+<a href="__INDEX__/https://q.jinsom.cn/6168.html" target="_blank">tetst  shit sfasdfsdf</a>
+</h1>
+
+<div class="jinsom-post-single-content b">
+
+<div class="jinsom-post-single-excerp">
+<a href="__INDEX__/https://q.jinsom.cn/6168.html" target="_blank">
+&nbsp;<img src="picture/19.png" alt="[s-19]" class="wp-smiley" style="height: 1em; max-height: 1em;" />&nbsp;[附件]第三方士大夫撒地方斯蒂芬的说法是打发斯蒂芬第四方长序缬草vsadvs东方闪电发所多发所付所大付撒发所付大所多付撒奥奥奥奥奥奥奥奥奥奥奥奥奥奥奥奥奥奥奥奥奥奥...</a>
+</div>
+
+
+<!-- 文章列表工具栏 -->
+
+<div class="jinsom-post-single-bar single">
+<li class="author">
+<a href="__INDEX__/https://q.jinsom.cn/author/13197" target="_blank">
+<img src="picture/avatar_1543500766.png" class="avatar opacity" width="40" height="40" /><span><a href="__INDEX__/https://q.jinsom.cn/author/13197" target="_blank">lianw</a></span>
+</a>
+</li>
+
+<li class="jinsom-no-like like" onclick='jinsom_like_posts(6168,this,"post");'>
+<i class="jinsom-icon">&#xe608;</i> <span>0</span>
+</li>
+
+<li><a href="__INDEX__/https://q.jinsom.cn/6168.html" target="_blank"><i class="jinsom-icon">&#xe633;</i> 0</a></li>
+
+
+<li onclick='jinsom_pop_login_style();'>
+<i class="jinsom-icon">&#xe926;</i> <span>0</span>
+</li>
+
+
+<li>
+<i class="jinsom-icon">&#xe602;</i> <span>31</span>
+</li>
+
+
+</div>
+</div>
+
+
+<div class="jinsom-post-footer-bar">
+<span title="2018-11-30 09:19:22">
+11-30 09:19</span>
+<span>电脑端</span><i class="jinsom-icon" title="公开内容">&#xe62c;</i></div>
+
+</div><!-- posts_list --><div class="jinsom-more-posts" data="2" onclick="jinsom_ajax_get_more_self(this);" user_id="13197">加载更多</div>	
+ </div>
+</div>
+
+</div>
+
+
+</div>
+</div>	
+</div>
+
+<!-- 右侧栏 -->
+<div class="jinsom-right-bar">
+<!-- IM -->
+<!-- 偏好设置 -->   
+<li class="totop"><i class="jinsom-icon">&#xe607;</i></li>
+</div>
+
+
+
+
+
+
+
+<!-- 弹窗搜索 -->
+<div class="jinsom-pop-search">
+<i class="jinsom-icon close">&#xe685;</i>
+<div class="jinsom-pop-search-container">
+<div class="jinsom-pop-search-content">
+<input type="text" placeholder="搜索你感兴趣的内容">
+<span class="opacity">搜索</span>
+</div>
+<div class="jinsom-pop-search-hot">
+<p>大家都在搜</p> 
+<div class="jinsom-pop-search-hot-list">
+<a href="__INDEX__//?s=LightSNS">LightSNS</a><a href="__INDEX__//?s=更新">更新</a><a href="__INDEX__//?s=早安">早安</a><a href="__INDEX__//?s=建议">建议</a><a href="__INDEX__//?s=wordpress">wordpress</a></div>
+
+</div>
+</div> 
+</div> 
+
+
+
+<script type='text/javascript' src='js/all.js'></script>
+<script type='text/javascript' src='js/wp-embed.min.js'></script>
+<!-- 自定义js文件 -->
+<script type="text/javascript" src=""></script>
+<script>
+layui.use(['layer'], function(){
+var layer = layui.layer;
+});
+</script>
+
+
+
+<audio id="audio" style="display: none;"><source src="https://q.jinsom.cn/wp-content/themes/LightSNS_1.5_beta_178/images/mp3/notify.mp3"></audio>
+<!-- 51查询-0.074秒 -->
+
+<div style="display: none;">
+<!-- 站长统计 -->
+<script type="text/javascript">
+var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1261499055'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1261499055' type='text/javascript'%3E%3C/script%3E"));</script>
+</div>
+
+</body>
+</html>

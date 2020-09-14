@@ -1,0 +1,1222 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{$data.softname}-尽在源码天堂!</title>
+<meta name="keywords" content="{$data.keyboard}" />
+<meta name="description" content="{$data.description}" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="icon" href="/favicon.ico" type="image/gif" />
+<link href="__INDEX__/skin/blue2013/css/download.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="__INDEX__/skin/blue2013/js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="/static/layer/layer.js"></script>
+    <script src="http://dup.baidustatic.com/js/ds.js"></script>
+<SCRIPT>
+
+var controllername = window.location;
+
+$(document).ready(function(){
+
+	$('.top-menu li').bind("hover", function() {
+
+		$(this).addClass('homes').siblings().removeClass('homes');
+
+	});
+
+  	var setonobj = $('.top-menu').find('li');
+
+    $.each(setonobj, function(i,val){
+
+   		var checkstr = $(val).attr('data');
+
+		$(val).removeClass('homes');
+
+		if(checkstr==controllername){
+
+				$(val).addClass('homes');
+
+   		}
+
+  	});
+
+})
+
+</SCRIPT>
+<base target="_blank">
+</head>
+    <body>
+
+<!--整体-->
+
+
+
+<!--顶部 start-->
+
+{include file="common/top" /}
+
+<!--顶部 end-->
+
+<!--body start-->
+
+<div id="wrap" class="w970 clear">
+
+
+
+   <!--头部 start-->
+
+    {include file="common/header" /}
+
+  <!--头部 end-->
+
+             <div class="w970 clear" id="soft_nav_ad"><!-- 广告位：pc_code_view_head96090A -->
+
+<script>
+
+(function() {
+
+    var s = "_" + Math.random().toString(36).slice(2);
+
+    document.write('<div id="' + s + '"></div>');
+
+    (window.slotbydup=window.slotbydup || []).push({
+
+        id: '2013896',
+
+        container: s,
+
+        size: '960,90',
+
+        display: 'inlay-fix'
+
+    });
+
+})();
+
+</script></div>
+
+            <div class="w970 clear" id="soft_nav_ad"><!-- 广告位：pc_code_view_head96090B -->
+
+<script>
+
+(function() {
+
+    var s = "_" + Math.random().toString(36).slice(2);
+
+    document.write('<div id="' + s + '"></div>');
+
+    (window.slotbydup=window.slotbydup || []).push({
+
+        id: '2013898',
+
+        container: s,
+
+        size: '960,90',
+
+        display: 'inlay-fix'
+
+    });
+
+})();
+
+</script></div>
+
+            <div class="w970 clear" id="soft_nav_ad"><!-- 广告位：pc_code_view_head96090C -->
+
+<script>
+
+(function() {
+
+    var s = "_" + Math.random().toString(36).slice(2);
+
+    document.write('<div id="' + s + '"></div>');
+
+    (window.slotbydup=window.slotbydup || []).push({
+
+        id: '2013900',
+
+        container: s,
+
+        size: '960,90',
+
+        display: 'inlay-fix'
+
+    });
+
+})();
+
+</script></div>
+
+            <div class="w970 clear" id="soft_nav_ad"><!-- 广告位：pc_code_view_head96090D -->
+
+<script>
+
+(function() {
+
+    var s = "_" + Math.random().toString(36).slice(2);
+
+    document.write('<div id="' + s + '"></div>');
+
+    (window.slotbydup=window.slotbydup || []).push({
+
+        id: '2013902',
+
+        container: s,
+
+        size: '960,90',
+
+        display: 'inlay-fix'
+
+    });
+
+})();
+
+</script></div>
+
+            <div class="w970 clear" id="soft_nav_ad"><!-- 广告位：pc_code_view_head96090E -->
+
+<script>
+
+(function() {
+
+    var s = "_" + Math.random().toString(36).slice(2);
+
+    document.write('<div id="' + s + '"></div>');
+
+    (window.slotbydup=window.slotbydup || []).push({
+
+        id: '2013904',
+
+        container: s,
+
+        size: '960,90',
+
+        display: 'inlay-fix'
+
+    });
+
+})();
+
+</script></div>
+
+<!--菜单下广告 end-->
+
+<div class="dangqian">
+
+    当前位置：<a href="/">
+
+    首页</a>&nbsp;>&nbsp;
+
+   {volist name="data.classgroup" id="foo"} <a href="/list/{$data.CodeClass.classid}_1.html">{$foo.classname}</a>&nbsp;>&nbsp;{/volist}
+
+    {$data.softname}
+
+</div>
+
+<div class="clear" id="detail">
+
+<div class="l clear">
+
+<!--left start-->
+
+<div class="top5 bg_2 clear softdetail">
+
+    <h3>{$data.softname}</h3>
+
+    <div class="l theme clear">
+
+        <a href="{$data.softpic}" target="_blank">
+
+            <img src="{$data.softpic}"  alt="{$data.softname}" width="200" height="200" border="0"></a></div>
+
+    <ul class="l soft_rel clear">
+
+        <li><span class="cTitle">软件大小：</span>{$data.filesize}</li>
+
+        <li style="overflow: hidden;"><span class="cTitle">源码类型：</span><a href="/list/{$data.classid}_1.html">{$data.CodeClass.classname}</a></li>
+
+        <li><span class="cTitle">源码语言：</span><span>简体中文</span></li>
+
+        <li><span class="cTitle">软件等级：</span><img src='/static/index/skin/blue2013/2019/3star.gif'></li>
+
+        <li><span class="cTitle">官方网站：</span><a href="http://www.662p.com" target="_blank">官方网</a></li>
+
+        <li><span class="cTitle">源码演示：</span>
+
+            <!--<a href="{$data.demo}" target="_blank">演示地址</a></li>-->
+            <a href="javascript:void(0);" onclick="downGit({$data.softid})" target="_blank">演示地址</a></li>
+
+        <li class="te"><span class="cTitle">运行环境：</span>{$data.soft_fj}</li>
+
+        <li class="te"><span class="cTitle">更新时间：</span>{$data.softtime|date='Y-m-d',###}&nbsp;&nbsp;&nbsp;需要点数：{$data.downfen}</li>
+
+<li class="te tags"><span class="cTitle">标签TAG：</span>&nbsp;&nbsp;&nbsp;<font color="#FF0000"><a style="cursor:pointer;" onclick="checkLogin()" target="_blank">点击充值</a></font></li>
+
+<!--baidushare-->
+
+<li class="bds te"><div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+
+<a class="bds_qzone"></a>
+
+<a class="bds_tsina"></a>
+
+<a class="bds_tqq"></a>
+
+<a class="bds_renren"></a>
+
+<a class="bds_t163"></a>
+
+<span class="bds_more"></span>
+
+<a class="shareCount"></a>
+
+</div></li>
+
+<!--baidushare-->
+
+    </ul>
+
+    <div class="l share clear">
+
+        <div class="bdlikebutton"></div>
+
+        <div id="qrcode"></div>
+
+<p></p>
+
+    </div>
+
+</div>
+
+
+
+<!--software recommend-->
+
+    <div class="detail_softsay top5 clear">
+
+        <div class="soft_intr"><h3>软件介绍</h3>
+
+            <span>           <img src="/data/images/gonggao.gif" alt="安卓滑块拼图验证码控件" border="0">
+
+                <a href="#SOHUCS">发表评论</a>
+
+
+
+                <img src="/data/images/gonggao.gif" alt="安卓滑块拼图验证码控件" border="0">
+
+                <a href="">加入收藏夹</a>
+
+                <img src="/data/images/gonggao.gif" alt="安卓滑块拼图验证码控件" border="0">
+
+               <a href="#edown" onclick="window.open('','','width=500,height=420,scrollbars=yes');">错误报告</a>
+
+            </span></div>
+
+        <div class="down_add top5"><!-- 广告位：pc_code_view_cont65090top -->
+
+<script>
+
+(function() {
+
+    var s = "_" + Math.random().toString(36).slice(2);
+
+    document.write('<div id="' + s + '"></div>');
+
+    (window.slotbydup=window.slotbydup || []).push({
+
+        id: '2013906',
+
+        container: s,
+
+        size: '650,90',
+
+        display: 'inlay-fix'
+
+    });
+
+})();
+
+</script></div>
+
+        <div class="down_softsay">
+
+            <div class="softpic"></div><font color="#FF0000">&nbsp;&nbsp;温馨提示：本资源由<a href="http://code.662p.com" target="_blank">源码天堂</a>整理提供下载转载时请留下链接说明：</font>
+
+            <div class="info info2">
+
+                <input type="text" value="http://code.662p.com/view/{$data.softid}.html" style="padding:2px 5px; width:310px;" onmouseover="this.select()" onfocus="this.select()" autocomplete="off" id="fileurl"/> (<span id="cliptips" style="color:#999; font-size:12px;">←点击复制</span>)
+
+            </div></br>
+
+            <span>
+
+            <pre style="white-space: pre-wrap;word-wrap: break-word;font-size: 13px;">{$data.softsay}</pre>
+
+            </span>
+
+
+
+</br><font color="#FF0000">技术支持：</font>如果遇到技术上的问题可以到我们相关网站进行咨询和解决，<a href="http://android.662p.com/forum-196-1.html" target="_blank">安卓教程网</a>，<a href="http://ios.662p.com/forum-59-1.html" target="_blank">IOS教程网</a>，<a href="http://wp.662p.com/forum-134-1.html" target="_blank">WP教程网</a>，<a href="http://php.662p.com/forum-51-1.html" target="_blank">PHP教程网</a>，<a href="http://java.662p.com/forum-86-1.html" target="_blank">JAVA教程网</a>，<a href="http://html5.662p.com/forum-44-1.html" target="_blank">HTML5教程网</a>。
+
+</div>
+
+		<div class="down_content_bottom"><!-- 广告位：pc_code_view_cont65090foot -->
+
+<script type="text/javascript">
+
+
+    function downGit(id){
+        $.ajax({
+            url:'/clogin',
+            type:'post',
+            data:{id:id},
+            beforeSend:function () {
+                layer.load()
+            },
+            success:function (msg) {
+                if(msg.code){
+                    window.location.href = msg.url;
+                }else{
+                    layer.msg(msg.info,{icon:0,time:1500})
+                    setTimeout(function () {
+                        window.location.href='/login';
+                    },1500)
+                }
+            }
+        })
+    }
+
+
+    function collect(softid){
+
+        $.ajax({
+
+            url:'/collect',
+
+            type:'post',
+
+            data:{softid:softid},
+
+            beforeSend:function () {
+
+                layer.load()
+
+            },
+
+            success:function (msg) {
+
+                layer.closeAll('loading');
+
+                if(msg.code){
+
+                    layer.msg(msg.info,{icon:1,time:1500})
+
+                }else{
+
+                    layer.msg(msg.info,{icon:0,time:2200})
+
+                }
+
+            }
+
+        })
+
+    }
+
+(function() {
+
+    var s = "_" + Math.random().toString(36).slice(2);
+
+    document.write('<div id="' + s + '"></div>');
+
+    (window.slotbydup=window.slotbydup || []).push({
+
+        id: '2013908',
+
+        container: s,
+
+        size: '650,90',
+
+        display: 'inlay-fix'
+
+    });
+
+})();
+
+</script></div>
+
+        <div class="downpath_box border_color top10">
+
+            <div class="downpath_title">点数不足：<a href="http://code.662p.com/buygroup/"  target="_blank">点击充值</a>&nbsp; &nbsp;|&nbsp; &nbsp;            <span id="countalldivAAAA">               </span></div>
+
+            <div class="down_url">
+
+                <div class="downpath l">
+
+                    {volist name="downPath" id="foo"}
+
+                        <a style="cursor: pointer;" onclick="downSoft({$data.softid},{$foo.urlid})" target="_blank" class="other" rel="noreferrer">{$foo.urlname}</a>
+
+                        <br>
+
+                    {/volist}
+
+                    <!--<a href="/DownSoft/?softid=16727&pathid=0" target="_blank" class="other" rel="noreferrer">官方网下载(首选)</a>-->
+
+                    <!--<br>-->
+
+                    <!--<a href="/DownSoft/?softid=16727&pathid=1" target="_blank" class="other" rel="noreferrer">本地下载(推荐)</a>-->
+
+                    <!--<br>-->
+
+                    <!--<a href="/DownSoft/?softid=16727&pathid=2" target="_blank" class="other" rel="noreferrer">广东电信下载</a>-->
+
+                    <!--<br>-->
+
+                    <!--<a href="/DownSoft/?softid=16727&pathid=3" target="_blank" class="other" rel="noreferrer">上海电信下载</a>-->
+
+                    <!--<br>-->
+
+                    <!--<a href="/DownSoft/?softid=16727&pathid=4" target="_blank" class="other" rel="noreferrer">深圳联通下载</a>-->
+
+                    <!--<br>-->
+
+                    <!--<a href="/DownSoft/?softid=16727&pathid=5" target="_blank" class="other" rel="noreferrer">北京联通下载</a>-->
+
+                    <!--<br>-->
+
+                    <!--<a href="/DownSoft/?softid=16727&pathid=6" target="_blank" class="other" rel="noreferrer">网通下载</a>-->
+
+                    <!--<br>-->
+
+                    <!--<a href="/DownSoft/?softid=16727&pathid=7" target="_blank" class="other" rel="noreferrer">移动下载</a>-->
+
+                </div>
+
+                <div class="l downurl_ad"><!-- 广告位：pc_code_view_down50060A -->
+
+<script type="text/javascript">
+
+    //充值前检测用户是否登录
+
+    function checkLogin(){
+
+        $.ajax({
+
+            url:'/isLogin',
+
+            beforeSend:function(){
+
+                layer.load()
+
+            },
+
+            success:function(msg){
+
+                if(msg.code){
+
+                    window.location.href = '/buygroup';
+
+                }else{
+
+                    layer.msg(msg.info,{icon:0,time:2000});
+
+                    setTimeout(function(){
+
+                        window.location.href = '/login';
+
+                    },2000)
+
+                }
+
+            }
+
+        })
+
+    }
+
+    //软件下载
+
+    function downSoft(softid,pathid){
+
+        $.ajax({
+
+            url:'/DownSoft',
+
+            data:{softid:softid,pathid:pathid},
+
+            type:'post',
+
+            beforeSend:function(){
+
+                layer.load()
+
+            },
+
+            success:function (msg) {
+
+                layer.closeAll('loading');
+                if(msg.code){
+
+                    window.location.href=msg.url;
+
+                }else{
+
+                    layer.msg(msg.info,{icon:0,time:2200});
+
+                    setTimeout(function(){
+
+                        window.location.href = msg.url;
+
+                    },2200)
+
+                }
+
+            }
+
+        })
+
+    }
+
+(function() {
+
+    var s = "_" + Math.random().toString(36).slice(2);
+
+    document.write('<div id="' + s + '"></div>');
+
+    (window.slotbydup=window.slotbydup || []).push({
+
+        id: '2013912',
+
+        container: s,
+
+        size: '500,60',
+
+        display: 'inlay-fix'
+
+    });
+
+})();
+
+</script></div>
+
+                <div class="l downurl_ad"><!-- 广告位：pc_code_view_down50060B -->
+
+<script>
+
+(function() {
+
+    var s = "_" + Math.random().toString(36).slice(2);
+
+    document.write('<div id="' + s + '"></div>');
+
+    (window.slotbydup=window.slotbydup || []).push({
+
+        id: '2013914',
+
+        container: s,
+
+        size: '500,60',
+
+        display: 'inlay-fix'
+
+    });
+
+})();
+
+</script></div>
+
+                <div class="l downurl_ad"><!-- 广告位：pc_code_view_down50060C -->
+
+<script>
+
+(function() {
+
+    var s = "_" + Math.random().toString(36).slice(2);
+
+    document.write('<div id="' + s + '"></div>');
+
+    (window.slotbydup=window.slotbydup || []).push({
+
+        id: '2013916',
+
+        container: s,
+
+        size: '500,60',
+
+        display: 'inlay-fix'
+
+    });
+
+})();
+
+</script></div>
+
+                <div class="l downurl_ad"><!-- 广告位：pc_code_view_down50060D -->
+
+<script>
+
+(function() {
+
+    var s = "_" + Math.random().toString(36).slice(2);
+
+    document.write('<div id="' + s + '"></div>');
+
+    (window.slotbydup=window.slotbydup || []).push({
+
+        id: '2013918',
+
+        container: s,
+
+        size: '500,60',
+
+        display: 'inlay-fix'
+
+    });
+
+})();
+
+</script></div>
+
+            </div>
+
+        </div>
+
+        <div class="related_box border_color top10">
+
+            <div class="related_title"><a href=""/view/16727.html>你可能还喜欢的源码</a></div>
+
+            <ul class="related clear">
+
+无相关下载
+
+            </ul>
+
+
+
+        </div>
+
+		<div class="related_box border_color top10">
+
+        <!-- baidutuisong Comment start -->
+
+
+
+      <!-- baidutuisong Comment end -->
+
+
+
+<div>
+
+		
+
+</div>
+		</div>
+
+    </div>
+
+</div>
+
+<!--left end-->
+
+
+
+<!--/right start-->
+
+<div class="l clear top5 left5">
+
+    <div class="box_3" style="width:251px;">
+
+    <div class="updatetitle"><div class="new"><a href="" >下载分类</a></div></div>
+
+<ul class="class_list clear">
+
+    {volist name="downCate" id="foo"}
+
+    <li><a href="/list/{$foo.classid}_1.html" class="current">{$foo.classname}</a></li>
+
+    {/volist}
+
+
+</ul>
+
+</div>
+
+<div class="top5"><!-- 广告位：pc_code_view_right250250A -->
+
+<script>
+
+(function() {
+
+    var s = "_" + Math.random().toString(36).slice(2);
+
+    document.write('<div id="' + s + '"></div>');
+
+    (window.slotbydup=window.slotbydup || []).push({
+
+        id: '2013926',
+
+        container: s,
+
+        size: '250,250',
+
+        display: 'inlay-fix'
+
+    });
+
+})();
+
+</script></div>
+
+<div class="box_3 top5" style="width:251px;">
+
+<div class="list_top10"><div class="current">下载排行</div></div>
+
+<div class="softtop10_list">
+
+<ul>
+
+    {volist name="hotCate" id="foo"}
+
+        <li><a href="/view/{$foo.softid}.html" target="_blank" rel="noreferrer">{$foo.softname}</a></li>
+
+    {/volist}
+
+</ul>
+
+</div>
+
+</div>
+
+<div class="top5"><!-- 广告位：pc_code_view_right250250B -->
+
+<script>
+
+(function() {
+
+    var s = "_" + Math.random().toString(36).slice(2);
+
+    document.write('<div id="' + s + '"></div>');
+
+    (window.slotbydup=window.slotbydup || []).push({
+
+        id: '2013928',
+
+        container: s,
+
+        size: '250,250',
+
+        display: 'inlay-fix'
+
+    });
+
+})();
+
+</script></div>
+
+<div class="box_3 top5" style="width:251px;">
+
+<div class="list_top10"><div class="current">最新源码</div></div>
+
+<div class="softtop10_list">
+
+<ul>
+
+    {volist name="LatestCate" id="foo"}
+
+    <li>
+
+        <a href="/view/{$foo.softid}.html" target="_blank" rel="noreferrer">{$foo.softname}</a>
+
+    </li>
+
+    {/volist}
+
+</ul>
+
+   </div>
+
+   </div>
+
+
+
+
+
+<div class="top5"><!-- 广告位：pc_code_view_right250250C -->
+
+<script>
+
+(function() {
+
+    var s = "_" + Math.random().toString(36).slice(2);
+
+    document.write('<div id="' + s + '"></div>');
+
+    (window.slotbydup=window.slotbydup || []).push({
+
+        id: '2013930',
+
+        container: s,
+
+        size: '250,250',
+
+        display: 'inlay-fix'
+
+    });
+
+})();
+
+</script></div>
+
+   <!--<div class="box_3 top5" style="width:251px;">-->
+
+<!--<div class="list_top10"><div class="current">软件推荐</div></div>-->
+
+<!--<div class="softtop10_list">-->
+
+<!--<ul><script src='http://down.662p.com/data/js/new.js'></script></ul>-->
+
+   <!--</div>-->
+
+   <!--</div>-->
+
+<div class="top5"><!-- 广告位：pc_code_view_right250250D -->
+
+<script>
+
+(function() {
+
+    var s = "_" + Math.random().toString(36).slice(2);
+
+    document.write('<div id="' + s + '"></div>');
+
+    (window.slotbydup=window.slotbydup || []).push({
+
+        id: '2374128',
+
+        container: s,
+
+        size: '250,250',
+
+        display: 'inlay-fix'
+
+    });
+
+})();
+
+</script></div>
+
+
+
+
+
+
+
+ </div>
+
+<!--/right end-->
+
+</div>
+
+
+
+<div class="w970 clear" id="soft_nav_ad">
+
+</div>
+
+<div class="w970 clear" id="soft_nav_ad"><!-- 广告位：pc_code_view_foot96090 -->
+
+<script>
+
+(function() {
+
+    var s = "_" + Math.random().toString(36).slice(2);
+
+    document.write('<div id="' + s + '"></div>');
+
+    (window.slotbydup=window.slotbydup || []).push({
+
+        id: '2013932',
+
+        container: s,
+
+        size: '960,90',
+
+        display: 'inlay-fix'
+
+    });
+
+})();
+
+</script></div>
+
+<script type="text/javascript">
+
+$("#menu1").addClass('current');
+
+$("#submenu a").mouseover(function(){
+
+	for (i = 1; i < 5; i++) {
+
+		var str=".menu"+i;
+
+		$(str).hide();
+
+	}
+
+	$('#submenu a').removeClass('current');
+
+	$(this).addClass('current');
+
+	 var id=$(this).attr("id");
+
+	  var menu="."+id;
+
+	$(menu).show();
+
+})
+
+$(".menu1").show();
+
+$(".news").hide();
+
+$(".new_title div").mouseover(function(){
+
+	$('.new_title div').removeClass('new');
+
+	$(this).addClass('new');
+
+	$(".soft").hide();
+
+	$(".news").hide();
+
+	$(this).show();
+
+	var id=$(this).attr("id");
+
+	var menu="."+id;
+
+	$(menu).show();
+
+})
+
+</script>
+
+
+
+        {include file="common/footerOne" /}
+
+        {include file="common/footerTwo" /}
+
+</div>
+
+<!--body end-->
+
+
+
+<script type="text/javascript">
+
+function AutoScroll(obj){
+
+$(obj).find("ul:first").animate({
+
+marginTop:"-25px"
+
+},500,function(){
+
+$(this).css({marginTop:"0px"}).find("li:first").appendTo(this);
+
+});
+
+}
+
+$(document).ready(function(){
+
+setInterval('AutoScroll("#scrollDiv")',3000);
+
+});
+
+</script>
+
+
+
+<!-- gotop#polaris -->
+
+<a href="javascript:void(0);" onClick="window.scrollTo(0,0);" class="gotop_btn" id="goTopButton" style="display:none;">&nbsp;</a>
+
+<script type="text/javascript">
+
+(function($){
+
+	$(window).scroll(function(event){
+
+		if($(this).scrollTop() > 0){
+
+			if($.browser.ie6){
+
+				$('#goTopButton').css('top', $(this).scrollTop() + $(this).height() - 170);
+
+			}
+
+			if($('#goTopButton').css('display') == 'none'){
+
+				$('#goTopButton').fadeIn();
+
+			}
+
+		}else{
+
+			$('#goTopButton').fadeOut();
+
+		}
+
+	});
+
+})(jQuery);
+
+</script>
+
+<!-- gotop#polaris -->
+
+<div style="display:none;">
+
+</div>
+
+<!-- Baidu Button start -->
+
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=6435355" ></script>
+
+<script type="text/javascript" id="bdshell_js"></script>
+
+<script type="text/javascript">
+
+var bds_config={"snsKey":{'tsina':'3024734324','tqq':'801378648','t163':'9aex68YqMlZMgyoZ','tsohu':'c20e9076297f49f5'}}
+
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+
+</script>
+
+<!-- Baidu Button END -->
+
+<!--baidu tongji-->
+
+<!--<script type="text/javascript">-->
+
+<!--var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");-->
+
+<!--document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F41f100f17c387983fa5342c91eaad722' type='text/javascript'%3E%3C/script%3E"));-->
+
+<!--</script>-->
+
+<!--soso tongji-->
+
+<script type="text/javascript" src="http://tajs.qq.com/stats?sId=21781729" charset="UTF-8"></script>
+
+
+<!-- QQ客服 BEGIN -->
+
+<div id="online_qq_layer">
+
+  <div id="online_qq_tab">
+
+    <div class="online_icon">
+
+      <a href="javascript:void(0);" style="display:block" id="floatShow" title=""></a>
+
+    </div>
+
+  </div>
+
+  <div id="onlineService">
+
+    <div class="online_windows overz">
+
+      <div class="online_w_top">在线咨询</div>
+
+      <div class="overz">
+
+        <div class="online_style1">
+
+         <div id="qq_affiliate" class="qq_bar qq_online overz">
+
+            <h2>网站建设服务</h2>
+
+            <a target="_blank" class="qq_icon" href="http://wpa.qq.com/msgrd?v=3&uin=858236016&menu=yes"></a><br />
+
+            <a target="_blank" class="qq_icon" href="http://wpa.qq.com/msgrd?v=3&uin=2360248666&menu=yes"></a>
+
+          </div>
+
+          <div id="qq_affiliate" class="qq_bar qq_online overz">
+
+            <h2>充值服务</h2>
+
+            <a target="_blank" class="qq_icon" href="http://wpa.qq.com/msgrd?v=3&uin=1336948921&menu=yes"></a><br />
+
+            <a target="_blank" class="qq_icon" href="http://wpa.qq.com/msgrd?v=3&uin=858236016&menu=yes"></a>
+
+          </div>
+
+          <div id="qq_advertiser" class="qq_bar qq_online overz">
+
+            <h2>广告投放</h2>
+
+            <a target="_blank" class="qq_icon" href="http://wpa.qq.com/msgrd?v=3&uin=858236016&menu=yes"></a>
+
+          </div>
+
+          <div id="qq_4x24" class="qq_bar qq_online overz">
+
+            <h2>其他服务</h2>
+
+            <a target="_blank" class="qq_icon" href="http://wpa.qq.com/msgrd?v=3&uin=858236016&menu=yes"></a>
+
+          </div>
+
+          <div class="qq_bar overz">
+
+            <div class="qq_tel overz">客服热线：9：00-18：00</div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="online_w_bottom"></div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<script language="JavaScript" type="text/javascript" src="__INDEX__/skin/blue2013/js/qqkf.js"></script>
+
+<link href="__INDEX__/skin/blue2013/css/qqkf.css" type=text/css rel=stylesheet>
+
+
+
+<!-- QQ客服 END -->
+
+
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    bp.src = '//push.zhanzhang.baidu.com/push.js';
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<script>
+(function(){
+var src = (document.location.protocol == "http:") ? "http://js.passport.qihucdn.com/11.0.1.js?00df90a751810fc902e6a07a8a872921":"https://jspassport.ssl.qhimg.com/11.0.1.js?00df90a751810fc902e6a07a8a872921";
+document.write('<script src="' + src + '" id="sozz"><\/script>');
+})();
+</script>
+
+    </body>
+
+</html>
+
+<script>QIHOO_UNION_F_SLOT={w:500, h:48, ls:"s6951ba6b8a",position:6, display:2,origin:0};</script><script src="http://s.lianmeng.360.cn/so/f.js" charset="utf-8"></script>

@@ -1,0 +1,324 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <title>充值记录</title>
+    <meta name="keywords" content="充值记录-源码天堂" />
+    <!--<meta charset="utf8"/>-->
+    <meta name="description" content="充值记录-源码天堂" />
+    <link rel="shortcut icon" href="./favicon.ico" />
+    <link rel="icon" href="favicon.ico" type="image/gif" />
+    <link href="__INDEX__/skin/blue2013/css/download.css" rel="stylesheet" type="text/css" />
+    <link href="__INDEX__/skin/blue2013/css/download.css" rel="stylesheet" type="text/css" />
+    <link href="__INDEX__/skin/blue2013/css/page.css" rel="stylesheet" type="text/css" />
+
+    <style type="text/css">
+        input{outline: none;padding-left: 2px;}
+    </style>
+    <script type="text/javascript" src="__INDEX__/skin/blue2013/js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="__INDEX__/vendor/sendMail.js"></script>
+    <script type="text/javascript" src="/static/layer/layer.js"></script>
+    <script src="http://dup.baidustatic.com/js/ds.js"></script>
+    <script>
+        var controllername = window.location;
+        $(document).ready(function(){
+            $('.top-menu li').bind("hover", function() {
+                $(this).addClass('homes').siblings().removeClass('homes');
+            });
+            var setonobj = $('.top-menu').find('li');
+            $.each(setonobj, function(i,val){
+                var checkstr = $(val).attr('data');
+                $(val).removeClass('homes');
+                if(checkstr==controllername){
+                    $(val).addClass('homes');
+                }
+            });
+        })
+    </script>
+
+</head>
+<body>
+<!--整体-->
+
+<!--顶部 start-->
+{include file="common/top" /}
+<!--顶部 end-->
+
+<!--body start-->
+<div id="wrap" class="w970 clear">
+
+    <!--头部 start-->
+    {include file="common/header" /}
+    <!--头部 end-->
+    <div class="w970 clear" id="soft_nav_ad"><!-- 广告位：pc_code_view_head96090A -->
+        <script>
+            (function() {
+                var s = "_" + Math.random().toString(36).slice(2);
+                document.write('<div id="' + s + '"></div>');
+                (window.slotbydup=window.slotbydup || []).push({
+                    id: '2013896',
+                    container: s,
+                    size: '960,90',
+                    display: 'inlay-fix'
+                });
+            })();
+        </script></div>
+    <div class="w970 clear" id="soft_nav_ad"><!-- 广告位：pc_code_view_head96090B -->
+        <script>
+            (function() {
+                var s = "_" + Math.random().toString(36).slice(2);
+                document.write('<div id="' + s + '"></div>');
+                (window.slotbydup=window.slotbydup || []).push({
+                    id: '2013898',
+                    container: s,
+                    size: '960,90',
+                    display: 'inlay-fix'
+                });
+            })();
+        </script></div>
+    <div class="w970 clear" id="soft_nav_ad"><!-- 广告位：pc_code_view_head96090C -->
+        <script>
+            (function() {
+                var s = "_" + Math.random().toString(36).slice(2);
+                document.write('<div id="' + s + '"></div>');
+                (window.slotbydup=window.slotbydup || []).push({
+                    id: '2013900',
+                    container: s,
+                    size: '960,90',
+                    display: 'inlay-fix'
+                });
+            })();
+        </script></div>
+    <div class="w970 clear" id="soft_nav_ad"><!-- 广告位：pc_code_view_head96090D -->
+        <script>
+            (function() {
+                var s = "_" + Math.random().toString(36).slice(2);
+                document.write('<div id="' + s + '"></div>');
+                (window.slotbydup=window.slotbydup || []).push({
+                    id: '2013902',
+                    container: s,
+                    size: '960,90',
+                    display: 'inlay-fix'
+                });
+            })();
+        </script></div>
+    <!--菜单下广告 end-->
+    <div class="dangqian">当前位置：<!--empire.url--><!--empire.url--><a href="/">首页</a>&nbsp;>&nbsp;<a href="/cp">会员中心</a>&nbsp;>&nbsp;<a href="">充值记录</a></div>
+    <div class="l top5 clear">
+        <div class="box_3" style="width:251px;">
+            <div class="updatetitle"><div class="new"><a href="/cp/">会员中心</a></div></div>
+            <ul class="class_list clear">
+                <div align="center"><a target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=1336948921&amp;site=qq&amp;menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:1336948921:52" alt="点击这里给我发消息" title="点击这里给我发消息">客服咨询</a></div>
+                <div align="center"><a href="/EditInfo/">修改资料</a></div>
+                <div align="center"><a href="/fava/">收藏夹</a></div>
+                <div align="center"><a href="/my/">我的点数</a></div>
+                <div align="center"><a href="/buygroup/">在线充值</a></div>
+                <div align="center"><a href="/card/">点卡充值</a></div>
+                <div align="center"><a href="/buybak/">充值记录</a></div>
+                <div align="center"><a href="/downbak/">消费记录</a></div>
+                <div align="center"><a href="/AddSoft/index.php">发布源码</a></div>
+            </ul>
+        </div>
+        <div class="box_3 top5" style="width:251px;"></div>
+    </div>
+    <div class="l left5 clear main_softlist">
+        <div class="box_2 top5 bg_2 clear" style="width:650px;height:auto;">
+            <div class="updatetitle"><em class="list_class_title">充值记录</em></div>
+            <div class="soft_list_ad">
+                <div id="BAIDU_SSP__wrapper_534017_0"></div>
+
+            </div>
+            <ul class="soft_list">
+                <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
+                    <tbody><tr class="header">
+                        <td width="12%"><div align="center">类型</div></td>
+                        <td width="42%" height="25"><div align="center">充值卡号</div></td>
+                        <td width="8%" height="25"><div align="center">金额</div></td>
+                        <td width="8%" height="25"><div align="center">点数</div></td>
+                        <td width="8%"><div align="center">有效期</div></td>
+                        <td width="22%" height="25"><div align="center">购买时间</div></td>
+                    </tr>
+                    {volist name="data" id="foo"}
+                        <tr bgcolor="#FFFFFF">
+                            <td><div align="center">
+                                {$foo.paybz.0}      </div></td>
+                            <td height="25">
+                                {$foo.paybz.1}    </td>
+                            <td height="25"><div align="center">
+                                100      </div></td>
+                            <td height="25"><div align="center">
+                                150 点      </div></td>
+                            <td><div align="center">0</div></td>
+                            <td height="25"><div align="center">
+                                2014-05-08 11:50:02      </div></td>
+                        </tr>
+                    {/volist}
+                    <tr bgcolor="#FFFFFF">
+                        <td height="25" colspan="6">
+                            共&nbsp;4&nbsp;条记录&nbsp;&nbsp;&nbsp;&nbsp;<b>[1]</b>    </td>
+                    </tr>
+                    </tbody></table>
+
+            </ul>
+        </div>
+        <div class="box_2 top5 pages clear" style="height: 4px;">
+        </div>
+    </div>
+    <div class="w970 clear" id="soft_nav_ad"><!-- 广告位：pc_code_view_foot96090 -->
+        <script>
+            (function() {
+                var s = "_" + Math.random().toString(36).slice(2);
+                document.write('<div id="' + s + '"></div>');
+                (window.slotbydup=window.slotbydup || []).push({
+                    id: '2013932',
+                    container: s,
+                    size: '960,90',
+                    display: 'inlay-fix'
+                });
+            })();
+        </script></div>
+    <!--<script src="/ViewClick?softid=16727&all=1&month=1&week=1&day=1"></script> -->
+    <script type="text/javascript">
+        function del(){
+            favaid = [];
+            $('.J_favaid:checked').each(function(){
+                favaid.push($(this).val());
+            });
+            $.ajax({
+                url:'/favaDelete',
+                type:'post',
+                data:{favaid:favaid},
+                beforeSend:function () {
+                    layer.load()
+                },
+                success:function (msg) {
+                    layer.closeAll('loading')
+                    if(msg.code){
+                        layer.msg(msg.info,{icon:1,time:2000});
+                        setTimeout(function(){
+                            window.location.reload();
+                        },2000)
+                    }else{
+                        layer.msg(msg.info,{icon:7,time:2000});
+                    }
+                }
+            })
+        }
+        function userLogin(){
+            username = $('#username').val();
+            if(username==''){
+                layer.msg('请输入用户名！',{icon:0,time:2000})
+                return false;
+            }
+            password = $('#password').val();
+            if(password==''){
+                layer.msg('请输入密码！',{icon:0,time:2000})
+                return false;
+            }
+            $.ajax({
+                url:'',
+                data:$("#J_form").serializeArray(),
+                type:'post',
+                beforeSend:function(){
+                    layer.load()
+                },
+                success:function(msg){
+                    layer.closeAll('loading')
+                    if(msg.code){
+                        layer.msg(msg.info,{icon:1,time:2000})
+                        if(msg.lastUrl!==''){
+                            jump_url = msg.lastUrl;
+                        }else{
+                            jump_url = 'http://code.662p.com';
+                        }
+                        setTimeout(function () {
+                            window.location.href = jump_url;
+                        },2000)
+                    }else{
+                        layer.msg(msg.info,{icon:0,time:2000})
+                    }
+                }
+            })
+        }
+        function formSubmit(){
+            console.log('888');
+            $("#menu1").addClass('current');
+            $("#submenu a").mouseover(function(){
+                for (i = 1; i < 5; i++) {
+                    var str=".menu"+i;
+                    $(str).hide();
+                }
+                $('#submenu a').removeClass('current');
+                $(this).addClass('current');
+                var id=$(this).attr("id");
+                var menu="."+id;
+                $(menu).show();
+            })
+            $.ajax({
+
+            })
+        }
+
+
+        $(".menu1").show();
+        $(".news").hide();
+        $(".new_title div").mouseover(function(){
+            $('.new_title div').removeClass('new');
+            $(this).addClass('new');
+            $(".soft").hide();
+            $(".news").hide();
+            $(this).show();
+            var id=$(this).attr("id");
+            var menu="."+id;
+            $(menu).show();
+        })
+    </script>
+
+    {include file="common/footerOne" /}
+
+    {include file="common/footerTwo" /}
+</div>
+<!--body end-->
+
+<script type="text/javascript">
+    function AutoScroll(obj){
+        $(obj).find("ul:first").animate({
+            marginTop:"-25px"
+        },500,function(){
+            $(this).css({marginTop:"0px"}).find("li:first").appendTo(this);
+        });
+    }
+    $(document).ready(function(){
+        setInterval('AutoScroll("#scrollDiv")',3000);
+    });
+</script>
+
+<!-- gotop#polaris -->
+<a href="javascript:void(0);" onClick="window.scrollTo(0,0);" class="gotop_btn" id="goTopButton" style="display:none;">&nbsp;</a>
+<script type="text/javascript">
+    (function($){
+        $(window).scroll(function(event){
+            if($(this).scrollTop() > 0){
+                if($.browser.ie6){
+                    $('#goTopButton').css('top', $(this).scrollTop() + $(this).height() - 170);
+                }
+                if($('#goTopButton').css('display') == 'none'){
+                    $('#goTopButton').fadeIn();
+                }
+            }else{
+                $('#goTopButton').fadeOut();
+            }
+        });
+    })(jQuery);
+</script>
+<!-- gotop#polaris -->
+<div style="display:none;">
+</div>
+
+<script type="text/javascript" src="http://tajs.qq.com/stats?sId=21781729" charset="UTF-8"></script>
+<script src="http://www.anquan.org/static/outer/js/anquan_authen_83x30.js"></script>
+</body>
+</html>
+
+<script>QIHOO_UNION_F_SLOT={w:500, h:48, ls:"s6951ba6b8a",position:6, display:2,origin:0};</script><script src="http://s.lianmeng.360.cn/so/f.js" charset="utf-8"></script>

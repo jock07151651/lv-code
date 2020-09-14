@@ -1,0 +1,114 @@
+<!-- 顶部工具条开始 -->
+{include file="common/top" /}
+<!-- 顶部工具条 结束 -->
+<!-- LOGO搜索开始 -->
+<div id="top" class="wrap overflowh">
+  <div class="logo clear_fix overflowh">
+    <div class="logo_img left">
+      <a href="http://www.662p.com/" title="662p开源网" target="_self">
+        <img alt="662p开源网" src="__ARTICLE__/picture/logo.gif" height="78" width="215"></a>
+    </div>
+    <div class="seach left">
+      <form method="get" id="searchForm" name="searchForm" action="/search">
+        <input name="keywords" class="search_form_input" value="{empty name='Think.get.keywords' value=''}{else/}{$Think.get.keywords}{/empty}" id="search_form_input" placeholder="  请输入关键字搜索 . . ." autocomplete="off" type="text">
+        <input class="search_form_submit" id="search_form_submit" value="搜 全 站" type="submit"></form>
+
+    </div>
+    <!--<div class="upload left ml15">-->
+    <!--<a target="_blank" href="">投稿中心</a>-->
+    <!--</div>-->
+    <div style="clear:both;"></div>
+  </div>
+</div>
+<!-- LOGO搜索 结束 -->
+<!-- 导航开始 -->
+<div class="template">
+  <div id="navbg" class="nav_top nav clear_fix head-v3 clearfix">
+    <div class="navigation-up">
+      <div class="navigation-inner">
+        <div id="menu" class="navigation-v3">
+          <ul>
+            <li class="{eq name='$current' value='1'}current{/eq}">
+              <h2>
+                <a class="home" href="http://www.662p.com/">网站首页</a></h2>
+            </li>
+            <li  _t_nav='category_0' class="{eq name='$current' value='2'}current{/eq}">
+              <h2>
+                <a target="_blank" href='http://code.662p.com'>源码下载</a></h2>
+            </li>
+            <li  _t_nav='category_1'>
+              <h2><a target="_blank" href=''>博客资讯</a></h2>
+            </li>
+            <li _t_nav='category_2'>
+              <h2>
+                <a target="_blank" href=''>网页特效</a></h2>
+            </li>
+            <li _t_nav='category_3' class="{eq name='$current' value='4'}current{/eq}">
+              <h2>
+                <a target="_blank" href='http://sucai.662p.com/list'>图片素材</a></h2>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="navigation-down">
+
+      <div id="category_0" class="nav-down-menu" style="display: none;" _t_nav="category_0">
+        <div class="navigation-down-inner">
+          <p>
+            <a href="http://code.662p.com/list/1_1.html" target="_blank">Asp源码</a>
+            <a href="http://code.662p.com/list/2_1.html" target="_blank">.net源码</a>
+            <a href="http://code.662p.com/list/4_1.html" target="_blank">php源码</a>
+            <a href="http://code.662p.com/list/5_1.html" target="_blank">Jsp源码</a>
+            <a href="http://code.662p.com/list/6_1.html" target="_blank">JS源码</a>
+            <a href="http://code.662p.com/list/7_1.html" target="_blank">Flash源码</a>
+            <a href="http://code.662p.com/list/8_1.html" target="_blank">Java源码</a>
+            <a href="http://code.662p.com/list/9_1.html" target="_blank">VC/C++源码</a>
+            <a href="http://code.662p.com/list/139_1.html" target="_blank">C#源码</a>
+            <a href="http://code.662p.com/list/10_1.html" target="_blank">VB源码</a>
+            <a href="http://code.662p.com/list/140_1.html" target="_blank">Delphi源码</a>
+            <a href="http://code.662p.com/list/11_1.html" target="_blank">Android源码</a>
+            <a href="http://code.662p.com/list/12_1.html" target="_blank">IOS源码</a>
+            <a href="http://code.662p.com/list/14_1.html" target="_blank">WP源码</a>
+            <a href="http://code.662p.com/list/13_1.html" target="_blank">HTML5源码</a>
+            <a class='last' href="/code/21_1.html"" target="_blank">其他源码</a></p>
+        </div>
+      </div>
+
+      <div id="category_1" class="nav-down-menu" style="display: none;" _t_nav="category_1">
+        <div class="navigation-down-inner">
+          <p>
+            <a title="移动开发" href="http://www.662p.com/list/58.html" target="_blank">移动开发</a>
+            <a title="云计算" href="http://www.662p.com/list/31.html" target="_blank">云计算</a>
+            <a title="人工智能" href="http://www.662p.com/list/34.html" target="_blank">人工智能</a>
+            <a title="物联网" href="http://www.662p.com/list/35.html" target="_blank">物联网</a>
+            <a title="大数据" href="http://www.662p.com/list/37.html" target="_blank">大数据</a>
+            <a title="编程语言" href="http://www.662p.com/list/40.html" target="_blank">编程语言</a>
+            <a title="系统运维" href="http://www.662p.com/list/44.html" target="_blank">系统运维</a>
+            <a title="区块链" href="http://www.662p.com/list/47.html" target="_blank">区块链</a>
+            <a title="产品运营" href="http://www.662p.com/list/53.html" target="_blank">产品运营</a>
+            <a title="前端开发" href="http://www.662p.com/list/66.html" target="_blank">前端开发</a>
+            <a title="其他类型" href="http://www.662p.com/list/48.html" target="_blank">其他类型</a>
+          </p>
+        </div>
+      </div>
+      <div id="category_2" class="nav-down-menu" style="display: none;" _t_nav="category_2">
+        <div class="navigation-down-inner">
+          <p>
+            <a href="http://code.662p.com/list/97_1.html" target="_blank">菜单导航</a>
+            <a href="http://code.662p.com/list/98_1.html" target="_blank">图片相册</a>
+            <a href="http://code.662p.com/list/99_1.html" target="_blank">选项卡TAB</a>
+            <a href="http://code.662p.com/list/102_1.html" target="_blank">文字特效</a>
+            <a href="http://code.662p.com/list/106_1.html" target="_blank">窗口特效</a>
+            <a href="http://code.662p.com/list/108_1.html" target="_blank">日期时间</a>
+            <a href="http://code.662p.com/list/103_1.html" target="_blank">鼠标特效</a>
+            <a href="http://code.662p.com/list/109_1.html" target="_blank">视频播放</a>
+            <a href="http://code.662p.com/list/110_1.html" target="_blank">其它代码</a>
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- 导航 结束 -->

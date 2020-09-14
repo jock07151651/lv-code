@@ -1,0 +1,428 @@
+<html><!--<![endif]-->
+<head>
+
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="icon" href="/favicon.ico" type="image/gif" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+
+    <!-- Start of Baidu Transcode -->
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta name="applicable-device" content="pc,mobile">
+    <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="mobile-agent" content="format=html5;url=https://www.jianshu.com/users/password/mobile_reset">
+    <!-- End of Baidu Transcode -->
+
+
+    <meta name="360-site-verification" content="604a14b53c6b871206001285921e81d8">
+    <meta property="wb:webmaster" content="294ec9de89e7fadb">
+    <meta property="qc:admins" content="104102651453316562112116375">
+    <meta property="qc:admins" content="11635613706305617">
+    <meta property="qc:admins" content="1163561616621163056375">
+    <meta name="google-site-verification" content="cV4-qkUJZR6gmFeajx_UyPe47GW9vY6cnCrYtCHYNh4">
+    <meta name="google-site-verification" content="HF7lfF8YEGs1qtCE-kPml8Z469e2RHhGajy6JPVy5XI">
+    <meta http-equiv="mobile-agent" content="format=html5; url=https://www.jianshu.com/users/password/mobile_reset">
+
+    <!-- Apple -->
+    <meta name="apple-mobile-web-app-title" content="简书">
+
+
+    <title>用手机号重置密码 - 简书</title>
+
+    <meta name="csrf-param" content="authenticity_token">
+    <meta name="csrf-token"
+          content="5e2udsu68wx1B8nDncTsoGUHXSPanXRxb1nRXo2l0bYxVi0neE7C3+uSihzbCbo2eW6YeTEV5bCjobIk7k7NUQ==">
+    <link rel="stylesheet" href="/static/sweetalert/sweetalert2.css">
+
+    <link rel="stylesheet" media="all" href="/static/index/jianshu/css/web-d8f364aa94534f48835a.css">
+
+    <link rel="stylesheet" media="all" href="/static/index/jianshu/css/entry-725103a0668ccb1789d4.css">
+
+    <link href="//cdn2.jianshu.io/assets/favicons/favicon-e743bfb1821442341c3ab15bdbe804f7ad97676bd07a770ccc9483473aa76f06.ico"
+          rel="shortcut icon" type="image/x-icon">
+    <link rel="apple-touch-icon-precomposed"
+          href="//cdn2.jianshu.io/assets/apple-touch-icons/57-a6f1f1ee62ace44f6dc2f6a08575abd3c3b163288881c78dd8d75247682a4b27.png"
+          sizes="57x57">
+    <link rel="apple-touch-icon-precomposed"
+          href="//cdn2.jianshu.io/assets/apple-touch-icons/72-fb9834bcfce738fd7b9c5e31363e79443e09a81a8e931170b58bc815387c1562.png"
+          sizes="72x72">
+    <link rel="apple-touch-icon-precomposed"
+          href="//cdn2.jianshu.io/assets/apple-touch-icons/76-49d88e539ff2489475d603994988d871219141ecaa0b1a7a9a1914f4fe3182d6.png"
+          sizes="76x76">
+    <link rel="apple-touch-icon-precomposed"
+          href="//cdn2.jianshu.io/assets/apple-touch-icons/114-24252fe693524ed3a9d0905e49bff3cbd0228f25a320aa09053c2ebb4955de97.png"
+          sizes="114x114">
+    <link rel="apple-touch-icon-precomposed"
+          href="//cdn2.jianshu.io/assets/apple-touch-icons/120-1bb7371f5e87f93ce780a5f1a05ff1b176828ee0d1d130e768575918a2e05834.png"
+          sizes="120x120">
+    <link rel="apple-touch-icon-precomposed"
+          href="//cdn2.jianshu.io/assets/apple-touch-icons/152-bf209460fc1c17bfd3e2b84c8e758bc11ca3e570fd411c3bbd84149b97453b99.png"
+          sizes="152x152">
+
+    <!-- Start of 访问统计 -->
+    <script src="/static/index/jianshu/js/push.js"></script>
+    <script src="//hm.baidu.com/hm.js?0c0e9d9b1e7d617b3e6842e85b9fb068"></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?0c0e9d9b1e7d617b3e6842e85b9fb068";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+    <!-- End of 访问统计 -->
+    <!--<script charset="UTF-8" async="" src="https://api.geetest.com/gettype.php?gt=ec47641997d5292180681a247db3c92e&amp;callback=geetest_1557889001613"></script>-->
+    <script charset="UTF-8" async="" src="/static/index/jianshu/js/fullpage.8.7.2.js"></script>
+    <!--<script charset="UTF-8" src="https://api.geetest.com/get.php?gt=ec47641997d5292180681a247db3c92e&amp;challenge=2a818d066bad0baae84788dc76e3acad&amp;lang=zh-cn&amp;pt=0&amp;w=KsMXBHWecWMvN19WGOZaHSLWrCYskNAlOcB6jlsKSgA1qGsgqxUxp(Ea9vbrXA2yGLfPHyGtU0(DmJKBTzm8clWLdGo2nfnvb8BeNaG3l(F11lvLAa3nuvFSx)hh9Pf1Cc6CFit5g4L6Ff4W(Ld8QPdg(0mUP4erJwdJHr7wD7IDTZ18XfTtj7XqxA(ezSq3GLBakGz7GwxLMyjhcDK5ULD1iVSAmuZYGQBtSIJr1C6GXDx7ia1jHxJW1I)L7YSbKXxS40MY1wosdd1Rax7V0(JJp6p6CFCrZrgS6G(qpoisRCxshkauG50mt2MrVUXQAXawpB5haE6cK8Q(Q(7fjAcQotFcgpjdalhGjJADUatCrdiLIaKddl(DC3UlKKWo9FTzWdajbHzePjvBeBLkXDcduVR8ZofgTT0jhW8)EEUdKbGU3C(sECxnia7(x38TYLXhl1tAUPkjk5)s0Cn7TExY0)bYr8IMAnqaN19Vb(ahBBxlECzuKn899N)tyQyM1F5Pir)21WMOs3Rfzymj55RdF0jXY6BnSttBrEM57nIF8X2NqxokXL0f8(6rFN5B34rQ4UzZVK2tA5IJKAuI5N18LWh4GEYfaZwfY73mFzryTxkpWz9B1yIFSbh461xtboJ1(VdIDgER06(56575kpmU47K2GUuvCzNCmLEMnMqpTtBaxCEIzYI6DiF2oBnXVK7Ou))sXla5M93g9nO06caTMvlbM6woCXtwKQXPnzobFlHu4(YH1sgbjdW8vgMpD47EduSWuDWKC7M4xYe3OhZdbRyfGP3uTas)sJGHWaBuRtx(HggcRmSQI7GzdRuP7A9O5pZ()l4IKTrJFmm9nzl0yeDw3JmSMldeG(Fqw2RnDO7W205V)ovK3m53vP217wqVlo2OQcBrrgKXFidtD3Nm(leBnEJndfTemySKI738dICJeGHNAYHnx9DMeXt3g48p9Tf54OKHiRSihtBJ8WQUKaXDPNnZYLTjhMTAy0rhcAz2)oR42kHX3rZwKjwUOtra3tc1pQavUb5N)VM4MkZfDRztS(RkQoEtaTBsAKc2DmUASdD(XrC72F0fYYOxtV0AyGo2otOBA(9CoUZP9NpUQk1RQe(nfBXdbBu5mSTqC0ZF8rZmz1VTPRRSTk1tCfjZdJqiyAVaRexZywhgUWYi5c2vgnKhblcs3KZDPk3NoMp9X3IRc4MHuu04OwpAQWiB7TYz19yZnPPVFsZJm4lO0KKK35Tab27UHJeOdN6IC9h2X2kufXHCwHgVU4INBasUTjqJ8eRapTRBEavNLi4o(fNQS)ozC9ivjuYSvDBpYTizcLW8fRub3HxburIu28i1)GavYGX0YOM2tMrMhO43t6nX4yPLEhQ17(C8iMvC5CF8Ibn1aQGjETAB5CQ2IMtZ(a(c9TpM8OnKW)9UcJH)Dmkxgb(hl6gwgtn8dcqIMozkaFztXJo62iG(FwffDXfSaDrTvEO9NqYPEc)pZvdYGV3wDSOdZ7YRcwheo3EpQXNYwCdSMF97G1QPPBu6)bbnSA6PSWA6L0eF6B8OacVrmEy0wfOYBYhvyph5eOfUJPGeRCzX(XNU38GmPGl8NjSKqRYd0sWMJzQabJ32PaW()HpUvhCOb0s4FKoDrWPoUz3ChMpjjTlSbe1EMesv4Swvgbl7TiTwBGzZPbQQ2QFnQkJ5HBxx)tOedpn7fOzhezWkaUS1qM9k6IYFotdYnDdPECCM19cP7x4NdWmKLO7indAzuF9yVlZyToVITSCRuv03fdVlvcB6rolY1Ikj1(i55xsRLt4x5MBTpQOOmEyLzgsHa4)p7iVCOKco)mWFJ(mK0EJ0jk(rZKbGHJBlbPpKf0l()61qCPSVvWUn1HbJ6bx6yiUaOziwkR7Sy(mvzFNwCL(CNyG6gBBLHvOeoNq2Tl5xZqCMd2mDz)L4po2IinVlNvXMGaN(fFqNz7o8oB6lhSYMWnm6UBB0QySvip3RZlKd14QQrv)cAApzPG1mzs9rJ6wX5zPFhHa(ximJoFL9wS2)2i89RpC8liaS53cDGWIsoI3mkQ2MITygt8mwwgTy)8Q537zTB)EgWtqyAkczPWCIeyp6XNlmyD9YqKrNh1I2oL6La8fSLh064TPmft69UCiM7H5K4hgW(M2FBfJCkzBZ6ftjUkZOyciEeIU()1sI15vc))YjbNzyZvw1DuAVd8afsVPWMH7eAENWR91w2hS23j)x2E4vTxGQ5wq9y4YVaZdsAg89ICmyNl4k9an0goY4L2kASQyhqRJXFzpkxptrglV7IyziWTueOSQXtORncz6AxpI7v0tM)Q..c02e6c2e35537342846dbfe28f0e8f38f2d6f772ecfb7317b47f4fd16ecbc7cf7a4e9fd13841836e3d90035164affdcdda15e0ee967e1279e27dc818abb733d6ef5cf819339f14b040dd0a4f43984b590f193c28674ffe18362ea9e7d9ea02c9925045114861fed340d5ac246727c0b189c82fca472b54054015e21f8ecab4b0&amp;callback=geetest_1557889002508"></script>-->
+    <link href="/static/index/jianshu/css/style_https.1.5.5.css" rel="stylesheet">
+</head>
+
+<body class="no-padding reader-black-font" lang="zh-CN">
+<div class="sign">
+    <div class="logo"><a href="/"><img src="/static/article/picture/logo.gif" style="width: 156px;" alt="Logo"></a></div>
+    <div class="main">
+        <h4 class="reset-title">用{eq name="$id" value="1"}手机{else/}邮箱{/eq}重置密码</h4>
+        <!-- 用手机号重置密码 -->
+        <form action="" onsubmit="return false;" accept-charset="UTF-8" method="post">
+            <input name="utf8" type="hidden" value="✓">
+            <input type="hidden" name="authenticity_token" value="5e2udsu68wx1B8nDncTsoGUHXSPanXRxb1nRXo2l0bYxVi0neE7C3+uSihzbCbo2eW6YeTEV5bCjobIk7k7NUQ==">
+            <div class="input-prepend restyle">
+                <div class="overseas">
+                    {eq name="$id" value="1"}
+                    <input type="text" onkeyup="checkPhone()" onblur="checkFormat()" name="mobile" style="width: 100%;padding-left: 35px !important;" id="mobile_number" placeholder="手机号">
+                    <a class="overseas-number js-overseas-number"style="width: 0px;" href="javascript:void(null);" data-toggle="dropdown"
+                       data-action="choose-country">
+                        <i class="iconfont ic-phonenumber"></i>
+                    </a>
+                    {else/}
+                    <input type="text" onblur="checkEmail()" name="email" style="width: 100%;padding-left: 35px !important;" id="mobile_number" placeholder="邮箱号">
+                    <a class="overseas-number js-overseas-number"style="width: 0px;" href="javascript:void(null);" data-toggle="dropdown"
+                       data-action="choose-country">
+                        <i class="iconfont ic-email"></i>
+                    </a>
+                    {/eq}
+                </div>
+            </div>
+            <input type="hidden" name="country_code" id="country_code" value="CN">
+            <input type="hidden" name="force_user_exist" id="force_user_exist" value="true">
+            <div class="input-prepend restyle no-radius">
+                <input type="password" name="password" id="password" placeholder="请输入新密码">
+                <i class="iconfont ic-password"></i>
+            </div>
+            <div class="input-prepend">
+                <input type="password" name="repassword" style="border-radius: 0px;" id="password_confirmation" placeholder="请再输入一遍新密码">
+                <i class="iconfont ic-password"></i>
+            </div>
+            <div class="input-prepend restyle no-radius security-up-code js-security-number">
+                <input type="text" style="border-bottom:1px solid #c8c8c8;border-top: 0px;" name="code" id="sms_code" placeholder="验证码">
+                <input type="hidden" name="hide_id" value="{$id}">
+                <i class="iconfont ic-verify"></i>
+                <a class="btn-in-resend js-send-code-button disable" onclick="sendCode(this)" href="javascript:void(0);">发送验证码</a>
+                <div>
+                    <div class="captcha"><input name="captcha[validation][challenge]" autocomplete="off" type="hidden"
+                                                value="2a818d066bad0baae84788dc76e3acad"> <input
+                            name="captcha[validation][gt]" autocomplete="off" type="hidden"
+                            value="ec47641997d5292180681a247db3c92e"> <input name="captcha[validation][validate]"
+                                                                             autocomplete="off" type="hidden" value="">
+                        <input name="captcha[validation][seccode]" autocomplete="off" type="hidden" value=""> <input
+                                name="captcha[id]" autocomplete="off" type="hidden" value="">
+                        <div id="geetest-area" class="geetest"></div>
+                    </div>
+                </div>
+            </div>
+
+            <input type="submit" name="commit" onclick="submitForm({$id})" value="重置密码" class="sign-in-button reset-password-btn"
+                   data-disable-with="重置密码">
+        </form>
+        <a class="return" href="/login"><i class="iconfont ic-back"></i> 返回登录注册</a>
+
+    </div>
+</div>
+
+<!-- Javascripts
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script type="application/json" data-name="page-data">{
+    "user_signed_in": false,
+    "locale": "zh-CN",
+    "os": "windows",
+    "read_mode": "day",
+    "read_font": "font2"
+}</script>
+
+<script src="/static/index/jianshu/js/web-base-e0abbe02a2a3751b5d82.js" crossorigin="anonymous"></script>
+<!--<script src="/static/index/jianshu/js/web-3fc97417af1d4231de85.js" crossorigin="anonymous"></script>-->
+<!--<script src="/static/index/jianshu/js/entry-9d804287771ff3014ae0.js"crossorigin="anonymous"></script>-->
+<script src="/static/admin/style/jquery_002.js"></script>
+<script src="/static/layer/layer.js"></script>
+<script src="/static/sweetalert/sweetalert2.js"></script>
+<script>
+    function sendCode(obj){
+        id = $('input[name=hide_id]').val();
+        var formData = new FormData();
+        password = $('input[name=password]').val()
+        repassword = $('input[name=repassword]').val()
+        if(id==1){
+            mobile = $('input[name=mobile]').val()
+            mobile = $('input[name=mobile]').val();
+            if(!mobile){
+                layer.tips('请输入手机号码！',$('input[name=mobile]'),{tips:[2,'#ff0000'],time:1500});
+                return false;
+            }
+            if(!isPhoneNo(mobile)){
+                layer.tips('手机号码格式不正确，请重新输入！',$('input[name=mobile]'),{tips:[2,'#ff0000'],time:1500});
+                return false;
+            }
+
+
+            formData.append('mobile',mobile);
+
+        }else{
+            email = $('input[name=email]').val()
+            if(!email){
+                layer.tips('请输入邮箱！',$('input[name=email]'),{tips:[2,'#ff0000'],time:1500});
+                return false;
+            }
+            var isEmail = /^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
+            if(!(isEmail.test(email))){
+                layer.tips('邮箱格式不正确，请重新输入！',$('input[name=email]'),{tips:[2,'#ff0000'],time:1500});
+                return false;
+            }
+            formData.append('email',email);
+        }
+        if(!password){
+            layer.tips('请输入密码！',$('input[name=password]'),{tips:[2,'#ff0000'],time:1500});
+            return false;
+        }
+        if(repassword!==password){
+            layer.tips('两次密码输入不一致，请重新输入！',$('input[name=repassword]'),{tips:[2,'#ff0000'],time:1500});
+            return false;
+        }
+        formData.append('password',password);
+        formData.append('id',id);
+        $.ajax({
+            url:"/rcode",
+            data:formData,
+            type:'post',
+            processData:false,
+            contentType:false,
+            beforeSend:function () {
+                layer.load()
+            },
+            success:function(msg){
+                layer.closeAll('loading')
+                if(msg.code){
+                    TimeDown(obj)
+                    swal({
+                        title:'',
+                        text:msg.info,
+                        type:"success",
+                        timer:1500,
+                        showConfirmButton:false
+                    });
+                }else{
+                    swal({
+                        title:'',
+                        text:msg.info,
+                        type:"warning",
+                        timer:1500,
+                        showConfirmButton:false
+                    });
+                }
+            }
+        })
+    }
+    function submitForm(id){
+        var formData = new FormData();
+        if(id==1){
+            mobile = $('input[name=mobile]').val()
+            if(!mobile){
+                layer.tips('请输入手机号！',$('input[name=mobile]'),{tips:[2,'#ff0000'],time:1500})
+                return false;
+            }
+            if(!isPhoneNo(mobile)){
+                layer.tips('手机号码格式不正确，请重新输入！',$('input[name=mobile]'),{tips:[2,'#ff0000'],time:1500})
+                return false;
+            }
+            formData.append('mobile',mobile);
+        }else{
+            email = $('input[name=email]').val()
+            if(!email){
+                layer.tips('请输入邮箱！',$('input[name=email]'),{tips:[2,'#ff0000'],time:1500})
+                return false;
+            }
+            var isEmail = /^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
+            if(!(isEmail.test(email))){
+                layer.tips('邮箱格式不正确，请重新输入！',$('input[name=email]'),{tips:[2,'#ff0000'],time:1500});
+                return false;
+            }
+            formData.append('email',email);
+        }
+
+        password = $('input[name=password]').val();
+        repassword = $('input[name=repassword]').val();
+        password = $.trim(password);
+        repassword = $.trim(repassword);
+        if(!password){
+            layer.tips('请输入密码！',$('input[name=password]'),{tips:[2,'#ff0000'],time:1500});
+            return false;
+        }
+        if(password.length<6){
+            layer.tips('密码长度为6-16位字符串！',$('input[name=password]'),{tips:[2,'#ff0000'],time:1500})
+            return false;
+        }
+
+        if(password.length>16){
+            layer.tips('密码长度为6-16位字符串！',$('input[name=password]'),{tips:[2,'#ff0000'],time:1500})
+            return false;
+        }
+        if(repassword!==password){
+            layer.tips('两次密码输入不一致，请重新输入！',$('input[name=repassword]'),{tips:[2,'#ff0000'],time:1500});
+            return false;
+        }
+        formData.append('password',password);
+        formData.append('code',$('input[name=code]').val())
+        $.ajax({
+            url:"/reset/"+id,
+            data:formData,
+            type:'post',
+            processData:false,
+            contentType:false,
+            beforeSend:function () {
+                layer.load()
+            },
+            success:function(msg){
+                layer.closeAll('loading')
+                if(msg.code){
+                    swal({
+                        title:'',
+                        text:msg.info,
+                        type:"success",
+                        timer:1500,
+                        showConfirmButton:false
+                    });
+                    setTimeout(function(){
+                        window.location.href="/login"
+                    },1500)
+                }else{
+                    swal({
+                        title:'',
+                        text:msg.info,
+                        type:"warning",
+                        timer:2000,
+                        showConfirmButton:false
+                    });
+                }
+            }
+        })
+    }
+    function checkPhone(){
+        mobile = $('input[name=mobile]').val();
+        if(isPhoneNo(mobile)){
+            $('.btn-in-resend').removeClass('disable')
+        }else{
+            $('.btn-in-resend').addClass('disable')
+        }
+    }
+    function checkEmail(){
+        email = $('input[name=email]').val();
+        var isEmail = /^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
+        if(!(isEmail.test(email))){
+            $('.btn-in-resend').addClass('disable')
+            layer.tips('邮箱格式不正确，请重新输入！',$('input[name=email]'),{tips:[2,'#ff0000'],time:1500});
+            return false;
+        }
+        $('.btn-in-resend').removeClass('disable')
+    }
+    function checkFormat(){
+        mobile = $('input[name=mobile]').val();
+        if(isPhoneNo(mobile)){
+            $('.btn-in-resend').removeClass('disable')
+        }else{
+            $('.btn-in-resend').addClass('disable')
+            layer.tips('手机号码格式不正确',$('input[name=mobile]'),{tips:[2,'#ff0000'],time:1500})
+            return false;
+        }
+    }
+    var time = 60;
+    function TimeDown(obj){
+
+        if(time==0){
+            $(obj).removeClass('disable');
+            $(obj).attr('disabled',false);
+            $(obj).text('发送验证码');
+            time = 60;
+            return
+        }else{
+            $(obj).addClass('disable')
+            $(obj).attr('disabled',true);
+            $(obj).text('重新发送'+time);
+            time--;
+        }
+        setTimeout(function(){
+            TimeDown(obj)
+        },1000)
+    }
+    // 验证手机号
+    function isPhoneNo(phone) {
+        var pattern = /^1[34578]\d{9}$/;
+        return pattern.test(phone);
+    }
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = '/static/index/jianshu/js/push.js';
+        } else {
+            bp.src = '/static/index/jianshu/js/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+
+<div class="geetest_panel geetest_wind" style="display: none;">
+    <div class="geetest_panel_ghost"></div>
+    <div class="geetest_panel_box">
+        <div class="geetest_other_offline geetest_panel_offline"></div>
+        <div class="geetest_panel_loading">
+            <div class="geetest_panel_loading_icon"></div>
+            <div class="geetest_panel_loading_content">智能验证检测中</div>
+        </div>
+        <div class="geetest_panel_success">
+            <div class="geetest_panel_success_box">
+                <div class="geetest_panel_success_show">
+                    <div class="geetest_panel_success_pie"></div>
+                    <div class="geetest_panel_success_filter"></div>
+                    <div class="geetest_panel_success_mask"></div>
+                </div>
+                <div class="geetest_panel_success_correct">
+                    <div class="geetest_panel_success_icon"></div>
+                </div>
+            </div>
+            <div class="geetest_panel_success_title">通过验证</div>
+        </div>
+        <div class="geetest_panel_error">
+            <div class="geetest_panel_error_icon"></div>
+            <div class="geetest_panel_error_title">网络超时</div>
+            <div class="geetest_panel_error_content">请点击此处重试</div>
+            <div class="geetest_panel_error_code">
+                <div class="geetest_panel_error_code_text"></div>
+            </div>
+        </div>
+        <div class="geetest_panel_footer" style="display: none;">
+            <div class="geetest_panel_footer_logo"></div>
+            <div class="geetest_panel_footer_copyright">由极验提供技术支持</div>
+        </div>
+        <div class="geetest_panel_next"></div>
+    </div>
+</div>
+</body>
+</html>

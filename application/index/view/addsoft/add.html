@@ -1,0 +1,500 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <title>软件投稿</title>
+    <meta name="keywords" content="软件投稿-源码天堂" />
+    <!--<meta charset="utf8"/>-->
+    <meta name="description" content="软件投稿-源码天堂" />
+    <link rel="shortcut icon" href="./favicon.ico" />
+    <link rel="icon" href="favicon.ico" type="image/gif" />
+    <link href="__INDEX__/skin/blue2013/css/download.css" rel="stylesheet" type="text/css" />
+    <link href="__INDEX__/skin/blue2013/css/download.css" rel="stylesheet" type="text/css" />
+    <link href="__INDEX__/skin/blue2013/css/page.css" rel="stylesheet" type="text/css" />
+
+    <style type="text/css">
+        input{outline: none;padding-left: 2px;}
+    </style>
+    <script type="text/javascript" src="__INDEX__/skin/blue2013/js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="__INDEX__/vendor/sendMail.js"></script>
+    <script type="text/javascript" src="/static/layer/layer.js"></script>
+    <script src="http://dup.baidustatic.com/js/ds.js"></script>
+    <script>
+        var controllername = window.location;
+        $(document).ready(function(){
+            $('.top-menu li').bind("hover", function() {
+                $(this).addClass('homes').siblings().removeClass('homes');
+            });
+            var setonobj = $('.top-menu').find('li');
+            $.each(setonobj, function(i,val){
+                var checkstr = $(val).attr('data');
+                $(val).removeClass('homes');
+                if(checkstr==controllername){
+                    $(val).addClass('homes');
+                }
+            });
+        })
+    </script>
+
+</head>
+<body>
+<!--整体-->
+
+<!--顶部 start-->
+{include file="common/top" /}
+<!--顶部 end-->
+
+<!--body start-->
+<div id="wrap" class="w970 clear">
+
+    <!--头部 start-->
+    {include file="common/header" /}
+    <!--头部 end-->
+    <div class="w970 clear" id="soft_nav_ad"><!-- 广告位：pc_code_view_head96090A -->
+        <script>
+            (function() {
+                var s = "_" + Math.random().toString(36).slice(2);
+                document.write('<div id="' + s + '"></div>');
+                (window.slotbydup=window.slotbydup || []).push({
+                    id: '2013896',
+                    container: s,
+                    size: '960,90',
+                    display: 'inlay-fix'
+                });
+            })();
+        </script></div>
+    <div class="w970 clear" id="soft_nav_ad"><!-- 广告位：pc_code_view_head96090B -->
+        <script>
+            (function() {
+                var s = "_" + Math.random().toString(36).slice(2);
+                document.write('<div id="' + s + '"></div>');
+                (window.slotbydup=window.slotbydup || []).push({
+                    id: '2013898',
+                    container: s,
+                    size: '960,90',
+                    display: 'inlay-fix'
+                });
+            })();
+        </script></div>
+    <div class="w970 clear" id="soft_nav_ad"><!-- 广告位：pc_code_view_head96090C -->
+        <script>
+            (function() {
+                var s = "_" + Math.random().toString(36).slice(2);
+                document.write('<div id="' + s + '"></div>');
+                (window.slotbydup=window.slotbydup || []).push({
+                    id: '2013900',
+                    container: s,
+                    size: '960,90',
+                    display: 'inlay-fix'
+                });
+            })();
+        </script></div>
+    <div class="w970 clear" id="soft_nav_ad"><!-- 广告位：pc_code_view_head96090D -->
+        <script>
+            (function() {
+                var s = "_" + Math.random().toString(36).slice(2);
+                document.write('<div id="' + s + '"></div>');
+                (window.slotbydup=window.slotbydup || []).push({
+                    id: '2013902',
+                    container: s,
+                    size: '960,90',
+                    display: 'inlay-fix'
+                });
+            })();
+        </script></div>
+    <!--菜单下广告 end-->
+    <div class="dangqian">当前位置：<!--empire.url--><!--empire.url--><a href="/">首页</a>&nbsp;>&nbsp;<a href="/list/11_1.html">会员中心</a>&nbsp;>&nbsp;<a href="">会员登录</a></div>
+    <div class="l top5 clear">
+        <div class="box_3" style="width:251px;">
+            <div class="updatetitle"><div class="new"><a href="/cp/">会员中心</a></div></div>
+            <ul class="class_list clear">
+                <div align="center"><a target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=1336948921&amp;site=qq&amp;menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:1336948921:52" alt="点击这里给我发消息" title="点击这里给我发消息">客服咨询</a></div>
+                <div align="center"><a href="/EditInfo/">修改资料</a></div>
+                <div align="center"><a href="/fava/">收藏夹</a></div>
+                <div align="center"><a href="/my/">我的点数</a></div>
+                <div align="center"><a href="/buygroup/">在线充值</a></div>
+                <div align="center"><a href="/card/">点卡充值</a></div>
+                <div align="center"><a href="/buybak/">充值记录</a></div>
+                <div align="center"><a href="/downbak/">消费记录</a></div>
+                <div align="center"><a href="/AddSoft/index.php">发布源码</a></div>
+                <div align="center"><a href="/register/">注册会员</a></div>
+            </ul>
+        </div>
+        <div class="box_3 top5" style="width:251px;"></div>
+    </div>
+    <div class="l left5 clear main_softlist">
+        <div class="box_2 top5 bg_2 clear" style="width:650px;height:auto;">
+            <div class="updatetitle"><em class="list_class_title">会员信息</em></div>
+            <div class="soft_list_ad"><div id="BAIDU_SSP__wrapper_534017_0"></div><script charset="utf-8" src="http://pos.baidu.com/mcqm?psi=f367429f4d48c3c48200206b13b0e1ea&amp;di=534017&amp;dri=0&amp;dis=0&amp;dai=0&amp;ps=758x765&amp;enu=encoding&amp;dcb=___adblockplus&amp;dtm=SSP_JSONP&amp;dvi=0.0&amp;dci=-1&amp;dpt=none&amp;tsr=0&amp;tpr=1551942314970&amp;ti=%E4%BC%9A%E5%91%98%E4%B8%AD%E5%BF%83-%E5%85%8D%E8%B4%B9%E6%BA%90%E7%A0%81-%E6%BA%90%E4%BB%A3%E7%A0%81%E4%B8%8B%E8%BD%BD-%E9%AB%98%E4%BB%BF%E6%BA%90%E7%A0%81%E4%B8%8B%E8%BD%BD-%E5%B0%BD%E5%9C%A8%E6%BA%90%E7%A0%81%E5%A4%A9%E5%A0%82!&amp;ari=2&amp;dbv=2&amp;drs=1&amp;pcs=1903x943&amp;pss=1903x1188&amp;cfv=0&amp;cpl=4&amp;chi=40&amp;cce=true&amp;cec=GBK&amp;tlm=1551942317&amp;rw=943&amp;ltu=http%3A%2F%2Fcode2.662p.com%2FAddSoft%2Findex.php&amp;ecd=1&amp;uc=1920x1040&amp;pis=-1x-1&amp;sr=1920x1080&amp;tcn=1551942318&amp;exps=110011"></script><script type="text/javascript"><!--
+            google_ad_client = "ca-pub-9334129185793568";
+            /* 728x90, 创建于 10-7-30-下载站首页 */
+            google_ad_slot = "9125868653";
+            google_ad_width = 728;
+            google_ad_height = 90;
+            //-->
+            </script>
+            </div>
+            <ul class="soft_list">
+                <script>
+                    //运行环境
+                    function AddFj(str){
+                        var r;
+                        var a;
+                        a=document.add.soft_fj.value;
+                        r=a.split(str);
+                        if(r.length!=1)
+                        {return true;}
+                        document.add.soft_fj.value+="/"+str;
+                    }
+                    function DelFj(str){
+                        var a;
+                        a=document.add.soft_fj.value;
+                        document.add.soft_fj.value=a.replace("/"+str,"");
+                    }
+
+                    function doadd(){
+                        var i;
+                        var str="";
+                        var oldi=0;
+                        var j=0;
+                        oldi=parseInt(document.add.editnum.value);
+                        for(i=1;i<=document.add.downnum.value;i++)
+                        {
+                            j=i+oldi;
+                            str=str+"<tr><td width='10%'><div align=center>"+j+"</div></td><td width='26%'><input name=downname[] type=text id=downname[] value=下载地址"+j+" size=18></td><td width='64%'><input name=downpath[] type=text id=downpath[] size=45></td></tr>";
+                        }
+                        document.getElementById("adddown").innerHTML="<table width='100%' border=0 cellspacing=1 cellpadding=3>"+str+"</table>";
+                    }
+                </script>
+
+                <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1" class="tableborder">
+                    <form name="add" method="post" action="../phome/index.php" enctype="multipart/form-data"></form>
+                    <tbody><tr class="header">
+                        <td height="25" colspan="2">发布软件 <input type="hidden" name="phome" value="AddSoft">
+                            <input name="filepass" type="hidden" id="filepass" value="1551942309">
+                            <font color="#FF0000"><br>
+
+                                基本要求：<br>
+                                1.作品必须是原创且网络未存有；<br>
+                                2.作品很强的创新和参考价值；<br>
+                                3.作品必须具有完整性；<br>
+                                4.作品必须是通过作者测试成功；<br>
+                                5.点数设置(控制0-1000点数之间) <br>
+                                6.上传作品到源码天堂网站时，需带有各大教程网的作品详细说明地址；<br>
+                                7.作者必须拥有作品的版权；<br>
+                                8.带"*"的必须填写； <br>
+                                没有符合以上的所有规定，请完善后再上传，我们坚持认真审批每一个作品；<br>
+
+                            </font></td>
+                    </tr>
+                    <tr bgcolor="#FFFFFF">
+                        <td width="18%" height="25">软件名称:<font color="#FF0000">(*)</font></td>
+                        <td width="82%" height="25"><input name="softname" type="text" id="softname" size="35">
+                            版本：
+                            <input name="soft_version" type="text" id="soft_version2" size="15"> </td>
+                    </tr>
+                    <tr bgcolor="#FFFFFF">
+                        <td height="25">选择分类:<font color="#FF0000">(*)</font></td>
+                        <td height="25">
+                            <select name="classid"><option value="0">选择分类</option><option value="1">|-Asp源码</option><option value="3" style="background:#99C4E3">&nbsp;&nbsp;|-社交聊天</option><option value="18" style="background:#99C4E3">&nbsp;&nbsp;|-留言日记</option><option value="19" style="background:#99C4E3">&nbsp;&nbsp;|-社区论坛</option><option value="20" style="background:#99C4E3">&nbsp;&nbsp;|-上传下载</option><option value="21" style="background:#99C4E3">&nbsp;&nbsp;|-电子商务</option><option value="22" style="background:#99C4E3">&nbsp;&nbsp;|-广告排行</option><option value="23" style="background:#99C4E3">&nbsp;&nbsp;|-投票调查</option><option value="24" style="background:#99C4E3">&nbsp;&nbsp;|-主机域名</option><option value="25" style="background:#99C4E3">&nbsp;&nbsp;|-新闻文章</option><option value="26" style="background:#99C4E3">&nbsp;&nbsp;|-搜索链接</option><option value="27" style="background:#99C4E3">&nbsp;&nbsp;|-贺卡图片</option><option value="28" style="background:#99C4E3">&nbsp;&nbsp;|-邮件邮箱</option><option value="29" style="background:#99C4E3">&nbsp;&nbsp;|-计数统计</option><option value="30" style="background:#99C4E3">&nbsp;&nbsp;|-影音娱乐</option><option value="31" style="background:#99C4E3">&nbsp;&nbsp;|-学校班级</option><option value="32" style="background:#99C4E3">&nbsp;&nbsp;|-CMS建站</option><option value="33" style="background:#99C4E3">&nbsp;&nbsp;|-博客系统</option><option value="34" style="background:#99C4E3">&nbsp;&nbsp;|-人才房产</option><option value="35" style="background:#99C4E3">&nbsp;&nbsp;|-办公信息</option><option value="36" style="background:#99C4E3">&nbsp;&nbsp;|-数据管理</option><option value="37" style="background:#99C4E3">&nbsp;&nbsp;|-查询工具</option><option value="38" style="background:#99C4E3">&nbsp;&nbsp;|-小偷采集</option><option value="39" style="background:#99C4E3">&nbsp;&nbsp;|-文件管理</option><option value="40" style="background:#99C4E3">&nbsp;&nbsp;|-网址导航</option><option value="41" style="background:#99C4E3">&nbsp;&nbsp;|-企业政府</option><option value="42" style="background:#99C4E3">&nbsp;&nbsp;|-其它类别</option><option value="2888" style="background:#99C4E3">&nbsp;&nbsp;|-会员交友</option><option value="2890" style="background:#99C4E3">&nbsp;&nbsp;|-整站栏目</option><option value="2">|-.net源码</option><option value="43" style="background:#99C4E3">&nbsp;&nbsp;|-社交聊天</option><option value="44" style="background:#99C4E3">&nbsp;&nbsp;|-留言日记</option><option value="45" style="background:#99C4E3">&nbsp;&nbsp;|-社区论坛</option><option value="46" style="background:#99C4E3">&nbsp;&nbsp;|-上传下载</option><option value="47" style="background:#99C4E3">&nbsp;&nbsp;|-电子商务</option><option value="48" style="background:#99C4E3">&nbsp;&nbsp;|-广告排行</option><option value="49" style="background:#99C4E3">&nbsp;&nbsp;|-投票调查</option><option value="50" style="background:#99C4E3">&nbsp;&nbsp;|-主机域名</option><option value="51" style="background:#99C4E3">&nbsp;&nbsp;|-新闻文章</option><option value="52" style="background:#99C4E3">&nbsp;&nbsp;|-搜索链接</option><option value="53" style="background:#99C4E3">&nbsp;&nbsp;|-贺卡图片</option><option value="54" style="background:#99C4E3">&nbsp;&nbsp;|-邮件列表</option><option value="55" style="background:#99C4E3">&nbsp;&nbsp;|-计数统计</option><option value="56" style="background:#99C4E3">&nbsp;&nbsp;|-影音娱乐</option><option value="57" style="background:#99C4E3">&nbsp;&nbsp;|-控件组件</option><option value="58" style="background:#99C4E3">&nbsp;&nbsp;|-CMS建站</option><option value="59" style="background:#99C4E3">&nbsp;&nbsp;|-博客系统</option><option value="60" style="background:#99C4E3">&nbsp;&nbsp;|-学校班级</option><option value="61" style="background:#99C4E3">&nbsp;&nbsp;|-企业政府</option><option value="62" style="background:#99C4E3">&nbsp;&nbsp;|-小偷采集</option><option value="63" style="background:#99C4E3">&nbsp;&nbsp;|-其它类别</option><option value="2901" style="background:#99C4E3">&nbsp;&nbsp;|-人才房产</option><option value="2924" style="background:#99C4E3">&nbsp;&nbsp;|-交友会员</option><option value="2951" style="background:#99C4E3">&nbsp;&nbsp;|-整站栏目</option><option value="2956" style="background:#99C4E3">&nbsp;&nbsp;|-网址导航</option><option value="4">|-PHP源码</option><option value="64" style="background:#99C4E3">&nbsp;&nbsp;|-社交聊天</option><option value="65" style="background:#99C4E3">&nbsp;&nbsp;|-留言日记</option><option value="66" style="background:#99C4E3">&nbsp;&nbsp;|-社区论坛</option><option value="67" style="background:#99C4E3">&nbsp;&nbsp;|-上传下载</option><option value="68" style="background:#99C4E3">&nbsp;&nbsp;|-电子商务</option><option value="69" style="background:#99C4E3">&nbsp;&nbsp;|-广告排行</option><option value="70" style="background:#99C4E3">&nbsp;&nbsp;|-投票调查</option><option value="71" style="background:#99C4E3">&nbsp;&nbsp;|-主机域名</option><option value="72" style="background:#99C4E3">&nbsp;&nbsp;|-新闻文章</option><option value="73" style="background:#99C4E3">&nbsp;&nbsp;|-搜索链接</option><option value="74" style="background:#99C4E3">&nbsp;&nbsp;|-贺卡图片</option><option value="75" style="background:#99C4E3">&nbsp;&nbsp;|-邮件列表</option><option value="76" style="background:#99C4E3">&nbsp;&nbsp;|-计数统计</option><option value="77" style="background:#99C4E3">&nbsp;&nbsp;|-网站导航</option><option value="78" style="background:#99C4E3">&nbsp;&nbsp;|-影音娱乐</option><option value="79" style="background:#99C4E3">&nbsp;&nbsp;|-查询工具</option><option value="80" style="background:#99C4E3">&nbsp;&nbsp;|-CMS建站</option><option value="81" style="background:#99C4E3">&nbsp;&nbsp;|-博客系统</option><option value="82" style="background:#99C4E3">&nbsp;&nbsp;|-学校班级</option><option value="83" style="background:#99C4E3">&nbsp;&nbsp;|-企业政府</option><option value="84" style="background:#99C4E3">&nbsp;&nbsp;|-小偷采集</option><option value="85" style="background:#99C4E3">&nbsp;&nbsp;|-其它类别</option><option value="2889" style="background:#99C4E3">&nbsp;&nbsp;|-会员交友</option><option value="2894" style="background:#99C4E3">&nbsp;&nbsp;|-数据管理</option><option value="2896" style="background:#99C4E3">&nbsp;&nbsp;|-文件管理</option><option value="2897" style="background:#99C4E3">&nbsp;&nbsp;|-整站栏目</option><option value="2923" style="background:#99C4E3">&nbsp;&nbsp;|-办公信息</option><option value="2952" style="background:#99C4E3">&nbsp;&nbsp;|-人才房产</option><option value="5">|-Jsp源码</option><option value="86" style="background:#99C4E3">&nbsp;&nbsp;|-社交聊天</option><option value="87" style="background:#99C4E3">&nbsp;&nbsp;|-留言日记</option><option value="88" style="background:#99C4E3">&nbsp;&nbsp;|-上传下载</option><option value="89" style="background:#99C4E3">&nbsp;&nbsp;|-CMS建站</option><option value="90" style="background:#99C4E3">&nbsp;&nbsp;|-博客系统</option><option value="91" style="background:#99C4E3">&nbsp;&nbsp;|-电子商务</option><option value="92" style="background:#99C4E3">&nbsp;&nbsp;|-新闻文章</option><option value="93" style="background:#99C4E3">&nbsp;&nbsp;|-计数统计</option><option value="94" style="background:#99C4E3">&nbsp;&nbsp;|-其它类别</option><option value="96" style="background:#99C4E3">&nbsp;&nbsp;|-社区论坛</option><option value="2902" style="background:#99C4E3">&nbsp;&nbsp;|-广告排行</option><option value="2903" style="background:#99C4E3">&nbsp;&nbsp;|-搜索链接</option><option value="2904" style="background:#99C4E3">&nbsp;&nbsp;|-贺卡图片</option><option value="2905" style="background:#99C4E3">&nbsp;&nbsp;|-交友征婚</option><option value="2906" style="background:#99C4E3">&nbsp;&nbsp;|-整站门户</option><option value="2907" style="background:#99C4E3">&nbsp;&nbsp;|-主机域名</option><option value="2908" style="background:#99C4E3">&nbsp;&nbsp;|-查询工具</option><option value="2909" style="background:#99C4E3">&nbsp;&nbsp;|-数据维护</option><option value="2910" style="background:#99C4E3">&nbsp;&nbsp;|-学校班级</option><option value="2911" style="background:#99C4E3">&nbsp;&nbsp;|-人才房产</option><option value="2912" style="background:#99C4E3">&nbsp;&nbsp;|-网址导航</option><option value="2913" style="background:#99C4E3">&nbsp;&nbsp;|-投票调查</option><option value="2914" style="background:#99C4E3">&nbsp;&nbsp;|-影音娱乐</option><option value="2915" style="background:#99C4E3">&nbsp;&nbsp;|-办公管理</option><option value="2916" style="background:#99C4E3">&nbsp;&nbsp;|-企业网站</option><option value="2917" style="background:#99C4E3">&nbsp;&nbsp;|-邮件邮箱</option><option value="2918" style="background:#99C4E3">&nbsp;&nbsp;|-小偷采集</option><option value="6">|- JS源码</option><option value="97" style="background:#99C4E3">&nbsp;&nbsp;|-菜单导航</option><option value="98" style="background:#99C4E3">&nbsp;&nbsp;|-图片相册</option><option value="99" style="background:#99C4E3">&nbsp;&nbsp;|-选项卡TAB</option><option value="100" style="background:#99C4E3">&nbsp;&nbsp;|-表单按钮</option><option value="101" style="background:#99C4E3">&nbsp;&nbsp;|-表格图层</option><option value="102" style="background:#99C4E3">&nbsp;&nbsp;|-文字特效</option><option value="103" style="background:#99C4E3">&nbsp;&nbsp;|-鼠标特效</option><option value="104" style="background:#99C4E3">&nbsp;&nbsp;|-css样式</option><option value="105" style="background:#99C4E3">&nbsp;&nbsp;|-颜色背景</option><option value="106" style="background:#99C4E3">&nbsp;&nbsp;|-窗口特效</option><option value="107" style="background:#99C4E3">&nbsp;&nbsp;|-滚动代码</option><option value="108" style="background:#99C4E3">&nbsp;&nbsp;|-日期时间</option><option value="109" style="background:#99C4E3">&nbsp;&nbsp;|-视频播放</option><option value="110" style="background:#99C4E3">&nbsp;&nbsp;|-其它代码</option><option value="318">&nbsp;&nbsp;|-广告代码</option><option value="319" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-Flash焦点图</option><option value="320" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-全屏广告 </option><option value="321" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-对联广告 </option><option value="322" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-在线客服 </option><option value="323" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-弹窗漂浮 </option><option value="324" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-翻牌页角</option><option value="325" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-其它广告</option><option value="7">|-Flash源码</option><option value="111" style="background:#99C4E3">&nbsp;&nbsp;|-图片展示</option><option value="112" style="background:#99C4E3">&nbsp;&nbsp;|-多媒体应用</option><option value="113" style="background:#99C4E3">&nbsp;&nbsp;|-菜单按钮</option><option value="114" style="background:#99C4E3">&nbsp;&nbsp;|-Web应用</option><option value="115" style="background:#99C4E3">&nbsp;&nbsp;|-背景动画</option><option value="116" style="background:#99C4E3">&nbsp;&nbsp;|-文字特效</option><option value="117" style="background:#99C4E3">&nbsp;&nbsp;|-短片剪辑</option><option value="118" style="background:#99C4E3">&nbsp;&nbsp;|-游戏源文件</option><option value="119" style="background:#99C4E3">&nbsp;&nbsp;|-鼠标效果</option><option value="120" style="background:#99C4E3">&nbsp;&nbsp;|-整站模板</option><option value="121" style="background:#99C4E3">&nbsp;&nbsp;|-广告片头</option><option value="122" style="background:#99C4E3">&nbsp;&nbsp;|-日期时间</option><option value="123" style="background:#99C4E3">&nbsp;&nbsp;|-视觉创意</option><option value="124" style="background:#99C4E3">&nbsp;&nbsp;|-其它应用</option><option value="8">|-Java源码</option><option value="125" style="background:#99C4E3">&nbsp;&nbsp;|-游戏娱乐</option><option value="126" style="background:#99C4E3">&nbsp;&nbsp;|-网络相关</option><option value="127" style="background:#99C4E3">&nbsp;&nbsp;|-窗体界面</option><option value="128" style="background:#99C4E3">&nbsp;&nbsp;|-算法相关</option><option value="129" style="background:#99C4E3">&nbsp;&nbsp;|-系统相关</option><option value="130" style="background:#99C4E3">&nbsp;&nbsp;|-综合应用</option><option value="131" style="background:#99C4E3">&nbsp;&nbsp;|-文件操作</option><option value="132" style="background:#99C4E3">&nbsp;&nbsp;|-书籍源码</option><option value="133" style="background:#99C4E3">&nbsp;&nbsp;|-多媒体</option><option value="134" style="background:#99C4E3">&nbsp;&nbsp;|-图形操作</option><option value="135" style="background:#99C4E3">&nbsp;&nbsp;|-文字字符</option><option value="136" style="background:#99C4E3">&nbsp;&nbsp;|-类库组件</option><option value="137" style="background:#99C4E3">&nbsp;&nbsp;|-初学实例</option><option value="138" style="background:#99C4E3">&nbsp;&nbsp;|-其他源码</option><option value="3031">&nbsp;&nbsp;|-网站项目</option><option value="3032" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-电子商务</option><option value="3033" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-学校班级</option><option value="9">|-VC/C++源码</option><option value="157" style="background:#99C4E3">&nbsp;&nbsp;|-游戏娱乐</option><option value="158" style="background:#99C4E3">&nbsp;&nbsp;|-网络相关</option><option value="159" style="background:#99C4E3">&nbsp;&nbsp;|-窗体界面</option><option value="160" style="background:#99C4E3">&nbsp;&nbsp;|-算法相关</option><option value="161" style="background:#99C4E3">&nbsp;&nbsp;|-系统相关</option><option value="162" style="background:#99C4E3">&nbsp;&nbsp;|-综合应用</option><option value="163" style="background:#99C4E3">&nbsp;&nbsp;|-文件操作</option><option value="164" style="background:#99C4E3">&nbsp;&nbsp;|-书籍源码</option><option value="165" style="background:#99C4E3">&nbsp;&nbsp;|-多媒体</option><option value="166" style="background:#99C4E3">&nbsp;&nbsp;|-图形操作</option><option value="167" style="background:#99C4E3">&nbsp;&nbsp;|-文字字符</option><option value="168" style="background:#99C4E3">&nbsp;&nbsp;|-类库组件</option><option value="169" style="background:#99C4E3">&nbsp;&nbsp;|-报表打印</option><option value="170" style="background:#99C4E3">&nbsp;&nbsp;|-加密解密</option><option value="171" style="background:#99C4E3">&nbsp;&nbsp;|-初学实例</option><option value="172" style="background:#99C4E3">&nbsp;&nbsp;|-其他源码</option><option value="10">|-VB源码</option><option value="141" style="background:#99C4E3">&nbsp;&nbsp;|-游戏娱乐</option><option value="142" style="background:#99C4E3">&nbsp;&nbsp;|-网络相关</option><option value="143" style="background:#99C4E3">&nbsp;&nbsp;|-窗体界面</option><option value="144" style="background:#99C4E3">&nbsp;&nbsp;|-算法相关</option><option value="145" style="background:#99C4E3">&nbsp;&nbsp;|-系统相关</option><option value="146" style="background:#99C4E3">&nbsp;&nbsp;|-综合应用</option><option value="147" style="background:#99C4E3">&nbsp;&nbsp;|-文件操作</option><option value="148" style="background:#99C4E3">&nbsp;&nbsp;|-书籍源码</option><option value="149" style="background:#99C4E3">&nbsp;&nbsp;|-多媒体</option><option value="150" style="background:#99C4E3">&nbsp;&nbsp;|-图形操作</option><option value="151" style="background:#99C4E3">&nbsp;&nbsp;|-文字字符</option><option value="152" style="background:#99C4E3">&nbsp;&nbsp;|-类库组件</option><option value="153" style="background:#99C4E3">&nbsp;&nbsp;|-报表打印</option><option value="154" style="background:#99C4E3">&nbsp;&nbsp;|-加密解密</option><option value="155" style="background:#99C4E3">&nbsp;&nbsp;|-初学实例</option><option value="156" style="background:#99C4E3">&nbsp;&nbsp;|-其他源码</option><option value="11">|-android源码</option><option value="173">&nbsp;&nbsp;|-代码片段</option><option value="255" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-视图布局(View Layout)</option><option value="256" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-视图切换(View Transition)</option><option value="257" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-数据库(Database)</option><option value="258" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-网络(Network)</option><option value="259" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-声音(Audio)</option><option value="260" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-图像(Image)</option><option value="261" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-重力感应(CoreMotion)</option><option value="262" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-游戏引擎(cocos2d)</option><option value="263" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-标签(Label)</option><option value="264" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-地图(Map)</option><option value="265" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-其他(other)</option><option value="2925" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-指示器(Indicator)</option><option value="2926" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-按钮(Button)</option><option value="2927" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-日历(Calendar)</option><option value="2928" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-相机(Camera)</option><option value="2929" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-透明层(Toast&amp;HUD)</option><option value="2930" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-键盘(Keyboard)</option><option value="2931" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-弹出视图(Popup View)</option><option value="2932" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-菜单(Menu)</option><option value="2933" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-导航条(Navigation Bar)</option><option value="2934" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-选择器(Picker)</option><option value="2935" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-进度条(Progress)</option><option value="2936" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-滚动视图(ScrollView)</option><option value="2937" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-分段选择(Segment)</option><option value="2938" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-滑杆(Slider)</option><option value="2939" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-状态栏(Status Bar)</option><option value="2940" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-开关(Switch)</option><option value="2941" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-选项卡(Tab Bar)</option><option value="2942" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-列表(ListView)</option><option value="2943" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-文本输入(TextView)</option><option value="2944" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-网页(WebView)</option><option value="2945" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-动画(Animation)</option><option value="2946" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-图表(Chart)</option><option value="2947" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-绘图(Drawing)</option><option value="2948" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-手势互换(Gesture)</option><option value="2949" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-社交分享(Socialization)</option><option value="2950" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-对话框(Dialog)</option><option value="2953" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-Action Bar(ActionBar)</option><option value="2955" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-视图效果(View Effects)</option><option value="3024" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-引导页(Intro&amp;Guide View)</option><option value="3025" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-插件机制</option><option value="3026" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-开发框架</option><option value="174">&nbsp;&nbsp;|-游戏源码</option><option value="266" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-角色扮演</option><option value="267" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-益智休闲</option><option value="268" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-棋牌游戏</option><option value="269" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-网络游戏</option><option value="270" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-体育竞速</option><option value="271" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-飞行射击</option><option value="272" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-经营策略</option><option value="273" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-动作冒险</option><option value="274" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-游戏引擎</option><option value="275" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-其他游戏</option><option value="175" style="background:#99C4E3">&nbsp;&nbsp;|-网络浏览</option><option value="176" style="background:#99C4E3">&nbsp;&nbsp;|-影音播放</option><option value="177" style="background:#99C4E3">&nbsp;&nbsp;|-聊天通讯</option><option value="178" style="background:#99C4E3">&nbsp;&nbsp;|-新闻阅读</option><option value="179" style="background:#99C4E3">&nbsp;&nbsp;|-摄影图像</option><option value="180" style="background:#99C4E3">&nbsp;&nbsp;|-安全杀毒</option><option value="181" style="background:#99C4E3">&nbsp;&nbsp;|-桌面美化</option><option value="182" style="background:#99C4E3">&nbsp;&nbsp;|-学习相关</option><option value="183" style="background:#99C4E3">&nbsp;&nbsp;|-生活相关</option><option value="184" style="background:#99C4E3">&nbsp;&nbsp;|-其他应用</option><option value="12">|-IOS源码</option><option value="217">&nbsp;&nbsp;|-代码片段</option><option value="276" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-动画(Animation)</option><option value="277" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-音频声效(Audio)</option><option value="278" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-按钮(Button)</option><option value="279" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-日历(Calendar)</option><option value="280" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-相机(Camera)</option><option value="281" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-图像(Image)</option><option value="282" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-键盘(Keyboard)</option><option value="283" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-标签(Label)</option><option value="284" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-地图(Map)</option><option value="285" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-导航条(Navigation Bar)</option><option value="286" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-网络(Networking)</option><option value="425" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-选择器(Picker)</option><option value="2868" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-弹出视图(Popup View)</option><option value="2869" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-进度条(Progress)</option><option value="2870" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-滚动视图(ScrollView)</option><option value="2871" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-分段选择(Segment)</option><option value="2872" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-滑杆(Slider)</option><option value="2873" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-状态栏(Status Bar)</option><option value="2874" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-开关(Switch)</option><option value="2875" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-选项卡(Tab Bar)</option><option value="2876" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-列表(Table)</option><option value="2877" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-文字视图(Text)</option><option value="2878" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-视图布局(View Layout)</option><option value="2879" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-视图切换(View Transition)</option><option value="2880" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-网页(Webview)</option><option value="2881" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-游戏引擎(cocos2d)</option><option value="2882" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-社交分享(Socialization)</option><option value="2883" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-其他(Others)</option><option value="2884" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-图表(Chart)</option><option value="2885" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-绘图(Drawing)</option><option value="2886" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-手势交互(Gesture)</option><option value="2887" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-指示器(HUD)</option><option value="2892" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-视图效果(View Effects)</option><option value="2893" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-重力感应CoreMotion</option><option value="2895" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-数据库(Database)</option><option value="2898" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-电子书(eBook)</option><option value="2919" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-文字输入框(TextField)</option><option value="2920" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-菜单(Menu)</option><option value="2921" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-提醒对话框(AlertView)</option><option value="2922" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-引导页(Intro&amp;Guide View)</option><option value="3027" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-插件机制</option><option value="3028" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-开发框架</option><option value="218">&nbsp;&nbsp;|-游戏源码</option><option value="287" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-角色扮演</option><option value="288" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-益智休闲</option><option value="289" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-棋牌游戏</option><option value="290" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-网络游戏</option><option value="291" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-体育竞速</option><option value="292" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-飞行射击</option><option value="293" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-经营策略</option><option value="294" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-动作冒险</option><option value="295" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-游戏引擎</option><option value="296" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-其他游戏</option><option value="219" style="background:#99C4E3">&nbsp;&nbsp;|-网络浏览</option><option value="220" style="background:#99C4E3">&nbsp;&nbsp;|-影音播放</option><option value="221" style="background:#99C4E3">&nbsp;&nbsp;|-聊天通讯</option><option value="222" style="background:#99C4E3">&nbsp;&nbsp;|-新闻阅读</option><option value="223" style="background:#99C4E3">&nbsp;&nbsp;|-摄影图像</option><option value="224" style="background:#99C4E3">&nbsp;&nbsp;|-安全杀毒</option><option value="225" style="background:#99C4E3">&nbsp;&nbsp;|-桌面美化</option><option value="226" style="background:#99C4E3">&nbsp;&nbsp;|-学习相关</option><option value="227" style="background:#99C4E3">&nbsp;&nbsp;|-生活相关</option><option value="228" style="background:#99C4E3">&nbsp;&nbsp;|-其他应用</option><option value="13">|-html5源码</option><option value="241" style="background:#99C4E3">&nbsp;&nbsp;|-图片展示</option><option value="242" style="background:#99C4E3">&nbsp;&nbsp;|-多媒体应用</option><option value="243" style="background:#99C4E3">&nbsp;&nbsp;|-菜单按钮</option><option value="244" style="background:#99C4E3">&nbsp;&nbsp;|-Web应用</option><option value="245" style="background:#99C4E3">&nbsp;&nbsp;|-背景动画</option><option value="246" style="background:#99C4E3">&nbsp;&nbsp;|-文字特效</option><option value="247" style="background:#99C4E3">&nbsp;&nbsp;|-短片剪辑</option><option value="248" style="background:#99C4E3">&nbsp;&nbsp;|-游戏源文件</option><option value="249" style="background:#99C4E3">&nbsp;&nbsp;|-鼠标效果</option><option value="250" style="background:#99C4E3">&nbsp;&nbsp;|-整站模板</option><option value="251" style="background:#99C4E3">&nbsp;&nbsp;|-广告片头</option><option value="252" style="background:#99C4E3">&nbsp;&nbsp;|-日期时间</option><option value="253" style="background:#99C4E3">&nbsp;&nbsp;|-视觉创意</option><option value="254" style="background:#99C4E3">&nbsp;&nbsp;|-其它应用</option><option value="14">|-WP源码</option><option value="229">&nbsp;&nbsp;|-代码片段</option><option value="297" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-视图布局(View Layout)</option><option value="298" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-视图切换(View Transition)</option><option value="299" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-数据库(Database) </option><option value="300" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-网络(Network)</option><option value="301" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-声音(Audio)</option><option value="302" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-图像(Image)</option><option value="303" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-重力感应(CoreMotion)</option><option value="304" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-游戏引擎(cocos2d)</option><option value="305" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-选择器(Picker)</option><option value="306" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-日历(Calendar)</option><option value="307" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-其他(other)</option><option value="2979" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-按钮(Button)</option><option value="2980" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-菜单(Menu)</option><option value="2981" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-指示器(Indicator)</option><option value="2982" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-相机(Camera)</option><option value="2983" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-透明层(Toast&amp;HUD)</option><option value="2984" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-键盘(Keyboard)</option><option value="2985" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-导航条(Navigation Bar)</option><option value="2986" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-进度条(Progress)</option><option value="2987" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-滑杆(Slider)</option><option value="2988" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-状态栏(Status Bar)</option><option value="2989" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-开关(Switch)</option><option value="2990" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-选项卡(Tab Bar)</option><option value="2991" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-列表(ListView)</option><option value="2992" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-文本输入(TextView)</option><option value="2993" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-动画(Animation)</option><option value="2994" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-图表(Chart)</option><option value="2995" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-绘图(Drawing)</option><option value="2996" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-对话框(Dialog)</option><option value="2997" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-标签(Label)</option><option value="2998" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-地图(Map)</option><option value="3029" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-插件机制</option><option value="3030" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-开发框架</option><option value="230">&nbsp;&nbsp;|-游戏源码</option><option value="308" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-角色扮演</option><option value="309" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-益智休闲</option><option value="310" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-棋牌游戏</option><option value="311" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-网络游戏</option><option value="312" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-体育竞速</option><option value="313" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-飞行射击</option><option value="314" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-经营策略</option><option value="315" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-动作冒险</option><option value="316" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-游戏引擎</option><option value="317" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-其他游戏</option><option value="231" style="background:#99C4E3">&nbsp;&nbsp;|-网络浏览</option><option value="232" style="background:#99C4E3">&nbsp;&nbsp;|-影音播放</option><option value="233" style="background:#99C4E3">&nbsp;&nbsp;|-聊天通讯</option><option value="234" style="background:#99C4E3">&nbsp;&nbsp;|-新闻阅读</option><option value="235" style="background:#99C4E3">&nbsp;&nbsp;|-摄影图像</option><option value="236" style="background:#99C4E3">&nbsp;&nbsp;|-安全杀毒</option><option value="237" style="background:#99C4E3">&nbsp;&nbsp;|-桌面美化</option><option value="238" style="background:#99C4E3">&nbsp;&nbsp;|-学习相关</option><option value="239" style="background:#99C4E3">&nbsp;&nbsp;|-生活相关</option><option value="240" style="background:#99C4E3">&nbsp;&nbsp;|-其他应用</option><option value="15">|-其他源码</option><option value="326">&nbsp;&nbsp;|-CGI源码</option><option value="333" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-游戏娱乐</option><option value="334" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-网络相关</option><option value="335" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-窗体界面</option><option value="336" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-算法相关</option><option value="337" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-系统相关</option><option value="338" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-综合应用</option><option value="339" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-文件操作</option><option value="340" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-书籍源码</option><option value="341" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-多媒体</option><option value="342" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-图形操作</option><option value="343" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-文字字符</option><option value="344" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-类库组件</option><option value="345" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-报表打印</option><option value="346" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-加密解密</option><option value="347" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-初学实例</option><option value="348" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-其他CGI源码</option><option value="327">&nbsp;&nbsp;|-PB源码</option><option value="349" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-游戏娱乐</option><option value="350" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-窗体界面</option><option value="351" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-算法相关</option><option value="352" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-系统相关</option><option value="353" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-综合应用</option><option value="354" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-文件操作</option><option value="355" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-书籍源码</option><option value="356" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-多媒体</option><option value="357" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-图形操作</option><option value="358" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-文字字符</option><option value="359" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-类库组件</option><option value="360" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-报表打印</option><option value="361" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-加密解密</option><option value="362" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-初学实例</option><option value="363" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-其他PB源码</option><option value="328">&nbsp;&nbsp;|-VF源码</option><option value="364" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-游戏娱乐</option><option value="365" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-窗体界面</option><option value="366" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-算法相关</option><option value="367" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-系统相关</option><option value="368" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-综合应用</option><option value="369" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-文件操作</option><option value="370" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-书籍源码</option><option value="371" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-多媒体</option><option value="372" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-图形操作</option><option value="373" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-文字字符</option><option value="374" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-类库组件</option><option value="375" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-报表打印</option><option value="376" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-加密解密</option><option value="377" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-初学实例</option><option value="378" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-其他VF源码</option><option value="329">&nbsp;&nbsp;|-汇编</option><option value="379" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-游戏娱乐</option><option value="380" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-窗体界面</option><option value="381" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-算法相关</option><option value="382" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-系统相关</option><option value="383" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-综合应用</option><option value="384" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-文件操作</option><option value="385" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-书籍源码</option><option value="386" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-多媒体</option><option value="387" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-图形操作</option><option value="388" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-文字字符</option><option value="389" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-类库组件</option><option value="390" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-报表打印</option><option value="391" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-加密解密</option><option value="392" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-初学实例</option><option value="393" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-其他汇编源码</option><option value="330">&nbsp;&nbsp;|-易语言</option><option value="394" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-游戏娱乐</option><option value="395" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-窗体界面</option><option value="396" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-算法相关</option><option value="397" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-系统相关</option><option value="398" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-综合应用</option><option value="399" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-文件操作</option><option value="400" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-书籍源码</option><option value="401" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-多媒体</option><option value="402" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-图形操作</option><option value="403" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-文字字符</option><option value="404" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-类库组件</option><option value="405" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-报表打印</option><option value="406" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-加密解密</option><option value="407" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-初学实例</option><option value="408" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-其他易语言源码</option><option value="331">&nbsp;&nbsp;|-jQuery</option><option value="409" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-游戏娱乐</option><option value="410" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-窗体界面</option><option value="411" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-算法相关</option><option value="412" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-系统相关</option><option value="413" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-综合应用</option><option value="414" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-文件操作</option><option value="415" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-书籍源码</option><option value="416" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-多媒体</option><option value="417" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-图形操作</option><option value="418" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-文字字符</option><option value="419" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-类库组件</option><option value="420" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-报表打印</option><option value="421" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-加密解密</option><option value="422" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-初学实例</option><option value="423" style="background:#99C4E3">&nbsp;&nbsp;&nbsp;&nbsp;|-其他jQuery源码</option><option value="332" style="background:#99C4E3">&nbsp;&nbsp;|-其他源码</option><option value="3034" style="background:#99C4E3">&nbsp;&nbsp;|-NodeJs源码</option><option value="16">|-开源项目</option><option value="424" style="background:#99C4E3">&nbsp;&nbsp;|-android </option><option value="139">|-C#源码</option><option value="185" style="background:#99C4E3">&nbsp;&nbsp;|-游戏娱乐</option><option value="186" style="background:#99C4E3">&nbsp;&nbsp;|-网络相关</option><option value="187" style="background:#99C4E3">&nbsp;&nbsp;|-窗体界面</option><option value="188" style="background:#99C4E3">&nbsp;&nbsp;|-算法相关</option><option value="189" style="background:#99C4E3">&nbsp;&nbsp;|-系统相关</option><option value="190" style="background:#99C4E3">&nbsp;&nbsp;|-综合应用</option><option value="191" style="background:#99C4E3">&nbsp;&nbsp;|-文件操作</option><option value="192" style="background:#99C4E3">&nbsp;&nbsp;|-书籍源码</option><option value="193" style="background:#99C4E3">&nbsp;&nbsp;|-多媒体</option><option value="194" style="background:#99C4E3">&nbsp;&nbsp;|-图形操作</option><option value="195" style="background:#99C4E3">&nbsp;&nbsp;|-文字字符</option><option value="196" style="background:#99C4E3">&nbsp;&nbsp;|-类库组件</option><option value="197" style="background:#99C4E3">&nbsp;&nbsp;|-报表打印</option><option value="198" style="background:#99C4E3">&nbsp;&nbsp;|-加密解密</option><option value="199" style="background:#99C4E3">&nbsp;&nbsp;|-初学实例</option><option value="200" style="background:#99C4E3">&nbsp;&nbsp;|-其他源码</option><option value="140">|-Delphi源码</option><option value="201" style="background:#99C4E3">&nbsp;&nbsp;|-游戏娱乐</option><option value="202" style="background:#99C4E3">&nbsp;&nbsp;|-网络相关</option><option value="203" style="background:#99C4E3">&nbsp;&nbsp;|-窗体界面</option><option value="204" style="background:#99C4E3">&nbsp;&nbsp;|-算法相关</option><option value="205" style="background:#99C4E3">&nbsp;&nbsp;|-系统相关</option><option value="206" style="background:#99C4E3">&nbsp;&nbsp;|-综合应用</option><option value="207" style="background:#99C4E3">&nbsp;&nbsp;|-文件操作</option><option value="208" style="background:#99C4E3">&nbsp;&nbsp;|-书籍源码</option><option value="209" style="background:#99C4E3">&nbsp;&nbsp;|-多媒体</option><option value="210" style="background:#99C4E3">&nbsp;&nbsp;|-图形操作</option><option value="211" style="background:#99C4E3">&nbsp;&nbsp;|-文字字符</option><option value="212" style="background:#99C4E3">&nbsp;&nbsp;|-类库组件</option><option value="213" style="background:#99C4E3">&nbsp;&nbsp;|-报表打印</option><option value="214" style="background:#99C4E3">&nbsp;&nbsp;|-加密解密</option><option value="215" style="background:#99C4E3">&nbsp;&nbsp;|-初学实例</option><option value="216" style="background:#99C4E3">&nbsp;&nbsp;|-其他源码</option><option value="2957">|-网站插件</option><option value="2967" style="background:#99C4E3">&nbsp;&nbsp;|-discuz插件</option><option value="2968" style="background:#99C4E3">&nbsp;&nbsp;|-dedecms插件</option><option value="2969" style="background:#99C4E3">&nbsp;&nbsp;|-wordpress插件</option><option value="2970" style="background:#99C4E3">&nbsp;&nbsp;|-ecshop插件</option><option value="2971" style="background:#99C4E3">&nbsp;&nbsp;|-帝国CMS插件</option><option value="2972" style="background:#99C4E3">&nbsp;&nbsp;|-phpwind插件</option><option value="2973" style="background:#99C4E3">&nbsp;&nbsp;|-phpcms插件</option><option value="2974" style="background:#99C4E3">&nbsp;&nbsp;|-shopex插件</option><option value="2975" style="background:#99C4E3">&nbsp;&nbsp;|-其他插件</option><option value="2958">|-网站模板</option><option value="2959" style="background:#99C4E3">&nbsp;&nbsp;|-discuz模板</option><option value="2960" style="background:#99C4E3">&nbsp;&nbsp;|-dedecms模板</option><option value="2961" style="background:#99C4E3">&nbsp;&nbsp;|-wordpress模板</option><option value="2962" style="background:#99C4E3">&nbsp;&nbsp;|-ecshop模板</option><option value="2963" style="background:#99C4E3">&nbsp;&nbsp;|-帝国CMS模板</option><option value="2964" style="background:#99C4E3">&nbsp;&nbsp;|-phpwind模板</option><option value="2965" style="background:#99C4E3">&nbsp;&nbsp;|-shopex模板</option><option value="2966" style="background:#99C4E3">&nbsp;&nbsp;|-其他模板</option><option value="2976">|-手机网站源码</option><option value="2977" style="background:#99C4E3">&nbsp;&nbsp;|-社交聊天</option><option value="2978" style="background:#99C4E3">&nbsp;&nbsp;|-留言日记</option><option value="2999" style="background:#99C4E3">&nbsp;&nbsp;|-文件管理</option><option value="3000" style="background:#99C4E3">&nbsp;&nbsp;|-整站模版</option><option value="3001" style="background:#99C4E3">&nbsp;&nbsp;|-办公信息</option><option value="3002" style="background:#99C4E3">&nbsp;&nbsp;|-人才房产</option><option value="3003" style="background:#99C4E3">&nbsp;&nbsp;|-社区论坛</option><option value="3004" style="background:#99C4E3">&nbsp;&nbsp;|-上传下载</option><option value="3005" style="background:#99C4E3">&nbsp;&nbsp;|-电子商务</option><option value="3006" style="background:#99C4E3">&nbsp;&nbsp;|-广告排行</option><option value="3007" style="background:#99C4E3">&nbsp;&nbsp;|-投票调查</option><option value="3008" style="background:#99C4E3">&nbsp;&nbsp;|-主机域名</option><option value="3009" style="background:#99C4E3">&nbsp;&nbsp;|-新闻文章</option><option value="3010" style="background:#99C4E3">&nbsp;&nbsp;|-搜索链接</option><option value="3011" style="background:#99C4E3">&nbsp;&nbsp;|-贺卡图片</option><option value="3012" style="background:#99C4E3">&nbsp;&nbsp;|-邮件列表</option><option value="3013" style="background:#99C4E3">&nbsp;&nbsp;|-会员交友</option><option value="3014" style="background:#99C4E3">&nbsp;&nbsp;|-计数统计</option><option value="3015" style="background:#99C4E3">&nbsp;&nbsp;|-网站导航</option><option value="3016" style="background:#99C4E3">&nbsp;&nbsp;|-影音娱乐</option><option value="3017" style="background:#99C4E3">&nbsp;&nbsp;|-查询工具</option><option value="3018" style="background:#99C4E3">&nbsp;&nbsp;|-CMS建站</option><option value="3019" style="background:#99C4E3">&nbsp;&nbsp;|-博客系统</option><option value="3020" style="background:#99C4E3">&nbsp;&nbsp;|-学校班级</option><option value="3021" style="background:#99C4E3">&nbsp;&nbsp;|-企业政府</option><option value="3022" style="background:#99C4E3">&nbsp;&nbsp;|-小偷采集</option><option value="3023" style="background:#99C4E3">&nbsp;&nbsp;|-其它类别</option></select> <font color="#666666">(要选择蓝色条[终极分类])</font></td>
+                    </tr>
+                    <tr bgcolor="#FFFFFF">
+                        <td height="25">选择专题:</td>
+                        <td height="25"><select name="ztid" id="ztid">
+                            <option value="0">不隶属专题</option>
+                            <option value="1">技术文档</option>        </select>
+                            （可选）</td>
+                    </tr>
+                    <tr bgcolor="#FFFFFF">
+                        <td height="25">关键字:</td>
+                        <td height="25"><input name="keyboard" type="text" id="keyboard" size="45">
+                            <font color="#666666">(多个请用","格开)</font></td>
+                    </tr>
+                    <tr bgcolor="#FFFFFF">
+                        <td rowspan="2" valign="top">预览图:<font color="#FF0000">(*)</font></td>
+                        <td height="25"><input name="softpic" type="text" id="softpic" size="45">
+                            <font color="#666666">(如没有，请留空)</font></td>
+                    </tr>
+                    <tr bgcolor="#FFFFFF">
+                        <td height="25">上传图片：
+                            <input name="imgfile" type="file" id="imgfile"> <font color="#666666">(比直接地址优先)
+                            </font></td>
+                    </tr>
+                    <tr bgcolor="#FFFFFF">
+                        <td height="25">作者:</td>
+                        <td height="25"><input name="writer" type="text" id="writer" size="45">
+                        </td>
+                    </tr>
+                    <tr bgcolor="#FFFFFF">
+                        <td height="25">官方网站:</td>
+                        <td height="25"><input name="homepage" type="text" id="homepage" size="45" value="http://"></td>
+                    </tr>
+                    <tr bgcolor="#FFFFFF">
+                        <td height="25">演示地址:</td>
+                        <td height="25"><input name="demo" type="text" id="demo" size="45" value="http://"></td>
+                    </tr>
+                    <tr bgcolor="#FFFFFF">
+                        <td height="25">运行环境: <font color="#FF0000">(*)</font></td>
+                        <td height="25"><input name="soft_fj" type="text" id="soft_fj" size="45">
+                            （可手动输入）</td>
+                    </tr>
+                    <tr bgcolor="#FFFFFF">
+                        <td height="25">&nbsp;</td>
+                        <td height="25">
+                            <input type="checkbox" name="check" value="Asp" onclick="if(this.checked){AddFj(this.value);}else{DelFj(this.value);}">Asp&nbsp;&nbsp;<input type="checkbox" name="check" value=".net" onclick="if(this.checked){AddFj(this.value);}else{DelFj(this.value);}">.net&nbsp;&nbsp;<input type="checkbox" name="check" value="javascript" onclick="if(this.checked){AddFj(this.value);}else{DelFj(this.value);}">javascript&nbsp;&nbsp;<input type="checkbox" name="check" value="PHP" onclick="if(this.checked){AddFj(this.value);}else{DelFj(this.value);}">PHP&nbsp;&nbsp;<input type="checkbox" name="check" value="Jsp" onclick="if(this.checked){AddFj(this.value);}else{DelFj(this.value);}">Jsp&nbsp;&nbsp;<br><input type="checkbox" name="check" value="MAC OS" onclick="if(this.checked){AddFj(this.value);}else{DelFj(this.value);}">MAC OS&nbsp;&nbsp;<input type="checkbox" name="check" value="Other" onclick="if(this.checked){AddFj(this.value);}else{DelFj(this.value);}">Other&nbsp;&nbsp;<input type="checkbox" name="check" value="Android2.0+" onclick="if(this.checked){AddFj(this.value);}else{DelFj(this.value);}">Android2.0+&nbsp;&nbsp;<input type="checkbox" name="check" value="Flash" onclick="if(this.checked){AddFj(this.value);}else{DelFj(this.value);}">Flash&nbsp;&nbsp;<input type="checkbox" name="check" value="Java" onclick="if(this.checked){AddFj(this.value);}else{DelFj(this.value);}">Java&nbsp;&nbsp;<br><input type="checkbox" name="check" value="Other" onclick="if(this.checked){AddFj(this.value);}else{DelFj(this.value);}">Other&nbsp;&nbsp;<input type="checkbox" name="check" value="mysql" onclick="if(this.checked){AddFj(this.value);}else{DelFj(this.value);}">mysql&nbsp;&nbsp;<input type="checkbox" name="check" value="Access" onclick="if(this.checked){AddFj(this.value);}else{DelFj(this.value);}">Access&nbsp;&nbsp;<input type="checkbox" name="check" value="mssql" onclick="if(this.checked){AddFj(this.value);}else{DelFj(this.value);}">mssql&nbsp;&nbsp;<input type="checkbox" name="check" value="oracle" onclick="if(this.checked){AddFj(this.value);}else{DelFj(this.value);}">oracle&nbsp;&nbsp;<br><input type="checkbox" name="check" value="Eclipse" onclick="if(this.checked){AddFj(this.value);}else{DelFj(this.value);}">Eclipse&nbsp;&nbsp;<input type="checkbox" name="check" value="Visual Studio2010/2008+" onclick="if(this.checked){AddFj(this.value);}else{DelFj(this.value);}">Visual Studio2010/2008+&nbsp;&nbsp;<input type="checkbox" name="check" value="Windows/Visual C/C++" onclick="if(this.checked){AddFj(this.value);}else{DelFj(this.value);}">Windows/Visual C/C++&nbsp;&nbsp;<input type="checkbox" name="check" value="Windows/VB" onclick="if(this.checked){AddFj(this.value);}else{DelFj(this.value);}">Windows/VB&nbsp;&nbsp;<input type="checkbox" name="check" value="Windows/Delphi7" onclick="if(this.checked){AddFj(this.value);}else{DelFj(this.value);}">Windows/Delphi7&nbsp;&nbsp;<br><input type="checkbox" name="check" value="Xcode 4.3, iOS 5.0" onclick="if(this.checked){AddFj(this.value);}else{DelFj(this.value);}">Xcode 4.3, iOS 5.0&nbsp;&nbsp;<input type="checkbox" name="check" value="window sdk 7.0/+" onclick="if(this.checked){AddFj(this.value);}else{DelFj(this.value);}">window sdk 7.0/+&nbsp;&nbsp;<input type="checkbox" name="check" value="IE/Firefox/360/" onclick="if(this.checked){AddFj(this.value);}else{DelFj(this.value);}">IE/Firefox/360/&nbsp;&nbsp;<input type="checkbox" name="check" value="android/apad" onclick="if(this.checked){AddFj(this.value);}else{DelFj(this.value);}">android/apad&nbsp;&nbsp;<input type="checkbox" name="check" value="其他" onclick="if(this.checked){AddFj(this.value);}else{DelFj(this.value);}">其他&nbsp;&nbsp;<br>      </td>
+                    </tr>
+                    <tr bgcolor="#FFFFFF">
+                        <td height="25">软件属性</td>
+                        <td height="25">界面语言:
+                            <select name="language" id="language">
+                                <option value="1" selected="">简体中文</option><option value="24">繁体</option><option value="25">英文</option><option value="26">多语言</option><option value="21">其他</option>        </select>
+                            ，软件类型:
+                            <select name="softtype" id="softtype">
+                                <option value="16">IOS源码</option><option value="17">Window Phone</option><option value="4">Asp源码</option><option value="5">.net源码</option><option value="6">PHP源码</option><option value="7">Jsp源码</option><option value="8">Javascript源码</option><option value="9">Flash源码</option><option value="10">Java源码</option><option value="11">VC/C++源码</option><option value="12">C#源码</option><option value="13">VB源码</option><option value="14">Delphi源码</option><option value="15" selected="">Android源码</option><option value="18">Html5源码</option><option value="19">其他源码</option><option value="20">网站模板</option><option value="21">网站插件</option><option value="22">WAP网站源码</option>        </select>
+                            ，授权型式:
+                            <select name="soft_sq" id="select">
+                                <option value="1" selected="">共享源码</option><option value="2">免费源码</option><option value="3">自由源码</option><option value="4">试用源码</option><option value="5">演示源码</option><option value="6">商业源码</option>        </select></td>
+                    </tr>
+                    <tr bgcolor="#FFFFFF">
+                        <td height="25">&nbsp;</td>
+                        <td height="25">文件类型:
+                            <input name="filetype" type="text" id="filetype" size="10"> <select name="select2" onchange="document.add.filetype.value=this.value">
+                                <option value="">类型</option>
+                                <option value=".zip">.zip</option>
+                                <option value=".rar">.rar</option>
+                                <option value=".exe">.exe</option>
+                            </select>
+                            ，文件大小:
+                            <input name="filesize" type="text" id="filesize2" size="10"> <select name="select" onchange="document.add.filesize.value+=this.value">
+                                <option value="">单位</option>
+                                <option value=" MB">MB</option>
+                                <option value=" KB">KB</option>
+                                <option value=" GB">GB</option>
+                                <option value=" BYTES">BYTES</option>
+                            </select></td>
+                    </tr>
+                    <tr>
+                        <td height="25" bgcolor="#FFFFFF">下载所需点数：</td>
+                        <td height="25" bgcolor="#FFFFFF"><input name="downfen" type="text" id="downfen" value="" size="6">
+                            点（0-1000之间）
+                            <p style="display:none"> <input name="dodownfen" type="checkbox" id="dodownfen" value="1" checked="checked">
+                                应用于每个下载地址(方便批量操作)</p></td>
+                    </tr>
+                    <tr bgcolor="#FFFFFF">
+                        <td height="25" valign="top"><p>下载地址:<font color="#FF0000">(*)</font></p></td>
+                        <td height="25"><table width="100%" border="0" cellspacing="1" cellpadding="3">
+                            <tbody><tr>
+                                <td><table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#DBEAF5">
+                                    <tbody><tr>
+                                        <td width="10%"> <div align="center">编号</div></td>
+                                        <td width="26%">下载名称</td>
+                                        <td width="64%">下载地址</td>
+                                    </tr>
+                                    </tbody></table></td>
+                            </tr>
+                            <tr>
+                                <td><table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                    <tbody><tr>
+                                        <td width="10%"> <div align="center">1</div></td>
+                                        <td width="26%"> <input name="downname[]" type="text" id="downname[]" value="下载地址1" size="16">
+                                        </td>
+                                        <td width="64%"> <input name="downpath[]" type="text" id="downpath[]" size="32"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><div align="center">2</div></td>
+                                        <td><input name="downname[]" type="text" id="downname[]" value="下载地址2" size="16"></td>
+                                        <td><input name="downpath[]" type="text" id="downpath[]" size="32"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><div align="center">3</div></td>
+                                        <td><input name="downname[]" type="text" id="downname[]" value="下载地址3" size="16"></td>
+                                        <td><input name="downpath[]" type="text" id="downpath[]" size="32"></td>
+                                    </tr>
+                                    </tbody></table></td>
+                            </tr>
+                            </tbody></table></td>
+                    </tr>
+                    <tr bgcolor="#FFFFFF">
+                        <td height="25" valign="top">软件介绍:<font color="#FF0000">(*)</font></td>
+                        <td height="25"> <textarea name="softsay" cols="67" rows="10" style="WIDTH:100%" placeholder="请简要说明你的作品(至少10个字)，并且注明详细说明地址，仅支持662p开源网旗下网站链接，具体作品详细说明请到各大教程网进行发布”
+
+      "></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="25" bgcolor="#FFFFFF">662p开源网旗下网站：</td>
+                        <td height="25" bgcolor="#FFFFFF"><a href="http://android.662p.com" target="_blank">安卓教程网</a>：android.662p.com,<a href="http://ios.662p.com" target="_blank">IOS教程网</a>：ios.662p.com,<a href="http://wp.662p.com" target="_blank">WP教程网</a>：wp.662p.com,<a href="http://php.662p.com" target="_blank">PHP教程网</a>：php.662p.com</td>
+                    </tr>
+                    <tr bgcolor="#FFFFFF">
+                        <td height="25">&nbsp;</td>
+                        <td height="25"><input type="submit" name="Submit2" value="提交"> <input type="reset" name="Submit3" value="重置"></td>
+                    </tr>
+                    <tr bgcolor="#FFFFFF">
+                        <td height="25" colspan="2"><strong><font color="#FF0000">注:      作品审核时间为3天，如3天后，还没有通过审核，则说明作品不符合要求，并且我们将对该作品进行删除，同时作者自行取消作品的下载地址，以便造成作品泄露等问题。</font></strong></td>
+                    </tr>
+
+                    </tbody></table>
+
+            </ul>
+        </div>
+        <div class="box_2 top5 pages clear">
+        </div>
+    </div>
+    <div class="w970 clear" id="soft_nav_ad"><!-- 广告位：pc_code_view_foot96090 -->
+        <script>
+            (function() {
+                var s = "_" + Math.random().toString(36).slice(2);
+                document.write('<div id="' + s + '"></div>');
+                (window.slotbydup=window.slotbydup || []).push({
+                    id: '2013932',
+                    container: s,
+                    size: '960,90',
+                    display: 'inlay-fix'
+                });
+            })();
+        </script></div>
+    <!--<script src="/ViewClick?softid=16727&all=1&month=1&week=1&day=1"></script> -->
+    <script type="text/javascript">
+        function del(){
+            favaid = [];
+            $('.J_favaid:checked').each(function(){
+                favaid.push($(this).val());
+            });
+            $.ajax({
+                url:'/favaDelete',
+                type:'post',
+                data:{favaid:favaid},
+                beforeSend:function () {
+                    layer.load()
+                },
+                success:function (msg) {
+                    layer.closeAll('loading')
+                    if(msg.code){
+                        layer.msg(msg.info,{icon:1,time:2000});
+                        setTimeout(function(){
+                            window.location.reload();
+                        },2000)
+                    }else{
+                        layer.msg(msg.info,{icon:7,time:2000});
+                    }
+                }
+            })
+        }
+        function userLogin(){
+            username = $('#username').val();
+            if(username==''){
+                layer.msg('请输入用户名！',{icon:0,time:2000})
+                return false;
+            }
+            password = $('#password').val();
+            if(password==''){
+                layer.msg('请输入密码！',{icon:0,time:2000})
+                return false;
+            }
+            $.ajax({
+                url:'',
+                data:$("#J_form").serializeArray(),
+                type:'post',
+                beforeSend:function(){
+                    layer.load()
+                },
+                success:function(msg){
+                    layer.closeAll('loading')
+                    if(msg.code){
+                        layer.msg(msg.info,{icon:1,time:2000})
+                        if(msg.lastUrl!==''){
+                            jump_url = msg.lastUrl;
+                        }else{
+                            jump_url = 'http://code.662p.com';
+                        }
+                        setTimeout(function () {
+                            window.location.href = jump_url;
+                        },2000)
+                    }else{
+                        layer.msg(msg.info,{icon:0,time:2000})
+                    }
+                }
+            })
+        }
+        function formSubmit(){
+            console.log('888');
+            $("#menu1").addClass('current');
+            $("#submenu a").mouseover(function(){
+                for (i = 1; i < 5; i++) {
+                    var str=".menu"+i;
+                    $(str).hide();
+                }
+                $('#submenu a').removeClass('current');
+                $(this).addClass('current');
+                var id=$(this).attr("id");
+                var menu="."+id;
+                $(menu).show();
+            })
+            $.ajax({
+
+            })
+        }
+
+
+        $(".menu1").show();
+        $(".news").hide();
+        $(".new_title div").mouseover(function(){
+            $('.new_title div').removeClass('new');
+            $(this).addClass('new');
+            $(".soft").hide();
+            $(".news").hide();
+            $(this).show();
+            var id=$(this).attr("id");
+            var menu="."+id;
+            $(menu).show();
+        })
+    </script>
+
+    {include file="common/footerOne" /}
+
+    {include file="common/footerTwo" /}
+</div>
+<!--body end-->
+
+<script type="text/javascript">
+    function AutoScroll(obj){
+        $(obj).find("ul:first").animate({
+            marginTop:"-25px"
+        },500,function(){
+            $(this).css({marginTop:"0px"}).find("li:first").appendTo(this);
+        });
+    }
+    $(document).ready(function(){
+        setInterval('AutoScroll("#scrollDiv")',3000);
+    });
+</script>
+
+<!-- gotop#polaris -->
+<a href="javascript:void(0);" onClick="window.scrollTo(0,0);" class="gotop_btn" id="goTopButton" style="display:none;">&nbsp;</a>
+<script type="text/javascript">
+    (function($){
+        $(window).scroll(function(event){
+            if($(this).scrollTop() > 0){
+                if($.browser.ie6){
+                    $('#goTopButton').css('top', $(this).scrollTop() + $(this).height() - 170);
+                }
+                if($('#goTopButton').css('display') == 'none'){
+                    $('#goTopButton').fadeIn();
+                }
+            }else{
+                $('#goTopButton').fadeOut();
+            }
+        });
+    })(jQuery);
+</script>
+<!-- gotop#polaris -->
+<div style="display:none;">
+</div>
+
+<script type="text/javascript" src="http://tajs.qq.com/stats?sId=21781729" charset="UTF-8"></script>
+<script src="http://www.anquan.org/static/outer/js/anquan_authen_83x30.js"></script>
+</body>
+</html>
+
+<script>QIHOO_UNION_F_SLOT={w:500, h:48, ls:"s6951ba6b8a",position:6, display:2,origin:0};</script><script src="http://s.lianmeng.360.cn/so/f.js" charset="utf-8"></script>

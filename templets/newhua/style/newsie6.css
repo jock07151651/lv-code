@@ -1,0 +1,53 @@
+.microblog {width:205px; height:50px; float:left; margin-left:3px;}
+.microblog h2 {width:50px; height:50px; float:left; margin-right:5px;}
+.hdm04 h3 span {width:160px; height:30px; display:block; float:left; margin-left:7px; border-left:1px dashed #ccc; padding:0px 10px;}
+.softdown_t ul {width:890px; height:25px; float:left; margin-left:2px; background:url(../images/down_bg.png) no-repeat;}
+.softdown_t ul li {float:left; padding-left:30px; line-height:25px; font-size:12px; margin-right:5px;}
+.col {width:335px; height:300px; float:left; margin-top:10px;}
+.col_box {width:333px; height:265px; float:left; border:1px solid #b3ced9; border-top:none;}
+.col_box ul {width:313px; height:125px; float:left; padding:5px; padding-bottom:0px; margin-bottom:7px;}
+.col_box ul li {width:303px; height:25px; float:left; font-size:14px; line-height:25px; background:url(../images/dot.gif) no-repeat left center; padding-left:5px; color:#cbcbcb;}
+.col_box ol {width:313px; height:100px; float:left; margin: 0px 5px; background:url(../images/dot_h.gif) repeat-x top; padding-top:7px;}
+.col_box ol li {width:303px; height:25px; float:left; font-size:14px; line-height:25px; background:url(../images/dot.gif) no-repeat left center; padding-left:5px; color:#cbcbcb;}
+
+.spc_box ul {width:313px; height:100px; float:left; margin: 0px 5px; padding-top:10px; padding-bottom:0px; background:url(../images/dot_h.gif) repeat-x top;}
+.spc_box ul li {width:303px; height:25px; float:left; font-size:12px; line-height:25px; background:url(../images/dot.gif) no-repeat left center; padding-left:5px;}
+.spc_box ol {width:90px; height:120px; float:left; margin: 10px 0px 5px 15px;}
+.spc_box ol h2 {width:90px; height:70px; float:left;}
+.spc_box ol p {width:90px; height:50px; float:left; line-height:25px; font-size:12px;}
+.pep .content ul {width:170px; height:150px; float:left; margin-left:15px;}
+
+.softnews ul {width:313px; height:100px; float:left; margin: 0px 5px; padding-top:10px; padding-bottom:0px; border-top:1px dashed #ccc;}
+.softnews ul li {width:303px; height:25px; float:left; font-size:12px; line-height:25px; background:url(../images/dot.gif) no-repeat left center; padding-left:5px;}
+
+.ittest ul {width:313px; height:92px; float:left; padding:5px; padding-bottom:0px;}
+.ittest ul h2 {width:110px; height:85px; float:left; margin-right:5px;}
+
+.price ul {width:313px; float:left; margin: 0px 5px; background:url(../images/dot_h.gif) repeat-x bottom; padding-bottom:7px; margin-top:5px;}
+.price ul li {width:303px; height:24px; float:left; font-size:12px; line-height:24px; background:url(../images/dot.gif) no-repeat left center; padding-left:5px; color:#cbcbcb;}
+
+.download ul {width:228px; float:left; margin-left:5px;}
+.download ul li {width:218px; height:25px; float:left; background:url(../images/dot.gif) no-repeat left center; padding-left:5px; line-height:25px; font-size:12px;}
+.ku ul {width:228px; height:70px; float:left; margin:10px 0px 0px 5px;}
+.ku ul h5 {width:90px; height:70px; float:left; margin-right:5px; padding:0px;}
+.ku ul h6 {width:128px; height:20px; float:left; line-height:20px; font-size:12px;}
+.ku ul h7 {width:128px; height:50px; float:left; line-height:25px; font-size:12px; color:#666;}
+.ku ol {width:228px; float:left; padding:8px 0px 0px 5px;}
+.ku ol li {width:218px; height:25px; float:left; background:url(../images/dot.gif) no-repeat left center; padding-left:5px; line-height:25px; font-size:12px;}
+.foen_box ul {width:170px; height:150px; float:left; margin-left:15px; margin-top:20px;}
+
+.app ul {width:313px; height:92px; float:left; padding:5px; padding-bottom:0px;}
+.app ul h2 {width:85px; height:85px; float:left; margin-right:5px;}
+.app ol {width:313px; float:left; padding:5px; padding-bottom:0px;}
+.app ol li {width:303px; height:25px; float:left; font-size:12px; line-height:25px; background:url(../images/dot.gif) no-repeat left center; padding-left:5px;}
+.data_t h2 {width:100px; height:32px; margin-left:5px; font-size:14px; line-height:32px; color:#0082cb; text-indent:10px; background:url(../images/tit.png) no-repeat left center;}
+.data ul {width:313px; height:92px; float:left; padding:5px; padding-bottom:0px;}
+.data ul h2 {width:110px; height:85px; float:left; margin-right:5px;}
+.data ol {width:313px; float:left; margin: 0px 5px; padding-bottom:7px; margin-top:5px;}
+.data ol li {width:303px; height:24px; float:left; font-size:12px; line-height:24px; background:url(../images/dot.gif) no-repeat left center; padding-left:5px; color:#cbcbcb;}
+
+.video ol {width:105px; height:120px; float:left; margin: 10px 0px 0px 10px;}
+
+.softdown_t h2 {width:60px; height:25px; float:left; line-height:25px; font-size:12px; text-align:center; color:#0082cb; margin-left:0px;}
+.softdown_t ul {width:890px; height:25px; float:left; margin-left:0px; background:url(../images/down_bg.png) no-repeat;}
+.softdown_t ul li {float:left; padding-left:30px; line-height:25px; font-size:12px; margin-right:10px;}

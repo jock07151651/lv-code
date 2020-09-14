@@ -1,0 +1,235 @@
+<div class="five wide computer five wide tablet sixteen wide mobile column">
+                    <!-- <val data-name="gitee_contributions_url" data-value="https://gitee.com/contributions.js?email=4BDAE0D3D30F2F2DEB1D27193C3298AC1B6EF279179BAA1B"></val> -->
+                    <div class="space-sidebar">
+                        <div class="ui basic center aligned segment sidebar-section user-info">
+                            <div class="avatar-wrap">
+                                <a class="ui small circular image avatar" href="https://my.662p.com/{$user_info.userid}">
+                                    <div class="osc-avatar large-portrait _120x120" title="{$user_info.username}" data-user-id="1259554">
+                                        {if condition="$user_info['userpic'] neq ''"}
+                                                    <img src="{$user_info.userpic}" alt="{$user_info.username}" title="{$user_info.username}">
+                                                    {else /}
+                                                    <img src="/static/member/images/nopic.gif" alt="{$user_info.username}" title="{$user_info.username}">
+                                                    {/if}
+
+                                    </div> </a>
+
+                                <div class="gender ui large teal circular label">
+
+                                    <i class="mars icon"></i>
+
+                                </div>
+
+                            </div>
+
+                            <div class="ui header">
+
+                                <h3>{$user_info.username}</h3>
+
+                                <div class="sub header user-signature">
+                                  {$user_info.signature}
+                                </div>
+                                <br />
+
+                            </div>
+
+                            <div class="ui mini images medals">
+
+                                <!-- <img class="ui image popup-oscer" src="/static/member/picture/slogo1541993084965.png" alt="" />
+                                <div class="ui flowing popup hidden items">
+                                    <div class="medal-popup-box item">
+                                        <img class="ui image" src="/static/member/picture/logo1541993084863.png" />
+                                        <div class="content">
+                                            <h3 class="header">原创作者</h3>
+                                            <div class="desc text">
+                                                “
+                                                <a href="#">源创会</a>”在线下联结了各位，推广开源项目和理念，很荣幸有你的参与~
+                                            </div>
+                                            <div class="extra text">
+                                                领取时间：2017/10/21
+                                                <div class="text">
+                                                    领取条件：参与过662p开源网“源创会”的 可以领取
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                               <img class="ui image popup-oscer" src="/static/member/picture/slogo1541993084965.png" alt="" />
+                                <div class="ui flowing popup hidden items">
+                                    <div class="medal-popup-box item">
+                                        <img class="ui image" src="/static/member/picture/logo1541993084863.png" />
+                                        <div class="content">
+                                            <h3 class="header">原创作者</h3>
+                                            <div class="desc text">
+                                                “
+                                                <a href="#">源创会</a>”在线下联结了各位，推广开源项目和理念，很荣幸有你的参与~
+                                            </div>
+                                            <div class="extra text">
+                                                领取时间：2017/10/21
+                                                <div class="text">
+                                                    领取条件：参与过662p开源网“源创会”的 可以领取
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> -->
+
+
+                            </div>
+
+                            <div class="ui three tiny statistics user-statistics">
+                                <a class="statistic" href="#" target="_blank">
+                                    <div class="value">452</div>
+                                    <div class="label">积分</div> </a>
+                                <a class="statistic" href="#">
+                                    <div class="value" data-user-id="1259554" data-followers-count="379" data-format="true">
+                                        379
+                                    </div>
+                                    <div class="label">
+                                        粉丝
+                                    </div> </a>
+
+                                <a class="statistic" href="#">
+
+                                    <div class="value" data-user-id="1259554" data-following-count="9" data-format="true">
+
+                                        9
+
+                                    </div>
+
+                                    <div class="label">
+
+                                        关注
+
+                                    </div> </a>
+
+                            </div>
+
+                            <div class="item action clearfix">
+
+
+
+                                <!-- <a class="ui green button follow-btn" data-user-id="1259554" data-follow-status="1"><i class="heart outline icon"></i><span class="text">关注</span></a>
+
+                                <a class="ui green basic button send-message-btn" data-user-id="1259554" data-user-name="李玉珏"><i class="envelope outline icon"></i>私信</a>
+
+                                <div class="ui basic dropdown more dropdown-more">
+
+                                    <div class="ui icon green basic button menu-btn">
+
+                                        <i class="bars icon"></i>
+
+                                    </div>
+
+                                    <div class="menu">
+
+                                        <a class="item" href="https://www.oschina.net/question/ask?user=1259554" target="_blank"><i class="comment outline icon"></i>提问</a>
+
+                                        <a class="item" user-block="" data-id="1259554" data-status="0"><i class="ban icon"></i><span class="text">加灰</span></a>
+
+                                        <a class="item ban" ban-report="" data-id="1259554" data-obj-type="32" data-url="https://my.662p.com/liyuj"> <i class="flag icon"></i>举报 </a>
+                                    </div>
+                                </div> -->
+
+                               <!-- <a class="ui green small button write-btn" href="http://my.662p.com/mdeditor"><i class="iconfont icon-combinedshapecopy2"></i><span class="text">写博客</span></a>
+                               <a class="ui basic small button" href="#"><i class="folder outline icon"></i><span class="text">草稿箱 (0)</span></a> -->
+                            </div>
+
+                        </div>
+
+                        <div class="ui basic segment sidebar-section">
+                            <h3 class="header">其他信息</h3>
+                            <div class="ui list">
+                                <div class="item">
+                                    <b>会员组：</b>{$user_info.groupname}
+                                </div>
+                                <div class="item">
+                                    <b>从事行业：</b>{$jobs_info.job_name}
+                                </div>
+                                <div class="item">
+                                    <b>开发平台：</b> Java EE, Java SE, Linux/Unix
+                                </div>
+                            </div>
+                            <div class="content panel-skills-radar">
+                                <div class="skills-radar">
+                                    <div class="radar-wrap" radar="" data-user-id="1259554" data-skills-num="5" data-detail-url="#" data-container=".panel-skills-radar" data-empty-show="">
+                                        <div class="radar-map"></div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="ui basic segment sidebar-section">
+                            <h3 class="header">统计</h3>
+                            <div class="ui list">
+                                <div class="item">
+                                    本月访问：2864
+                                </div>
+                                <div class="item">加入时间：2013/09/03 09:02</div>
+                            </div>
+                        </div>
+                        <!-- <div class="ui basic segment sidebar-section">
+                            <h3 class="header">文章排行</h3>
+                            <div class="ui list">
+                               <div class="item"><a href="http://www.662p.com/article/111.html" target="_blank"></a></div>
+                            </div>
+                        </div> -->
+
+                    </div>
+
+                </div>
+
+
+                <div class="eleven wide computer eleven wide tablet sixteen wide mobile column">
+                    <div class="ui inverted dimmer space-index-container-loader">
+                        <div class="ui text loader">
+                            加载中
+                        </div>
+                    </div>
+
+                    <div class="space-index-container">
+
+                        <div class="hidden-scroll global-mb ">
+
+                            <div class="ui green pointing secondary big menu space-tab">
+
+                                <input type="hidden" name="currentTab" value="newest" />
+                             <!-- <div class="ui dropdown item  blog-dropdown">
+                                <input name="catalogId" type="hidden" value="0">
+                               <div class="text">动态<span>(0)</span></div>
+                               <i class="dropdown icon"></i>
+                                <div class="menu">
+                               <a href="http://my.662p.com/{$user_info.userid}/" class="item" data-value="0">
+                     <span class="description">4</span>
+                    <span class="text">全部动态</span>
+                               </a>
+                               </div>
+                              </div> -->
+                               <a href="http://my.662p.com/{$user_info.userid}/" <?php if(request()->action()=='index'){echo "class='active item'";} else{echo "class='item'";} ?>>动态<span>({$artcount})</span></a>
+                                <a href="http://my.662p.com/{$user_info.userid}/blog" <?php if(request()->action()=='blog'){echo "class='active item'";} else{echo "class='item'";} ?>>博客<span>({$artcount})</span></a>
+                                <a href="http://my.662p.com/{$user_info.userid}/code" <?php if(request()->action()=='code'){echo "class='active item'";} else{echo "class='item'";} ?>>源码<span>({$codecount})</span></a>
+                                <a href="http://my.662p.com/{$user_info.userid}/sucai" <?php if(request()->action()=='sucai'){echo "class='active item'";} else{echo "class='item'";} ?>>素材<span>(0)</span></a>
+
+                                <div class="ui secondary right large menu search-form-wrap">
+
+                                    <form class="item search-form">
+
+                                        <div class="ui icon small input">
+
+                                            <input type="text" placeholder="搜索{$user_info.username}的博客" name="q" value="" />
+
+                                            <i class="search link icon"></i>
+
+                                        </div>
+
+                                    </form>
+
+                                </div>
+
+                            </div>
+
+                        </div>

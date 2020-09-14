@@ -1,0 +1,151 @@
+<div class="toolBar">
+    <div class="TPmain">
+        <div class="topNav clearfix">
+            <ul class="navList fl clearfix">
+        <li>
+          <div class="one">
+            <a href="http://www.662p.com">网站首页</a></div>
+        </li>
+          <li>
+          <div class="one">
+            <a href="http://code.662p.com" target="_blank">源码下载<i class="icon"></i></a></div>
+          <div class="two">
+            <a  href="http://code.662p.com/list/11_1.html" target="_blank">安卓源码</a>
+            <a  href="http://code.662p.com/list/12_1.html" target="_blank">IOS源码</a>
+            <a  href="http://code.662p.com/list/4_1.html" target="_blank">PHP源码</a>
+            <a  href="http://code.662p.com/list/1_1.html" target="_blank">ASP源码</a>
+            <a  href="http://code.662p.com/list/2_1.html" target="_blank">.NET源码</a>
+            <a class='last' href="http://code.662p.com" target="_blank">其他源码</a></div>
+          </li><li>
+          <div class="one">
+            <a href="http://android.662p.com" target="_blank">教程网<i class="icon"></i></a></div>
+          <div class="two">
+            <a  href="http://android.662p.com" target="_blank">安卓教程网</a>
+            <a  href="http://java.662p.com" target="_blank">JAVA教程网</a>
+            <a  href="http://ios.662p.com" target="_blank">IOS教程网</a>
+            <a  href="http://php.662p.com" target="_blank">PHP教程网</a>
+            <a  href="http://html5.662p.com" target="_blank">HTML5教程网</a>
+            <a  href="http://wxapp.662p.com" target="_blank">小程序教程网</a></div>
+          </li>
+          <li>
+          <div class="one">
+            <a href="http://yun.662p.com" target="_blank">IDC服务<i class="icon"></i></a></div>
+          <div class="two">
+            <a  href="http://yun.662p.com/services/domain/" target="_blank">域名注册</a>
+            <a  href="http://yun.662p.com/services/webhosting/" target="_blank">虚拟主机</a>
+            <a  href="http://yun.662p.com/services/cloudhost/" target="_blank">云服务器</a>
+            <a  href="http://yun.662p.com/services/server/" target="_blank">服务器托管</a>
+            <a  href="http://yun.662p.com/services/miniprogram/" target="_blank">小程序开发</a>
+            <a class='last' href="http://yun.662p.com/services/mail/" target="_blank">企业邮局</a></div>
+          </li>
+          <li>
+          <div class="one">
+            <a href="http://yun.662p.com" target="_blank">博客资讯<i class="icon"></i></a></div>
+          <div class="two">
+          <a title="移动开发" href="http://www.662p.com/list/58.html" target="_blank">移动开发</a>
+          <a title="云计算" href="http://www.662p.com/list/31.html" target="_blank">云计算</a>
+          <a title="人工智能" href="http://www.662p.com/list/34.html" target="_blank">人工智能</a>
+          <a title="物联网" href="http://www.662p.com/list/35.html" target="_blank">物联网</a>
+          <a title="大数据" href="http://www.662p.com/list/37.html" target="_blank">大数据</a>
+          <a title="编程语言" href="http://www.662p.com/list/40.html" target="_blank">编程语言</a>
+          <a title="区块链" href="http://www.662p.com/list/47.html" target="_blank">区块链</a>
+          <a title="产品运营" href="http://www.662p.com/list/53.html" target="_blank">产品运营</a>
+          <a title="其他类型" href="http://www.662p.com/list/48.html" target="_blank">其他类型</a></div>
+          </li>
+
+      </ul>
+            <div class="navUser fr" id="chinaz_topbar">
+
+                {eq name="Think.session.user_id" value=""}
+                <div class="login-box start" id="logintop">
+          <span class="denglu">
+            <a href="/login" target="_blank">登陆</a></span>|
+                    <span class="zhuce">
+            <a href="/register" target="_blank">注册</a></span>
+                </div>
+                {else/}
+                <div class="login-box">
+                <div class="con1 con-user js-nav">
+                    <a href="javascript:void(0);" class="face-top" target="_blank">您好：{$Think.session.username}</a>
+                    <ul class="sub-nav-list" style="display: none;">
+                        <li class="sub-nav-item"><a href="http://my.662p.com/set" target="_blank" class="sub-nav-con">管理中心 </a></li>
+                        <li class="sub-nav-item"><a href="/fava" target="_blank" class="sub-nav-con">我的收藏 </a></li>
+                        <li class="sub-nav-item"><a href="http://my.662p.com/buygroup" target="_blank" class="sub-nav-con">我要充值</a></li>
+                        <!--<li class="sub-nav-item"><a href="https://www.80zhan.com/member/signlist.php" target="_blank" class="sub-nav-con">我的签到</a></li>-->
+
+                        <li class="sub-nav-item"><a href="">修改密码 </a>
+                        </li>
+                        <li class="sub-nav-item"><a href="/logout" class="sub-nav-con">退出登录</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--<div class="con1 js-nav">-->
+                    <!--<a href="https://www.80zhan.com/member/pm.php" class="sub-nav-con">站内信 <font>(0)</font></a>-->
+                <!--</div>-->
+            </div>{/eq}
+                <!--<script language="javascript" type="text/javascript">CheckLogin();</script>-->
+            <!-- 快捷导航 开始 -->
+            <div class="text_d right" id="navHide">
+                    <a href="javascript:void(0);">快捷导航
+
+                        <i id="icon" class="sprite arrowRight"></i></a>
+
+                    <div id="navBox" class="nwebNav" style="display: none;">
+
+                        <div class="ndealList clear_fix">
+
+                            <div class="navTitle left">
+                                <h4><a href="http://code.662p.com" target="_blank">源码下载</a></h4>
+                            </div>
+                            <dl class="right">
+                                <dd>
+            <a  href="http://code.662p.com/list/11_1.html" target="_blank">安卓源码</a>
+            <a  href="http://code.662p.com/list/12_1.html" target="_blank">IOS源码</a>
+            <a  href="http://code.662p.com/list/4_1.html" target="_blank">PHP源码</a>
+            <a  href="http://code.662p.com/list/1_1.html" target="_blank">ASP源码</a></dd></dl>
+                        </div>
+
+                        
+                    </div>
+                </div>
+            </div>
+            <!-- 快捷导航 结束 -->
+
+        </div>
+
+    </div>
+
+</div>
+<style>
+    .J_page{
+        text-align: center;
+    }
+    .J_page li{
+        float: none;
+        background: rgba(28,142,255,0.8);
+        margin: 0 5px;
+        display: inline-block;
+        padding: 6px 12px;
+        border-radius: 5px;
+    }
+    .J_page li input{
+        outline: none;
+        border: none;
+    }
+    .J_page li a{
+        color: #fff;
+        text-decoration: none;
+    }
+    .nowpage{
+        border: 1px solid #1c8eff;
+        background: transparent !important;
+    }
+    .nowpage a{
+        color: #1c8eff !important;
+    }
+    .J_page:after{
+        display: block;
+        content: '';
+        clear: both;
+    }
+</style>

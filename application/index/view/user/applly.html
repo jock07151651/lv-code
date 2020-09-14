@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="mobile-agent" content="format=html5;url=https://m.ask2.cn/"/>
+    <title>{$Think.session.username} - {$titleConf}</title>
+    <meta name="description" content=""/>
+    <meta name="keywords" content="{$data.username}-会员中心-源码天堂"/>
+    <meta name="author" content="whatsns Team"/>
+    <meta name="copyright" content="2019 www.whatsns.com"/>
+    <meta name="applicable-device" content="pc"/>
+    <meta name="version" content="whatsns问答系统 4.0-up20180128"/>
+    <link href="/static/ask/css/zui.min.css" rel="stylesheet">
+    <link rel="stylesheet" media="all" href="/static/ask/css/animate.min.css"/>
+    <link rel="stylesheet" media="all" href="/static/ask/css/greenzhongchou.css"/>
+    <link rel="stylesheet" media="all" href="/static/ask/css/greencommon.css"/>
+    <link rel="stylesheet" href="/static/sweetalert/sweetalert2.css">
+    <link rel="stylesheet" href="/static/ask/css/whatsns.css" media="screen" type="text/css">
+    <link rel="stylesheet" media="all" href="/static/ask/css/greencustom.css"/>
+    <link href="/static/ask/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/ask/css/green_main.css">
+    <link rel="stylesheet" href="/static/ask/css/slider.css">
+    <link rel="stylesheet" href="/static/ask/css/basepage.css">
+    <link rel="stylesheet" media="all" href="/static/ask/css/index.css"/>
+
+    <link rel="icon" href="/favicon.ico" type="image/gif"/>
+    <link href="__ARTICLE__/css/css.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/static/index/css/index.css"/>
+    <!--<script src="/static/ask/js/jquery-1.11.3.min.js" type="text/javascript"></script>-->
+    <script src="/static/admin/style/jquery_002.js"></script>
+    <script src="/static/layer/layer.js"></script>
+    <script src="/static/sweetalert/sweetalert2.js"></script>
+    <script src="/static/ask/js/ie.js" type="text/javascript"></script>
+    <!-- ZUI Javascript组件 -->
+    <script src="/static/ask/js/zui.min.js" type="text/javascript"></script>
+    <script src="/static/ask/js/common.js" type="text/javascript"></script>
+    <script src="/static/ask/js/jquery.qrcode.min.js" type="text/javascript"></script>
+    <!--[if lt IE 9]>
+    <script src="/static/ask/js/html5shiv.js" type="text/javascript"></script>
+    <script src="/static/ask/js/respond.js" type="text/javascript"></script>
+    <script src="__ARTICLE__/js/js.js" type="text/javascript"></script>
+    <script src="/static/index/js/carousel.js" type="text/javascript" charset="utf-8"></script>
+    <script src="http://dup.baidustatic.com/js/ds.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+        var g_site_url = "https://www.ask2.cn/";
+        var g_site_name = "ask2问答系统官网";
+        var g_prefix = "";
+        var g_suffix = ".html";
+        var g_uid = 0;
+        var qid = 0;
+    </script>
+    <style>
+        .table-striped tr{
+            color: #009a61;
+        }
+        #cate_view{
+            background: rgba(0, 132, 255, 0);
+        }
+        .table-striped td a{
+            color: #009a61;
+        }
+        #body{
+            padding-bottom: 0px;
+        }
+        .navigation-v3 h2 {
+            height: 48px;
+        }
+        .navigation-v3 a{
+            line-height: 48px;
+        }
+    </style>
+</head>
+<body>
+{include file="common/header1" /}
+<div id="body">
+
+    <script type="text/javascript">
+        $(".sear-btn").click(function () {
+            var _txt = $.trim($("#search-kw").val());
+            if (_txt == '') {
+                alert("关键词不能为空");
+                return;
+            }
+            document.searchform.action = "https://www.ask2.cn/question/search.html";
+            document.searchform.submit();
+        });
+
+
+    </script>
+
+    <div class="main-wrapper index">    <div class="container person">
+
+        <div class="row " style="margin-top: 20px;">
+            {include file="user/userLeft" /}
+            <div class="col-md-16">
+                <h4>我的认证</h4>
+                <hr>
+                <form class="form-horizontal" method="POST" id="vertify_form">
+                    <div class="form-group">
+                        <p class="col-md-6 text-left">当前状态:</p>
+                        <div class="col-md-8">
+                            未认证
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <p class="col-md-6 text-left ">认证类型:</p>
+                        <div class="col-md-14">
+                            <span><input type="radio" value="0" class="normal_radio vertify_type" name="type">专家 &nbsp;&nbsp;</span>
+                            <span><input type="radio" value="1" class="normal_radio vertify_type" name="type">公司</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <p class="col-md-6 text-left ">擅长领域(最多3个)：</p>
+                        <div class="col-md-14">
+                            <input type="hidden" value="" name="cids" id="cate_value">
+                            <div class="btn btn-danger" id="changecategory" onclick="checkcategory()"><span>添加擅长分类+</span></div>
+
+                            <ul id="cate_view" class="tag ">
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+                    <div class="form-group">
+                        <p class="col-md-6 text-left change_name">真实姓名：</p>
+                        <div class="col-md-12">
+                            <input type="text" name="name" id="name" value="" placeholder="" class="form-control">
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="form-group">
+                        <p class="col-md-6 text-left change_idcode">身份证号码：</p>
+                        <div class="col-md-12">
+                            <input type="text" name="id_code" id="id_code" value="" placeholder="" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <p class="col-md-6 text-left ">认证介绍:</p>
+                        <div class="col-md-12">
+                            <textarea name="jieshao" id="jieshao" style="width:458px;height:89px;" class="form-control"></textarea>
+
+
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <p class="col-md-6 text-left ">附件一(必传):</p>
+                        <div class="col-md-12">
+
+                            <a class="btn btn-mini btn-default" target="_self">上传附件</a>
+
+                            <p class="text-hui">请提交对应的身份证或者组织机构代码证件扫描</p>
+                            <input name="attach1" type="file" class="fujianfule  collapse" onchange="previewImage(this)">
+                            <img src="" id="vertify_img1" class="vertify_img ">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <p class="col-md-6 text-left ">附件二(可选):</p>
+                        <div class="col-md-12">
+
+                            <a class="btn btn-mini btn-default" target="_self">上传附件</a>
+
+                            <p class="text-hui">其它证明材料(图片格式)</p>
+                            <input name="attach2" type="file" class="fujianfule  collapse" onchange="previewImage1(this)">
+                            <img src="" id="vertify_img2" class="vertify_img ">
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <div class=" col-md-10">
+                            <button type="button" id="submit" name="submit" onclick="submitvertify()" class="btn btn-success" data-loading="稍候...">
+                                保存          </button>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+
+        <!--用户中心结束-->
+        <link rel="stylesheet" type="text/css" href="https://www.ask2.cn/static/js/neweditor/code/styles/tomorrow-night-eighties.css">
+        <script src="https://www.ask2.cn/static/js/neweditor/code/highlight.pack.js" type="text/javascript"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+        <script src="https://www.ask2.cn/static/js/jquery.lazyload.min.js" type="text/javascript"></script>
+        <script>
+
+            $("a").attr("target","_self");
+
+
+
+            $("img.lazy").lazyload({effect: "fadeIn" });
+
+        </script>
+
+        <div class="side-tool" id="to_top" style="display: none;"><ul><li data-placement="left" data-toggle="tooltip" data-container="body" data-original-title="回到顶部">
+            <a href="#" class="function-button"><i class="fa fa-angle-up"></i></a>
+        </li>
+
+
+
+        </ul></div>
+
+        <script>
+            function submitForm(){
+                formData = new FormData();
+                //真实姓名
+                real_name = $('input[name=real_name]').val();
+                if(real_name){
+                    formData.append('real_name',real_name);
+                }
+                //工作地点
+                work_place = $('input[name=work_place]').val();
+                if(work_place){
+                    formData.append('work_place',work_place);
+                }
+                //消息通知
+                news = '';
+                $('input[name=news]').each(function(){
+                    news += $(this).val()+',';
+                })
+                $.trim(news,',');
+                formData.append('news',news);
+                //生日
+                birthday = $('input[name=birthday]').val();
+                if(birthday){
+                    formData.append('birthday',birthday);
+                }
+                //手机号
+                mobile = $('input[name=mobile]').val()
+                if(mobile){
+                    if(!isPhone(mobile)){
+                        layer.tips('手机号码格式不正确！',$('input[name=mobile]'),{tips:[2,'#ff0000'],time:1500})
+                        return false;
+                    }
+                    // formData.append('mobile',mobile);
+                }
+                //email
+                email = $('input[name=email]').val()
+                if(email){
+                    if(!email.match(/^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+((\.[a-zA-Z0-9_-]{2,3}){1,2})$/)){
+                        layer.tips('email格式不正确！',$('input[name=email]'),{tips:[2,'#ff0000'],time:1500})
+                        return false;
+                    }
+                    // formData.append('email',email);
+                }
+                //签名
+                signature = $('input[name=signature]').val()
+                if(signature){
+                    formData.append('signature',signature);
+                }
+                //身份介绍
+                describe = $('textarea[name=describe]').val()
+                if(describe){
+                    formData.append('describe',describe);
+                }
+                id = $('input[name=userid]').val()
+                formData.append('id',id);
+                $.ajax({
+                    url:'',
+                    type:'post',
+                    data:formData,
+                    contentType:false,
+                    processData:false,
+                    beforeSend:function(){
+                        layer.load()
+                    },
+                    success:function(msg){
+                        console.log(msg);
+                        layer.closeAll('loading')
+                        if(msg.code){
+                            swal({
+                                title:'',
+                                text:msg.info,
+                                type:"success",
+                                timer:1500,
+                                showConfirmButton:false
+                            })
+                            setTimeout(function(){
+                                window.location.reload()
+                            },1500)
+                        }else{
+                            swal({
+                                title:'',
+                                text:msg.info,
+                                type:"warning",
+                                timer:1500,
+                                showConfirmButton:false
+                            })
+                            return false;
+                        }
+                    }
+                })
+            }
+            function isPhone(str){
+                var regMobile=/^0{0,1}(13[0-9]|14[0-9]|15[0-9]|18[0-9])[0-9]{8}$/;
+                if (regMobile.test(str)){
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+            window.onload = function(){
+                $(".edui-upload-video").attr("preload","");
+                var oTop = document.getElementById("to_top");
+
+                var screenw = document.documentElement.clientWidth || document.body.clientWidth;
+                var screenh = document.documentElement.clientHeight || document.body.clientHeight;
+                window.onscroll = function(){
+                    var scrolltop = document.documentElement.scrollTop || document.body.scrollTop;
+
+                    if(scrolltop<=screenh){
+                        oTop.style.display="none";
+                    }else{
+                        oTop.style.display="block";
+                    }
+                    if(scrolltop>30){
+
+                        $(".scrollshow").show();
+                    }else{
+                        $(".scrollshow").hide();
+                    }
+                }
+                oTop.onclick = function(){
+                    document.documentElement.scrollTop = document.body.scrollTop =0;
+                }
+            }
+
+        </script>
+
+        <footer id="footer">
+            <div class="footer-wrapper">
+                <div class="footer-wrapper-top">
+                    <div class="footer-wrapper-top-left">
+                        <a href="https://www.ask2.cn/tags.html"><i class="hide"></i>标签大全</a>
+                        <a href="https://www.ask2.cn/new.html">站内问题</a>
+                        <a href="https://www.ask2.cn/topic/default.html">专栏文章</a>
+                        <a href="https://www.ask2.cn/expert/default.html">站内专家</a>
+                        <a href="https://www.ask2.cn/category/viewtopic/hot.html">站内话题</a>
+                        <a href="https://www.ask2.cn/note/list.html">站内公告</a>
+                        <a href="https://www.ask2.cn/rule/index.html">财富值规则</a>
+                        <script>
+                            var _hmt = _hmt || [];
+                            (function() {
+                                var hm = document.createElement("script");
+                                hm.src = "https://hm.baidu.com/hm.js?43f9000b4a3d7955b7ad47b8c9aa5860";
+                                var s = document.getElementsByTagName("script")[0];
+                                s.parentNode.insertBefore(hm, s);
+                            })();
+                        </script>
+                    </div>
+
+                </div>
+
+
+                <div class="footer-wrapper-bottom space-footer-bottom">
+                    <a href="http://www.12377.cn/" target="_blank">网上有害信息举报专区</a>
+                    <i></i>
+                    <a href="http://www.miibeian.gov.cn/" target="_blank">京ICP备15032243号-1</a>
+                    <i></i>
+                    <span><a href="https://www.ask2.cn/rss/articlelist.xml" target="_blank">站内文章地图xml</a></span>
+                    <i></i>
+                    <span><a href="https://www.ask2.cn/rss/list.xml" target="_blank">站内问答地图xml</a></span>
+                    <i></i>
+                    <span><a href="https://www.ask2.cn/rss/userspace.xml" target="_blank">站内作者地图xml</a></span>
+                    <i></i>
+                    <span><a href="https://www.ask2.cn/rss/tag.xml" target="_blank">站内标签地图xml</a></span>
+
+                    <span class="copyrightLink">Copyright © 2016-2018 <a href="https://www.whatsns.com/" target="_blank">WHATSNSV4.0</a></span>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    {include file="common/footer" /}
+</body>
+</html>

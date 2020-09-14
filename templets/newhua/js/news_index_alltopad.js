@@ -1,0 +1,1 @@
+document.writeln('<a href="http://www.iqiyi.com" target="_blank"><img src="http://www.newhua.com/adimg/qiyi.gif" width="640" height="90" /></a>');   

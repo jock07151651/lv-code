@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="mobile-agent" content="format=html5;url=https://m.ask2.cn/"/>
+    <title>{$Think.session.username} - {$titleConf}</title>
+    <meta name="description" content=""/>
+    <meta name="keywords" content="{$data.username}-会员中心-源码天堂"/>
+    <meta name="author" content="whatsns Team"/>
+    <meta name="copyright" content="2019 www.whatsns.com"/>
+    <meta name="applicable-device" content="pc"/>
+    <meta name="version" content="whatsns问答系统 4.0-up20180128"/>
+    <link href="/static/ask/css/zui.min.css" rel="stylesheet">
+    <link rel="stylesheet" media="all" href="/static/ask/css/animate.min.css"/>
+    <link rel="stylesheet" media="all" href="/static/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" media="all" href="/static/ask/css/greenzhongchou.css"/>
+    <link rel="stylesheet" media="all" href="/static/ask/css/greencommon.css"/>
+    <link rel="stylesheet" href="/static/sweetalert/sweetalert2.css">
+    <link rel="stylesheet" href="/static/ask/css/whatsns.css" media="screen" type="text/css">
+    <link rel="stylesheet" media="all" href="/static/ask/css/greencustom.css"/>
+    <link href="/static/ask/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/ask/css/green_main.css">
+    <link rel="stylesheet" href="/static/ask/css/slider.css">
+    <link rel="stylesheet" href="/static/ask/css/basepage.css">
+    <link rel="stylesheet" media="all" href="/static/ask/css/index.css"/>
+    <link rel="icon" href="/favicon.ico" type="image/gif"/>
+    <link href="__ARTICLE__/css/css.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/static/index/css/index.css"/>
+    <link rel="stylesheet" href="/static/markdown/examples/css/style.css" />
+    <link rel="stylesheet" href="/static/markdown/css/editormd.css" />
+    <!--<script src="/static/ask/js/jquery-1.11.3.min.js" type="text/javascript"></script>-->
+    <script src="/static/admin/style/jquery_002.js"></script>
+    <script src="/static/layer/layer.js"></script>
+    <script src="/static/sweetalert/sweetalert2.js"></script>
+    <script src="/static/ask/js/ie.js" type="text/javascript"></script>
+    <!-- ZUI Javascript组件 -->
+    <script src="/static/ask/js/zui.min.js" type="text/javascript"></script>
+    <!--<script src="/static/ask/js/common.js" type="text/javascript"></script>-->
+    <script src="/static/ask/js/jquery.qrcode.min.js" type="text/javascript"></script>
+    <script src="/static/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+    <!--[if lt IE 9]>
+    <script src="/static/ask/js/html5shiv.js" type="text/javascript"></script>
+    <script src="/static/ask/js/respond.js" type="text/javascript"></script>
+    <script src="__ARTICLE__/js/js.js" type="text/javascript"></script>
+    <script src="/static/index/js/carousel.js" type="text/javascript" charset="utf-8"></script>
+    <![endif]-->
+    <style>
+        .search_form_input{
+            height:44px !important;
+            width: 466px !important;
+        }
+        #body {
+            padding-bottom: 0px;
+        }
+        .form-control{
+            padding-left: 5px;
+        }
+        .navigation-v3 h2 {
+            height: 48px;
+        }
+
+        .navigation-v3 a {
+            line-height: 48px;
+        }
+        .upload-content{
+            width: 1200px;
+            margin: 0 auto;
+            padding: 10px 20px;
+            border: 1px solid #eee;
+            background: #fff;
+        }
+        .dl_common_t{
+            height: 24px;
+            font-size: 18px;
+            font-weight: 500;
+            color: inherit;
+            margin-bottom: 20px;
+            line-height: 24px;
+        }
+        .input-group-addon{
+            font-size: 14px !important;
+            background: transparent !important;
+            width: 85px;
+            text-align: center;
+        }
+        .layui-form-label{
+            font-size: 14px !important;
+            background: transparent !important;
+            text-align: center;
+            font-weight: 500;
+        }
+        .dl_common_t:before {
+            content: '';
+            display: inline-block;
+            width: 3px;
+            height: 16px;
+            background: #1c8eff;
+            overflow: hidden;
+            margin-right: 5px;
+            vertical-align: -2px;
+        }
+        .input-group{
+            margin: 10px 0px;
+        }
+        .form{
+            width: 100%;
+            margin:0 auto;
+        }
+        .c-control{
+            width: 800px !important;
+            height: 36px !important;
+        }
+    </style>
+</head>
+<body>
+{include file="common/header1" /}
+<div id="body">
+    <div class="upload-content">
+        <h4 style="text-align: left" class="dl_common_t">
+            上传资源
+        </h4>
+        <form class="form">
+            <div class="input-group input-group-sm">
+                <span class="input-group-addon" id="sizing-addon3">资源名称</span>
+                <input type="text" class="form-control c-control" placeholder="请输入资源名称" aria-describedby="sizing-addon3">
+            </div>
+            <div class="input-group input-group-sm">
+                <span class="input-group-addon" id="sizing-addon3">版本</span>
+                <input type="text" class="form-control c-control" placeholder="v1.0" aria-describedby="sizing-addon3">
+            </div>
+            <div class="input-group input-group-sm">
+                <span class="input-group-addon" id="sizing-addon3">演示网站</span>
+                <input type="text" class="form-control c-control" placeholder="请输入演示网站" aria-describedby="sizing-addon3">
+            </div>
+            <div class="input-group input-group-sm">
+                <span class="input-group-addon" id="sizing-addon3">运行环境</span>
+                <input type="text" class="form-control c-control" placeholder="请输入运行环境信息" aria-describedby="sizing-addon3">
+            </div>
+            <div class="input-group input-group-sm">
+                <span class="input-group-addon" id="sizing-addon3">源码类型</span>
+                <select style="width: 200px;height: 36px;" name="" class="form-control" id="">
+                    <option value="1">PHP源码</option>
+                    <option value="2">JAVA源码</option>
+                </select>
+            </div>
+            <div class="input-group input-group-sm">
+                <span class="input-group-addon" id="sizing-addon3">资源图片</span>
+                <input type="file" class="form-control c-control" aria-describedby="sizing-addon3">
+            </div>
+            <div class="input-group input-group-sm">
+                <span class="input-group-addon" id="sizing-addon3">资源文件</span>
+                <input type="file" class="form-control c-control" aria-describedby="sizing-addon3">
+            </div>
+
+            <div class="input-group-sm">
+                <label style="width: 86px;font-weight: 500;font-size:14px;text-align: center;float: left;" class="layui-form-label">资源描述</label>
+                <textarea placeholder="请输入资源的介绍信息" style="width: 800px;" class="form-control" rows="8"></textarea>
+            </div>
+            <div style="margin: 20px 0" class="input-group input-group-sm">
+                <label style="width: 126px;font-weight: 500;font-size:14px;text-align: left;float: left;" class="layui-form-label">请编写源码内容</label>
+            </div>
+            <div id="test-editormd"></div>
+            <div class="layui-layer-btn" style="text-align: left"><a class="layui-layer-btn0">确定</a><a class="layui-layer-btn1">取消</a></div>
+        </form>
+    </div>
+
+    {include file="common/footer" /}
+    <script src="/static/markdown/editormd.js"></script>
+    <script>
+        $(function() {
+
+            $.get('/static/markdown/examples/test.md', function(md){
+                testEditor = editormd("test-editormd", {
+                    width: "100%",
+                    height: 520,
+                    path : '/static/markdown/lib/',
+                    theme : "dark",
+                    previewTheme : "dark",
+                    editorTheme : "pastel-on-dark",
+                    markdown : md,
+                    codeFold : true,
+                    //syncScrolling : false,
+                    saveHTMLToTextarea : true,    // 保存 HTML 到 Textarea
+                    searchReplace : true,
+                    //watch : false,                // 关闭实时预览
+                    htmlDecode : "style,script,iframe|on*",            // 开启 HTML 标签解析，为了安全性，默认不开启
+                    //toolbar  : false,             //关闭工具栏
+                    //previewCodeHighlight : false, // 关闭预览 HTML 的代码块高亮，默认开启
+                    emoji : true,
+                    taskList : true,
+                    tocm            : true,         // Using [TOCM]
+                    tex : true,                   // 开启科学公式TeX语言支持，默认关闭
+                    flowChart : true,             // 开启流程图支持，默认关闭
+                    sequenceDiagram : true,       // 开启时序/序列图支持，默认关闭,
+                    //dialogLockScreen : false,   // 设置弹出层对话框不锁屏，全局通用，默认为true
+                    //dialogShowMask : false,     // 设置弹出层对话框显示透明遮罩层，全局通用，默认为true
+                    //dialogDraggable : false,    // 设置弹出层对话框不可拖动，全局通用，默认为true
+                    //dialogMaskOpacity : 0.4,    // 设置透明遮罩层的透明度，全局通用，默认值为0.1
+                    //dialogMaskBgColor : "#000", // 设置透明遮罩层的背景颜色，全局通用，默认为#fff
+                    imageUpload : true,
+                    imageFormats : ["jpg", "jpeg", "gif", "png", "bmp", "webp"],
+                    imageUploadURL : "http://my.662p.com/upload/markdown",
+                    onload : function() {
+                        console.log('onload', this);
+                        //this.fullscreen();
+                        //this.unwatch();
+                        //this.watch().fullscreen();
+
+                        //this.setMarkdown("#PHP");
+                        //this.width("100%");
+                        //this.height(480);
+                        //this.resize("100%", 640);
+                    }
+                });
+            });
+
+            $("#goto-line-btn").bind("click", function(){
+                testEditor.gotoLine(90);
+            });
+
+            $("#show-btn").bind('click', function(){
+                testEditor.show();
+            });
+
+            $("#hide-btn").bind('click', function(){
+                testEditor.hide();
+            });
+
+            $("#get-md-btn").bind('click', function(){
+                alert(testEditor.getMarkdown());
+            });
+
+            $("#get-html-btn").bind('click', function() {
+                alert(testEditor.getHTML());
+            });
+
+            $("#watch-btn").bind('click', function() {
+                testEditor.watch();
+            });
+
+            $("#unwatch-btn").bind('click', function() {
+                testEditor.unwatch();
+            });
+
+            $("#preview-btn").bind('click', function() {
+                testEditor.previewing();
+            });
+
+            $("#fullscreen-btn").bind('click', function() {
+                testEditor.fullscreen();
+            });
+
+            $("#show-toolbar-btn").bind('click', function() {
+                testEditor.showToolbar();
+            });
+
+            $("#close-toolbar-btn").bind('click', function() {
+                testEditor.hideToolbar();
+            });
+
+            $("#toc-menu-btn").click(function(){
+                testEditor.config({
+                    tocDropdown   : true,
+                    tocTitle      : "目录 Table of Contents",
+                });
+            });
+
+            $("#toc-default-btn").click(function() {
+                testEditor.config("tocDropdown", false);
+            });
+        });
+    </script>
+</body>
+</html>

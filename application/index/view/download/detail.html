@@ -1,0 +1,916 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{$data.softname}-{$data.classname}-尽在源码天堂!</title>
+<meta name="keywords" content="{$data.keyboard}" />
+<meta name="description" content="{$data.description}" />
+<meta http-equiv="x-ua-compatible" content="IE=edge">
+<meta name="viewport" charset="width=device-width,initial-scale=1">
+<link href="__ARTICLE__/css/css.css" rel="stylesheet">
+<link href="/static/icon/iconfont.css" rel="stylesheet">
+<script src="__ARTICLE__/js/jquery.js" type="text/javascript"></script>
+<script src="__ARTICLE__/js/js.js" type="text/javascript"></script>
+<script src="http://dup.baidustatic.com/js/ds.js"></script>
+</head>
+<style>
+    .comments{
+        box-sizing: border-box;
+        background: #F9F9F9;
+        padding: 14px;
+        border: 1px solid rgba(34,36,38,.15);
+    }
+    .comments .comments-loader{
+        display: none;
+    }
+    .comments-header{
+        font-size: 1.28571429rem;
+        border: none;
+        margin: calc(2rem - .14285714em) 0 1rem;
+        padding: 0 0;
+        font-family: 'PingFang SC','Helvetica Neue','Microsoft YaHei UI','Microsoft YaHei','Noto Sans CJK SC',Sathu,EucrosiaUPC,Arial,Helvetica,sans-serif;
+        font-weight: 700;
+        line-height: 1.28571429em;
+        text-transform: none;
+        color: rgba(0,0,0,.87);
+        margin-top: 0;
+    }
+    .comment-list .avatar{
+        display: block;
+        width: 2.5em;
+        height: 2.5em !important;
+        float: left;
+        margin: .2em 0 0;
+    }
+    .comment-list .avatar .small-portrait{
+        height: 35px;
+        width: 35px;
+        border-radius: 500rem;
+    }
+    .comment-list .avatar img{
+        width: 100%;
+        height: 100%;
+    }
+    .comment-list .avatar .text-portrait{
+        font-size: 16px;
+        background: #d35400;
+        color: #fff;
+        font-weight: 700;
+        line-height: 100%;
+        display: flex;
+        text-align: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        border-radius: 100%;
+        overflow: hidden;
+        text-transform: capitalize;
+    }
+    .comment-detail{
+        margin-left: 3.5em;
+        display: block;
+    }
+    .comment-detail .author{
+        font-size: 1em;
+        color: rgba(0,0,0,.87);
+        font-weight: 700;
+        background-color: transparent;
+    }
+    .comment-detail .actions{
+        font-size: .875em;
+        color: rgba(0,0,0,.6);
+    }
+    .comment-detail .actions a{
+        cursor: pointer;
+        display: inline-block;
+        margin: 0 .75em 0 0;
+        color: rgba(0,0,0,.4);
+    }
+    .comment-detail .text{
+        word-break: break-word;
+        word-wrap: break-word;
+        margin: .6em 0 .5em;
+        line-height: 1.5;
+    }
+    .comment-detail .metadata{
+        display: inline-block;
+        margin-left: .5em;
+        color: rgba(0,0,0,.4);
+        font-size: .875em;
+    }
+    .comment-detail .author{
+        font-size: 1em;
+        color: rgba(0,0,0,.87);
+        font-weight: 700;
+        cursor: pointer;
+    }
+    .comments2{
+        padding: 2.5em 0 1em 2.25em;
+        margin: -2em 0 -.6em 1.25em;
+        box-shadow: -1px 0 0 rgba(34,36,38,.1)
+    }
+    .comments2 .comment{
+        position: relative;
+        margin: .5em 0;
+    }
+    .comments2 .comment a{
+        display: block;
+        /*width: 2.5em;*/
+        height: auto;
+        float: left;
+        margin: .2em 0 0;
+    }
+    .comments2 .comment osc-avatar{
+        height: 35px;
+        width: 35px;
+        border-radius: 500rem;
+    }
+    .comments2 .comment .osc-avatar img{
+        width: 100%;
+        height: 100%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+    }
+    .comments2 .comment .author{
+        vertical-align: middle;
+        font-size: 1em;
+        color: rgba(0,0,0,.87);
+        font-weight: 700;
+    }
+    .comments2 .content{
+        margin-left: 3.5em;
+    }
+    .comments2 .content .author{
+        font-size: 1em;
+        color: rgba(0,0,0,.87);
+        font-weight: 700;
+        width: auto !important;
+    }
+    .comments2 .metadata .date{
+        color: rgba(0,0,0,.4);
+    }
+    .comments2 .content .text{
+        word-break: break-word;
+        word-wrap: break-word;
+        margin: .6em 0 .5em;
+        line-height: 1.5;
+    }
+    .comments2 .actions{
+        font-size: .875em;
+        color: rgba(0,0,0,.6);
+    }
+    .comments2 .actions a{
+        width: auto;
+        margin: 0 .75em 0 0;
+        color: rgba(0,0,0,.4);
+    }
+    .reply-comment{
+        margin: 20px 0 0 0;
+        text-align: right;
+    }
+    .reply-comment .reply-text{
+        background-color: #32aa66;
+        color: #fff;
+        padding: 8px 16px;
+        text-shadow: none;
+        opacity: .45!important;
+        cursor: pointer !important;
+    }
+    .replyForm{
+        display: none;
+    }
+    .publishComment{
+        margin: 48px 0 0 0;
+    }
+    .reply_name{
+        color: rgba(0, 0, 0, 0.4);
+        margin-left: 5px !important;
+        margin-right: 5px !important;
+        font-size: 12px;
+    }
+    .actions:after{
+        display: block;
+        content: '';
+        clear: both;
+    }
+    .metadata .date{
+        font-size: 12px;
+        vertical-align: middle;
+    }
+    .text-portrait{
+        background: #d35400;
+    }
+    .textarea{
+        font-size: 12px;
+    }
+</style>
+<body>
+<!-- 头部开始 -->
+{include file="common/header1" /}
+<!-- 头部结束 -->
+<div class="cl" id="header"></div>
+    <div class="box_1162 overflowh" id="header">
+      <div class="place">
+        <strong>当前位置：</strong><a href='/'>网站首页</a> > <a href=''>源码下载</a> > {$data.softname}</div>
+      <div class="clearfix mt10">
+        <div class="middle">
+          <div class="wlimit">
+            <div class="m-l">
+              <div class="w900 float_l">
+                <div class="box">
+                  <div class="help">
+                    <div class="title-con">
+                             <div class="w900 float_l">
+                      <h1>{$data.softname}</h1>
+                        <em class="keep-btn" id="stows"></em>
+                                 </div>
+                      <span>
+                        <i class="view" id="hits">
+                            {$data.count_all}
+                        </i>
+                        <i class="down" id="xiazai">
+                          <script src="" language="javascript"></script>
+                        </i>
+                        <i class="collection" id="favorite">
+                          <script src="" language="javascript"></script>
+                        </i>
+                        <i class="time">{$data.softtime|date="m-d",###}</i></span>
+                    </div>
+                    <div class="video">
+                      <div class="plug_description">
+                        <b>模板详情：</b>
+                          <div class="content">{$data.softsay}</div></div>
+                    </div>
+                    <!--模板效果图-->
+                    <div class="demobox" style="display:none; ">
+                      <div class="demotit">模板图集</div>
+                      <div class="demotit float_r">
+                      </div>
+                      <div id="gallery">
+                        <ul></ul>
+                        <div class="cl">
+                          <a class="d-mo" rel="9226"></a>
+                        </div>
+                      </div>
+                    </div>
+                    <!--模板效果图-->
+                      {eq name="$data.softpic" value=""}{else/}
+                        <div class="fescpics" style="width: 500px;height: auto;">
+                          <a href="/view/{$data.softid}.html" title="{$data.softname}">
+                              <img src="{$data.softpic}" alt="{$data.softpic}" style="width: 500px;">
+                          </a>
+                        </div>
+                      {/eq}
+
+                    <!--<div class="works_tags clearfix">-->
+                      <!--<span class="moretag">模板标签：</span>-->
+                      <!--<p class="intro_a">-->
+                        <!--<a href="" class="item">黑色</a>-->
+                        <!--<a href="" class="item">HTML5</a>-->
+                        <!--<a href="" class="item">官网</a>-->
+                        <!--<a href="" class="item">品牌设计</a></p>-->
+                    <!--</div>-->
+                      <div class="article-nav">
+                  <ul>
+                    <li class="float_l">上一篇：{empty name="$prev"}没有了 {else/}<a href='/view/{$prev.softid}.html'>{$prev.softname}</a>{/empty} </li>
+                    <li class="float_r">下一篇：{empty name="$next"}没有了 {else/}<a href='/view/{$next.softid}.html'>{$next.softname}</a>{/empty} </li></ul>
+                </div>
+                  </div>
+                </div>
+              </div>
+                <div class="w900 float_l comments">
+                    <div class="comments-loader">
+                        <div class="loader">加载中</div>
+                    </div>
+                    <div class="comments-wrapper">
+                        <h3 id="comments-title" class="comments-header">评论(<span>{$commentCount}</span>)</h3>
+                        {volist name="comment" key="k" id="foo"}
+                        <div class="comment-list" name="rpl_313614995" id="rpl_313614995" data-comment-id="313614995" data-comment-parent-id="0" data-comment-is-last-level="false" data-comment-user-id="4001056" data-comment-user-name="{$foo.username}">
+                            <a class="avatar" href="http://my.662p.com/{$foo.userid}" target="_blank">
+                                <div class="small-portrait" title="{$foo.username}" data-user-id="{$foo.userid}">
+                                    <span class="text-portrait" style="background: #d35400">
+                                        {empty name="$foo.userpic"}
+                                                {$foo.username|mb_substr=0,1}
+                                            {else /}
+                                                <img src="{$foo.userpic}" alt="">
+                                        {/empty}
+
+                                    </span>
+                                </div>
+                            </a>
+                            <div class="comment-detail">
+                                <a class="author" href="http://my.662p.com/{$foo.userid}" target="_blank">{$foo.username}</a>
+                                <div class="metadata">
+                                    <span class="date">{$foo.c_time|date="m/d",###}</span>
+                                </div>
+                                <div class="text" data-emoji-render="">
+                                    {$foo.content}
+                                </div>
+                                <div class="actions">
+                                    <a onclick="fabulous(this,{$foo.plid})" class="reply">
+                                        <i class="comment iconfont icon-dianzan"></i> 点赞(<span class="fabulous_times">{$foo.fabulous?$foo.fabulous:'0'}</span>)
+                                    </a>
+                                    <a onclick="replyComment(this)" class="reply">
+                                        <i class="comment iconfont icon-pinglun"></i> 回复
+                                    </a>
+                                    <a class="ban" onclick="report({$foo.plid})" ban-report="" data-id="313614995" data-obj-type="12" data-url="https://my.662p.com/editorial-story/blog/3103692#rpl_313614995">
+                                        <i class="ban iconfont icon-chakantiezigengduojubao"></i> 举报
+                                    </a>
+                                </div>
+                                <div class="replyForm">
+                                    <form action="">
+                                        <div class="textarea">
+                                            <textarea style="width: 99%;outline: none;background: transparent;padding:4px;" name="content" id="" maxlength="1000" rows="4"></textarea>
+                                        </div>
+                                        <div onclick="J_reply(this,{$foo.plid},{$foo.userid},{$foo.softid},1)" class="reply-comment">
+                                            <span class="reply-text">回复</span>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            {empty name="$foo.child"}
+                            {else /}
+                                {volist name="$foo.child" id="voo"}
+                                    <div class="comments2" children-comments="">
+                                        <div class="comment" name="{$voo.username}" id="{$voo.username}" data-comment-id="{$voo.userid}" data-comment-parent-id="{$voo.userid}" data-comment-is-last-level="false" data-comment-user-id="{$voo.userid}" data-comment-user-name="{$voo.username}">
+                                            <a class="ui circular image avatar" href="http://my.662p.com" target="_blank">
+                                                <div class="osc-avatar small-portrait _35x35" title="kakai" data-user-id="{$voo.userid}">
+                                                    {empty name="$voo.userpic"}
+                                                        <span class="text-portrait" style="background: #d35400">{$voo.username|mb_substr=0,1}</span>
+                                                        {else/}
+                                                        <img src="{$voo.userpic}" alt="{$voo.username}" title="{$voo.username}">
+                                                    {/empty}
+                                                </div>
+                                            </a>
+                                            <div class="content">
+                                                <a class="author" href="#" target="_blank">{$voo.username}</a><a href="" class="reply_name">@{$voo.reply_name}</a>
+                                                <div class="metadata">
+                                                    <span class="date">{$voo.c_time|date="m/d",###}</span>
+                                                </div>
+                                                <div class="text" data-emoji-render="">
+                                                    {$voo.content}
+                                                </div>
+                                                <div class="actions">
+                                                    <a onclick="fabulous(this,{$voo.plid})"  class="reply">
+                                                        <i class="comment iconfont icon-dianzan"></i> 点赞(<span class="fabulous_times">{$voo.fabulous?$voo.fabulous:'0'}</span>)
+                                                    </a>
+                                                    <a onclick="replyComment(this)" class="reply">
+                                                        <i class="comment iconfont icon-pinglun"></i> 回复
+                                                    </a>
+                                                    <a onclick="report({$voo.plid})" class="ban" ban-report="" data-id="313614995" data-obj-type="12" data-url="#">
+                                                        <i class="ban iconfont icon-chakantiezigengduojubao"></i> 举报
+                                                    </a>
+                                                </div>
+                                                <div class="replyForm">
+                                                    <form action="">
+                                                        <div class="textarea">
+                                                            <textarea style="width: 99%;outline: none;background: transparent;padding:4px;" name="content" id="" maxlength="1000" rows="4"></textarea>
+                                                        </div>
+                                                        <input type="hidden" name="softid" value="{$data.softid}">
+                                                        <div onclick="J_reply(this,{$foo.plid},{$voo.userid},{$voo.softid},2)" class="reply-comment">
+                                                            <span class="reply-text">回复</span>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                {/volist}
+                            {/empty}
+                        </div>
+                        {/volist}
+                        <div class="publishComment">
+                            <form action="">
+                                <div class="textarea">
+                                    <textarea placeholder="在次发表你对此文的评论" style="width: 99%;outline: none;background: transparent;padding:4px;" name="content" id="" maxlength="1000" rows="4"></textarea>
+                                </div>
+                                <input type="hidden" name="softid" value="{$data.softid}">
+                                <div class="reply-comment">
+                                    <span class="reply-text" onclick="publishComment(this)">发表评论</span>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="w900 float_l">
+                <div class="speek clearfix">
+                      <span>特别说明：</span><p>
+    推荐使用第三方专业下载工具下载本站资源，使用 WinRAR v3.10 以上版本解压本站资源。<br />
+    662p开源网所有软件，源码，素材，等资源均来自网友上传，或网络收集，如果有侵犯版权请及时联系我们，我们会在第一时间处理。<br />
+    如果该资源不能下载，请联系本站在线客服报错，谢谢合作!!<br />
+    下载本站资源，如果服务器暂不能下载请过一段时间重试！<br />
+    本站提供的一些商业源码，软件，等资源仅供学习研究之用，如用于商业用途，请购买正版。<br />
+    如需大量转载本站内容；请联系本站站长，少量转载本站内容请注明出处，谢谢合作。</p>
+</div></div>
+              <div class="w900 float_l">
+                <div class="w900">
+                  <div class="boxTitle">
+                    <p class="padding_lr15 clearfix">
+                      <strong class="font_s20 float_l color_ce380a boxTitle-new boxTitle-new-y">相关内容</strong></p>
+                  </div>
+                  <div class="fesucaibox margin_t20">
+                    <ul>
+                      <li style="display:block;">
+                        <div class="fescfl">
+                          <dl>
+                              {volist name="relevant" id="foo"}
+                                  <dd>
+                                  <div class="fescpics">
+                                    <a href="/view/{$foo.softid}.html" title="{$foo.softname}">
+                                      <img src="{$foo.softpic}" alt="{$foo.softname|mb_substr=0,12,'utf-8'}" width="258" /></a></div>
+                                  <div class="fescbm">
+                                    <div class="fescbmre">
+                                      <h5>
+                                        <a href="/view/{$foo.softid}.html" title="{$foo.softname|mb_substr=0,12,'utf-8'}">{$foo.softname|mb_substr=0,11,'utf-8'}</a></h5>
+                                      <p>
+                                        <a target="_blank" href="/view/{$foo.softid}.html" title="{$foo.softname|mb_substr=0,12,'utf-8'}">{$foo.softname|mb_substr=0,11,'utf-8'}</a>
+                                        <em>/</em>{$foo.softtime|date="m-d",###}</p></div>
+                                    <div class="clear"></div>
+                                  </div>
+                                </dd>
+                              {/volist}
+                            <div class="clear"></div></dl>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="m-r">
+              <div class="piao">
+                <div class="w378 float_r">
+                  <div class="w378">
+                    <div class="prodinfo">
+                      <div class="information">
+                        <div class="first">
+                          <li class="left">源码信息</li>
+                          <li class="right">
+                            <span class='source_org1'>免费资源</span></li></div>
+                        <dd>
+                          <div class="rec">所需：
+                            <em id="readpoint">{$data.downfen}
+                              <em>点数</em></em></div>
+                          <div class="right vip"></div>
+                        </dd>
+                        <!--<dd>下载权限：<font color="#1abd9b">无等级限制</font></dd>-->
+                        <dd>源码作者：{eq name="$data.adduser" value=""}匿名作者{else/}{$data.adduser}{/eq}</dd>
+                        <dd>源码大小：{$data.filesize}</dd>
+                        <dd>运行环境：{eq name="$data.soft_fj" value=""}未知{else/}{$data.soft_fj}{/eq}</dd>
+                        <dd>
+                          <div class="rec">推荐等级：</div>
+                          <div class="rate-bar">
+                            <div class="xxxx"></div>
+                          </div>
+                        </dd>
+                      </div>
+                      <div class="pro_btns">
+                        <a data-pop="pop-dows" class="down" onclick="downSoft({$data.softid},{$downPath.0.urlid},{$data.downfen})" title="{$data.softname}">点击下载</a>
+                        <a onclick="downGit({$data.softid},{$data.downfen})" href='javascript:void(0);'>查看演示</a></div></div>
+                  </div>
+                  <div class="w378 float_r tabTitleBar mt10 bgf borderTred clearfix">
+                    <div class="borderTnone YaHei">
+                      <h4>相关分类</h4>
+                      <ul class="catalog catalogA">
+                        {volist name="downCate" id="foo"}
+                          <li>
+                            <a title='{$foo.classname}' href='/list/{$foo.classid}_1.html'>{$foo.classname}</a>
+                          </li>
+                        {/volist}
+                      </ul>
+                    </div>
+
+                  </div>
+                        
+                   <div class="w378 float_r">
+                  <div class="ablock clearfix mt10">
+                    <h3>代码排行</h3>
+                    <div class="textlist clearfix">
+                      <ul>
+                      {volist name="hotCate" id="foo"}
+                          <li><a href="/view/{$foo.softid}.html" target="_blank" rel="noreferrer">{$foo.softname}</a></li>
+                      {/volist}
+                      </ul>
+                    </div>
+                  </div>
+                       <a href="http://www.5duyun.com"><img src="/adv/5duyun280300.gif" alt=""></a>
+                   </div>
+                   <div class="w378 float_r">
+                  <div class="ablock clearfix mt10">
+                    <h3>最新代码</h3>
+                    <div class="textlist clearfix">
+                      <ul>
+                      {volist name="LatestCate" id="foo"}
+                          <li><a href="/view/{$foo.softid}.html" target="_blank" rel="noreferrer">{$foo.softname}</a></li>
+                      {/volist}
+</ul>
+                    </div>
+                  </div>
+                       <a href="http://www.pgyidc.com"><img src="/adv/280300.jpg" alt=""></a>
+                   </div>
+                    <div class="w378 float_r">
+                        <div class="ablock clearfix mt10">
+                            <h3>最新文章</h3>
+                            <div class="textlist clearfix">
+                                <ul>
+                                    {volist name="latestArticle" id="foo"}
+                                    <li><a href="http://www.662p.com/article/{$foo.id}.html" target="_blank" rel="noreferrer">{$foo.title}</a></li>
+                                    {/volist}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                  <!--<div class="w378 float_r mt10">-->
+                            <!--<a href="https://www.60zhan.com/" target="_blank"><img src="/images/0.gif" border="0"></a>-->
+                  <!--</div>-->
+                  <!--<div class="w378 float_r">-->
+                    <!--<div class="ablock clearfix mt10 mb10">-->
+                      <!--<h3>热门标签</h3>-->
+                      <!--<div class="keylist">-->
+                        <!--<ul>-->
+                          <!--<a href="">IOS</a>-->
+<!--</ul></div>-->
+                    <!--</div>-->
+                  <!--</div>-->
+                <!--</div>-->
+                <div class="mould4"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div align="center">
+<a href="http://www.idcjf.com/" target="_blank"><img src="http://ubmcmm.baidustatic.com/media/v1/0f000ZbRgHCKAVRJMqy-R6.gif" border="0" height="90" width="1200"></a></div>
+   {include file="common/footer" /}
+<script src="/static/layer/layer.js"></script>
+<div id="liuyan" class="popupbox">
+  <div class="popupbox-header"> <span id="fmsgtitle"></span> <a class="popup-close">&times;</a> </div>
+  <div class="popupbox-content">
+    <div class="popdows popbox-cont-t" id="liuyancont"></div>
+  </div>
+</div>
+<!--<script type="text/javascript" src="/style/js/functions.min.js"></script> -->
+    <div id="pop-dows" class="popupbox">
+      <div class="popupbox-header">
+        <span id="dmsgtitle"></span>
+        <a class="popup-close">&times;</a></div>
+      <div class="popupbox-content">
+        <div class="popdows" id="dowmsg"></div>
+        <div id="popsub"></div>
+      </div>
+    </div>
+<!--<script src='/common/sucaidows.php?aid=9226&wid=1' language='javascript'></script>-->
+    <div class="clear"></div>
+  </body>
+<script>
+    function report(id){
+        layer.prompt({title:'请输入反馈信息',formType:2},function(text,index){
+            layer.close(index)
+            $.ajax({
+                url:'/comment/report/'+id,
+                type:'post',
+                data:{content:text},
+                dataType:'json',
+                success:function (msg) {
+                    if(msg.code){
+                        layer.msg(msg.info,{icon:1,time:1500})
+                    }else{
+                        layer.msg(msg.info,{icon:0,time:1500})
+                    }
+                }
+            })
+        })
+    }
+    function fabulous(obj,id){
+        $.ajax({
+            url:'/fabulous/'+id,
+            type:'post',
+            dataType:'json',
+            success:function (msg) {
+                if(msg.code){
+                    layer.msg(msg.info,{icon:1,time:1500})
+                    $(obj).find('.fabulous_times').text(msg.times)
+                }else{
+                    layer.msg(msg.info,{icon:0,time:1500})
+                }
+            }
+        })
+    }
+    function publishComment(obj){
+        $.ajax({
+            url:'/comment/publish',
+            type:'post',
+            data:$('.publishComment').find('form').serializeArray(),
+            dataType:'json',
+            success:function (msg) {
+                if(msg.code){
+                    layer.msg(msg.info,{icon:1,time:1500})
+                    console.log(msg)
+                    pComment(msg.data)
+                }else{
+                    layer.msg(msg.info,{icon:0,time:1500})
+                }
+            }
+        })
+    }
+    //点击回复按钮
+    function replyComment(obj){
+        if($(obj).hasClass('active')){
+            $(obj).parent().parent().find('.replyForm').css('display','none')
+            $(obj).removeClass('active')
+        }else{
+            $(obj).addClass('active')
+            $(obj).parent().parent().find('.replyForm').css('display','block')
+        }
+    }
+    function J_reply(obj,pid,replyid,softid,type){
+        content = $(obj).parent().find('textarea[name=content]').val();
+        $.ajax({
+            url:'/comment/reply',
+            type:'post',
+            data:{pid:pid,softid:softid,reply_user_id:replyid,content:content},
+            dataType:'json',
+            success:function (msg) {
+                if(msg.code){
+                    showLatestComment(msg.data,obj,type)
+                    $(obj).parent().parent().css('display','none')
+                    layer.msg(msg.info,{icon:1,time:1500})
+                }else{
+                    layer.msg(msg.info,{icon:0,time:1500})
+                }
+            }
+        })
+    }
+    //更新最新回复评论
+    function showLatestComment(data,obj,grade){
+        var list = '';
+        list += `<div class="comments2" children-comments="">
+                    <div class="comment">
+                        <a class="ui circular image avatar" href="http://my.662p.com/`+data.userid+`" target="_blank">
+                            <div class="osc-avatar small-portrait _35x35">`;
+        if(data.userpic){
+            list += ` <span class="text-portrait">
+                        <img src="`+data.userpic+`" alt="`+data.username+`" title="`+data.username+`">
+                        </span>`
+        }else{
+            list += ` <span class="text-portrait">
+                        `+data.username.substring(0,1)+`
+                        </span>`
+        }
+
+        list +=`</div>
+                        </a>
+                        <div class="content">
+                            <a class="author" href="https://my.662p.com/`+data.userid+`" target="_blank">`+data.username+`</a><a href="" class="reply_name">@`+data.reply_name+`</a>
+                            <div class="metadata">
+                                <span class="date">刚刚</span>
+                            </div>
+                            <div class="text" data-emoji-render="">
+                                `+data.content+`
+                            </div>
+                            <div class="actions">
+                                <a onclick="fabulous(this,`+data.plid+`)" class="reply">
+                                    <i class="comment iconfont icon-dianzan"></i> 点赞(<span class="fabulous_times">0</span>)
+                                </a>
+                                <a onclick="replyComment(this)" class="reply">
+                                    <i class="comment iconfont icon-pinglun"></i> 回复
+                                </a>
+                                <a onclick="report(`+data.plid+`)" class="ban">
+                                    <i class="ban iconfont icon-chakantiezigengduojubao"></i> 举报
+                                </a>
+                            </div>
+                            <div class="replyForm">
+                                <form action="">
+                                    <div class="textarea">
+                                        <textarea style="width: 99%;outline: none;background: transparent;padding:4px;" name="content" id="" maxlength="1000" rows="4"></textarea>
+                                    </div>
+                                    <input type="hidden" name="softid" value="18402">
+                                    <div onclick="J_reply(this,`+data.plid+`,`+data.userid+`,`+data.softid+`,2)" class="reply-comment">
+                                        <span class="reply-text">回复</span>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>`
+        if(grade==1){
+            $(obj).parent().parent().parent().after(list)
+        }else{
+            $(obj).parent().parent().parent().parent().parent().parent().parent().find('.comment-detail').after(list)
+        }
+    }
+    function pComment(data){
+        var list = `<div class="comment-list" name="rpl_313614995" id="rpl_313614995" data-comment-id="313614995" data-comment-parent-id="0" data-comment-is-last-level="false" data-comment-user-id="4001056" data-comment-user-name="高久峰是个大胖子">
+                            <a class="avatar" href="https://my.662p.com/`+data.userid+`" target="_blank">
+                                <div class="small-portrait" title="`+data.username+`" data-user-id="41791">
+                                    <span class="text-portrait" style="background: #d35400">`
+                                                if(data.userpic){
+                                                    list += `<img src="`+data.userpic+`" alt="">`
+                                                }else{
+                                                    list += data.username.substring(0,1)
+                                                }
+                                    list +=`</span>
+                                </div>
+                            </a>
+                            <div class="comment-detail">
+                                <a class="author" href="http://my.662p.com/" target="_blank">`+data.username+`</a>
+                                <div class="metadata">
+                                    <span class="date">刚刚</span>
+                                </div>
+                                <div class="text" data-emoji-render="">`+data.content+`</div>
+                                <div class="actions">
+                                    <a onclick="fabulous(this,`+data.plid+`)" class="reply">
+                                        <i class="comment iconfont icon-dianzan"></i> 点赞(<span class="fabulous_times">0</span>)
+                                    </a>
+                                    <a onclick="replyComment(this)" class="reply">
+                                        <i class="comment iconfont icon-pinglun"></i> 回复
+                                    </a>
+                                    <a class="ban" onclick="report(`+data.plid+`)" ban-report="" data-id="313614995" data-obj-type="12" data-url="https://my.662p.com/editorial-story/blog/3103692#rpl_313614995">
+                                        <i class="ban iconfont icon-chakantiezigengduojubao"></i> 举报
+                                    </a>
+                                </div>
+                                <div class="replyForm">
+                                    <form action="">
+                                        <div class="textarea">
+                                            <textarea style="width: 99%;outline: none;background: transparent;padding:4px;" name="content" id="" maxlength="1000" rows="4"></textarea>
+                                        </div>
+                                        <div onclick="J_reply(this,`+data.plid+`,`+data.userid+`,`+data.softid+`,1)" class="reply-comment">
+                                            <span class="reply-text">回复</span>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            </div>`
+        $('#comments-title').after(list)
+    }
+    function downGit(id,downfen){
+        $.ajax({
+            url:'/clogin',
+            type:'post',
+            data:{id:id,downfen},
+            beforeSend:function () {
+                layer.load()
+            },
+            success:function (msg) {
+                layer.closeAll('loading')
+                if(msg.code==1){
+                    window.location.href = msg.url;
+                }else if(msg.code==502){
+                    layer.msg(msg.info,{icon:0,time:1500})
+                }else{
+                    layer.msg(msg.info,{icon:0,time:1500})
+                    setTimeout(function () {
+                        window.location.href='/login';
+                    },1500)
+                }
+            }
+        })
+    }
+    //充值前检测用户是否登录
+
+    function checkLogin(){
+
+        $.ajax({
+
+            url:'/isLogin',
+
+            beforeSend:function(){
+
+                layer.load()
+
+            },
+
+            success:function(msg){
+
+                if(msg.code){
+
+                    window.location.href = '/buygroup';
+
+                }else{
+
+                    layer.msg(msg.info,{icon:0,time:2000});
+
+                    setTimeout(function(){
+
+                        window.location.href = '/login';
+
+                    },2000)
+
+                }
+
+            }
+
+        })
+
+    }
+
+    //软件下载
+
+    function downSoft(softid,pathid,num){
+        if(num){
+            layer.confirm('下载将消耗点数'+num,{btn:['确定','取消'],title:'提示'},function(){
+                layer.closeAll('dialog');
+                $.ajax({
+                    url:'/DownSoft',
+                    data:{softid:softid,pathid:pathid},
+                    type:'post',
+                    beforeSend:function(){
+                        layer.load()
+                    },
+                    success:function (msg) {
+                        layer.closeAll('loading');
+                        if(msg.code){
+                            $.ajax({
+                                url:'/downrecord',
+                                type:'post',
+                                data:{softid:softid},
+                                success:function(msg){
+                                    console.log(msg)
+                                }
+                            })
+                            window.location.href=msg.url;
+                        }else{
+                            layer.msg(msg.info,{icon:0,time:2200});
+                            setTimeout(function(){
+                                window.location.href = msg.url;
+                            },2200)
+                        }
+                    }
+                })
+            })
+        }else{
+            $.ajax({
+                url:'/DownSoft',
+                data:{softid:softid,pathid:pathid},
+                type:'post',
+                beforeSend:function(){
+                    layer.load()
+                },
+                success:function (msg) {
+                    layer.closeAll('loading');
+                    if(msg.code){
+                        window.location.href=msg.url;
+                    }else{
+                        layer.msg(msg.info,{icon:0,time:2200});
+                        setTimeout(function(){
+                            window.location.href = msg.url;
+                        },2200)
+                    }
+                }
+            })
+        }
+
+    }
+
+
+    function collect(softid){
+
+        $.ajax({
+
+            url:'/collect',
+
+            type:'post',
+
+            data:{softid:softid},
+
+            beforeSend:function () {
+
+                layer.load()
+
+            },
+
+            success:function (msg) {
+
+                layer.closeAll('loading');
+
+                if(msg.code){
+
+                    layer.msg(msg.info,{icon:1,time:1500})
+
+                }else{
+
+                    layer.msg(msg.info,{icon:0,time:2200})
+
+                }
+
+            }
+
+        })
+
+    }
+</script>
+</html>

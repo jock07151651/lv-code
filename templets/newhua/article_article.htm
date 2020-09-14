@@ -1,0 +1,384 @@
+{dede:include filename="head_article.htm"/}
+<DIV class=mini_nav_top>
+
+<H1><A href="http://code.662p.com/" target=_blank><IMG 
+
+src="{dede:global.cfg_templets_skin/}/images/logo.jpg" width=130 
+
+height=25></A></H1>
+
+<H2>{dede:field name='position'/} 正文</H2>
+
+<UL>
+
+  <li><a href="http://down.662p.com" target="_blank"><i style="background: url({dede:global.cfg_templets_skin/}/images/home.png) no-repeat left; "></i>软件下载</a></li>
+
+<li><a href="http://code.662p.com" target="_blank"><i style="background: url({dede:global.cfg_templets_skin/}/images/hao.png) no-repeat left; "></i>源码下载</a></li>
+
+<li><a href="http://app.662p.com/" target="_blank"><i style="background: url({dede:global.cfg_templets_skin/}/images/s.png) no-repeat left; "></i>应用下载</a></li></UL></DIV>
+
+<DIV id=main>
+
+<DIV id=left>
+
+<DIV class=left_box>
+
+<DIV class=body_title><SPAN>{dede:field.title/}</SPAN></DIV>
+
+<DIV class=body_time>{dede:field.pubdate function="MyDate('Y-m-d H:i',@me)"/}&#160;&#160;{dede:field.source/}&#160;<A href="#feedback">我要评论</A>
+
+
+</DIV>
+
+
+
+<DIV id=Zoom class=body_article>
+<div><!-- 广告位：662p_pc_view_content64060top -->
+<script>
+(function() {
+    var s = "_" + Math.random().toString(36).slice(2);
+    document.write('<div id="' + s + '"></div>');
+    (window.slotbydup=window.slotbydup || []).push({
+        id: '2013819',
+        container: s,
+        size: '640,60',
+        display: 'inlay-fix'
+    });
+})();
+</script>
+</div>
+<br/>
+{dede:field.body/}
+<div><img alt="微信关注" src="/uploads/news_topic/weixin_guanzhu.jpg" style="margin: 0px; padding: 0px; line-height: 1.5em; border: none; max-width: 100%; height: auto; " /></div>
+<p>
+<div><!-- 广告位：662p_pc_view_content64060foot -->
+<script>
+(function() {
+    var s = "_" + Math.random().toString(36).slice(2);
+    document.write('<div id="' + s + '"></div>');
+    (window.slotbydup=window.slotbydup || []).push({
+        id: '2013821',
+        container: s,
+        size: '640,60',
+        display: 'inlay-fix'
+    });
+})();
+</script>
+</div>
+</DIV>
+
+
+
+<DIV class=share>
+
+<!-- Baidu Button BEGIN -->
+
+<div id="bdshare" class="bdshare_t bds_tools get-codes-bdshare">
+
+<span class="bds_more">分享到：</span>
+
+<a class="bds_qzone"></a>
+
+<a class="bds_tsina"></a>
+
+<a class="bds_tqq"></a>
+
+<a class="bds_renren"></a>
+
+<a class="bds_t163"></a>
+
+</div>
+
+<script type="text/javascript" id="bdshare_js" data="type=tools&uid=6435355" ></script>
+
+<script type="text/javascript" id="bdshell_js"></script>
+
+<script type="text/javascript">
+
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+
+</script>
+
+<!-- Baidu Button END -->         </DIV>
+
+
+<DIV class=about_news>
+<H2>相关文章：</H2>
+<UL>
+  {dede:likearticle row='5' titlelen='42'}
+
+  <LI><a href="[field:arcurl/]">[field:title/]</a><SPAN>[field:pubdate function="MyDate('Y-m-d',@me)"/]</SPAN></LI>
+
+  {/dede:likearticle}
+
+  <!-- 相关文章调用教程：http://code.662p.com/plus/search.php?kwtype=0&keyword=相关文章 -->
+  </UL>
+</DIV>
+
+<DIV class=about_news>
+<H2>热点推荐：</H2>
+  <script type="text/javascript">
+var cpro_id="u2284001";
+(window["cproStyleApi"] = window["cproStyleApi"] || {})[cpro_id]={at:"3",rsi0:"610",rsi1:"200",pat:"1",tn:"baiduCustNativeAD",rss1:"#FFFFFF",conBW:"0",adp:"1",ptt:"0",titFF:"%E5%BE%AE%E8%BD%AF%E9%9B%85%E9%BB%91",titFS:"14",rss2:"#000000",titSU:"0",tft:"0",tlt:"0",ptbg:"90",piw:"0",pih:"0",ptp:"0"}
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+</DIV>
+
+
+<DIV class=about_news>
+<H2>热点排行：</H2>
+<script type="text/javascript">
+var cpro_id="u2286235";
+(window["cproStyleApi"] = window["cproStyleApi"] || {})[cpro_id]={at:"3",rsi0:"610",rsi1:"260",pat:"6",tn:"baiduCustNativeAD",rss1:"#FFFFFF",conBW:"0",adp:"1",ptt:"0",titFF:"%E5%BE%AE%E8%BD%AF%E9%9B%85%E9%BB%91",titFS:"14",rss2:"#000000",titSU:"0",ptbg:"90",piw:"0",pih:"0",ptp:"0"}
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+</DIV>
+
+
+<DIV class=editor>
+
+<H5>关键词： {dede:tag type='current'/} 
+
+</H5>
+
+<H3>责任编辑：{dede:field.writer/}</H3></DIV></DIV>
+
+<DIV class=pingl id="feedback">
+
+<!--高速版-->
+<div id="SOHUCS" sid="{dede:field.id/}" ></div>
+<script charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/changyan.js" ></script>
+<script type="text/javascript">
+    window.changyan.api.config({
+        appid: 'cyrXKHKQX',
+        conf: 'prod_2e2f7fe5ba533ae3a266a9dd1a3ca322'
+    });
+</script>   
+
+</DIV>
+
+<DIV class=clear></DIV>
+
+</DIV>
+
+<DIV id=right>
+
+<DIV class=ad_ritht_1>
+<!-- 广告位：662p_pc_view_right300250A -->
+<script>
+(function() {
+    var s = "_" + Math.random().toString(36).slice(2);
+    document.write('<div id="' + s + '"></div>');
+    (window.slotbydup=window.slotbydup || []).push({
+        id: '2013807',
+        container: s,
+        size: '300,250',
+        display: 'inlay-fix'
+    });
+})();
+</script></DIV>
+
+
+<DIV class=ad_ritht_1>
+<script language="javascript" src="http://www.64lou.com/javascript.php?flag=tech10" ></script></DIV>
+
+
+
+<DIV class=column>
+
+<DIV class=column_t>
+
+<H2>今日视点</H2></DIV>
+
+<DIV class=column_box>
+
+<UL>
+
+  {dede:arclist type='commend' row='1' titlelen=26 flag=p infolen='48'}
+
+  <H3><A class=focusimg href="[field:arcurl/]" target=_blank><IMG src="[field:litpic/]" width=80 height=60></A></H3>
+
+  <H4><A href="[field:arcurl/]" target=_blank>[field:title/]</A></H4>
+
+  <P>[field:info/]...<A href="[field:arcurl/]" target=_blank>[详细]</A></P>
+
+  {/dede:arclist}
+
+  </UL>
+
+<OL>
+
+  {dede:arclist row='5' titlelen=42}
+
+  <LI><A href="[field:arcurl/]" target=_blank>[field:title/]</A> </LI>
+
+  {/dede:arclist}
+
+  </OL>
+
+  </DIV></DIV>
+
+
+<DIV class=ad_ritht_2>
+<!-- 广告位：662p_pc_view_right300250B -->
+<script>
+(function() {
+    var s = "_" + Math.random().toString(36).slice(2);
+    document.write('<div id="' + s + '"></div>');
+    (window.slotbydup=window.slotbydup || []).push({
+        id: '2013809',
+        container: s,
+        size: '300,250',
+        display: 'inlay-fix'
+    });
+})();
+</script></DIV>
+
+
+<DIV class=newspic>
+
+<DIV class=newspic_t>
+
+<H2>新闻图片</H2></DIV>
+
+<DIV class=newspic_box>
+
+{dede:arclist row='4' titlelen=18 flag=p}
+
+<UL><H2><A class=focusimg href="[field:arcurl/]" alt="[field:fulltitle/]"><IMG src="[field:litpic/]" width=110 
+
+  height=85></A></H2>
+
+  <P><A href="[field:arcurl/]" target=_blank alt="[field:fulltitle/]">[field:title/]</A></P></UL>
+
+  {/dede:arclist}  
+
+  </DIV></DIV>
+
+<DIV class=ad_ritht_2>
+<!-- 广告位：662p_pc_view_right300250E -->
+<script>
+(function() {
+    var s = "_" + Math.random().toString(36).slice(2);
+    document.write('<div id="' + s + '"></div>');
+    (window.slotbydup=window.slotbydup || []).push({
+        id: '2013815',
+        container: s,
+        size: '300,250',
+        display: 'inlay-fix'
+    });
+})();
+</script>
+</DIV>
+
+<DIV class=toplist>
+
+<DIV class=column_t style='font-family: "微软雅黑","黑体";font-size: 16px; padding-left: 10px;padding-top: 5px;margin-bottom: -15px !important;'>新闻排行</DIV>
+
+<DIV class=toplist_box>
+
+<DIV>
+
+<DIV class=dis>
+
+<UL>
+
+{dede:arclist row='10' titlelen=42 orderby=click}
+
+  <LI><A title="[field:fulltitle/]" href="[field:arcurl/]">[field:title/]</A></LI>
+
+  {/dede:arclist} 
+
+  </UL></DIV></DIV>
+
+
+<DIV class=ad_ritht_2>
+<!-- 广告位：662p_pc_view_right300250C -->
+<script>
+(function() {
+    var s = "_" + Math.random().toString(36).slice(2);
+    document.write('<div id="' + s + '"></div>');
+    (window.slotbydup=window.slotbydup || []).push({
+        id: '2013811',
+        container: s,
+        size: '300,250',
+        display: 'inlay-fix'
+    });
+})();
+</script></DIV>
+<DIV class=ad_ritht_2>
+
+<!-- 广告位：662p_pc_view_right300250D -->
+<script>
+(function() {
+    var s = "_" + Math.random().toString(36).slice(2);
+    document.write('<div id="' + s + '"></div>');
+    (window.slotbydup=window.slotbydup || []).push({
+        id: '2013813',
+        container: s,
+        size: '300,250',
+        display: 'inlay-fix'
+    });
+})();
+</script></DIV>
+<br />
+<DIV class=ad_ritht_2>
+<script>QIHOO_UNION_SLOT={w:300, h:250, ls:"s1d94a56284"};</script><script src="http://s.lianmeng.360.cn/so/inlay.js" charset="utf-8"></script></DIV>
+
+<DIV class=ad_ritht_2>
+<!-- 广告位：662p_pc_view_right300250G -->
+<script>
+(function() {
+    var s = "_" + Math.random().toString(36).slice(2);
+    document.write('<div id="' + s + '"></div>');
+    (window.slotbydup=window.slotbydup || []).push({
+        id: '2344194',
+        container: s,
+        size: '300,250',
+        display: 'inlay-fix'
+    });
+})();
+</script>
+</DIV>
+
+
+<DIV>
+
+</DIV></DIV></DIV>
+
+<DIV class=blank></DIV>
+
+</DIV>
+
+</DIV>
+
+<br />
+<DIV class=bai></DIV>
+<div class="ad_top" align="center">
+<!-- 广告位：662p_pc_view_foot96090 -->
+<script>
+(function() {
+    var s = "_" + Math.random().toString(36).slice(2);
+    document.write('<div id="' + s + '"></div>');
+    (window.slotbydup=window.slotbydup || []).push({
+        id: '2013823',
+        container: s,
+        size: '960,90',
+        display: 'inlay-fix'
+    });
+})();
+</script></DIV>
+<p />
+<div class="ad_top" align="center">
+<script>QIHOO_UNION_SLOT={w:960, h:90, ls:"s3bb1a55e86"};</script><script src="http://s.lianmeng.360.cn/so/inlay.js" charset="utf-8"></script></DIV>>
+<DIV class=bai></DIV>
+{dede:include filename="footer.htm"/}
+
+<script type="text/javascript">
+    /*自适应文章内文广告*/
+    var cpro_id = "u2751206";
+</script>
+<script type="text/javascript" src="http://cpro.baidustatic.com/cpro/ui/cnw.js"></script>
+
+</BODY>                     
+</HTML>

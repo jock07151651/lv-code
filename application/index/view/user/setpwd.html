@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+
+<html lang="cn">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="mobile-agent" content="format=html5;url=https://m.ask2.cn/"/>
+
+    <title>{$Think.session.username} - {$titleConf}</title>
+
+    <meta name="description" content=""/>
+
+    <meta name="keywords" content="{$data.username}-会员中心-源码天堂"/>
+
+    <meta name="author" content="whatsns Team"/>
+
+    <meta name="copyright" content="2019 www.whatsns.com"/>
+
+    <meta name="applicable-device" content="pc"/>
+
+    <link href="/static/ask/css/zui.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" media="all" href="/static/ask/css/animate.min.css"/>
+
+    <link rel="stylesheet" media="all" href="/static/ask/css/greenzhongchou.css"/>
+
+    <link rel="stylesheet" media="all" href="/static/ask/css/greencommon.css"/>
+
+    <link rel="stylesheet" href="/static/sweetalert/sweetalert2.css">
+
+    <link rel="stylesheet" href="/static/ask/css/whatsns.css" media="screen" type="text/css">
+
+    <link rel="stylesheet" media="all" href="/static/ask/css/greencustom.css"/>
+
+    <link href="/static/ask/css/font-awesome.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="/static/ask/css/green_main.css">
+
+    <link rel="stylesheet" href="/static/ask/css/slider.css">
+
+    <link rel="stylesheet" href="/static/ask/css/basepage.css">
+
+    <link rel="stylesheet" media="all" href="/static/ask/css/index.css"/>
+
+    <link rel="icon" href="/favicon.ico" type="image/gif"/>
+
+    <link href="__ARTICLE__/css/css.css" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="/static/index/css/index.css"/>
+
+    <!--<script src="/static/ask/js/jquery-1.11.3.min.js" type="text/javascript"></script>-->
+
+    <script src="/static/admin/style/jquery_002.js"></script>
+
+    <script src="/static/layer/layer.js"></script>
+
+    <script src="/static/sweetalert/sweetalert2.js"></script>
+
+    <script src="/static/ask/js/ie.js" type="text/javascript"></script>
+
+    <!-- ZUI Javascript组件 -->
+
+    <script src="/static/ask/js/zui.min.js" type="text/javascript"></script>
+
+    <script src="/static/ask/js/common.js" type="text/javascript"></script>
+
+    <script src="/static/ask/js/jquery.qrcode.min.js" type="text/javascript"></script>
+
+    <!--[if lt IE 9]>
+
+    <script src="/static/ask/js/html5shiv.js" type="text/javascript"></script>
+
+    <script src="/static/ask/js/respond.js" type="text/javascript"></script>
+
+    <script src="__ARTICLE__/js/js.js" type="text/javascript"></script>
+
+    <script src="/static/index/js/carousel.js" type="text/javascript" charset="utf-8"></script>
+
+    <![endif]-->
+
+    <style>
+
+        #body {
+
+            padding-bottom: 0px;
+
+        }
+
+
+
+        .form-control {
+
+            padding-left: 5px;
+
+        }
+
+
+
+        .navigation-v3 h2 {
+
+            height: 48px;
+
+        }
+
+
+
+        .navigation-v3 a {
+
+            line-height: 48px;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+{include file="common/header1" /}
+
+<div id="body">
+
+
+
+
+
+    <div class="main-wrapper index">
+
+        <div class="container person">
+
+
+
+            <div class="row " style="margin-top: 20px;">
+
+                {include file="user/userLeft" /}
+
+                <div class="col-md-16">
+
+                    <h4>修改密码</h4>
+
+                    <hr>
+
+                    <form class="form-horizontal" action="https://www.ask2.cn/user/uppass.html" method="post">
+
+                        <div class="form-group">
+
+                            <p class="col-md-24 ">新密码</p>
+
+                            <div class="col-md-14">
+
+                                <input type="password" id="newpwd" name="password" value="" placeholder=""
+
+                                       class="form-control">
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-group">
+                            <p class="col-md-24 ">确认密码</p>
+                            <div class="col-md-14">
+                                <input type="password" id="confirmpwd" name="cpassword" value="" placeholder=""
+                                       class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <p class="col-md-24 ">注册手机号</p>
+                            <div class="col-md-14">
+                                <input type="number" autocomplete="off" name="mobile" value="" placeholder="" class="form-control">
+                            </div>
+                        </div>
+
+                        <div style="">
+                            <div class="form-group">
+                                <div class="col-md-5 input_code_col">
+                                  <input type="text" placeholder="输入验证码" autocomplete="OFF" id="code" name="code"
+                                           value=""
+                                           class="form-control">
+                                </div>
+                                <div class="col-md-8 ">
+            <span class="verifycode">
+                        </span>
+                                    <button type="button" style="line-height:36px;cursor: pointer;background: transparent" href="javascript:void(0);" onclick="sendCode(this)" value="发送验证码" target="_self">发送验证码</button>
+                                </div>
+                                <div class="col-md-8">
+                                    <div id="codetip" class="help-block alert alert-warning hide"></div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <div class=" col-md-10">
+
+                                <input type="button" onclick="submitPassword(this)" name="submit" id="submit" class="btn btn-success" value="保存"
+
+                                       data-loading="稍候...">
+
+                            </div>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!--用户中心结束-->
+
+
+        <script>
+
+            // 验证手机号
+
+            function isPhoneNo(phone) {
+
+                var pattern = /^1[34578]\d{9}$/;
+
+                return pattern.test(phone);
+
+            }
+
+            function submitPassword(obj){
+
+                password = $('input[name=password]').val();
+
+                cpassword = $('input[name=cpassword]').val();
+
+                if(!password){
+
+                    layer.tips('密码不可为空！',$('input[name=password]'),{tips:[2,'#ff0000'],time:1500});
+
+                    return false;
+
+                }
+
+                if(password.length<6){
+
+                    layer.tips('密码长度不可少于6位！',$('input[name=password]'),{tips:[2,'#ff0000'],time:1500});
+
+                    return false;
+
+                }
+
+                if(password.length>16){
+
+                    layer.tips('密码长度不可超过16位！',$('input[name=password]'),{tips:[2,'#ff0000'],time:1500});
+
+                    return false;
+
+                }
+
+                if(!cpassword){
+
+                    layer.tips('重置密码不可为空！',$('input[name=cpassword]'),{tips:[2,'#ff0000'],time:1500});
+
+                    return false;
+
+                }
+
+                if(password!==cpassword){
+
+                    layer.tips('两次密码输入不一致！',$('input[name=cpassword]'),{tips:[2,'#ff0000'],time:1500});
+
+                    return false;
+
+                }
+
+                mobile = $('input[name=mobile]').val();
+
+                if(!isPhoneNo(mobile)){
+
+                    layer.tips('手机号码格式不正确！',$('input[name=mobile]'),{tips:[2,'#ff0000'],time:1500});
+
+                    return false;
+
+                }
+
+                cpassword = $('input[name=cpassword]').val();
+
+                code = $('input[name=code]').val();
+
+                $.ajax({
+
+                    url:"",
+
+                    type:'post',
+
+                    data:{password:password,cpassword:cpassword,code:code,mobile:mobile},
+
+                    success:function(msg){
+
+                        if(msg.code){
+
+                            swal({
+
+                                title:'',
+
+                                text:msg.info,
+
+                                type:"success",
+
+                                timer:1500,
+
+                                showConfirmButton:false
+
+                            });
+
+                        }else{
+
+                            swal({
+
+                                title:'',
+
+                                text:msg.info,
+
+                                type:"warning",
+
+                                timer:1500,
+
+                                showConfirmButton:false
+
+                            });
+
+                        }
+
+                    }
+
+                })
+
+            }
+
+            // 验证手机号
+
+            var time = 60;
+
+            function sendCode(obj){
+
+                password = $('input[name=password]').val();
+
+                cpassword = $('input[name=cpassword]').val();
+
+                if(!password){
+
+                    layer.tips('密码不可为空！',$('input[name=password]'),{tips:[2,'#ff0000'],time:1500});
+
+                    return false;
+
+                }
+
+                if(password.length<6){
+
+                    layer.tips('密码长度不可少于6位！',$('input[name=password]'),{tips:[2,'#ff0000'],time:1500});
+
+                    return false;
+
+                }
+
+                if(password.length>16){
+
+                    layer.tips('密码长度不可超过16位！',$('input[name=password]'),{tips:[2,'#ff0000'],time:1500});
+
+                    return false;
+
+                }
+
+                if(!cpassword){
+
+                    layer.tips('重置密码不可为空！',$('input[name=cpassword]'),{tips:[2,'#ff0000'],time:1500});
+
+                    return false;
+
+                }
+
+                if(password!==cpassword){
+
+                    layer.tips('两次密码输入不一致！',$('input[name=cpassword]'),{tips:[2,'#ff0000'],time:1500});
+
+                    return false;
+
+                }
+
+                mobile = $('input[name=mobile]').val();
+
+                if(!mobile){
+
+                    layer.tips('请输入手机号！',$('input[name=mobile]'),{tips:[2,'#ff0000'],time:1500});
+
+                    return false;
+
+                }
+
+                if(!isPhone(mobile)){
+
+                    layer.tips('手机号码格式不正确！',$('input[name=mobile]'),{tips:[2,'#ff0000'],time:1500});
+
+                    return false;
+
+                }
+
+                $.ajax({
+
+                    url:'/pwdCode',
+
+                    type:'post',
+
+                    beforeSend:function(){
+
+                        layer.load();
+
+                    },
+
+                    data:{mobile:mobile},
+
+                    success:function(msg){
+
+                        layer.closeAll('loading')
+
+                        if(msg.code){
+
+                            TimeDown(obj)
+
+                            swal({
+
+                                title:'',
+
+                                text:msg.info,
+
+                                type:"success",
+
+                                timer:1500,
+
+                                showConfirmButton:false
+
+                            });
+
+                        }else{
+
+                            swal({
+
+                                title:'',
+
+                                text:msg.info,
+
+                                type:"warning",
+
+                                timer:1500,
+
+                                showConfirmButton:false
+
+                            });
+
+                        }
+
+                    }
+
+                })
+
+            }
+
+            function TimeDown(obj) {
+
+                if (time == 0) {
+
+                    $(obj).removeClass('disable');
+
+                    $(obj).attr('disabled', false);
+
+                    $(obj).text('发送验证码');
+
+                    time = 60;
+
+                    return
+
+                } else {
+
+                    $(obj).addClass('disable')
+
+                    $(obj).attr('disabled', true);
+
+                    $(obj).text('重新发送' + time);
+
+                    time--;
+
+                }
+
+                setTimeout(function () {
+
+                    TimeDown(obj)
+
+                }, 1000)
+
+            }
+
+
+
+            $("a").attr("target", "_self");
+
+
+
+
+
+            $("img.lazy").lazyload({effect: "fadeIn"});
+
+
+
+        </script>
+
+
+
+        <div class="side-tool" id="to_top" style="display: none;">
+
+            <ul>
+
+                <li data-placement="left" data-toggle="tooltip" data-container="body" data-original-title="回到顶部">
+
+                    <a href="#" class="function-button"><i class="fa fa-angle-up"></i></a>
+
+                </li>
+
+
+
+
+
+            </ul>
+
+        </div>
+
+
+
+        <script>
+
+            function submitForm() {
+
+                formData = new FormData();
+
+                //真实姓名
+
+                real_name = $('input[name=real_name]').val();
+
+                if (real_name) {
+
+                    formData.append('real_name', real_name);
+
+                }
+
+                //工作地点
+
+                work_place = $('input[name=work_place]').val();
+
+                if (work_place) {
+
+                    formData.append('work_place', work_place);
+
+                }
+
+                //消息通知
+
+                news = '';
+
+                $('input[name=news]').each(function () {
+
+                    news += $(this).val() + ',';
+
+                })
+
+                $.trim(news, ',');
+
+                formData.append('news', news);
+
+                //生日
+
+                birthday = $('input[name=birthday]').val();
+
+                if (birthday) {
+
+                    formData.append('birthday', birthday);
+
+                }
+
+                //手机号
+
+                mobile = $('input[name=mobile]').val()
+
+                if (mobile) {
+
+                    if (!isPhone(mobile)) {
+
+                        layer.tips('手机号码格式不正确！', $('input[name=mobile]'), {tips: [2, '#ff0000'], time: 1500})
+
+                        return false;
+
+                    }
+
+                    // formData.append('mobile',mobile);
+
+                }
+
+                //email
+
+                email = $('input[name=email]').val()
+
+                if (email) {
+
+                    if (!email.match(/^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+((\.[a-zA-Z0-9_-]{2,3}){1,2})$/)) {
+
+                        layer.tips('email格式不正确！', $('input[name=email]'), {tips: [2, '#ff0000'], time: 1500})
+
+                        return false;
+
+                    }
+
+                    // formData.append('email',email);
+
+                }
+
+                //签名
+
+                signature = $('input[name=signature]').val()
+
+                if (signature) {
+
+                    formData.append('signature', signature);
+
+                }
+
+                //身份介绍
+
+                describe = $('textarea[name=describe]').val()
+
+                if (describe) {
+
+                    formData.append('describe', describe);
+
+                }
+
+                id = $('input[name=userid]').val()
+
+                formData.append('id', id);
+
+                $.ajax({
+
+                    url: '',
+
+                    type: 'post',
+
+                    data: formData,
+
+                    contentType: false,
+
+                    processData: false,
+
+                    beforeSend: function () {
+
+                        layer.load()
+
+                    },
+
+                    success: function (msg) {
+
+                        console.log(msg);
+
+                        layer.closeAll('loading')
+
+                        if (msg.code) {
+
+                            swal({
+
+                                title: '',
+
+                                text: msg.info,
+
+                                type: "success",
+
+                                timer: 1500,
+
+                                showConfirmButton: false
+
+                            })
+
+                            setTimeout(function () {
+
+                                window.location.reload()
+
+                            }, 1500)
+
+                        } else {
+
+                            swal({
+
+                                title: '',
+
+                                text: msg.info,
+
+                                type: "warning",
+
+                                timer: 1500,
+
+                                showConfirmButton: false
+
+                            })
+
+                            return false;
+
+                        }
+
+                    }
+
+                })
+
+            }
+
+
+
+            function isPhone(str) {
+
+                var regMobile = /^0{0,1}(13[0-9]|14[0-9]|15[0-9]|18[0-9])[0-9]{8}$/;
+
+                if (regMobile.test(str)) {
+
+                    return true;
+
+                } else {
+
+                    return false;
+
+                }
+
+            }
+
+
+
+            window.onload = function () {
+
+                $(".edui-upload-video").attr("preload", "");
+
+                var oTop = document.getElementById("to_top");
+
+
+
+                var screenw = document.documentElement.clientWidth || document.body.clientWidth;
+
+                var screenh = document.documentElement.clientHeight || document.body.clientHeight;
+
+                window.onscroll = function () {
+
+                    var scrolltop = document.documentElement.scrollTop || document.body.scrollTop;
+
+
+
+                    if (scrolltop <= screenh) {
+
+                        oTop.style.display = "none";
+
+                    } else {
+
+                        oTop.style.display = "block";
+
+                    }
+
+                    if (scrolltop > 30) {
+
+
+
+                        $(".scrollshow").show();
+
+                    } else {
+
+                        $(".scrollshow").hide();
+
+                    }
+
+                }
+
+                oTop.onclick = function () {
+
+                    document.documentElement.scrollTop = document.body.scrollTop = 0;
+
+                }
+
+            }
+
+
+
+        </script>
+
+
+
+
+
+    </div>
+
+    {include file="common/footer" /}
+
+</body>
+
+</html>
+

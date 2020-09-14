@@ -1,0 +1,418 @@
+{dede:include filename="header_list.htm"/}
+
+<div class="mini_nav_top">
+<h1><img src="{dede:global.cfg_templets_skin/}/images/logo.jpg" width="106" height="24"></h1>
+
+<h2>{dede:field name='position'/} 列表</h2>
+
+<UL>
+
+<li><a href="http://down.662p.com" target="_blank"><i style="background: url({dede:global.cfg_templets_skin/}/images/home.png) no-repeat left; "></i>软件下载</a></li>
+
+<li><a href="http://code.662p.com" target="_blank"><i style="background: url({dede:global.cfg_templets_skin/}/images/hao.png) no-repeat left; "></i>源码下载</a></li>
+
+<li><a href="http://app.662p.com/" target="_blank"><i style="background: url({dede:global.cfg_templets_skin/}/images/s.png) no-repeat left; "></i>应用下载</a></li>
+</UL>
+
+</div>
+
+
+
+<div class="zhuti">
+
+  <div class="left">
+
+    <div class="left_box">
+
+      <div class="zdent">
+
+       {dede:arclist row='3' flag=p titlelen=28 infolen='100'}
+
+		<div class="ss[field:global name=autoindex/]">
+
+          <h2 class="zdenth2"><a href="[field:arcurl/]"><img src="[field:litpic/]" width="185" height="132"></a></h2>
+
+        <h3 class="zdenth3"><a href="[field:arcurl/]">[field:title/]</a></h3>
+
+        <p class="zdentp" style="color:#666;">[field:info/]...<a href="[field:arcurl/]">[全文阅读]</a></p>
+
+        </div>
+
+		{/dede:arclist}
+
+      </div>
+
+    <div class="l_t"><h2>最新文章</h2></div>
+
+
+    {dede:list pagesize='13'}
+
+	 <div class="entrybox">
+
+       <div class="thumbnail_box">
+
+		  <div class="thumbnail_t">
+
+			<a href="[field:arcurl/]"><img src="[field:litpic/]"></a>
+
+          </div>
+
+		 <span class="postdate">[field:pubdate function="GetDateTimeMK(@me)"/]</span>
+
+	   </div>
+
+     <div class="infotxt">
+
+     <h3><a href="[field:arcurl/]" target="_blank">[field:title/]</a></h3>
+
+     <p>[field:description function='cn_substr(@me,200)'/]...</p>
+
+     <h5>分类：[field:typelink/]</h5>
+
+     <h4>[field:click/]次阅读</h4>
+
+     <h4 class="archive_more"><a href="[field:arcurl/]" target="_blank" class="title">阅读全文</a></h4>
+
+     </div>
+
+     </div>
+
+	{/dede:list}
+ 
+
+        <ol class="dede_pages"> <ul class="pagelist"> {dede:pagelist listitem="info,index,end,pre,next,pageno,option" listsize="3"/} </ul> </ol>
+
+	  
+
+    </div>  
+
+
+  </div>
+
+  
+
+  <!--left end-->
+
+<div class="right">
+
+    <div class="ad_ritht_1">
+  <!-- 广告位：662p_pc_list_right300250A -->
+<script>
+(function() {
+    var s = "_" + Math.random().toString(36).slice(2);
+    document.write('<div id="' + s + '"></div>');
+    (window.slotbydup=window.slotbydup || []).push({
+        id: '2013787',
+        container: s,
+        size: '300,250',
+        display: 'inlay-fix'
+    });
+})();
+</script>    </div>
+    <!--ad_right1 end-->
+
+
+    <div class="ad_ritht_1">
+  <!-- 广告位：662p_pc_list_right300250A -->
+<script language="javascript" src="http://www.64lou.com/javascript.php?flag=tech10" ></script></div>
+    <!--ad_right1 end-->
+
+
+
+    <div class="today_focus">
+
+      <div class="today_focus_t"><h2>今日焦点</h2></div>
+
+      <div class="today_focus_box">
+
+      <ul>
+
+      <h2>{dede:arclist row='1' titlelen=32 flag=h}
+
+	  <a href="[field:arcurl/]" target="_blank">[field:title/]</a>
+
+	  {/dede:arclist}</h2>
+
+      <p style="margin-top:0px; padding-top:0px;">{dede:arclist limit='1,2' titlelen=20 flag=h}<a href="[field:arcurl/]" target="_blank" style="margin-right:0px;">[field:title/]</a>{/dede:arclist}</p>
+
+      </ul>
+
+      <ol>
+
+      {dede:arclist row='5' titlelen=42 flag=''}<li><a href="[field:arcurl/]" target="_blank">[field:title/]</a></li>{/dede:arclist}
+
+      </ol>
+
+      <h3>
+
+	  名企动态：<a href="http://www.662p.com/tags.php?/%C6%BB%B9%FB/" target="_blank">苹果</a> | <a href="http://www.662p.com/tags.php?/%B9%C8%B8%E8/" target="_blank">谷歌</a> | <a href="http://www.662p.com/tags.php?/%BE%A9%B6%AB/" target="_blank">微软</a> | <a href="http://www.662p.com/tags.php?/%D1%C7%C2%ED%D1%B7/" target="_blank">亚马逊</a> | <a href="http://www.662p.com/tags.php?/%CC%DA%D1%B6/" target="_blank">腾讯</a> | <a href="http://www.662p.com/tags.php?/%B0%A2%C0%EF%B0%CD%B0%CD/" target="_blank">阿里巴巴</a> | <a href="http://www.662p.com/tags.php?/%B0%D9%B6%C8/" target="_blank">百度</a> | <a href="http://www.662p.com/tags.php?/360/" target="_blank">360</a> | <a href="http://www.662p.com/tags.php?/662p/" target="_blank">662p</a> | <a href="http://www.662p.com/tags.php?/%D0%C2%C0%CB/" target="_blank">新浪</a> | <a href="http://www.662p.com/tags.php?/%CB%D1%BA%FC/" target="_blank">搜狐</a>
+
+	  </h3>
+
+	  <!-- 这里的企业，可以使用tags调用相关文章 -->
+
+      </div>
+
+    </div>
+
+    
+
+    <!--today_focus end-->
+
+  <div class="ad_ritht_1">  
+<!-- 广告位：662p_pc_list_right300250B -->
+<script>
+(function() {
+    var s = "_" + Math.random().toString(36).slice(2);
+    document.write('<div id="' + s + '"></div>');
+    (window.slotbydup=window.slotbydup || []).push({
+        id: '2013789',
+        container: s,
+        size: '300,250',
+        display: 'inlay-fix'
+    });
+})();
+</script></div>
+
+    <div class="column">
+
+      <div class="column_t"><h2>专栏评论</h2></div>
+
+      <div class="column_box">
+
+       <ul>
+
+        {dede:arclist row='1' flag=p titlelen=26 typeid=' ' infolen='45'}
+
+		<h3><a href="[field:arcurl/]" class="focusimg" target="_blank"><img src="[field:litpic/]" width="80" height="60"></a></h3>
+
+        <h4><a href="[field:arcurl/]" target="_blank">[field:title/]</a></h4>
+
+        <p style="margin-top:0px; padding-top:0px;">[field:info/]<a href="[field:arcurl/]" target="_blank">...[详细]</a></p>
+
+		{/dede:arclist}
+
+      </ul>
+
+        <ol>{dede:arclist row='5' titlelen=42 flag=''}<li><a href="[field:arcurl/]" target="_blank">[field:title/]</a></li>{/dede:arclist}
+
+        </ol>
+
+      </div>
+
+    </div>
+
+    
+<div class="ad_ritht_1">
+<!-- 广告位：662p_pc_list_right300250C -->
+<script>
+(function() {
+    var s = "_" + Math.random().toString(36).slice(2);
+    document.write('<div id="' + s + '"></div>');
+    (window.slotbydup=window.slotbydup || []).push({
+        id: '2013791',
+        container: s,
+        size: '300,250',
+        display: 'inlay-fix'
+    });
+})();
+</script>
+    </div>
+
+    
+
+    <!--column-->
+
+<div class="spc">
+
+      <div class="spc_t"><h2>热点专题</h2></div>
+
+      <div class="spc_box">
+
+      <ul>{dede:arclist row='5' titlelen=42 flag=''}<li><a href="[field:arcurl/]" target="_blank">[field:title/]</a></li>{/dede:arclist}
+
+      </ul>
+
+      </div>
+
+    </div>
+
+    
+
+    <!--spc end-->
+
+    <div class="newspic">
+
+      <div class="newspic_t"><h2>新闻图片</h2></div>
+
+      <div class="newspic_box">
+
+ 
+
+      {dede:arclist row='4' titlelen=22 flag='p'}
+
+	  <ul>
+
+      <h2><a href="[field:arcurl/]" alt="[field:fulltitle/]" class="focusimg"><img src="[field:litpic/]" width="110" height="85"></a></h2>
+
+      <p><a href="[field:arcurl/]" alt="[field:fulltitle/]" target="_blank">[field:title/]</a></p>
+
+      </ul>
+
+	  {/dede:arclist}
+
+
+
+      </div>
+
+    </div>
+
+    <!--newspic end-->    
+
+    <div class="ad_ritht_2">
+<!-- 广告位：662p_pc_list_right300250D -->
+<script>
+(function() {
+    var s = "_" + Math.random().toString(36).slice(2);
+    document.write('<div id="' + s + '"></div>');
+    (window.slotbydup=window.slotbydup || []).push({
+        id: '2013793',
+        container: s,
+        size: '300,250',
+        display: 'inlay-fix'
+    });
+})();
+</script>    </div>
+    <!--ad_right_2-->
+
+      <div class="toplist">
+
+      <div class="hdm01"><h3><a href="javascript:void(0);" class="current">新闻资讯</a><a href="javascript:void(0);" class="">评测教程</a></h3>
+
+      <div class="content" style="display: block; ">
+
+      <ul>{dede:arclist row='10' titlelen=42 orderby=click}<li><a href="[field:arcurl/]" target="_blank">[field:title/]</a></li>{/dede:arclist}
+
+      </ul>
+
+      </div>
+
+      <div class="content" style="display: none; ">
+
+      <ul>
+
+	  {dede:arclist row='10' titlelen=42 flag=''}<li><a href="[field:arcurl/]" target="_blank">[field:title/]</a></li>{/dede:arclist}
+
+      </ul>
+
+        </div>
+
+        </div>
+
+
+
+      </div>
+
+    <!--toplist end-->
+
+</div>
+
+
+
+</div>
+
+
+
+<!--zhuti end-->
+
+
+
+
+<div class="bai"></div>
+
+<div class="ad_top" align="center">
+<!-- 广告位：662p_pc_list_foot96090 -->
+<script>
+(function() {
+    var s = "_" + Math.random().toString(36).slice(2);
+    document.write('<div id="' + s + '"></div>');
+    (window.slotbydup=window.slotbydup || []).push({
+        id: '2013795',
+        container: s,
+        size: '960,90',
+        display: 'inlay-fix'
+    });
+})();
+</script></DIV>
+<br />
+<div class="ad_top" align="center">
+<!-- 360：662ppclistfoot96090-->
+<script>QIHOO_UNION_SLOT={w:960, h:90, ls:"s1bf9a55b80"};</script><script src="http://s.lianmeng.360.cn/so/inlay.js" charset="utf-8"></script>
+</div>
+<div class="bai"></div>
+{dede:include filename="footer.htm"/}
+
+<script type="text/javascript" src="{dede:global.cfg_templets_skin/}/images/jquery.js"></script>
+
+<script>
+
+jQuery(function() {
+
+jQuery('.hdm01>h3>a').mouseover(function() { TabSelect(".hdm01>h3>a", ".hdm01>div.content", "current", jQuery(this)) });
+
+jQuery('.hdm01>h3>a').eq(0).trigger("mouseover");
+
+jQuery('.hdm02>h3>a').mouseover(function() { TabSelect(".hdm02>h3>a", ".hdm02>div.content", "current", jQuery(this)) });
+
+jQuery('.hdm02>h3>a').eq(0).trigger("mouseover");
+
+jQuery('#duice').click(function(){
+
+			jQuery('.wthpop').show();
+
+		})
+
+		jQuery('.wthpop>p>span').click(function(){
+
+			jQuery('.wthpop').hide()
+
+		})
+
+
+
+    });
+
+
+
+//tab function
+
+function TabSelect(tab,con,addClass,obj) {
+
+    var jQuery_self = obj;
+
+    var jQuery_nav = jQuery(tab);
+
+
+
+    jQuery_nav.removeClass(addClass),
+
+	jQuery_self.addClass(addClass);
+
+
+
+    var jQuery_index = jQuery_nav.index(jQuery_self);
+
+    var jQuery_con = jQuery(con);
+
+    jQuery_con.hide(),
+
+	jQuery_con.eq(jQuery_index).show();
+
+}
+
+swfobject.registerObject("FlashID3");
+
+</script>
+
+</body>
+</html>

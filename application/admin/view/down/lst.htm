@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+    <meta charset="utf-8">
+
+    <title>ThinkPHP5.0</title>
+
+
+    <meta name="description" content="Dashboard">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <!--Basic Styles-->
+
+    <link href="__ADMIN__/style/bootstrap.css" rel="stylesheet">
+
+    <link href="__ADMIN__/style/font-awesome.css" rel="stylesheet">
+
+    <link href="__ADMIN__/style/weather-icons.css" rel="stylesheet">
+
+
+    <!--Beyond styles-->
+
+    <link id="beyond-link" href="__ADMIN__/style/beyond.css" rel="stylesheet" type="text/css">
+
+    <link href="__ADMIN__/style/demo.css" rel="stylesheet">
+
+    <link href="__ADMIN__/style/typicons.css" rel="stylesheet">
+
+    <link href="__ADMIN__/style/animate.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+<!-- 头部 -->
+
+{include file="public/top" /}
+
+<!-- /头部 -->
+
+
+<div class="main-container container-fluid">
+
+    <div class="page-container">
+
+        <!-- Page Sidebar -->
+
+        {include file="public/left" /}
+
+        <!-- /Page Sidebar -->
+
+        <!-- Page Content -->
+
+        <div class="page-content">
+
+            <!-- Page Breadcrumb -->
+
+            <div class="page-breadcrumbs">
+
+                <ul class="breadcrumb">
+
+                    <li>
+
+                        <a href="#">系统</a>
+
+                    </li>
+
+                    <li class="active">文章管理</li>
+
+                </ul>
+
+            </div>
+
+            <!-- /Page Breadcrumb -->
+
+
+            <!-- Page Body -->
+
+            <div class="page-body">
+
+
+                <button type="button" tooltip="添加栏目" class="btn btn-sm btn-azure btn-addon"
+                        onClick="javascript:window.location.href = '{:url('add')}'"><i class="fa fa-plus"></i> Add
+
+                </button>
+
+                <div class="row">
+
+                    <div class="col-lg-12 col-sm-12 col-xs-12">
+
+                        <div class="widget">
+                            <form action="" class="form-horizontal" style="margin: 6px 0px;">
+                                <input class="form-control" style="height: 33px;width: 12%;display: inline-block;" type="text" value="{$Think.get.keyword}" name="keyword" placeholder="请输入标题关键词">
+                                <select name="classid" class="form-control" onchange="firstCate(this)" style="display: inline-block;width: auto;">
+                                    <option value="0">请选择一级分类</option>
+                                    {volist name="firstCate" id="foo"}
+                                    <option {eq name='Think.get.classid' value='$foo.classid'}selected{/eq} value="{$foo.classid}">{$foo.classname}</option>
+                                    {/volist}
+                                </select>
+                                <select name="sclassid" class="form-control" onchange="secondCate(this)" style="display: inline-block;width: auto;{empty name='$secondCate'}display: none;{/empty}">
+                                    {empty name="$secondCate"}
+                                    {else/}
+                                    <option value="0">请选择二级分类</option>
+                                    {volist name="$secondCate" id="foo"}
+                                    <option {eq name='Think.get.sclassid' value='$foo.classid'}selected{/eq} value="{$foo.classid}">{$foo.classname}</option>
+                                    {/volist}
+                                    {/empty}
+                                </select>
+                                <select name="tclassid" class="form-control" style="display: inline-block;width: auto;{empty name='$thirdCate'}display: none;{/empty}">
+                                    {empty name="$thirdCate"}
+                                    {else/}
+                                    <option value="0">请选择三级分类</option>
+                                    {volist name="$thirdCate" id="foo"}
+                                    <option {eq name='Think.get.tclassid' value='$foo.classid'}selected{/eq} value="{$foo.classid}">{$foo.classname}</option>
+                                    {/volist}
+                                    {/empty}
+                                </select>
+                                <button type="submit" style="padding: 4px 8px;height: 100%;" class="btn btn-primary shiny"><i class="fa fa-search" aria-hidden="true"></i>搜索
+                                </button>
+
+                            </form>
+                            <div class="widget-body">
+
+                                <div class="flip-scroll">
+
+                                    <form action="" method="post">
+
+                                        <table class="table table-bordered table-hover">
+
+                                            <thead class="">
+
+                                            <tr>
+
+                                                <th class="text-center" width="10%">ID</th>
+
+                                                <th class="text-center">标题</th>
+
+                                                <th class="text-center">缩略图</th>
+
+                                                <th class="text-center">大小</th>
+                                                <th class="text-center">作者</th>
+                                                <th class="text-center">推荐</th>
+
+                                                <th class="text-center">时间</th>
+
+                                                <th class="text-center">所属栏目</th>
+
+                                                <th class="text-center" width="20%">操作</th>
+
+                                            </tr>
+
+                                            </thead>
+
+                                            <tbody>
+
+                                            {volist name="downs" id="down"}
+
+                                            <tr>
+
+                                                <td align="center">{$down.softid}</td>
+
+                                                <td><?php echo mb_substr($down['softname'], 0,30,'utf-8'); if(strlen($down['softname'])>
+                                                    30){echo '...';}?>
+                                                </td>
+
+                                                <td align="center">
+
+                                                    {if condition="$down['softpic'] neq ''"}
+
+                                                    <img src="{$down.softpic}" height="30">
+
+                                                    {else /}
+
+                                                    暂无缩略图
+
+                                                    {/if}
+
+                                                </td>
+                                                <td align="center">{if condition="$down['filesize'] eq ''"}不详{else
+                                                    /}{$down.filesize}{/if}
+                                                </td>
+                                                <td align="center">{if condition="$down['writer'] eq ''"}未填写{else
+                                                    /}{$down.writer}{/if}
+                                                </td>
+
+                                                <td align="center">{if condition="$down['isgood'] eq 0"}未推荐{else
+                                                    /}已推荐{/if}
+                                                </td>
+
+                                                <td align="center">{$down['softtime']|date='Y-m-d H:i:s',###}</td>
+
+                                                <td align="center">{$down.classname}</td>
+
+                                                <td align="center">
+
+                                                    <a href="{:url('edit',array('softid'=>$down['softid']))}"
+                                                       class="btn btn-primary btn-sm shiny">
+
+                                                        <i class="fa fa-edit"></i> 编辑
+
+                                                    </a>
+
+                                                    <a href="#"
+                                                       onClick="warning('确实要删除吗', '{:url('del',array('softid'=>$down['softid']))}')"
+                                                       class="btn btn-danger btn-sm shiny">
+
+                                                        <i class="fa fa-trash-o"></i> 删除
+
+                                                    </a>
+
+                                                </td>
+
+                                            </tr>
+
+                                            {/volist}
+
+                                            </tbody>
+
+                                        </table>
+
+                                    </form>
+
+                                </div>
+
+                                <div style="padding-top:10px;">
+
+                                    {$downs->render()}
+
+                                </div>
+
+                                <div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+            <!-- /Page Body -->
+
+        </div>
+
+        <!-- /Page Content -->
+
+    </div>
+
+</div>
+
+
+<!--Basic Scripts-->
+
+<script src="__ADMIN__/style/jquery_002.js"></script>
+
+<script src="__ADMIN__/style/bootstrap.js"></script>
+
+<script src="__ADMIN__/style/jquery.js"></script>
+
+<!--Beyond Scripts-->
+
+<script src="__ADMIN__/style/beyond.js"></script>
+
+<script>
+    function search(obj) {
+        $(obj).parent().find('input').click();
+    }
+    function firstCate(obj){
+        val = $(obj).val()
+        if(val){
+            $.ajax({
+                url:'',
+                data:{id:val},
+                type:'post',
+                success:function(msg){
+                    if(msg.code){
+                        $('select[name=sclassid]').css('display','inline-block');
+                        $('select[name=sclassid]').show()
+                        $('select[name=tclassid]').hide()
+                        list = '<option value="0">请选择二级分类</option>';
+                        $.each(msg.data,function(k,v){
+                            list += '<option value="'+v.classid+'">'+v.classname+'</option>'
+                        })
+                        $('select[name=sclassid]').html(list)
+                    }else{
+                        $('select[name=sclassid]').hide()
+                    }
+                }
+            })
+        }
+    }
+    function secondCate(obj){
+        val = $(obj).val()
+        if(val){
+            $.ajax({
+                url:'',
+                data:{id:val},
+                type:'post',
+                success:function(msg){
+                    if(msg.code){
+                        $('select[name=tclassid]').css('display','inline-block');
+                        $('select[name=tclassid]').show()
+                        list = '<option value="0">请选择三级分类</option>';
+                        $.each(msg.data,function(k,v){
+                            list += '<option value="'+v.classid+'">'+v.classname+'</option>'
+                        })
+                        $('select[name=tclassid]').html(list)
+                    }else{
+                        $('select[name=tclassid]').hide()
+                    }
+                }
+            })
+        }
+    }
+</script>
+
+
+</body>
+</html>

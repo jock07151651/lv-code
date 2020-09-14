@@ -1,0 +1,18 @@
+.addon-vote {
+	PADDING-BOTTOM: 10px; LINE-HEIGHT: 24px; MARGIN: 15px auto; PADDING-LEFT: 60px; WIDTH: 500px; PADDING-RIGHT: 60px; BACKGROUND: url(http://pic.newhua.com/index.2.0/images/vote_bg.png) #f5f5f5 no-repeat left top; CLEAR: both; FONT-SIZE: 14px; OVERFLOW: hidden; PADDING-TOP: 50px
+}
+.addon-vote .vote-title {
+	FONT-WEIGHT: normal
+}
+.mod-gallery {
+	BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; WIDTH: 620px; BACKGROUND: #f5f5f5; FLOAT: left; MARGIN-LEFT: 20px; BORDER-TOP: medium none; BORDER-RIGHT: medium none
+}
+.mod-gallery .gallery-photo-items {
+	BACKGROUND: #f5f5f5
+}
+.mod-gallery .gallery-content {
+	BORDER-BOTTOM: #eee 1px solid; BACKGROUND: #f5f5f5
+}
+.widget-vote .progress {
+	BACKGROUND-COLOR: #e3e3e3
+}

@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+
+<html><head>
+
+        <meta charset="utf-8">
+
+    <title>ThinkPHP5.0</title>
+
+
+
+    <meta name="description" content="Dashboard">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <!--Basic Styles-->
+
+    <link href="__ADMIN__/style/bootstrap.css" rel="stylesheet">
+
+    <link href="__ADMIN__/style/font-awesome.css" rel="stylesheet">
+
+    <link href="__ADMIN__/style/weather-icons.css" rel="stylesheet">
+
+
+
+    <!--Beyond styles-->
+
+    <link id="beyond-link" href="__ADMIN__/style/beyond.css" rel="stylesheet" type="text/css">
+
+    <link href="__ADMIN__/style/demo.css" rel="stylesheet">
+
+    <link href="__ADMIN__/style/typicons.css" rel="stylesheet">
+
+    <link href="__ADMIN__/style/animate.css" rel="stylesheet">
+
+    <script src="__ADMIN__/ueditor/ueditor.config.js"></script>
+
+    <script src="__ADMIN__/ueditor/ueditor.all.min.js"></script>
+
+    <script src="__ADMIN__/ueditor/lang/zh-cn/zh-cn.js"></script>
+
+
+
+</head>
+
+<body>
+
+    <!-- 头部 -->
+
+    {include file="public/top" /} 
+
+    <!-- /头部 -->
+
+    
+
+    <div class="main-container container-fluid">
+
+        <div class="page-container">
+
+            <!-- Page Sidebar -->
+
+            {include file="public/left" /} 
+
+            <!-- /Page Sidebar -->
+
+            <!-- Page Content -->
+
+            <div class="page-content">
+
+                <!-- Page Breadcrumb -->
+
+                <div class="page-breadcrumbs">
+
+                    <ul class="breadcrumb">
+
+                                        <li>
+
+                        <a href="#">系统</a>
+
+                    </li>
+
+                                        <li>
+
+                        <a href="{:url('lst')}">文章管理</a>
+
+                    </li>
+
+                                        <li class="active">修改文章</li>
+
+                                        </ul>
+
+                </div>
+
+                <!-- /Page Breadcrumb -->
+
+
+
+                <!-- Page Body -->
+
+                <div class="page-body">
+
+                    
+
+<div class="row">
+
+    <div class="col-lg-12 col-sm-12 col-xs-12">
+
+        <div class="widget">
+
+            <div class="widget-header bordered-bottom bordered-blue">
+
+                <span class="widget-caption">修改软件</span>
+
+            </div>
+
+            <div class="widget-body">
+
+                <div id="horizontal-form">
+
+                    <form class="form-horizontal" role="form" action="" method="post" enctype="multipart/form-data" >
+
+                        <input type="hidden" name="softid" value="{$downs.softid}">
+
+                        <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">标题</label>
+                            <div class="col-sm-6">
+                                <input class="form-control"  placeholder=""  value="{$downs.softname}" name="softname" required="" type="text">
+                            </div>
+                            <p class="help-block col-sm-4 red">* 必填</p>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">版本</label>
+                            <div class="col-sm-6">
+                                <input style="width: 150px;" class="form-control"   value="{$downs.soft_version}" name="soft_version"  type="text">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">作者信息</label>
+                            <div class="col-sm-6">
+                                <select onchange="a_mess(this)" name="userid">
+                                    {volist name="author" id="foo"}
+                                    <option {eq name="$downs.userid" value="$foo.userid"}selected{/eq} value="{$foo.userid}">{$foo.username}</option>
+                                    {/volist}
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+
+                            <label for="username" class="col-sm-2 control-label no-padding-right">作者</label>
+
+                            <div class="col-sm-6">
+
+                                <input class="form-control"  placeholder=""  value="{$downs.writer}" name="writer" type="text">
+
+                            </div>
+
+                            <p class="help-block col-sm-4 red">* 必填</p>
+
+                        </div>
+
+
+
+                        <div class="form-group">
+
+                            <label for="username" class="col-sm-2 control-label no-padding-right">关键词</label>
+
+                            <div class="col-sm-6">
+
+                                <input class="form-control"  placeholder=""  value="{$downs.keyboard}" name="keyboard" type="text">
+
+                            </div>
+
+                            <p class="help-block col-sm-4 red">* 必填</p>
+
+                        </div>
+
+
+
+                        <div class="form-group">
+
+                            <label for="username" class="col-sm-2 control-label no-padding-right">演示网站</label>
+
+                            <div class="col-sm-6">
+
+                                <input class="form-control"  placeholder="" name="demo"  value="{$downs.demo}" type="text">
+
+                            </div>
+
+                            <p class="help-block col-sm-4 red">* 必填</p>
+
+                        </div>
+
+
+
+                        <div class="form-group">
+
+                            <label for="username" class="col-sm-2 control-label no-padding-right">运行环境</label>
+
+                            <div class="col-sm-6">
+
+                                <input class="form-control"  placeholder="" name="soft_fj"  value="{$downs.soft_fj}" type="text">
+
+                            </div>
+
+                            <p class="help-block col-sm-4 red">* 必填</p>
+
+                        </div>
+
+
+
+                        <div class="form-group">
+
+                            <label for="username" class="col-sm-2 control-label no-padding-right">官方网</label>
+
+                            <div class="col-sm-6">
+
+                                <input class="form-control"  placeholder="" name="homepage"  value="{$downs.homepage}" type="text">
+
+                            </div>
+
+                            <p class="help-block col-sm-4 red">* 必填</p>
+
+                        </div>
+
+
+
+                        <div class="form-group">
+
+                            <label for="username" class="col-sm-2 control-label no-padding-right">描述</label>
+
+                            <div class="col-sm-6">
+
+                                <textarea name="softsay" class="form-control">{$downs.describes}</textarea>
+
+                            </div>
+
+                            <p class="help-block col-sm-4 red">* 必填</p>
+
+                        </div>
+
+
+
+                        <div class="form-group">
+
+                            <label for="username" class="col-sm-2 control-label no-padding-right">缩略图</label>
+
+                            <div class="col-sm-6">
+
+                                <input style="float:left;width: 600px;" id="softPic" name="thumbImg" class="form-control J_softPic" value="{$downs.softpic}" placeholder="" type="text">
+
+                                <label class="showThumbPicSize" style="display: none;cursor: pointer;padding: 9px 5px;">20.268KB</label>
+
+                                <label onclick="SoftPicClick(1)" style="cursor: pointer;padding: 9px 5px;">上传</label>
+
+                                <label class="softpicDel" onclick="EditDel(this,'softPic','{$downs.softid}')" style="cursor: pointer;padding: 9px 5px;">删除</label>
+                                <input onchange="uploadSoftPic(1,'softPic')" style="display:none;float:left;"  placeholder="" name="softpic" type="file">
+
+                                <input type="hidden" name="updatePicTips" value="0"/><br>
+
+                                <img id="Imgshow" style="float:left;" src="{$downs.softpic}" width="80">
+
+                            </div>
+
+                            <p class="help-block col-sm-4 red">* 必填</p>
+
+                        </div>
+
+
+
+                        <div class="form-group">
+
+                            <label for="username" class="col-sm-2 control-label no-padding-right">水印图</label>
+
+                            <div class="col-sm-6">
+
+                                <input style="float:left;width: 600px;" class="form-control" id="water" placeholder="" type="text">
+
+                                <label class="showWaterSize" style="display: none;cursor: pointer;padding: 9px 5px;">20.268KB</label>
+
+                                <label onclick="SoftPicClick(2)" style="cursor: pointer;padding: 9px 5px;">上传</label>
+
+                                <!--<label onclick="del(2,'water')" style="cursor: pointer;padding: 9px 5px;">删除</label>-->
+
+                                <input onchange="uploadSoftPic(2,'water')" style="display:none;float:left;"  placeholder="" name="water" type="file">
+
+                            </div>
+
+                            <p class="help-block col-sm-4 red">* 必填</p>
+
+                        </div>
+
+
+
+                        <div class="form-group">
+
+                            <label for="username" class="col-sm-2 control-label no-padding-right">软件包</label>
+
+                            <div class="col-sm-6">
+
+                                <input style="float:left;width: 600px;" class="form-control J_downpath" name="softSrc" id="softpath" value="{$downs.downpath}" placeholder="" type="text">
+
+                                <input type="text" style="display: none;" id="softsize" name="filesize" value=""/>
+
+                                <label class="showSoftSize" style="display: none;cursor: pointer;padding: 9px 5px;">20.268KB</label>
+
+                                <label onclick="SoftPicClick(3)" style="cursor: pointer;padding: 5px 5px;">上传</label>
+
+                                <label class="softDel" onclick="EditDel(this,'demo','{$downs.softid}')" style="cursor: pointer;padding: 9px 5px;">删除</label>
+
+                                <input onchange="uploadSoftPic(3,'softpath')" style="display:none;float:left;"  placeholder="" name="downpath" type="file">
+
+                                <input name="updateSoftTips" value="0" type="hidden">
+
+                            </div>
+
+                            <p class="help-block col-sm-4 red">* 必填</p>
+
+                        </div>
+
+
+                       <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">文件大小</label>
+                            <div class="col-sm-6">
+                                <input style="width: 100px;" value="{$downs.filesize}" class="form-control"  placeholder="" name="filesize" type="text">
+                            </div>
+                            <p class="help-block col-sm-4 red">* 必填</p>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">文字水印</label>
+                            <div class="col-sm-6">
+                                <input style="float:left;padding-left: 5px;"  placeholder="" name="waterword" type="text" value="662p开源网">
+                            </div>
+                            <p class="help-block col-sm-4 red">* 必填</p>
+                        </div>
+
+                        <div class="form-group">
+
+                            <label for="username" class="col-sm-2 control-label no-padding-right">是否推荐</label>
+
+                            <div class="col-sm-6">
+
+                                <label style="margin-right:15px;">
+
+                                    <input {if condition="$downs['isgood'] eq 1"} checked="checked" {/if} name="isgood" value="1" type="radio">
+
+                                    <span class="text">是</span>
+
+                                </label>
+
+                                <label style="margin-right:15px;">
+
+                                    <input {if condition="$downs['isgood'] eq 0"} checked="checked" {/if} class="inverted" name="isgood" value="0" type="radio">
+
+                                    <span class="text">否</span>
+
+                                </label>
+
+                            </div>
+
+                            <p class="help-block col-sm-4 red">* 必填</p>
+
+                        </div>
+
+
+
+                        <div class="form-group">
+
+                            <label for="username" class="col-sm-2 control-label no-padding-right">所属栏目</label>
+
+                            <div class="col-sm-6">
+
+                                <select name="classid">
+
+                                    {volist name="downclasss" id="downclass"}
+
+                                    <option {if condition="$downclass['classid'] eq $downs['classid']"} selected="selected"{/if} value="{$downclass.classid}">{if condition="$downclass['level'] neq 0"}|{/if}<?php echo str_repeat('-', $downclass['level']*4)?>{$downclass.classname}</option>
+
+                                    {/volist}
+
+                                </select>
+
+                            </div>
+
+                            <p class="help-block col-sm-4 red">* 必填</p>
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <label for="username" class="col-sm-2 control-label no-padding-right">所属语言</label>
+
+                            <div class="col-sm-6">
+
+                                <select name="language">
+
+                                    {volist name="language" id="foo"}
+
+                                    <option value="{$foo.languageid}" {eq name="$foo.languageid" value="downs.languageid"}selected{/eq}>{$foo.language}</option>
+
+                                    {/volist}
+
+                                </select>
+
+                            </div>
+
+                            <p class="help-block col-sm-4 red">* 必填</p>
+
+                        </div>
+
+                        <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">下载所需点数</label>
+                            <div class="col-sm-6">
+                                <input style="width: 100px;" value="{$downs.downfen}" class="form-control"  placeholder="" name="downfen" type="number" min="0">
+                            </div>
+                            <p class="help-block col-sm-4 red">* 必填</p>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">内容</label>
+                            <div class="col-sm-6">
+                                <textarea id="content" name="softsay">{$downs.softsay}</textarea>
+                            </div>
+                            <p class="help-block col-sm-4 red">* 必填</p>
+                        </div>
+
+                     <!--    <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">软件时间</label>
+                            <div class="col-sm-6">
+                                <input style="width: 200px;" value="{$downs.softtime|date='Y-m-d H:i:s',###}" class="form-control"  placeholder="" name="softtime" >
+                            </div>
+                            <p class="help-block col-sm-4 red">* 必填</p>
+                        </div> -->
+
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+
+                                <button type="submit" class="btn btn-default">保存信息</button>
+
+                            </div>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+                </div>
+
+                <!-- /Page Body -->
+
+            </div>
+
+            <!-- /Page Content -->
+
+        </div>  
+
+    </div>
+
+
+
+        <!--Basic Scripts-->
+
+    <script src="__ADMIN__/style/jquery_002.js"></script>
+
+    <script src="__ADMIN__/style/bootstrap.js"></script>
+
+    <script src="__ADMIN__/style/jquery.js"></script>
+
+    <script type="text/javascript" src="/static/layer/layer.js"></script>
+
+    <!--Beyond Scripts-->
+
+    <script src="__ADMIN__/style/beyond.js"></script>
+
+    <script type="text/javascript">
+
+
+
+    //实例化编辑器
+
+    //建议使用工厂方法getEditor创建和引用编辑器实例，如果在某个闭包下引用该编辑器，直接调用UE.getEditor('editor')就能拿到相关的实例
+
+    UE.getEditor('content',{initialFrameWidth:800,initialFrameHeight:400,});
+
+    </script>
+
+    <script type="text/javascript">
+        function a_mess(obj){
+            val = $(obj).find('option:selected').text()
+            $('input[name=writer]').val(val);
+        }
+        function SoftPicClick(type){
+
+            if(type==1){
+
+                $('input[name=softpic]').click();
+
+            }else if(type==2){
+
+                $('input[name=water]').click();
+
+            }else{
+
+                $('input[name=downpath]').click();
+
+            }
+
+        }
+
+        function uploadSoftPic(type,name){
+
+            formData = new FormData();
+
+            if(type==1){
+
+                formData.append('softpic',$('input[name=softpic]').get(0).files[0]);
+
+            }else if(type==2){
+
+                formData.append('water',$('input[name=water]').get(0).files[0]);
+
+                formData.append('imgSrc',$('#softPic').val())
+
+            }else{
+
+                formData.append('downpath',$('input[name=downpath]').get(0).files[0]);
+
+            }
+
+            formData.append('type',type);
+
+            $.ajax({
+
+                url:'/SoftUpload',
+
+                type:'post',
+
+                contentType:false,
+
+                processData:false,
+
+                data:formData,
+
+                beforeSend:function(){
+
+                    layer.load()
+
+                },
+
+                success:function(msg){
+
+                    layer.closeAll('loading')
+
+                    if(msg.code){
+
+                        $('#'+name).val(msg.url);
+
+
+
+                        if(type==3){
+
+                            $('#softsize').val(msg.fileSize);
+
+                            $('input[name=updateSoftTips]').val(1);
+
+                            $('.showSoftSize').text(msg.size);
+
+                            $('.showSoftSize').css('display','inline-block');
+
+                            $('.softDel').css('display','inline-block')
+
+                        }else if(type==1){
+
+                            $('.softpicDel').css('display','inline-block');
+
+                            $('#Imgshow').attr('src',msg.url.substr(1));
+
+                            $('input[name=updatePicTips]').val(1);
+
+                            $(".showThumbPicSize").text(msg.size)
+
+                            $('.showThumbPicSize').css('display','inline-block');
+
+                        }else{
+
+                            $('.showWaterSize').text(msg.size)
+
+                            $('.showWaterSize').css('display','inline-block');
+
+                        }
+
+                        layer.msg(msg.info,{icon:1,time:1500})
+
+                    }else{
+
+                        layer.msg(msg.info,{icon:7,time:1500})
+
+                    }
+
+                }
+
+            })
+
+        }
+
+        function EditDel(obj,type,softid){
+            if(type=='softPic'){
+                urls = $(obj).parent().find('#Imgshow').attr('src');
+            }else{
+                urls = $('input[name=softSrc]').val();
+            }
+            if(urls==''){
+
+                layer.msg('删除失败，找不到文件',{icon:0,time:1500});
+
+                return false;
+
+            }
+
+            $.ajax({
+
+                url:'/EditDelete',
+
+                data:{urls:urls,type:type,softid:softid},
+
+                type:'post',
+
+                beforeSend:function () {
+
+                    layer.load()
+
+                },
+
+                success:function (msg) {
+
+                    layer.closeAll('loading')
+
+                    if(msg.code){
+                        $('#'+name).val('');
+                        layer.msg(msg.info,{icon:1,time:1500})
+                        if(msg.type=='softPic'){
+                            $('#Imgshow').attr('src','')
+                            $('input[name=thumbImg]').val('')
+                            $('input[name=updatePicTips]').val('')
+                            $('.showThumbPicSize').css('display','none')
+                        }else{
+                            $('input[name=softSrc]').val('')
+                            $('input[name=updateSoftTips]').val('')
+                            $('.showSoftSize').css('display','none')
+                        }
+
+                    }else{
+
+                        layer.msg(msg.info,{icon:0,time:1500})
+
+                    }
+
+                }
+
+            })
+
+        }
+
+    </script>
+
+
+
+</body></html>

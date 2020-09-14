@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>搜索页_{dede:global.cfg_webname/}<</title>
+<meta name="keywords" content="{dede:field name='keywords'/}" />
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+<link type="text/css" href="{dede:global.cfg_templets_skin/}/style/list.css" rel="stylesheet" meddia="screen">
+<!--[if lte IE 6]>
+<style type="text/css">
+.zhuti .right {width:300px; float:left; margin-left:8px;}
+.entrybox {width:640px; height:146px; float:left; margin:5px; margin-top:10px; margin-bottom:0px; background:url({dede:global.cfg_templets_skin/}/images/morelist.png) no-repeat;}
+.thumbnail_box {float: left; width: 140px; height:129px; margin: 5px 5px 5px 5px;; padding: 4px 2px 0 2px;}
+.ss1 {width:193px; height:249px; float:left; margin-right:16px; margin-left:0px;}
+.ss2 {width:193px; height:249px; float:left; margin-right:16px;}
+.ss3 {width:193px; height:249px; float:left; margin-right:0px;}
+</style>
+<![endif]-->
+<body>
+<div class="head">
+  <div class="head_txt">
+     <ul>
+     <li><a href="/">首页</a></li>
+     <li><a href=# style="color:red;">新闻</a></li>
+     <li><a href=#>手机</a></li>
+     <li><a href=#>数码</a></li>
+     <li><a href=#>游戏</a></li>
+     <li><a href=#>软件</a></li>
+     <li><a href=#>电商</a></li>
+     <li><a href=#>创投</a></li>
+     <li><a href=#>科学</a></li>
+     <li><a href=#>百科</a></li>
+     <li><a href=#>社区</a></li>
+     <li><a href=#>盒子</a></li>
+     <li><a href="">导航</a></li>
+     <li><a href=#>下载</a></li>
+     </ul>
+    <h3>
+	<form name="so" method="get" action="/plus/search.php">
+	  <input type="text" id="demo" name="q" onblur="if(this.value=='')this.value='请输入搜索内容'" onfocus="if(this.value=='请输入搜索内容')this.value=''" value="请输入搜索内容" class="search-input" />
+      <select name="channeltype" class="select"> 
+        <option value="1" selected="">资讯搜索</option> 
+		<option value="3">软件搜索</option> 
+      </select>
+      <input type="image" class="input_search" src="{dede:global.cfg_templets_skin/}/images/so_bg.png">
+    </form></h3>
+  </div>
+</div>
+<div class="ad_top">
+  <img src="{dede:global.cfg_templets_skin/}/ad/960.gif" width="970" height="70" border="0" alt="">
+</div>
+<div class="mini_nav_top"><h1><img src="{dede:global.cfg_templets_skin/}/images/logo.jpg" width="106" height="24"></h1>
+<h2>搜索 <strong class="fc_03c">{dede:global name='keyword' function='RemoveXSS(@me)'/}</strong> 的结果 </h2>
+<ul>
+<li><a href="http://www.z5.cc/" target="_blank"><i style="background: url({dede:global.cfg_templets_skin/}/images/home.png) no-repeat left; "></i>软件下载</a></li>
+<li><a href="http://www.z5.cc/" target="_blank"><i style="background: url({dede:global.cfg_templets_skin/}/images/hao.png) no-repeat left; "></i>QQ2013下载</a></li>
+<li><a href="http://bbs.dedecms8.com/" target="_blank"><i style="background: url({dede:global.cfg_templets_skin/}/images/s.png) no-repeat left; "></i>DedeCMS论坛</a></li>
+</ul>
+</div>
+
+<div class="zhuti">
+  <div class="left">
+    <div class="left_box" style="margin-top:10px;">
+    <div class="l_t"><h2>最新文章</h2></div>
+    <!--autoindex用法：http://www.dedecms8.com/plus/search.php?kwtype=0&keyword=auto -->
+    {dede:list perpage='10'}
+	 <div class="entrybox">
+       <div class="thumbnail_box">
+		  <div class="thumbnail_t">
+			<a href="[field:arcurl/]"><img src="[field:litpic/]"></a>
+          </div>
+		 <span class="postdate">[field:pubdate function="GetDateTimeMK(@me)"/]</span>
+	   </div>
+     <div class="infotxt">
+     <h3><a href="[field:arcurl/]" target="_blank">[field:title/]</a></h3>
+     <p>[field:description function='cn_substr(@me,200)'/]...</p>
+     <h5>分类：[field:typelink/]</h5>
+     <h4>[field:click/]次阅读</h4>
+     <h4 class="archive_more"><a href="[field:arcurl/]" target="_blank" class="title">阅读全文</a></h4>
+     </div>
+     </div>
+	{/dede:list}
+	<!-- cn_substr函数用法参考：http://www.dedecms8.com/dedecms/use/2876.html -->
+
+ 
+        <ol class="dede_pages"> <ul class="pagelist"> {dede:pagelist listitem="info,index,end,pre,next,pageno,option" listsize="5"/} </ul> </ol>
+	  <!-- dedecms列表分页、文章内容分页参考：http://bbs.dedecms8.com/thread-1157-1-1.html -->
+    </div>  
+  </div>
+  
+  <!--left end-->
+<div class="right">
+    <div class="ad_ritht_1">
+      <script language="javascript" src="{dede:global.cfg_templets_skin/}/images/article_right_1.js"></script><a href="http://www.dedecms8.com/" target="_blank"><img src="{dede:global.cfg_templets_skin/}/ad/iphone.jpg" width="300" height="250"></a>
+    </div>
+    <!--ad_right1 end-->
+	<style type="text/css">
+		#search {
+        float: left;
+        margin-top: 10px;
+        width: 300px;
+    }
+	</style>
+	<div id="search">
+		<h2>相关搜索</h2>
+        <ul>
+			<li>{dede:likewords num='30'/}</li>
+        </ul>
+	</div>
+     
+    <div class="ad_ritht_2">
+      <a href="http://www.dedecms8.com/" target="_blank"><img src="{dede:global.cfg_templets_skin/}/ad/denglu.gif" width="300" height="250"></a>
+    </div>
+    <!--ad_right_2-->
+</div>
+
+</div>
+
+<!--zhuti end-->
+
+<div class="bai"></div>
+<div class="bai"></div>
+
+{dede:include filename="footer.htm"/}
+<script type="text/javascript" src="{dede:global.cfg_templets_skin/}/images/jquery.js"></script>
+<script>
+jQuery(function() {
+jQuery('.hdm01>h3>a').mouseover(function() { TabSelect(".hdm01>h3>a", ".hdm01>div.content", "current", jQuery(this)) });
+jQuery('.hdm01>h3>a').eq(0).trigger("mouseover");
+jQuery('.hdm02>h3>a').mouseover(function() { TabSelect(".hdm02>h3>a", ".hdm02>div.content", "current", jQuery(this)) });
+jQuery('.hdm02>h3>a').eq(0).trigger("mouseover");
+jQuery('#duice').click(function(){
+			jQuery('.wthpop').show();
+		})
+		jQuery('.wthpop>p>span').click(function(){
+			jQuery('.wthpop').hide()
+		})
+
+    });
+
+//tab function
+function TabSelect(tab,con,addClass,obj) {
+    var jQuery_self = obj;
+    var jQuery_nav = jQuery(tab);
+
+    jQuery_nav.removeClass(addClass),
+	jQuery_self.addClass(addClass);
+
+    var jQuery_index = jQuery_nav.index(jQuery_self);
+    var jQuery_con = jQuery(con);
+    jQuery_con.hide(),
+	jQuery_con.eq(jQuery_index).show();
+}
+swfobject.registerObject("FlashID3");
+</script>
+</body>
+</html>

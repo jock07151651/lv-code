@@ -1,0 +1,936 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" />
+<meta name="applicable-device" content="pc,mobile">
+<meta name="robots" content="index,follow" />
+<meta name="keywords" content="管理" />
+<meta name="description" content="MBA智库文档，专业的管理资源分享平台。分享管理资源，传递管理智慧。" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="copyright" href="//www.mbalib.com" />
+<title>管理_全部文档 -  MBA智库文档</title>
+<link rel="stylesheet" href="css/main_v921.css" />
+<link rel="stylesheet" href="css/home_common_v921.css" />
+<!--[if IE 6 ]><link rel="stylesheet" href="css/ie60fixes.css" /><![endif]-->
+
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/front_app_v213.js"></script>
+<script type="text/javascript" src="js/notice_v0927.js"></script>
+
+
+
+<script src="js/ds.js"></script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+ var hm = document.createElement("script");
+ hm.src = "https://hm.baidu.com/hm.js?9b0c3a7f2a7608cb5ff711c8a3f6697c";
+ var s = document.getElementsByTagName("script")[0]; 
+ s.parentNode.insertBefore(hm, s);
+
+ })();
+
+
+var wgUserType = 'anonymous';
+
+ statUserType(wgUserType);
+</script>
+<script type="application/ld+json">
+
+{
+
+	"@context": "https://ziyuan.baidu.com/contexts/cambrian.jsonld",
+	"@id": "https://doc.mbalib.com/list/1",
+	"appid": "1536770749037986",
+	"title": "管理_全部文档 - MBA智库文档",
+	"description": "管理",
+	"pubDate": "",
+	"upDate": "2018-11-23T18:59:03"
+
+}
+
+</script></head>
+<body>
+<div class="header">
+  <div class="topbar">
+	<ul class="site-nav">
+		<li><a href="//www.mbalib.com/" title="智库首页">首页</a></li>
+		<li class=sel><b>文档</b></li>
+		<li><a href="//wiki.mbalib.com/" title="智库百科">百科</a></li>
+		<li><a href="//ke.mbalib.com/" title="智库课堂">课堂</a></li>
+		<li><a href="//mba.mbalib.com/" title="智库商学院">商学院</a></li>
+		<li><a href="//news.mbalib.com/" title="智库资讯">资讯</a></li>
+		<li><a href="//training.mbalib.com/" title="智库培训">培训</a></li>
+		<li><a href="//bang.mbalib.com/" title="智库帮帮">帮帮</a></li>
+	</ul>
+
+<div class="site-nav-r">
+<a onclick="statRecharge('recharge_nologin_top');" href="/userpay/recharge?sfrom=view" target="_blank">充值</a>
+<a href="/userpay/member?sfrom=view" onclick="statMember('member_nologin_top');" class="nav-ico sear-vip" target="_blank"><i></i>加入<b>VIP</b></a>
+<a href="/login" class="login">登录</a>
+<a href="/register">注册</a>
+</div> 
+
+<div id="bg"></div>
+<script>
+var wfusername = "";
+var wfrealname = "";
+var wfusersetUrl = "/userset";
+var wfuserfileUrl = "/userfile";
+var wfuserfavoriteUrl = "/userfavorite";
+var wfuserdownloadUrl = "/userdownload";
+var wfuserpayUrl = "/userpay";
+var wffinancerecordsUrl = "/financerecords";
+var wfuserrecommendUrl = "/userrecommend";
+var wfusernoticeUrl = "/usernotice/system";
+var wfusermessageUrl = "/usermessage";
+var wfrechargeUrl = "/userpay/recharge";
+var wfmemberUrl = "/userpay/member";
+var wflogoutUrl = "/logout";
+var wfgetuserUrl = "/services/user";
+var wfuserUrl = "/user";
+var site_message_count = "0";
+
+$(function(){
+(function(){
+var token_user = getCookie("wikidbUserName");
+var personUl = getCookie("wikidbPersonUl");
+if(token_user)
+{
+$.post(wfgetuserUrl,{},function(result){
+	if(!$.isEmptyObject(result))
+	{
+        wfusername = result.name;
+        wfrealname = result.realname;
+		 if(wfrealname)
+		 {
+			var hname = wfrealname;
+		 }else
+		 {
+			var hname = wfusername;
+		 }
+		var logindiv = '<span class="fl">欢迎你，</span>'+
+	     '<div class="ui-navcon fl" id="top_user_menu">'+
+             '<a href="//passport.mbalib.com/center" class="user-name ui-nav" ><b>'+hname+'</b></a>'+
+             '<div class="ui-navtip hidden" id="top_user_menu_div">'+
+               '<ul class="ui-navlist">'+
+                 '<li><a href="'+wfuserUrl+'">个人中心</a></li>'+
+                 '<li><a href="//passport.mbalib.com/center">账号设置</a></li>'+
+                 '<li><a href="//passport.mbalib.com/user/base">基本资料</a></li>'+
+                 //'<li><a href="//passport.mbalib.com/user/changepassword">修改密码</a></li>'+
+                 '<li><a href="'+wfusersetUrl+'">主页设置</a></li>'+
+               '</ul>'+
+             '</div> '+
+	'</div>';
+	if (site_message_count > 0)
+		logindiv +=  '<a href="'+wfusernoticeUrl+'" class="nav-ico notice-ico" target="_blank"><i></i><em class="red-d red-d2">'+site_message_count+'</em></a> ';
+	else
+		logindiv +=  '<a href="'+wfusernoticeUrl+'" class="nav-ico notice-ico" target="_blank"><i></i></a> ';
+
+    logindiv +=  '<div class="ui-navcon fl" id="top_doc_menu">'+
+             '<a href="'+wfuserfileUrl+'" class="ui-nav" >我的文档<i class="red-d hidden"></i></a>'+
+             '<div class="ui-navtip hidden" id="top_doc_menu_div">'+
+               '<ul class="ui-navlist">'+
+                 '<li><a href="'+wfuserfavoriteUrl+'">收藏的文档</a></li>'+
+                 '<li><a href="'+wfuserdownloadUrl+'">下载的文档</a></li>'+
+                 '<li><a href="'+wfuserpayUrl+'">支付订单</a></li>'+
+                 '<li><a href="'+wffinancerecordsUrl+'">积分变动</a></li>'+
+                 '<li><a href="'+wfuserrecommendUrl+'" id="top_recommend">推介奖励<sup class="red-d hidden"></sup></a></li>'+
+               '</ul>'+
+             '</div>'+
+         '</div> '+
+'<a href="'+wfrechargeUrl+'?sfrom=view" onclick="statRecharge(\'recharge_login_top\');" target="_blank">账户充值</a>'+
+'<a href="'+wfmemberUrl+'?sfrom=top" onclick="statMember(\'member_login_top\');" class="nav-ico sear-vip" target="_blank"><i></i>加入<b>VIP</b></a>';
+
+
+if(result.type == 'admin' || result.type == 'sysop' || result.type == 'law')
+
+	logindiv += '<a href="/admin">后台管理</a>';
+
+logindiv += '<a href="'+wflogoutUrl+'">退出</a>';
+$(".site-nav-r").html(logindiv);
+
+var user_menu_hide = '';
+var doc_menu_hide = '';
+$("#top_user_menu").hover(function(){
+	clearTimeout(user_menu_hide);
+	$("#top_user_menu_div").show();
+	$("#top_doc_menu_div").hide();
+	
+},
+function(){
+	user_menu_hide = setTimeout(function(){$("#top_user_menu_div").hide();},500);
+});
+$("#top_user_menu_div").hover(function(){
+	clearTimeout(user_menu_hide);	
+	});
+
+$("#top_doc_menu").hover(function(){
+	clearTimeout(doc_menu_hide);
+	$("#top_doc_menu_div").show();
+	$("#top_user_menu_div").hide();
+},
+function(){
+	doc_menu_hide = setTimeout(function(){$("#top_doc_menu_div").hide();},500);
+});
+$("#top_doc_menu_div").hover(function(){
+	clearTimeout(doc_menu_hide);	
+	});
+
+	}
+},'json');
+}
+
+
+})();
+
+
+});
+
+
+</script>     
+</div> 
+  <div class="container">
+      <div class="topnav-iph">
+       <div class="logo"><a href="/" class="wrap-logo"></a><a href="//www.mbalib.com" class="wrap-logo-s"></a></div>
+       <a href="javascript:void(0)" class="topnav-ico sear-ico"></a>
+       <a href="/" class="topnav-ico home-ico"></a>       
+      </div> 
+      <div class="content">
+          <form class="search-box top-search-box" name=search action="/search" method=get>
+	  <span class="s-btn-wr"><input class="s-btn" id="search_submit" type="submit" value="智库搜索"></span>
+	  <span class="s-ipt-wr"><input class="s-ipt" type="text" style="color:gray" name="q" id="search_top" value="请输入关键词"  onfocus="if(this.value=='请输入关键词'){this.value=''};this.style.color='black';" onblur="if(this.value==''||this.value=='请输入关键词'){this.value='请输入关键词';this.style.color='gray';}"   ></span>
+           <div class="s-opt-wr">
+		
+					<label><input class="type-check" type="radio" name="ft"  checked value=0>全部</label>
+					<label><input class="type-check" type="radio" name="ft"  value=1>DOC</label>
+					<label><input class="type-check" type="radio" name="ft"  value=2>PDF</label>
+					<label><input class="type-check" type="radio" name="ft"  value=3>PPT</label>
+					<label><input class="type-check" type="radio" name="ft"  value=4>XLS</label>
+					<label><input class="type-check" type="radio" name="ft"  value=5>TXT</label>
+					<label><input class="type-check" type="radio" name="ft"  value=6>专题</label>
+				           </div>
+	             </form>
+	  <div class="sear-fix-money">
+          <a href="/userpay/recharge?sfrom=view3" onclick="statRecharge('recharge_search_top');" class="sear-ico sear-cz" target="_blank"><i></i>账户充值</a>
+          <a href="/userpay/member?sfrom=view3" onclick="statMember('member_search_top');" class="nav-ico sear-vip" target="_blank"><i></i>加入<b>VIP</b></a>
+	  </div> 
+       </div>
+
+	<script>
+	
+	(function(){
+		$("#search_submit").click(function(){
+			var key = $("#search_top").val();
+			if(key == '请输入关键词') return false;
+			var parten = /^[0-9]{4}$/;
+			if(parten.test(key))
+			{
+				if(typeof stateDocDownloadCodeClick == 'function')
+				{
+					stateDocDownloadCodeClick();
+				}
+			}
+			//return false;
+		});
+	})()
+	
+	</script> 
+       <div id="Head-Ad" class="top-banner">
+<!-- 广告位：DOC-01 -->
+<script>
+
+(function() {
+    var s = "_" + Math.random().toString(36).slice(2);
+    document.write('<div id="' + s + '"></div>');
+    (window.slotbydup=window.slotbydup || []).push({
+        id: '2014386',
+        container: s,
+        size: '234,60',
+        display: 'inlay-fix'
+    });
+})();
+
+</script>
+</div>  </div>
+</div><div class="nav-wrap" id="nav_bar">
+    <div class="nav-ul">
+        <ul class="nav-ul-l">
+            <li class="nav-list-item">
+                <a href="//doc.mbalib.com" title="首页" class="">首页</a>
+            </li>
+            <li class="nav-list-item" id="l1">
+                <div class="pos-rel" id="p1">
+                    <span class="nav-list-tit1">文档分类</span>
+                    <span class="nav-icon2 nav-icon2-down" id="icon1"></span><!--nav-icon2-down 下-->
+                </div>
+                <div class="nav-pop-list nav-pop-list2" id="nav1">
+                </div>
+            </li>
+            <li class="nav-list-item" id="l2">
+                <div class="pos-rel" id="p2">
+                    <span class="nav-list-tit1">专题分类</span>
+                    <span class="nav-icon2 nav-icon2-down" id="icon2"></span><!--nav-icon2-down 下-->
+                </div>
+                <div class="nav-pop-list nav-pop-list2" id="nav2">
+                </div>
+            </li>
+            <li class="nav-list-item" id="l3">
+                <div class="pos-rel" id="p3">
+                    <span class="nav-list-tit1">机构认证</span>
+                    <span class="nav-icon2 nav-icon2-down" id="icon3"></span><!--nav-icon2-down 下-->
+                </div>
+                <div class="nav-pop-list nav-pop-list3" id="nav3">
+                    <ul class="ui-navlist2">
+                        <li>增加品牌曝光</li>
+                        <li>加强版权保护</li>
+                        <li>机构权威标识</li>
+                        <li class="nav-icon nav-icon-zx"><a href="http://wpa.b.qq.com/cgi/wpa.php?ln=1&key=XzgwMDAxODIxMl80NzM3MjJfODAwMDE4MjEyXw" target="_blank">认证咨询</a></li>
+                        <li class="nav-icon nav-icon-phone"><a href="javascript:void(0);"  style="cursor: default">0592-5817281</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="nav-list-item" >
+                <div class="pos-rel">
+                    <span class="nav-list-tit1"><div onclick="openUrl('/vip')" style="cursor: pointer">VIP专区</div></span>
+                </div>
+            </li>
+        </ul>
+        <div class="fr">
+            <ul class="nav-ul-l">
+                <li class="nav-list-item"  id="l4">
+                    <div class="pos-rel">
+                        <a href="/user" title="个人中心" class="nav-list-tit1">个人中心</a>
+                        <span class="nav-icon2 nav-icon2-down" id="icon4"></span><!--nav-icon2-down 下-->
+                    </div>
+                    <div class="nav-pop-list nav-pop-list5" id="nav4">
+                        <ul class="ui-navlist2">
+                            <li><a href="/usertopic" title="创建的专题">创建的专题</a></li>
+                            <li><a href="/userdownload" title="下载的文档">下载的文档</a></li>
+                            <li><a href="/userfile" title="上传的文档">上传的文档</a></li>
+                            <li><a href="/userfavorite" title="收藏的文档">收藏的文档</a></li>
+                            <li><a href="/userrecommend" title="推介奖励">推介奖励</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="nav-list-item">
+                    <a href="/userpay/recharge?sfrom=nav"  title="充值积分" target="_blank">充值积分</a>
+                </li>
+
+                <li class="nav-list-item nav-list-item2" id="l5">
+                    <a href="/userpay/member?sfrom=nav" title="加入VIP" target="_blank" style="background:#fea85b;">加入VIP</a>
+                    <div class="nav-pop-list nav-pop-list4" id="nav5">
+                        <ul class="ui-navlist2">
+                            <li class="nav-icon nav-icon-zk">享文档8折下载</li>
+                            <li class="nav-icon nav-icon-ff">付费文档8折购</li>
+                            <li class="nav-icon nav-icon-mf"><div onclick="openUrl('/vip')" style="cursor: pointer">VIP免费专区</div></li>
+                            <li class="nav-icon nav-icon-zx">VIP专属客服</li>
+                            <li class="nav-icon nav-icon-bs">VIP权威标识</li>
+                        </ul>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</div>
+<script>
+    var url = "/top/ajaxnavbar";
+    
+
+    var str1='';
+    var str2='';
+    $.get(url,function (result) {
+        var res=$.parseJSON(result);
+        for (var i in res){
+            str1+="<div class=\"class-lay\"><h3><a href='/list/"+res[i].category_id+"' class='tit'>"+res[i].category_name+"</a><sub>共"+res[i].category_file_count+"份</sub></h3><ul>";
+            str2+="<div class=\"class-lay\"><h3><a href='/list/topic_"+res[i].category_id+"' class='tit'>"+res[i].category_name+"</a><sub>共"+res[i].category_topic_count+"份</sub></h3><ul>";
+            for(var j in res[i].category_childrens){
+                str1+="<li><a href=/list/"+res[i].category_childrens[j].category_id+">"+res[i].category_childrens[j].category_name+"</a></li>";
+                str2+="<li><a href=/list/topic_"+res[i].category_childrens[j].category_id+">"+res[i].category_childrens[j].category_name+"</a></li>";
+                if (j>=6){break;}
+            }
+            str1+="<li><a href=/list/"+res[i].category_id+">...</a></li></ul></div>";
+            str2+="<li><a href=/list/topic_"+res[i].category_id+">...</a></li></ul></div>";
+        }
+        $('#nav1').html(str1);
+        $('#nav2').html(str2);
+    });
+
+    var clicks=0;
+    $('#nav1').hide();
+    $('#nav2').hide();
+    $('#nav3').hide();
+    $('#nav4').hide();
+    $('#nav5').hide();
+    $('#l1').mouseover(function () {
+        navtoggle(1,1);
+    });
+    $('#l1').mouseout(function () {
+        navtoggle(1,0);
+        clicks=0;
+    });
+    $('#p1').click(function () {
+        clicks=~clicks;
+        if (clicks==0){
+            navtoggle(1,0);
+        }else {
+            navtoggle(1,1);
+        }
+    });
+    $('#l2').mouseover(function () {
+        navtoggle(2,1);
+    });
+    $('#l2').mouseout(function () {
+        navtoggle(2,0);
+        clicks=0;
+    });
+    $('#p2').click(function () {
+        clicks=~clicks;
+        if (clicks==0){
+            navtoggle(2,0);
+        }else {
+            navtoggle(2,1);
+        }
+    });
+    $('#l3').mouseover(function () {
+        navtoggle(3,1);
+    });
+    $('#l3').mouseout(function () {
+        navtoggle(3,0);
+        clicks=0;
+    });
+    $('#p3').click(function () {
+        clicks=~clicks;
+        if (clicks==0){
+            navtoggle(3,0);
+        }else {
+            navtoggle(3,1);
+        }
+    });
+
+    $('#l4').mouseover(function () {
+        navtoggle(4,1);
+    });
+    $('#l4').mouseout(function () {
+        navtoggle(4,0);
+        clicks=0;
+    });
+    $('#l5').mouseover(function () {
+        navtoggle(5,1);
+    });
+    $('#l5').mouseout(function () {
+        navtoggle(5,0);
+        clicks=0;
+    });
+    
+    function navtoggle(n,state) {
+        if (state==1){
+            $('#nav'+n).show();
+            $('#icon'+n).removeClass('nav-icon2-down');
+            $('#icon'+n).addClass('nav-icon2-up');
+        }else{
+            $('#nav'+n).hide();
+            $('#icon'+n).removeClass('nav-icon2-up');
+            $('#icon'+n).addClass('nav-icon2-down');
+        }
+    }
+    function openUrl(url) {
+        window.open(url);
+    }
+    
+</script><div class="container">
+    <span class="hd-site-nav"><i class="site-1">当前位置：</i><a href="/" class="site-2">MBA智库文档</a>&nbsp;>&nbsp;<i class="site-3">管理</i><a class="site-4" href="javascript:void(0)"></a></span>
+    <div class="conta-wr">
+     <div class="conta-l-wr">
+        <div class="conta-l">
+          <div id="tc-nav-iph" class="class-mod iph-none">
+                         <h2>
+				   				   		<a href="/list/1">管理</a><sub>共2,218,232份</sub><a class="site-4" href="javascript:void(0)"></a>
+				   			   </h2>
+               <div class="inner ">
+                    <ul class="classlist">
+			                       <li>
+						<a href="/list/6"><span>战略管理</span><sub class="more-ico">(170,628)</sub><i class="arrow-right"></i></a></li>
+						                       <li>
+						<a href="/list/9"><span>人力资源</span><sub class="more-ico">(244,646)</sub><i class="arrow-right"></i></a></li>
+						                       <li>
+						<a href="/list/10"><span>生产管理</span><sub class="more-ico">(133,083)</sub><i class="arrow-right"></i></a></li>
+						                       <li>
+						<a href="/list/11"><span>质量管理</span><sub class="more-ico">(85,338)</sub><i class="arrow-right"></i></a></li>
+						                       <li>
+						<a href="/list/12"><span>财务管理</span><sub class="more-ico">(348,085)</sub><i class="arrow-right"></i></a></li>
+						                       <li>
+						<a href="/list/13"><span>管理咨询</span><sub class="more-ico">(14,814)</sub><i class="arrow-right"></i></a></li>
+						                       <li>
+						<a href="/list/14"><span>管理培训</span><sub>(47,997)</sub><i class="arrow-right"></i></a></li>
+						                       <li>
+						<a href="/list/15"><span>组织管理</span><sub class="more-ico">(52,184)</sub><i class="arrow-right"></i></a></li>
+						                       <li>
+						<a href="/list/16"><span>流程管理</span><sub>(28,284)</sub><i class="arrow-right"></i></a></li>
+						                       <li>
+						<a href="/list/17"><span>物流管理</span><sub class="more-ico">(65,066)</sub><i class="arrow-right"></i></a></li>
+						                       <li>
+						<a href="/list/18"><span>项目管理</span><sub>(96,822)</sub><i class="arrow-right"></i></a></li>
+						                       <li>
+						<a href="/list/19"><span>知识管理</span><sub>(9,673)</sub><i class="arrow-right"></i></a></li>
+						                       <li>
+						<a href="/list/20"><span>信息化管理</span><sub class="more-ico">(92,066)</sub><i class="arrow-right"></i></a></li>
+						                       <li>
+						<a href="/list/21"><span>风险管理</span><sub>(36,687)</sub><i class="arrow-right"></i></a></li>
+						                       <li>
+						<a href="/list/22"><span>企业文化</span><sub>(21,999)</sub><i class="arrow-right"></i></a></li>
+						                       <li>
+						<a href="/list/23"><span>领导艺术</span><sub>(26,810)</sub><i class="arrow-right"></i></a></li>
+						                       <li>
+						<a href="/list/24"><span>创业投资</span><sub>(11,597)</sub><i class="arrow-right"></i></a></li>
+						                       <li>
+						<a href="/list/25"><span>创新决策</span><sub>(52,799)</sub><i class="arrow-right"></i></a></li>
+						                       <li>
+						<a href="/list/173"><span>行政管理</span><sub>(10,494)</sub><i class="arrow-right"></i></a></li>
+						                       <li>
+						<a href="/list/26"><span>管理学</span><sub>(29,132)</sub><i class="arrow-right"></i></a></li>
+						                       <li>
+						<a href="/list/27"><span>管理制度</span><sub class="more-ico">(153,426)</sub><i class="arrow-right"></i></a></li>
+						                       <li>
+						<a href="/list/28"><span>管理工具</span><sub>(4,477)</sub><i class="arrow-right"></i></a></li>
+						                       <li>
+						<a href="/list/29"><span>管理案例</span><sub>(17,652)</sub><i class="arrow-right"></i></a></li>
+						                       <li>
+						<a href="/list/142"><span>时间管理</span><sub>(1,250)</sub><i class="arrow-right"></i></a></li>
+						                       <li>
+						<a href="/list/143"><span>运筹学</span><sub>(1,586)</sub><i class="arrow-right"></i></a></li>
+						                       <li>
+						<a href="/list/159"><span>管理模式</span><sub>(11,631)</sub><i class="arrow-right"></i></a></li>
+						                       <li>
+						<a href="/list/167"><span>经营管理</span><sub>(18,735)</sub><i class="arrow-right"></i></a></li>
+						                       <li>
+						<a href="/list/170"><span>管理理论</span><sub>(4,287)</sub><i class="arrow-right"></i></a></li>
+						                       <li>
+						<a href="/list/176"><span>商业</span><sub>(7,513)</sub><i class="arrow-right"></i></a></li>
+						                       <li>
+						<a href="/list/180"><span>标准认证</span><sub>(364,933)</sub><i class="arrow-right"></i></a></li>
+						                    </ul>
+               </div>	  </div>
+          <div class="dataList">
+                <div class="hd-nav">
+                     <a href="/list/1"  class="sel" ><i>文档</i></a>
+                     <a href="/list/topic_1" ><i>专题</i></a>
+                </div>
+		                <!--文档-->
+                <div class="bd">
+                    <div class="doc-item-hd">
+                     <div class="doc-num-wr">文档名称</div>
+                     <div class="doc-inf"><a href="/list/1?o=s" class="doc-inf-coll ">文档评分<i></i></a><a href="javascript:void(0)" class="doc-inf-aut">创建者</a><a href="/list/1?o=d" class="doc-inf-coll ">下载量<i></i></a>
+	<!--<a href="/list/1" class="doc-inf-time sel">上传时间<i></i></a>--></div>
+                    </div>                 
+		                    <div class="doc-item-wr">
+                     <div class="doc-num-wr"><div class="doc-num"><a target="_blank" href="/view/c5d25f24726524279f0cec52f4d7e808.html"><i class="doc-ico"></i>锂电铜箔研发项目立项申请</a><i>10页</i></div></div>
+                     <div class="doc-inf"><span class="new-doc-star"><div class="starscal star-0 fl" title="文档评价得分：0.0分"></div></span><span class="doc-inf-aut">M_id_6bb0f2a952108e1d72c6c98963f8c66f</span><span class="doc-inf-coll">0次</span></div>
+                    </div>
+		                    <div class="doc-item-wr">
+                     <div class="doc-num-wr"><div class="doc-num"><a target="_blank" href="/view/6435296691c73c6ca3c5030466f2a72d.html"><i class="doc-ico"></i>锂电研发项目投资计划</a><i>9页</i></div></div>
+                     <div class="doc-inf"><span class="new-doc-star"><div class="starscal star-0 fl" title="文档评价得分：0.0分"></div></span><span class="doc-inf-aut">M_id_6bb0f2a952108e1d72c6c98963f8c66f</span><span class="doc-inf-coll">0次</span></div>
+                    </div>
+		                    <div class="doc-item-wr">
+                     <div class="doc-num-wr"><div class="doc-num"><a target="_blank" href="/view/139899c5d2ae1bab9bce181680d405b6.html"><i class="doc-ico"></i>电力研发项目立项报告</a><i>9页</i></div></div>
+                     <div class="doc-inf"><span class="new-doc-star"><div class="starscal star-0 fl" title="文档评价得分：0.0分"></div></span><span class="doc-inf-aut">M_id_6bb0f2a952108e1d72c6c98963f8c66f</span><span class="doc-inf-coll">0次</span></div>
+                    </div>
+		                    <div class="doc-item-wr">
+                     <div class="doc-num-wr"><div class="doc-num"><a target="_blank" href="/view/1b823e3a494840860c42e8f951ff5c28.html"><i class="doc-ico"></i>分销商覆盖服务费（CSF）的支付政策和流程</a><i>2页</i></div></div>
+                     <div class="doc-inf"><span class="new-doc-star"><div class="starscal star-0 fl" title="文档评价得分：0.0分"></div></span><span class="doc-inf-aut">Wildcarde</span><span class="doc-inf-coll">0次</span></div>
+                    </div>
+		                    <div class="doc-item-wr">
+                     <div class="doc-num-wr"><div class="doc-num"><a target="_blank" href="/view/a85d670bae2a7621cbabdf5f082168a7.html"><i class="doc-ico"></i>企业管理理念标语口号及含义</a><i>12页</i></div></div>
+                     <div class="doc-inf"><span class="new-doc-star"><div class="starscal star-0 fl" title="文档评价得分：0.0分"></div></span><span class="doc-inf-aut">Mlanders2</span><span class="doc-inf-coll">0次</span></div>
+                    </div>
+		                    <div class="doc-item-wr">
+                     <div class="doc-num-wr"><div class="doc-num"><a target="_blank" href="/view/6bbeb94f75af05b70d353ef4a153fb11.html"><i class="doc-ico"></i>新能源汽车研发项目立项报告</a><i>10页</i></div></div>
+                     <div class="doc-inf"><span class="new-doc-star"><div class="starscal star-0 fl" title="文档评价得分：0.0分"></div></span><span class="doc-inf-aut">M_id_6bb0f2a952108e1d72c6c98963f8c66f</span><span class="doc-inf-coll">0次</span></div>
+                    </div>
+		                    <div class="doc-item-wr">
+                     <div class="doc-num-wr"><div class="doc-num"><a target="_blank" href="/view/cabf726de1fa379bfadf86c4d5fa50ac.html"><i class="doc-ico"></i>汽车热系统研发中心项目立项申请</a><i>9页</i></div></div>
+                     <div class="doc-inf"><span class="new-doc-star"><div class="starscal star-0 fl" title="文档评价得分：0.0分"></div></span><span class="doc-inf-aut">M_id_6bb0f2a952108e1d72c6c98963f8c66f</span><span class="doc-inf-coll">0次</span></div>
+                    </div>
+		                    <div class="doc-item-wr">
+                     <div class="doc-num-wr"><div class="doc-num"><a target="_blank" href="/view/db5da98e9a3098db6a6878d629dc0b1d.html"><i class="doc-ico"></i>企业管理理念</a><i>11页</i></div></div>
+                     <div class="doc-inf"><span class="new-doc-star"><div class="starscal star-0 fl" title="文档评价得分：0.0分"></div></span><span class="doc-inf-aut">Zburbano</span><span class="doc-inf-coll">0次</span></div>
+                    </div>
+		                    <div class="doc-item-wr">
+                     <div class="doc-num-wr"><div class="doc-num"><a target="_blank" href="/view/0c24d732509bcdfea455329f9b111447.html"><i class="doc-ico"></i>换向器研发项目立项申请</a><i>10页</i></div></div>
+                     <div class="doc-inf"><span class="new-doc-star"><div class="starscal star-0 fl" title="文档评价得分：0.0分"></div></span><span class="doc-inf-aut">M_id_6bb0f2a952108e1d72c6c98963f8c66f</span><span class="doc-inf-coll">0次</span></div>
+                    </div>
+		                    <div class="doc-item-wr">
+                     <div class="doc-num-wr"><div class="doc-num"><a target="_blank" href="/view/c878ecc42d6d269abf6e8996efee364e.html"><i class="doc-ico"></i>医疗器械研发项目投资计划</a><i>9页</i></div></div>
+                     <div class="doc-inf"><span class="new-doc-star"><div class="starscal star-0 fl" title="文档评价得分：0.0分"></div></span><span class="doc-inf-aut">M_id_6bb0f2a952108e1d72c6c98963f8c66f</span><span class="doc-inf-coll">0次</span></div>
+                    </div>
+		                    <div class="doc-item-wr">
+                     <div class="doc-num-wr"><div class="doc-num"><a target="_blank" href="/view/69b5f78c448c15d04adf2d9bb8e84435.html"><i class="doc-ico"></i>中外专利技术许可合同(样式一)</a><i>4页</i></div></div>
+                     <div class="doc-inf"><span class="new-doc-star"><div class="starscal star-0 fl" title="文档评价得分：0.0分"></div></span><span class="doc-inf-aut">Ajdsm</span><span class="doc-inf-coll">0次</span></div>
+                    </div>
+		                    <div class="doc-item-wr">
+                     <div class="doc-num-wr"><div class="doc-num"><a target="_blank" href="/view/e957ebae54670ac5fafbf85b9136c96a.html"><i class="doc-ico"></i>中外专利技术许可合同</a><i>5页</i></div></div>
+                     <div class="doc-inf"><span class="new-doc-star"><div class="starscal star-0 fl" title="文档评价得分：0.0分"></div></span><span class="doc-inf-aut">Ajdsm</span><span class="doc-inf-coll">0次</span></div>
+                    </div>
+		                    <div class="doc-item-wr">
+                     <div class="doc-num-wr"><div class="doc-num"><a target="_blank" href="/view/a02b09d8fd4d5ca4d8c98bc431fd5125.html"><i class="doc-ico"></i>中外专利技术许可合同范本</a><i>5页</i></div></div>
+                     <div class="doc-inf"><span class="new-doc-star"><div class="starscal star-0 fl" title="文档评价得分：0.0分"></div></span><span class="doc-inf-aut">Ajdsm</span><span class="doc-inf-coll">0次</span></div>
+                    </div>
+		                    <div class="doc-item-wr">
+                     <div class="doc-num-wr"><div class="doc-num"><a target="_blank" href="/view/c9098c22cc87b40acc05c72a5028f9e6.html"><i class="ppt-ico"></i>大客户业务培训教材</a><i>64页</i></div></div>
+                     <div class="doc-inf"><span class="new-doc-star"><div class="starscal star-0 fl" title="文档评价得分：0.0分"></div></span><span class="doc-inf-aut">Playsoon2009</span><span class="doc-inf-coll">0次</span></div>
+                    </div>
+		                    <div class="doc-item-wr">
+                     <div class="doc-num-wr"><div class="doc-num"><a target="_blank" href="/view/a9ce4a47e629566e6fae22750d7a8f30.html"><i class="doc-ico"></i>覆盖服务费的监督和审核公司政策和执行程序</a><i>2页</i></div></div>
+                     <div class="doc-inf"><span class="new-doc-star"><div class="starscal star-0 fl" title="文档评价得分：0.0分"></div></span><span class="doc-inf-aut">Marcokwpz1</span><span class="doc-inf-coll">0次</span></div>
+                    </div>
+		                    <div class="doc-item-wr">
+                     <div class="doc-num-wr"><div class="doc-num"><a target="_blank" href="/view/e06dc08da9771823aec61b43aabcc561.html"><i class="doc-ico"></i>分销商覆盖服务费用付款凭证</a><i>1页</i></div></div>
+                     <div class="doc-inf"><span class="new-doc-star"><div class="starscal star-0 fl" title="文档评价得分：0.0分"></div></span><span class="doc-inf-aut">Gabkoen</span><span class="doc-inf-coll">0次</span></div>
+                    </div>
+		                    <div class="doc-item-wr">
+                     <div class="doc-num-wr"><div class="doc-num"><a target="_blank" href="/view/eacad3608c91afc15ef9a902e825ca5f.html"><i class="doc-ico"></i>分销商覆盖服务费（CSF）评估系统</a><i>2页</i></div></div>
+                     <div class="doc-inf"><span class="new-doc-star"><div class="starscal star-0 fl" title="文档评价得分：0.0分"></div></span><span class="doc-inf-aut">Lje090</span><span class="doc-inf-coll">0次</span></div>
+                    </div>
+		                    <div class="doc-item-wr">
+                     <div class="doc-num-wr"><div class="doc-num"><a target="_blank" href="/view/bcc1b4be32e55f960e5eb7756ef02e57.html"><i class="doc-ico"></i>海绵设备研发项目立项申请</a><i>10页</i></div></div>
+                     <div class="doc-inf"><span class="new-doc-star"><div class="starscal star-0 fl" title="文档评价得分：0.0分"></div></span><span class="doc-inf-aut">M_id_6bb0f2a952108e1d72c6c98963f8c66f</span><span class="doc-inf-coll">0次</span></div>
+                    </div>
+		                    <div class="doc-item-wr">
+                     <div class="doc-num-wr"><div class="doc-num"><a target="_blank" href="/view/06501c111fe4cce30a8f69e4bd02719f.html"><i class="doc-ico"></i>上海多媒体产业园办公研发中心整体推广方案</a><i>23页</i></div></div>
+                     <div class="doc-inf"><span class="new-doc-star"><div class="starscal star-0 fl" title="文档评价得分：0.0分"></div></span><span class="doc-inf-aut">Calvin025</span><span class="doc-inf-coll">0次</span></div>
+                    </div>
+		                    <div class="doc-item-wr">
+                     <div class="doc-num-wr"><div class="doc-num"><a target="_blank" href="/view/26259c4100f8d258152dbee5d3593103.html"><i class="doc-ico"></i>车灯研发制造项目计划方案</a><i>9页</i></div></div>
+                     <div class="doc-inf"><span class="new-doc-star"><div class="starscal star-0 fl" title="文档评价得分：0.0分"></div></span><span class="doc-inf-aut">M_id_6bb0f2a952108e1d72c6c98963f8c66f</span><span class="doc-inf-coll">0次</span></div>
+                    </div>
+		                    <div class="doc-item-wr">
+                     <div class="doc-num-wr"><div class="doc-num"><a target="_blank" href="/view/f02d38346f6c3bb6e4793a58a0a51985.html"><i class="doc-ico"></i>通用飞机研发与制造项目立项报告</a><i>10页</i></div></div>
+                     <div class="doc-inf"><span class="new-doc-star"><div class="starscal star-0 fl" title="文档评价得分：0.0分"></div></span><span class="doc-inf-aut">M_id_6bb0f2a952108e1d72c6c98963f8c66f</span><span class="doc-inf-coll">0次</span></div>
+                    </div>
+		                    <div class="doc-item-wr">
+                     <div class="doc-num-wr"><div class="doc-num"><a target="_blank" href="/view/6dc0bb414d3b43a8cefbf16e9f918d30.html"><i class="doc-ico"></i>企业社会管理创新标语口号</a><i>9页</i></div></div>
+                     <div class="doc-inf"><span class="new-doc-star"><div class="starscal star-0 fl" title="文档评价得分：0.0分"></div></span><span class="doc-inf-aut">Mcastelhano</span><span class="doc-inf-coll">0次</span></div>
+                    </div>
+		                    <div class="doc-item-wr">
+                     <div class="doc-num-wr"><div class="doc-num"><a target="_blank" href="/view/527cbeede515e4fe1a6dfa14ce64d40d.html"><i class="doc-ico"></i>高速艇研发项目投资计划</a><i>10页</i></div></div>
+                     <div class="doc-inf"><span class="new-doc-star"><div class="starscal star-0 fl" title="文档评价得分：0.0分"></div></span><span class="doc-inf-aut">M_id_6bb0f2a952108e1d72c6c98963f8c66f</span><span class="doc-inf-coll">0次</span></div>
+                    </div>
+		                    <div class="doc-item-wr">
+                     <div class="doc-num-wr"><div class="doc-num"><a target="_blank" href="/view/bd716a68b7b7f3d07f5a92a621527ced.html"><i class="doc-ico"></i>新能源线缆研发项目立项报告</a><i>10页</i></div></div>
+                     <div class="doc-inf"><span class="new-doc-star"><div class="starscal star-0 fl" title="文档评价得分：0.0分"></div></span><span class="doc-inf-aut">M_id_6bb0f2a952108e1d72c6c98963f8c66f</span><span class="doc-inf-coll">0次</span></div>
+                    </div>
+		                    <div class="doc-item-wr">
+                     <div class="doc-num-wr"><div class="doc-num"><a target="_blank" href="/view/e8ea399c0ffe842e67ed9318a74fc065.html"><i class="doc-ico"></i>半导体研发与化项目计划方案</a><i>9页</i></div></div>
+                     <div class="doc-inf"><span class="new-doc-star"><div class="starscal star-0 fl" title="文档评价得分：0.0分"></div></span><span class="doc-inf-aut">M_id_6bb0f2a952108e1d72c6c98963f8c66f</span><span class="doc-inf-coll">0次</span></div>
+                    </div>
+		                    <div class="doc-item-wr">
+                     <div class="doc-num-wr"><div class="doc-num"><a target="_blank" href="/view/57df44e83b43774465e1b7b72a0dc620.html"><i class="doc-ico"></i>企业班组安全文化建设的实践</a><i>11页</i></div></div>
+                     <div class="doc-inf"><span class="new-doc-star"><div class="starscal star-0 fl" title="文档评价得分：0.0分"></div></span><span class="doc-inf-aut">Srudish</span><span class="doc-inf-coll">0次</span></div>
+                    </div>
+		                    <div class="doc-item-wr">
+                     <div class="doc-num-wr"><div class="doc-num"><a target="_blank" href="/view/fb1be8638c731c395ee350e02e8d904c.html"><i class="doc-ico"></i>专利技术合同</a><i>3页</i></div></div>
+                     <div class="doc-inf"><span class="new-doc-star"><div class="starscal star-0 fl" title="文档评价得分：0.0分"></div></span><span class="doc-inf-aut">Ajdsm</span><span class="doc-inf-coll">0次</span></div>
+                    </div>
+		                    <div class="doc-item-wr">
+                     <div class="doc-num-wr"><div class="doc-num"><a target="_blank" href="/view/cc698ffcfdf5fd7346f6731b463cc2b7.html"><i class="doc-ico"></i>专利技术许可合同范本</a><i>5页</i></div></div>
+                     <div class="doc-inf"><span class="new-doc-star"><div class="starscal star-0 fl" title="文档评价得分：0.0分"></div></span><span class="doc-inf-aut">Ajdsm</span><span class="doc-inf-coll">0次</span></div>
+                    </div>
+		                    <div class="doc-item-wr">
+                     <div class="doc-num-wr"><div class="doc-num"><a target="_blank" href="/view/1998341169bc5ea545b671250930b8d4.html"><i class="doc-ico"></i>人防设备研发制造项目立项申请</a><i>9页</i></div></div>
+                     <div class="doc-inf"><span class="new-doc-star"><div class="starscal star-0 fl" title="文档评价得分：0.0分"></div></span><span class="doc-inf-aut">M_id_6bb0f2a952108e1d72c6c98963f8c66f</span><span class="doc-inf-coll">0次</span></div>
+                    </div>
+		                    <div class="doc-item-wr">
+                     <div class="doc-num-wr"><div class="doc-num"><a target="_blank" href="/view/54f9f7b9fd62b95be2030a31801a5283.html"><i class="ppt-ico"></i>博广力作—三星银加（Ag+）技术推广大策略创意案</a><i>36页</i></div></div>
+                     <div class="doc-inf"><span class="new-doc-star"><div class="starscal star-0 fl" title="文档评价得分：0.0分"></div></span><span class="doc-inf-aut">Ttocon</span><span class="doc-inf-coll">0次</span></div>
+                    </div>
+				
+
+<div class="page">
+	<a href="/list/1?pn=0"><<</a>
+	<a href="/list/1?pn=0"><</a>
+				<span class="current">1</span>
+							<a href="/list/1?pn=1">2</a>
+							<a href="/list/1?pn=2">3</a>
+							<a href="/list/1?pn=3">4</a>
+							<a href="/list/1?pn=4">5</a>
+							<a href="/list/1?pn=5">6</a>
+							<a href="/list/1?pn=6">7</a>
+							<a href="/list/1?pn=7">8</a>
+							<a href="/list/1?pn=8">9</a>
+							<a href="/list/1?pn=9">10</a>
+							<a href="/list/1?pn=10">11</a>
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																							<a href="/list/1?pn=1">></a>
+	<a href="/list/1?pn=29">>></a>
+</div> 
+<div class="page-iph">
+<a href="/list/1?pn=0">上一页</a><a href="/list/1?pn=1" style="margin-left:-1px; border-left:1px solid #29AA76">下一页</a></div>                 </div>
+                <!--猜你喜欢-->
+                <div class="newcanvas-lay box-shadow" id="guess_you_like" ></div>
+<script type="text/javascript">
+    var guess_you_like_url = "/services/guessyoulike";
+    var hmt_flag = "list";
+    
+        function GuessYouLikeInit() {
+            $.post(guess_you_like_url,{},function (result) {
+                if(!$.isEmptyObject(result))
+                {
+                    var str=' <h3 class="title f-c-green">猜你喜欢 <a href="javascript:;" class="fr font-gray2 fz-16 ico4" id="hyh">换一换</a></h3><div class="padding-tb20">';
+                    for(var i in result)
+                    {
+                        str += '<div class="hot-doc">'+
+                            '<a href="/view/'+result[i].key+'.html" target="_blank" class="doc-img guess_you_like_document" title="'+HTMLEnCode(result[i].title)+'"><img src="'+result[i].image+'"><i class="'+result[i].type+'-ico"></i></a>'+
+                            '<a href="/view/'+result[i].key+'.html" target="_blank" class="doc-nam guess_you_like_document" title="'+HTMLEnCode(result[i].title)+'">'+HTMLEnCode(result[i].title)+'</a>'+
+                            '</div>';
+                    }
+                    str += '</div>';
+                    $("#guess_you_like").html(str);
+                } else {
+                    $("#guess_you_like").removeClass('box-shadow');
+                }
+            },'json')
+        }
+
+        $(document).on('click','.guess_you_like_document',function () {
+           statGuessYouLike(hmt_flag);
+        });
+
+        $(document).on('click','#hyh',function () {
+            statGuessYouLikeHyh(hmt_flag);
+            //GuessYouLikeInit();
+        });
+
+        //GuessYouLikeInit();
+    
+</script>                <!--猜你喜欢end-->
+		                 <div class="sear-bottom">
+     <form class="search-box bottom-search-box"  name=search  action="/search" method=get>
+         <div class="s-ipt-wr"><div class="s-ipt-p"><input id="b-search" class="s-ipt" type="text" style="color:gray" name="q" value="请输入关键词"  onfocus="if(this.value=='请输入关键词'){this.value=''};this.style.color='black';" onblur="if(this.value==''||this.value=='请输入关键词'){this.value='请输入关键词';this.style.color='gray';}" ></div></div>
+         <div class="s-btn-wr"><input class="s-btn" type="submit" value="搜索文档" onclick="if(document.getElementById('b-search').value=='请输入关键词')return false;"></div>
+         <div class="s-opt-wr">
+             
+                              <label><input class="type-check" type="radio" name="ft"  checked value=0>全部</label>
+                              <label><input class="type-check" type="radio" name="ft"  value=1>DOC</label>
+                              <label><input class="type-check" type="radio" name="ft"  value=2>PDF</label>
+                              <label><input class="type-check" type="radio" name="ft"  value=3>PPT</label>
+                              <label><input class="type-check" type="radio" name="ft"  value=4>XLS</label>
+                              <label><input class="type-check" type="radio" name="ft"  value=5>TXT</label>
+                              <label><input class="type-check" type="radio" name="ft"  value=6>专题</label>
+                          <input type="hidden" name="od" id="od" value="0" />
+         </div>
+     </form>
+ </div>           </div>
+         </div>            
+     </div>
+
+     <div class="conta-r-wr">
+          <div class="down-btn-wr "><a href="/submit" id="upload" title="分享我的文档" class="down-btn"></a></div>          <div class="doc-adve m-t20">
+<!-- 广告位：DOC-02-300 -->
+<script>
+
+(function() {
+    var s = "_" + Math.random().toString(36).slice(2);
+    document.write('<div id="' + s + '"></div>');
+    (window.slotbydup=window.slotbydup || []).push({
+        id: '4280737',
+        container: s,
+        size: '300,250',
+        display: 'inlay-fix'
+    });
+})();
+
+</script>
+
+</div>          <div class="new-doc-wr m-t20">
+<h3 class="new-doc-tit">本分类热门标签</h3>
+<div class="doc-tag-wr"><a href="/tag/%E7%AE%A1%E7%90%86%E4%BD%93%E5%88%B6">管理体制</a><a href="/tag/%E7%AE%A1%E7%90%86%E7%90%86%E5%BF%B5">管理理念</a><a href="/tag/Mbo">Mbo</a><a href="/tag/%E5%85%AC%E5%85%B1%E6%94%BF%E7%AD%96">公共政策</a><a href="/tag/%E5%85%AC%E5%85%B1%E7%AE%A1%E7%90%86">公共管理</a><a href="/tag/%E3%80%8A%E4%BB%8E%E4%BC%98%E7%A7%80%E5%88%B0%E5%8D%93%E8%B6%8A%E3%80%8B">《从优秀到卓越》</a><a href="/tag/%E5%85%AC%E5%85%B1%E7%89%A9%E5%93%81">公共物品</a><a href="/tag/%E5%8D%8F%E5%90%8C%E5%8F%91%E5%B1%95">协同发展</a><a href="/tag/%E5%AE%9E%E9%99%85%E6%8E%A7%E5%88%B6%E4%BA%BA">实际控制人</a><a href="/tag/%E7%AE%A1%E7%90%86%E9%81%93%E5%BE%B7">管理道德</a><a href="/tag/%E4%BA%94%E8%A1%8C%E7%AE%A1%E7%90%86">五行管理</a><a href="/tag/%E7%AE%A1%E7%90%86%E6%89%8B%E6%AE%B5">管理手段</a><a href="/tag/%E7%AE%A1%E7%90%86%E9%A3%8E%E6%A0%BC">管理风格</a><a href="/tag/%E5%85%AC%E5%85%B1%E5%85%B3%E7%B3%BB%E5%AE%9E%E5%8A%A1">公共关系实务</a><a href="/tag/%E7%AE%A1%E7%90%86%E5%A4%A7%E8%B6%8B%E5%8A%BF">管理大趋势</a><a href="/tag/%E7%AE%A1%E7%90%86%E4%BB%B7%E5%80%BC%E8%A7%82">管理价值观</a><a href="/tag/%E7%AE%A1%E7%90%86%E6%84%8F%E8%AF%86">管理意识</a><a href="/tag/%E7%B3%BB%E7%BB%9F%E7%A7%91%E5%AD%A6">系统科学</a><a href="/tag/%E4%BC%81%E4%B8%9A%E5%AE%B6%E5%A3%B0%E8%AA%89%E6%9C%BA%E5%88%B6">企业家声誉机制</a><a href="/tag/%E5%85%A8%E7%90%83%E8%BF%90%E7%AD%B9%E7%AE%A1%E7%90%86">全球运筹管理</a><a href="/tag/%E4%BA%BA%E6%96%87%E7%AE%A1%E7%90%86">人文管理</a><a href="/tag/%E7%AE%A1%E7%90%86%E8%8C%83%E5%BC%8F">管理范式</a><a href="/tag/%E8%83%BD%E6%9C%AC%E7%AE%A1%E7%90%86">能本管理</a><a href="/tag/%E4%BC%81%E4%B8%9A%E7%A7%91%E6%8A%80%E7%AE%A1%E7%90%86">企业科技管理</a><a href="/tag/M%E5%9E%8B%E7%A4%BE%E4%BC%9A">M型社会</a><a href="/tag/%E5%AE%8C%E5%85%A8%E7%90%86%E6%80%A7">完全理性</a><a href="/tag/%E6%8B%87%E6%8C%87%E8%A7%84%E5%88%99">拇指规则</a><a href="/tag/%E7%AE%A1%E7%90%86%E5%A4%9A%E6%A0%B7%E5%8C%96">管理多样化</a><a href="/tag/%E4%BC%81%E4%B8%9A%E5%8D%B0%E7%AB%A0">企业印章</a><a href="/tag/%E6%95%99%E5%B8%88%E7%AE%A1%E7%90%86">教师管理</a></div>               
+</div>  
+          	    <div class="new-doc-wr m-t20">
+            <h3 class="new-doc-tit">本分类推荐专题</h3>
+	                <div class="new-doc-info">
+                <span class="new-doc-nam"><span><i class="zt-ico"></i><a href="/topic/324">弗布克精细化管理全案系列</a></span></span>
+                <span class="new-doc-star"><div class="starscal star-10"></div></span><span class="new-doc-appr">8人评价</span><span class="new-doc-pag">9个文档</span>
+            </div>
+	                <div class="new-doc-info">
+                <span class="new-doc-nam"><span><i class="zt-ico"></i><a href="/topic/76">孔子与现代管理</a></span></span>
+                <span class="new-doc-star"><div class="starscal star-10"></div></span><span class="new-doc-appr">2人评价</span><span class="new-doc-pag">9个文档</span>
+            </div>
+	                <div class="new-doc-info">
+                <span class="new-doc-nam"><span><i class="zt-ico"></i><a href="/topic/634">中阶管理才能训练系列</a></span></span>
+                <span class="new-doc-star"><div class="starscal star-10"></div></span><span class="new-doc-appr">2人评价</span><span class="new-doc-pag">6个文档</span>
+            </div>
+	                <div class="new-doc-info">
+                <span class="new-doc-nam"><span><i class="zt-ico"></i><a href="/topic/454">跨国企业管理（21世纪经济学...</a></span></span>
+                <span class="new-doc-star"><div class="starscal star-10"></div></span><span class="new-doc-appr">2人评价</span><span class="new-doc-pag">8个文档</span>
+            </div>
+	                <div class="new-doc-info">
+                <span class="new-doc-nam"><span><i class="zt-ico"></i><a href="/topic/285961">由“专业”走向管理培训</a></span></span>
+                <span class="new-doc-star"><div class="starscal star-10"></div></span><span class="new-doc-appr">2人评价</span><span class="new-doc-pag">5个文档</span>
+            </div>
+	    </div> 
+	       
+            <div class="new-doc-wr m-t20">
+              <h3 class="new-doc-tit">提交需求</h3>
+              <div class="doc-enqu-wr">
+                  <span class="enqu-p">找不到您要的资料？<br><a href="/usermessage/post?type=demand">提交资料需求</a>，让网友帮您查找。</span>
+              </div>               
+</div>              
+          </div>
+     </div>     
+               
+</div>
+
+<script>
+$(function(){
+	$(".site-4").click(function(){
+		if($(".class-mod").is(":hidden"))
+		{
+			$(".class-mod").show();
+			$(".class-mod .inner").removeClass('phone-hide');
+			$(".class-mod .site-4").hide();
+		}
+		else
+		{
+			$(".class-mod").hide();
+		}
+	});
+});
+</script>
+
+
+<script type="text/javascript" src="js/ads.js"></script> 
+<script type="text/javascript" charset="utf-8"><!--
+var pageOptions = {
+'pubId' : 'pub-8234842646771010',
+'query' : '管理',
+'channel' : '8578971546'
+};
+
+var searchad = {
+'container' : 'search-ad-bottom',
+'number' : 1,
+'lines' : 2,
+'hl' : 'zh-CN',
+'fontFamily' : 'arial',
+'fontSizeTitle' : '14px',
+'fontSizeDescription' : '12px',
+'fontSizeDomainLink' : '12px',
+'colorTitleLink' : '#22749B',
+'colorDomainLink' : '#ADADAD',
+'colorBorder' : '#DFDFDF',
+'colorBackground': '#F5F5F5',
+'linkTarget' : '_blank'
+};
+new google.ads.search.Ads(pageOptions,searchad);
+//--></script>
+<!-- 右侧返回，二维码，反馈功能-->
+<div class="fix-position fix-r box-shadow hidden " id="r_side">
+     <a href="/userpay/recharge?sfrom=center" onclick="statRecharge('recharge_right_center');" class="fix-ico2 fix-ico3" target="_blank"><span>充值<br>积分</span></a>
+     <a href="/userpay/member?sfrom=center" onclick="statMember('memeber_right_center');" class="fix-ico2 fix-ico4" target="_blank"><span>开通<br>VIP</span></a>
+     <a href="javascript:void(0)" class="fix-ico2 qr-code"><span>微信<br>服务号</span></a>
+     <a href="/usermessage/post" class="fix-ico2"><span>用户<br>反馈</span></a>
+     <a href="javascript:void(0)" class="fix-ico" id="back"></a>
+     <div class="box-shadow qr-code-wd hidden" id="weixinCode">
+       <span class="qr-code-bd"><img src="picture/300-1.png"></span>
+     </div>
+</div>
+
+<script>
+
+function hideBack()
+{
+	$("#r_side").hide();
+}
+function showBack()
+{
+	$("#r_side").show();
+}
+(function(){
+
+	$(function(){
+
+		var content='';
+		if($(".conta-wr").length && $(".conta-wr").length>0)//页面class不统一，根据不同页面做处理返回按钮位置
+		{
+			content = $(".conta-wr");
+		}
+		else if($(".class-wr").length && $(".class-wr").length>0)
+		{
+			content = $(".class-wr");
+		}
+		else if($(".user-box").length && $(".user-box").length>0)
+		{
+			content = $(".user-box");
+		}
+
+		$("#back").click(function(){
+			scroll(0,0);
+			});
+
+		function changeSidePosition()
+		{
+			if(!content) return false;
+			var width = content.width();
+			var left = parseInt(content.offset().left);
+			if(left > 100)
+			{
+				var side_right = left + width + 5;
+				$(".fix-r").css("left",side_right+"px");
+				$(".fix-r").css("right","initial");
+				$(".fix-r").removeClass('hidden');
+			}else
+			{
+				$(".fix-r").css("right","10px");
+				$(".fix-r").css("left","initial");
+				$(".fix-r").removeClass('hidden');
+			}
+		}
+		changeSidePosition();
+		$(window).resize(function(){
+			changeSidePosition();
+		});
+
+		$(".qr-code").hover(function(){
+			$("#weixinCode").show();
+            statWxMp();
+		},function(){
+			$("#weixinCode").hide();
+		});
+	});
+})();
+
+</script>	<!-- 广告位：DOC-07 -->
+<script>
+
+(function() {
+    var s = "_" + Math.random().toString(36).slice(2);
+    document.write('<div id="' + s + '"></div>');
+    if($(window).width()<992)
+    {
+     (window.slotbydup=window.slotbydup || []).push({
+        id: '2406317',
+        container: s,
+        size: '20,3',
+        display: 'float',
+        async:true
+    });
+	}else
+{
+	 (window.slotbydup=window.slotbydup || []).push({
+        id: '224766',
+        container: s,
+        size: '365,110',
+        display: 'float'
+    });
+}
+})();
+
+</script><div class="foot ">
+    <a href="//www.mbalib.com/">智库首页</a>- <span class="phone-hide"><a href="//www.mbalib.com/adcooperation">广告合作</a>-</span><span class="phone-hide"><a href="//www.mbalib.com/link/">友情链接</a>-</span><a href="/support/list-agreement.html">规范协议</a>-<a href="//www.mbalib.com/right">权利通知</a>-<a href="/support">帮助中心</a>-<a href="/support/view-24.html">关于我们</a>
+    <p><script src="js/seallogo.js"></script>©2018 MBAlib.com, All rights reserved.</p>
+</div></body>
+</html>

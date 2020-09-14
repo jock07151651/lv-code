@@ -1,0 +1,419 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>{$data.softname}-{$data.classname}-尽在源码天堂!</title>
+    <meta name="keywords" content="{$data.keyboard}" />
+    <meta name="description" content="{$data.description}" />
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="viewport" charset="width=device-width,initial-scale=1">
+    <link href="__ARTICLE__/css/css.css" rel="stylesheet">
+    <script src="__ARTICLE__/js/jquery.js" type="text/javascript"></script>
+    <script src="__ARTICLE__/js/js.js" type="text/javascript"></script>
+    <script src="http://dup.baidustatic.com/js/ds.js"></script>
+</head>
+<body>
+<!-- 头部开始 -->
+{include file="common/header1" /}
+<!-- 头部结束 -->
+<div class="cl" id="header"></div>
+<div class="box_1162 overflowh" id="header">
+    <div class="place">
+        <strong>当前位置：</strong><a href='http://www.662p.com/'>网站首页</a> > <a href=''>源码下载</a> > {$data.softname}</div>
+    <div class="clearfix mt10">
+        <div class="middle">
+            <div class="wlimit">
+                <div class="m-l">
+                    <div class="w900 float_l">
+                        <div class="box">
+                            <div class="help">
+                                <div class="title-con">
+                                    <div class="w900 float_l">
+                                        <h1>{$data.softname}</h1>
+                                        <em class="keep-btn" id="stows"></em>
+                                    </div>
+                                    <span>
+                        <i class="view" id="hits">
+                            {$data.count_all}
+                        </i>
+                        <i class="down" id="xiazai">
+                          <script src="" language="javascript"></script>
+                        </i>
+                        <i class="collection" id="favorite">
+                          <script src="" language="javascript"></script>
+                        </i>
+                        <i class="time">{$data.softtime|date="m-d",###}</i></span>
+                                </div>
+                                <div class="video">
+                                    <div class="plug_description">
+                                        <b>模板详情：</b>
+                                        <div class="content">{$data.softsay}</div></div>
+                                </div>
+                                <!--模板效果图-->
+                                <div class="demobox" style="display:none; ">
+                                    <div class="demotit">模板图集</div>
+                                    <div class="demotit float_r">
+                                    </div>
+                                    <div id="gallery">
+                                        <ul></ul>
+                                        <div class="cl">
+                                            <a class="d-mo" rel="9226"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--模板效果图-->
+                                {eq name="$data.softpic" value=""}{else/}
+                                <div class="fescpics" style="width: 500px;height: auto;">
+                                    <a href="/view/{$data.softid}.html" title="{$data.softname}">
+                                        <img src="{$data.softpic}" alt="{$data.softpic}" style="width: 500px;">
+                                    </a>
+                                </div>
+                                {/eq}
+
+                                <!--<div class="works_tags clearfix">-->
+                                <!--<span class="moretag">模板标签：</span>-->
+                                <!--<p class="intro_a">-->
+                                <!--<a href="" class="item">黑色</a>-->
+                                <!--<a href="" class="item">HTML5</a>-->
+                                <!--<a href="" class="item">官网</a>-->
+                                <!--<a href="" class="item">品牌设计</a></p>-->
+                                <!--</div>-->
+                                <div class="article-nav">
+                                    <ul>
+                                        <li class="float_l">上一篇：{empty name="$prev"}没有了 {else/}<a href='/view/{$prev.softid}.html'>{$prev.softname}</a>{/empty} </li>
+                                        <li class="float_r">下一篇：{empty name="$next"}没有了 {else/}<a href='/view/{$next.softid}.html'>{$next.softname}</a>{/empty} </li></ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w900 float_l">
+                        <div class="speek clearfix">
+                            <span>特别说明：</span><p>
+                            推荐使用第三方专业下载工具下载本站资源，使用 WinRAR v3.10 以上版本解压本站资源。<br />
+                            662p开源网所有软件，源码，素材，等资源均来自网友上传，或网络收集，如果有侵犯版权请及时联系我们，我们会在第一时间处理。<br />
+                            如果该资源不能下载，请联系本站在线客服报错，谢谢合作!!<br />
+                            下载本站资源，如果服务器暂不能下载请过一段时间重试！<br />
+                            本站提供的一些商业源码，软件，等资源仅供学习研究之用，如用于商业用途，请购买正版。<br />
+                            如需大量转载本站内容；请联系本站站长，少量转载本站内容请注明出处，谢谢合作。</p>
+                        </div></div>
+                    <div class="w900 float_l">
+                        <div class="w900">
+                            <div class="boxTitle">
+                                <p class="padding_lr15 clearfix">
+                                    <strong class="font_s20 float_l color_ce380a boxTitle-new boxTitle-new-y">相关内容</strong></p>
+                            </div>
+                            <div class="fesucaibox margin_t20">
+                                <ul>
+                                    <li style="display:block;">
+                                        <div class="fescfl">
+                                            <dl>
+                                                {volist name="relevant" id="foo"}
+                                                <dd>
+                                                    <div class="fescpics">
+                                                        <a href="/view/{$foo.softid}.html" title="{$foo.softname}">
+                                                            <img src="{$foo.softpic}" alt="{$foo.softname|mb_substr=0,12,'utf-8'}" width="258" /></a></div>
+                                                    <div class="fescbm">
+                                                        <div class="fescbmre">
+                                                            <h5>
+                                                                <a href="/view/{$foo.softid}.html" title="{$foo.softname|mb_substr=0,12,'utf-8'}">{$foo.softname|mb_substr=0,11,'utf-8'}</a></h5>
+                                                            <p>
+                                                                <a target="_blank" href="/view/{$foo.softid}.html" title="{$foo.softname|mb_substr=0,12,'utf-8'}">{$foo.softname|mb_substr=0,11,'utf-8'}</a>
+                                                                <em>/</em>{$foo.softtime|date="m-d",###}</p></div>
+                                                        <div class="clear"></div>
+                                                    </div>
+                                                </dd>
+                                                {/volist}
+                                                <div class="clear"></div></dl>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="m-r">
+                    <div class="piao">
+                        <div class="w378 float_r">
+                            <div class="w378">
+                                <div class="prodinfo">
+                                    <div class="information">
+                                        <div class="first">
+                                            <li class="left">源码信息</li>
+                                            <li class="right">
+                                                <span class='source_org1'>免费资源</span></li></div>
+                                        <dd>
+                                            <div class="rec">所需积分：
+                                                <em id="readpoint">{$data.downfen}
+                                                    <em>积分</em></em></div>
+                                            <div class="right vip"></div>
+                                        </dd>
+                                        <!--<dd>下载权限：<font color="#1abd9b">无等级限制</font></dd>-->
+                                        <dd>源码作者：{eq name="$data.adduser" value=""}匿名作者{else/}{$data.adduser}{/eq}</dd>
+                                        <dd>源码大小：{$data.filesize}</dd>
+                                        <dd>运行环境：{eq name="$data.soft_fj" value=""}未知{else/}{$data.soft_fj}{/eq}</dd>
+                                        <dd>
+                                            <div class="rec">推荐等级：</div>
+                                            <div class="rate-bar">
+                                                <div class="xxxx"></div>
+                                            </div>
+                                        </dd>
+                                    </div>
+                                    <div class="pro_btns">
+                                        <a data-pop="pop-dows" class="down" onclick="downSoft({$data.softid},{$downPath.0.urlid},{$data.downfen})" title="{$data.softname}">点击下载</a>
+                                        <a onclick="downGit({$data.softid},{$data.downfen})" href='javascript:void(0);'>查看演示</a></div></div>
+                            </div>
+                            <div class="w378 float_r tabTitleBar mt10 bgf borderTred clearfix">
+                                <div class="borderTnone YaHei">
+                                    <h4>相关分类</h4>
+                                    <ul class="catalog catalogA">
+                                        {volist name="downCate" id="foo"}
+                                        <li>
+                                            <a title='{$foo.classname}' href='/list/{$foo.classid}_1.html'>{$foo.classname}</a>
+                                        </li>
+                                        {/volist}
+                                    </ul>
+                                </div>
+
+                            </div>
+
+                            <div class="w378 float_r">
+                                <div class="ablock clearfix mt10">
+                                    <h3>代码排行</h3>
+                                    <div class="textlist clearfix">
+                                        <ul>
+                                            {volist name="hotCate" id="foo"}
+                                            <li><a href="/view/{$foo.softid}.html" target="_blank" rel="noreferrer">{$foo.softname}</a></li>
+                                            {/volist}
+                                        </ul>
+                                    </div>
+                                </div>
+                                <a href="http://www.5duyun.com"><img src="/adv/5duyun280300.gif" alt=""></a>
+                            </div>
+                            <div class="w378 float_r">
+                                <div class="ablock clearfix mt10">
+                                    <h3>最新代码</h3>
+                                    <div class="textlist clearfix">
+                                        <ul>
+                                            {volist name="LatestCate" id="foo"}
+                                            <li><a href="/view/{$foo.softid}.html" target="_blank" rel="noreferrer">{$foo.softname}</a></li>
+                                            {/volist}
+                                        </ul>
+                                    </div>
+                                </div>
+                                <a href="http://www.pgyidc.com"><img src="/adv/280300.jpg" alt=""></a>
+                            </div>
+                            <div class="w378 float_r">
+                                <div class="ablock clearfix mt10">
+                                    <h3>最新文章</h3>
+                                    <div class="textlist clearfix">
+                                        <ul>
+                                            {volist name="latestArticle" id="foo"}
+                                            <li><a href="http://www.662p.com/article/{$foo.id}.html" target="_blank" rel="noreferrer">{$foo.title}</a></li>
+                                            {/volist}
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--<div class="w378 float_r mt10">-->
+                            <!--<a href="https://www.60zhan.com/" target="_blank"><img src="/images/0.gif" border="0"></a>-->
+                            <!--</div>-->
+                            <!--<div class="w378 float_r">-->
+                            <!--<div class="ablock clearfix mt10 mb10">-->
+                            <!--<h3>热门标签</h3>-->
+                            <!--<div class="keylist">-->
+                            <!--<ul>-->
+                            <!--<a href="">IOS</a>-->
+                            <!--</ul></div>-->
+                            <!--</div>-->
+                            <!--</div>-->
+                            <!--</div>-->
+                            <div class="mould4"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div align="center">
+        <a href="http://www.idcjf.com/" target="_blank"><img src="http://ubmcmm.baidustatic.com/media/v1/0f000ZbRgHCKAVRJMqy-R6.gif" border="0" height="90" width="1200"></a></div>
+    {include file="common/footer" /}
+    <script src="/static/layer/layer.js"></script>
+    <div id="liuyan" class="popupbox">
+        <div class="popupbox-header"> <span id="fmsgtitle"></span> <a class="popup-close">&times;</a> </div>
+        <div class="popupbox-content">
+            <div class="popdows popbox-cont-t" id="liuyancont"></div>
+        </div>
+    </div>
+    <!--<script type="text/javascript" src="/style/js/functions.min.js"></script> -->
+    <div id="pop-dows" class="popupbox">
+        <div class="popupbox-header">
+            <span id="dmsgtitle"></span>
+            <a class="popup-close">&times;</a></div>
+        <div class="popupbox-content">
+            <div class="popdows" id="dowmsg"></div>
+            <div id="popsub"></div>
+        </div>
+    </div>
+    <!--<script src='/common/sucaidows.php?aid=9226&wid=1' language='javascript'></script>-->
+    <div class="clear"></div>
+</body>
+<script>
+    function downGit(id,downfen){
+        $.ajax({
+            url:'/clogin',
+            type:'post',
+            data:{id:id,downfen},
+            beforeSend:function () {
+                layer.load()
+            },
+            success:function (msg) {
+                layer.closeAll('loading')
+                if(msg.code==1){
+                    window.location.href = msg.url;
+                }else if(msg.code==502){
+                    layer.msg(msg.info,{icon:0,time:1500})
+                }else{
+                    layer.msg(msg.info,{icon:0,time:1500})
+                    setTimeout(function () {
+                        window.location.href='/login';
+                    },1500)
+                }
+            }
+        })
+    }
+    //充值前检测用户是否登录
+
+    function checkLogin(){
+
+        $.ajax({
+
+            url:'/isLogin',
+
+            beforeSend:function(){
+
+                layer.load()
+
+            },
+
+            success:function(msg){
+
+                if(msg.code){
+
+                    window.location.href = '/buygroup';
+
+                }else{
+
+                    layer.msg(msg.info,{icon:0,time:2000});
+
+                    setTimeout(function(){
+
+                        window.location.href = '/login';
+
+                    },2000)
+
+                }
+
+            }
+
+        })
+
+    }
+
+    //软件下载
+
+    function downSoft(softid,pathid,num){
+        if(num){
+            layer.confirm('下载将消耗点数'+num,{btn:['确定','取消'],title:'提示'},function(){
+                layer.closeAll('dialog');
+                $.ajax({
+                    url:'/DownSoft',
+                    data:{softid:softid,pathid:pathid},
+                    type:'post',
+                    beforeSend:function(){
+                        layer.load()
+                    },
+                    success:function (msg) {
+                        layer.closeAll('loading');
+                        if(msg.code){
+                            $.ajax({
+                                url:'/downrecord',
+                                type:'post',
+                                data:{softid:softid},
+                                success:function(msg){
+                                    console.log(msg)
+                                }
+                            })
+                            window.location.href=msg.url;
+                        }else{
+                            layer.msg(msg.info,{icon:0,time:2200});
+                            setTimeout(function(){
+                                window.location.href = msg.url;
+                            },2200)
+                        }
+                    }
+                })
+            })
+        }else{
+            $.ajax({
+                url:'/DownSoft',
+                data:{softid:softid,pathid:pathid},
+                type:'post',
+                beforeSend:function(){
+                    layer.load()
+                },
+                success:function (msg) {
+                    layer.closeAll('loading');
+                    if(msg.code){
+                        window.location.href=msg.url;
+                    }else{
+                        layer.msg(msg.info,{icon:0,time:2200});
+                        setTimeout(function(){
+                            window.location.href = msg.url;
+                        },2200)
+                    }
+                }
+            })
+        }
+
+    }
+
+
+    function collect(softid){
+
+        $.ajax({
+
+            url:'/collect',
+
+            type:'post',
+
+            data:{softid:softid},
+
+            beforeSend:function () {
+
+                layer.load()
+
+            },
+
+            success:function (msg) {
+
+                layer.closeAll('loading');
+
+                if(msg.code){
+
+                    layer.msg(msg.info,{icon:1,time:1500})
+
+                }else{
+
+                    layer.msg(msg.info,{icon:0,time:2200})
+
+                }
+
+            }
+
+        })
+
+    }
+</script>
+</html>

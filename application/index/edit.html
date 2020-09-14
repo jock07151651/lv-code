@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>编写文章</title>
+    <link rel="stylesheet" href="/static/markdown/examples/css/style.css" />
+    <link rel="stylesheet" href="/static/markdown/css/editormd.css" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="stylesheet" href="/static/layui/css/layui.css">
+</head>
+<style>
+    #test-editormd{
+        width: 100% !important;
+    }
+    .CodeMirror,.CodeMirror-gutters,.editormd-preview-theme-dark,.markdown-body{
+        background: #f5f5f5 !important;
+
+    }
+    .CodeMirror{
+        height: 100%;
+    }
+    .editormd-toolbar{
+        background: #e0e0e0 !important;
+    }
+    .editormd-menu a{
+        border-color: transparent !important;
+    }
+    .header{
+        text-align: left;
+    }
+    .title{
+        margin: 8px 20px;
+        border-radius: 4px;
+        border: 1px solid rgba(7,17,27,0.4);
+        padding: 10px;
+        width: 80%;
+        background: transparent;
+        outline: none;
+    }
+    .publish{
+        padding: 10px 16px;
+        background: #1c8eff;
+        color: #fff;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+    .form{
+        width: 680px;
+        margin-top: 20px;
+    }
+    .layui-form-label{
+        width: 120px;
+    }
+    .layui-input,.layui-textarea{
+        width: 90%;
+    }
+    .layui-input-block{
+        text-align: left;
+        padding-left: 11px;
+    }
+    .layui-edge{
+        right: 60px !important;
+    }
+    .layui-form-select dl{
+        min-width: 90% !important;
+    }
+</style>
+<div style="background: #f4f4f4">
+<div class="header">
+    <form>
+        <input placeholder="输入文章标题" type="text" class="title">
+        <label onclick="publish()" for="" class="publish">发布文章</label>
+    </form>
+</div>
+
+<div id="test-editormd"></div>
+    <div class="hideform" style="display: none">
+    <div class="form" >
+        <form class="layui-form" action="" enctype="multipart/form-data" onsubmit="return false">
+            <div class="layui-form-item">
+                <label class="layui-form-label">关键词</label>
+                <div class="layui-input-block">
+                    <input type="text" name="keyword" placeholder="请输入文章关键词" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item layui-form-text">
+                <label class="layui-form-label">简单描述</label>
+                <div class="layui-input-block">
+                    <textarea name="desc" placeholder="请输入文章简单描述" class="layui-textarea"></textarea>
+                </div>
+            </div>
+            <div class="layui-form-item layui-form-text">
+                <label class="layui-form-label">文章封面</label>
+                <div class="layui-input-block">
+                    <button onclick="clickUpload(this)" class="layui-btn">
+                        <i class="layui-icon">&#xe67c;</i>上传图片
+                    </button>
+                    <br>
+                    <input onchange="imgShow(this)" style="display: none;" type="file" name="theme">
+                    <img src="" style="display: none;max-width:320px;max-height: 240px;margin-top:2px;" alt="">
+                </div>
+            </div>
+            <div class="layui-form-item layui-form-text">
+                <label class="layui-form-label">文章类型</label>
+                <div class="layui-input-block">
+                    <select name="type" id="select_type">
+                        <option value="1">原创</option>
+                        <option value="2">转载</option>
+                        <option value="3">翻译</option>
+                    </select>
+                </div>
+                <div style="display: none;" class="J_link layui-input-block">
+                    <input style="margin: 11px;" type="text" name="link" placeholder="请输入链接" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item layui-form-text">
+                <label class="layui-form-label">系统分类</label>
+                <div class="layui-input-block">
+                    <select name="cateid" id="cateid">
+                        <option value="">请选择</option>
+                        {volist name="systemCate" id="foo"}
+                            <option value="{$foo.id}">{$foo.catename}</option>
+                        {/volist}
+                    </select>
+                </div>
+            </div>
+            
+            <div class="layui-form-item layui-form-text">
+                <label class="layui-form-label">添加标签</label>
+                <div class="layui-input-block">
+                    <button onclick="addTag(this)" style="background: transparent;width: 0px;" class="layui-btn addTag"><i style="color: #1c8eff;" class="layui-icon"></i> </button>（最多可添加5个标签）
+                </div>
+                <div class="layui-input-block" style="padding-left: 11px">
+                    {volist name="userTag" id="foo"}
+                        <input type="checkbox" class="chose_tag_select" value="{$foo.id}" name="add_tag[]" title="{$foo.name}" lay-skin="primary">
+                    {/volist}
+                </div>
+            </div>
+
+            <div class="layui-form-item layui-form-text">
+                <label class="layui-form-label">添加分类</label>
+                <div class="layui-input-block">
+                    <button onclick="addCate(this)" style="background: transparent;width: 0px;" class="layui-btn addCate"><i style="color: #1c8eff;" class="layui-icon"></i> </button>（最多可添加3个分类）
+                </div>
+                <div class="layui-input-block" style="padding-left: 11px">
+                    {volist name="userCate" id="foo"}
+                        <input onclick="choseCate(this)" class="chose_cate_select" type="checkbox" value="{$foo.id}" name="add_cate[]" title="{$foo.name}" lay-skin="primary">
+                    {/volist}
+                </div>
+            </div>
+
+            <div class="layui-form-item layui-form-text">
+                <label class="layui-form-label">发布形式</label>
+                <div class="layui-input-block">
+                    <input name="status" checked type="radio" value="1" title="所有人">
+                    <input name="status" type="radio" value="2" title="私密（仅自己可见）">
+                    <input name="status" type="radio" value="3" title="会员可见">
+                </div>
+            </div>
+            <div style="margin-left: 11px;" class="layui-form-item">
+                <div class="layui-input-block">
+                    <button onclick="submitForm()" class="layui-btn" lay-submit lay-filter="formDemo">立即提交</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    </div>
+</body>
+<script src="/static/markdown/examples/js/jquery.min.js"></script>
+<script src="/static/layui/layui.all.js"></script>
+
+<script>
+    
+</script>
+<script src="/static/markdown/editormd.js"></script>
+<script src="/static/layer/layer.js"></script>
+<script type="text/javascript">
+    function imgShow(file){
+        if (file.files && file.files[0]){
+            var reader = new FileReader();
+            reader.onload = function(evt){
+                console.log(evt)
+                $(file).parent().find('img').attr('src',evt.target.result);
+                $(file).parent().find('img').show()
+            }
+            reader.readAsDataURL(file.files[0]);
+        }else{
+            $(file).parent().find('img').hide()
+        }
+    }
+    //添加分类
+    function addCate(obj){
+        list = `<div class="newCate" style="display: inline-block">
+                        <input onkeyup="changeWidth(this)" type="text" name="add_cate[]" style="width: 10px;display: inline-block;margin-right: 5px" placeholder="请输入分类" autocomplete="off" class="layui-input add_cate"><i onclick="delCate(this)" style="color: #1c8eff;font-size: 20px;line-height: 20px;vertical-align: middle;cursor: pointer;" class="layui-icon layui-icon-close"></i>
+                    </div>`
+        if($('.newCate').length>=3){
+            layer.msg('最多只能添加3个分类了',{icon:0,time:1500})
+            return false
+        }
+        $(obj).before(list);
+    }
+    //添加标签
+    function addTag(obj){
+        list = `<div class="newTag" style="display: inline-block">
+                        <input onkeyup="changeWidth(this)" type="text" name="add_tag[]" style="width: 10px;display: inline-block;margin-right: 5px" placeholder="请输入标签" autocomplete="off" class="layui-input add_tag"><i onclick="delTag(this)" style="color: #1c8eff;font-size: 20px;line-height: 20px;vertical-align: middle;cursor: pointer;" class="layui-icon layui-icon-close"></i>
+                    </div>`
+        if($('.newTag').length>=5){
+            layer.msg('最多只能添加5个标签了',{icon:0,time:1500})
+            return false
+        }
+        $(obj).before(list);
+    }
+
+    //删除分类
+    function delCate(obj,val){
+        $(obj).parent().remove();
+        if(val){
+            $(':checked').each(function () {
+                if($(this).hasClass('chose_cate_select')){
+                    if($(this).val()==val){
+                        $(this).next().removeClass('layui-form-checked')
+                    }
+                }
+            })
+        }
+    }
+    //删除标签
+    function delTag(obj,val){
+        $(obj).parent().remove();
+        if(val){
+            $(':checked').each(function () {
+                if($(this).hasClass('chose_tag_select')){
+                    if($(this).val()==val){
+                        $(this).next().removeClass('layui-form-checked')
+                    }
+                }
+            })
+        }
+    }
+   function changeWidth(obj){
+       var $this = $(obj);
+       var text_length = $this.val().length;//获取当前文本框的长度
+       var current_width = parseInt(text_length) *18;//该16是改变前的宽度除以当前字符串的长度,算出每个字符的长度
+       console.log(current_width+"px")
+       $this.css("width",current_width+"px");
+   }
+    //选择分类
+    function choseCate(obj){
+        val = $(obj).val()
+        var repeat = 0;
+        $('.chose_cate').each(function(){
+            if($(this).val()==val){
+                $(this).parent().remove()
+                repeat = 1
+            }
+        })
+        if(repeat){
+            return false;
+        }
+        title = $(obj).attr('title')
+        list = `<div class="newCate" style="display: inline-block">
+                        <input disabled type="text" value="`+title+`" title="`+title+`" style="width: 90px;display: inline-block;margin-right: 5px" placeholder="请输入分类" autocomplete="off" class="layui-input chose_cate">
+                        <input disabled type="text" name="chose_cate[]" value="`+val+`" title="`+title+`" style="display: none;width: 90px;margin-right: 5px" placeholder="请输入分类" autocomplete="off" class="layui-input chosen_cate"><i onclick="delCate(this,`+val+`)" style="color: #1c8eff;font-size: 20px;line-height: 20px;vertical-align: middle;cursor: pointer;" class="layui-icon layui-icon-close"></i>
+                    </div>`
+        if($('.newCate').length>=3){
+            layer.msg('最多只能选择3个分类了',{icon:0,time:1500})
+            $(obj).next().removeClass('layui-form-checked')
+            return false
+        }
+        $('.addCate').before(list);
+    }
+    //选择标签
+    function choseTag(obj){
+        val = $(obj).val()
+        var repeat = 0;
+        $('.chose_tag').each(function(){
+            if($(this).next().val()==val){
+                $(this).parent().remove()
+                repeat = 1
+            }
+        })
+        if(repeat){
+            return false;
+        }
+        title = $(obj).attr('title')
+        list = `<div class="newTag" style="display: inline-block">
+                        <input disabled type="text" value="`+title+`" title="`+title+`" style="width: 90px;display: inline-block;margin-right: 5px" placeholder="请输入分类" autocomplete="off" class="layui-input chose_tag">
+                        <input disabled type="text" name="chose_tag[]" value="`+val+`" title="`+title+`" style="display: none;width: 90px;margin-right: 5px" placeholder="请输入分类" autocomplete="off" class="layui-input chosen_tag"><i onclick="delTag(this,`+val+`)" style="color: #1c8eff;font-size: 20px;line-height: 20px;vertical-align: middle;cursor: pointer;" class="layui-icon layui-icon-close"></i>
+                    </div>`
+        if($('.newTag').length>=5){
+            layer.msg('最多只能选择5个标签了',{icon:0,time:1500})
+            $(obj).next().removeClass('layui-form-checked')
+            return false
+        }
+        $('.addTag').before(list);
+    }
+    $('.layui-form-checkbox').on('click',function () {
+
+        obj = $(this).prev()
+        if($(obj).hasClass('chose_cate_select')){
+            choseCate(obj)
+        }else{
+            choseTag(obj)
+        }
+    })
+    var testEditor;
+    function submitForm(){
+        var formData = new FormData();
+        content = testEditor.getHTML();
+        if(!content){
+            layer.msg('请编写文章内容',{icon:0,time:1500})
+            return false;
+        }
+        formData.append('content',content);
+        //文章标题
+        title = $('.title').val()
+        if(!title){
+            layer.msg('请输入文章标题',{icon:0,time:1500})
+            return false;
+        }
+        formData.append('title',title);
+        describe = $('textarea[name=desc]').val()
+        if(!describe){
+            layer.tips('请输入描述内容',$('textarea[name=desc]'),{tips:[1,'#ff0000'],time:1500})
+            return false;
+        }
+        fileinfo = $('input[name=theme]').get(0).files[0]
+        if(fileinfo){
+            formData.append('theme',$('input[name=theme]')[0].files[0])
+        }
+        formData.append('desc',describe);
+        //文章类型
+        type = $('#select_type').val()
+        //是转载或者翻译的，检测链接路径是否为空
+        if(type!=='1'){
+            link = $('input[name=link]').val()
+            if(!link){
+                layer.tips('请输入链接路径',$('input[name=link]'),{tips:[1,"#ff0000"],time:1500});
+                return false;
+            }
+            formData.append('link',link);
+        }
+        formData.append('type',type);
+        keyword = $('input[name=keyword]').val()
+        if(!keyword){
+            layer.tips('请输入文章关键词',$('input[name=keyword]'),{tips:[1,'#ff0000'],time:1500});
+            return false;
+        }
+        formData.append('keywords',keyword);
+
+
+        //系统分类
+        cateid = $('#cateid').val()
+        if(!cateid){
+            layer.msg('请选择系统分类',{icon:0,time:1500})
+            return false;
+        }
+        formData.append('cateid',cateid);
+        //获取选择标签
+        var tag_ids = [];
+        $('.chosen_tag').each(function () {
+            tag_ids.push($(this).val())
+        })
+        formData.append('tag_ids',tag_ids);
+        //获取添加标签
+        var tag_add = [];
+        $('.add_tag').each(function(){
+            tag_add.push($(this).val())
+        })
+        formData.append('tag_add',tag_add);
+        //获取选择分类
+        var cate_ids = [];
+        $('.chosen_cate').each(function () {
+            cate_ids.push($(this).val())
+        })
+        formData.append('cate_ids',cate_ids);
+        //获取添加分类
+        var cate_add = [];
+        $('.add_cate').each(function(){
+            cate_add.push($(this).val())
+        })
+        formData.append('cate_add',cate_add);
+        //发布形式
+        var status = $('input[name=status]').val()
+        formData.append('status',status);
+        //表单提交
+        $.ajax({
+            url:'/mdeditor/publish',
+            data:formData,
+            type:'post',
+            processData:false,
+            dataType:'json',
+            contentType:false,
+            success:function (msg) {
+                if(msg.code){
+                    layer.msg(msg.info,{icon:1,time:1500})
+                    window.location.href = "/";
+                }else{
+                    layer.msg(msg.info,{icon:0,time:1500})
+                    return false;
+                }
+            }
+        })
+    }
+    function publish() {
+        content = testEditor.getHTML();
+        title = $('.title').val();
+        var list = ``;
+        layer.open({
+            type: 1
+            ,title: ['文章发布','text-align:left;'] //不显示标题栏
+            ,closeBtn: false
+            ,area: '680px;'
+            ,shade: 0.8
+            ,id: 'LAY_layuipro' //设定一个id，防止重复弹出
+            ,resize: false
+            ,btn:['确定','取消']
+            ,btnAlign: 'l'
+            ,moveType: 1 //拖拽模式，0或者1
+            ,content: $('.hideform')
+            ,success: function(layero){
+                keyword = $('input[name=keyword]').val()
+                console.log(keyword)
+            }
+        });
+    }
+    $(function() {
+
+        $.get('/static/markdown/examples/test.md', function(md){
+            testEditor = editormd("test-editormd", {
+                width: "90%",
+                height: 740,
+                path : '/static/markdown/lib/',
+                theme : "dark",
+                previewTheme : "white",
+                editorTheme : "pastel-on-dark",
+                markdown : md,
+                codeFold : true,
+                //syncScrolling : false,
+                saveHTMLToTextarea : true,    // 保存 HTML 到 Textarea
+                searchReplace : true,
+                //watch : false,                // 关闭实时预览
+                htmlDecode : "style,script,iframe|on*",            // 开启 HTML 标签解析，为了安全性，默认不开启
+                //toolbar  : false,             //关闭工具栏
+                //previewCodeHighlight : false, // 关闭预览 HTML 的代码块高亮，默认开启
+                emoji : true,
+                taskList : true,
+                tocm            : true,         // Using [TOCM]
+                tex : true,                   // 开启科学公式TeX语言支持，默认关闭
+                flowChart : true,             // 开启流程图支持，默认关闭
+                sequenceDiagram : true,       // 开启时序/序列图支持，默认关闭,
+                //dialogLockScreen : false,   // 设置弹出层对话框不锁屏，全局通用，默认为true
+                //dialogShowMask : false,     // 设置弹出层对话框显示透明遮罩层，全局通用，默认为true
+                //dialogDraggable : false,    // 设置弹出层对话框不可拖动，全局通用，默认为true
+                //dialogMaskOpacity : 0.4,    // 设置透明遮罩层的透明度，全局通用，默认值为0.1
+                //dialogMaskBgColor : "#000", // 设置透明遮罩层的背景颜色，全局通用，默认为#fff
+                imageUpload : true,
+                imageFormats : ["jpg", "jpeg", "gif", "png", "bmp", "webp"],
+                imageUploadURL : "http://my.662p.com/upload/markdown",
+                onload : function() {
+                    console.log('onload', this);
+                    //this.fullscreen();
+                    //this.unwatch();
+                    //this.watch().fullscreen();
+
+                    //this.setMarkdown("#PHP");
+                    //this.width("100%");
+                    //this.height(480);
+                    //this.resize("100%", 640);
+                }
+            });
+        });
+
+        $("#goto-line-btn").bind("click", function(){
+            testEditor.gotoLine(90);
+        });
+
+        $("#show-btn").bind('click', function(){
+            testEditor.show();
+        });
+
+        $("#hide-btn").bind('click', function(){
+            testEditor.hide();
+        });
+
+        $("#get-md-btn").bind('click', function(){
+            alert(testEditor.getMarkdown());
+        });
+
+        $("#get-html-btn").bind('click', function() {
+            alert(testEditor.getHTML());
+        });
+
+        $("#watch-btn").bind('click', function() {
+            testEditor.watch();
+        });
+
+        $("#unwatch-btn").bind('click', function() {
+            testEditor.unwatch();
+        });
+
+        $("#preview-btn").bind('click', function() {
+            testEditor.previewing();
+        });
+
+        $("#fullscreen-btn").bind('click', function() {
+            testEditor.fullscreen();
+        });
+
+        $("#show-toolbar-btn").bind('click', function() {
+            testEditor.showToolbar();
+        });
+
+        $("#close-toolbar-btn").bind('click', function() {
+            testEditor.hideToolbar();
+        });
+
+        $("#toc-menu-btn").click(function(){
+            testEditor.config({
+                tocDropdown   : true,
+                tocTitle      : "目录 Table of Contents",
+            });
+        });
+
+        $("#toc-default-btn").click(function() {
+            testEditor.config("tocDropdown", false);
+        });
+    });
+
+    layui.use(['form', 'jquery'], function() {
+        var form = layui.form
+            , $ = layui.$;
+        form.on('select', function(data){
+            type = $('#select_type').val()
+            console.log(type)
+            if(type!=='1'){
+                $('.J_link').css('display','block')
+            }else{
+                $('.J_link').css('display','none')
+            }
+        });
+    })
+    function clickUpload(obj){
+        $('input[name=theme]').click()
+    }
+</script>
+</html>

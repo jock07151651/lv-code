@@ -1,0 +1,77 @@
+
+<section class="all-content">
+
+    <div class="row div-mindex">
+        <div class="col-md-12 table-responsive">
+            <form id="form-conf" action="{:U('Config/upload')}" method="post" enctype="multipart/form-data">
+                    <div class="single-conf" >
+                        <label>FTP 图片上传测试【upImg】:</label>
+                        <div class="single-conf2">
+                            <input type="file"
+                                   name="upImg"
+                                   class="input-conf">
+
+                            <img class="conf-img" src="{$Think.config.FTP_SEVER}/{$imgUrl}">
+                            <span class="tip">(保证FTP地址可访问)</span>
+                        </div>
+                    </div>
+
+                <div class="group text-center">
+                    <div class="btn-group">
+                        <input type="submit" value="提 交"
+                               class="btn  btn-danger ">
+                        <input type="reset" value="重 置" class="btn  btn-danger ">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+<style>
+    #form-conf{
+        border: 1px solid #00a2d4;
+    }
+    .group{
+        color: #440044;
+        font-family: "Monaco", "Andale Mono", "Lucida Console", monospace;
+        margin:2% 0;
+    }
+    .single-conf{
+        font-family: "Courier New", Courier, monospace;
+        margin-top: 20px;
+        border-radius: 5px;
+        border:1px dashed #aaaaaa;
+		float:left;
+		width:100%;
+		height:auto;
+		padding:0 2%;
+    }
+    .single-conf2{
+        text-align:center;
+        width: 70%;
+		padding:20px 0;
+		float:left;
+    }
+    .single-conf label{
+		padding:20px 0;
+        width: 20%;
+        float: left;
+    }
+	.single-conf2 span{
+		float:left;
+		margin-left:2%;
+	}
+    .tip{
+        float: right;
+        color: #99210b;
+    }
+    .input-conf{
+        height: 30px;
+        width: 20%;
+		float:left;
+    }
+    .conf-img{
+		width:5%;
+		float:left;
+    }
+</style>

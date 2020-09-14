@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="mobile-agent" content="format=html5;url=https://m.ask2.cn/"/>
+    <title>{$Think.session.username} - {$titleConf}</title>
+    <meta name="description" content=""/>
+    <meta name="keywords" content="{$data.username}-会员中心-源码天堂"/>
+    <meta name="author" content="whatsns Team"/>
+    <meta name="copyright" content="2019 www.whatsns.com"/>
+    <meta name="applicable-device" content="pc"/>
+    <meta name="version" content="whatsns问答系统 4.0-up20180128"/>
+    <link href="/static/ask/css/zui.min.css" rel="stylesheet">
+    <link rel="stylesheet" media="all" href="/static/ask/css/animate.min.css"/>
+    <link rel="stylesheet" media="all" href="/static/ask/css/greenzhongchou.css"/>
+    <link rel="stylesheet" media="all" href="/static/ask/css/greencommon.css"/>
+    <link rel="stylesheet" href="/static/sweetalert/sweetalert2.css">
+    <link rel="stylesheet" href="/static/ask/css/whatsns.css" media="screen" type="text/css">
+    <link rel="stylesheet" media="all" href="/static/ask/css/greencustom.css"/>
+    <link href="/static/ask/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/ask/css/green_main.css">
+    <link rel="stylesheet" href="/static/ask/css/slider.css">
+    <link rel="stylesheet" href="/static/ask/css/basepage.css">
+    <link rel="stylesheet" media="all" href="/static/ask/css/index.css"/>
+    <link rel="icon" href="/favicon.ico" type="image/gif"/>
+    <link href="__ARTICLE__/css/css.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/static/index/css/index.css"/>
+    <!--<script src="/static/ask/js/jquery-1.11.3.min.js" type="text/javascript"></script>-->
+    <script src="/static/admin/style/jquery_002.js"></script>
+    <script src="/static/layer/layer.js"></script>
+    <script src="/static/sweetalert/sweetalert2.js"></script>
+    <script src="/static/ask/js/ie.js" type="text/javascript"></script>
+    <!-- ZUI Javascript组件 -->
+    <script src="/static/ask/js/zui.min.js" type="text/javascript"></script>
+    <script src="/static/ask/js/common.js" type="text/javascript"></script>
+    <script src="/static/ask/js/jquery.qrcode.min.js" type="text/javascript"></script>
+    <!--[if lt IE 9]>
+    <script src="/static/ask/js/html5shiv.js" type="text/javascript"></script>
+    <script src="/static/ask/js/respond.js" type="text/javascript"></script>
+    <script src="__ARTICLE__/js/js.js" type="text/javascript"></script>
+    <script src="/static/index/js/carousel.js" type="text/javascript" charset="utf-8"></script>
+    <![endif]-->
+    <style>
+        #body {
+            padding-bottom: 0px;
+        }
+        .form-control{
+            padding-left: 5px;
+        }
+        .navigation-v3 h2 {
+            height: 48px;
+        }
+
+        .navigation-v3 a {
+            line-height: 48px;
+        }
+    </style>
+</head>
+<body>
+{include file="common/header1" /}
+<div id="body">
+
+
+    <div class="main-wrapper index">
+        <div class="container person">
+
+            <div class="row " style="margin-top: 20px;">
+                {include file="user/userLeft" /}
+                <div class="col-md-16">
+
+                    <h4>手机号码修改</h4>
+                    <hr>
+
+
+                    <!--<div class="alert-success alert">-->
+                        <!--手机号已经激活-->
+                    <!--</div>-->
+                    <form class="form-horizontal" action="" onsubmit="return false;" method="post">
+
+                        <input type="hidden" name="formkey" id="formkey" value="">
+                        <div class="form-group">
+                            <p class="col-md-24 ">新手机号</p>
+                            <div class="col-md-14">
+                                <input type="number" autocomplete="off" name="mobile" value="" placeholder="请输入新手机号"
+                                       class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <p class="col-md-24 ">注册手机号</p>
+                            <div class="col-md-14">
+                                <input type="number" autocomplete="off" name="omobile" value="" placeholder="请输入注册预留的手机号"
+                                       class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-10">
+                                <input type="hidden" name="token" value="{$token}">
+                                <input type="text" style="display: inline-block;width: 100px;" autocomplete="off" name="code" id="code" value="" placeholder="输入短信验证码" class="form-control">
+                                <button type="button"
+                                        style="line-height:36px;cursor: pointer;background: transparent"
+                                        href="javascript:void(0);" onclick="sendCode(this)" value="发送验证码"
+                                        target="_self">发送验证码
+                                </button>
+                            </div>
+
+                        </div>
+                        <div class="form-group">
+                            <div class=" col-md-10">
+                                <input onclick="submitMobile()" type="submit" name="submit" id="submit" class="btn btn-success" value="保存" data-loading="稍候...">
+                            </div>
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <!--用户中心结束-->
+        <link rel="stylesheet" type="text/css"
+              href="https://www.ask2.cn/static/js/neweditor/code/styles/tomorrow-night-eighties.css">
+        <script src="https://www.ask2.cn/static/js/neweditor/code/highlight.pack.js" type="text/javascript"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+        <script src="https://www.ask2.cn/static/js/jquery.lazyload.min.js" type="text/javascript"></script>
+        <script>
+
+            $("a").attr("target", "_self");
+
+
+            $("img.lazy").lazyload({effect: "fadeIn"});
+
+        </script>
+
+        <div class="side-tool" id="to_top" style="display: none;">
+            <ul>
+                <li data-placement="left" data-toggle="tooltip" data-container="body" data-original-title="回到顶部">
+                    <a href="#" class="function-button"><i class="fa fa-angle-up"></i></a>
+                </li>
+
+
+            </ul>
+        </div>
+
+        <script>
+            var time = 60;
+            function sendCode(obj) {
+                mobile = $('input[name=mobile]').val()
+                if(!mobile){
+                    layer.tips('请输入手机号！', $('input[name=mobile]'), {tips: [2, '#ff0000'], time: 1500});
+                    return false;
+                }
+                if (!isPhone(mobile)) {
+                    layer.tips('手机号码格式不正确！', $('input[name=email]'), {tips: [2, '#ff0000'], time: 1500});
+                    return false;
+                }
+
+               omobile = $('input[name=omobile]').val();
+                if (!omobile) {
+                    layer.tips('请输入预留手机号！', $('input[name=omobile]'), {tips: [2, '#ff0000'], time: 1500});
+                    return false;
+                }
+                if (!isPhone(omobile)) {
+                    layer.tips('手机号码格式不正确！', $('input[name=omobile]'), {tips: [2, '#ff0000'], time: 1500});
+                    return false;
+                }
+
+                $.ajax({
+                    url: '/pwdCode',
+                    type: 'post',
+                    beforeSend: function () {
+                        layer.load();
+                    },
+                    data: {mobile: omobile},
+                    success: function (msg) {
+                        layer.closeAll('loading')
+                        if (msg.code) {
+                            TimeDown(obj)
+                            swal({
+                                title: '',
+                                text: msg.info,
+                                type: "success",
+                                timer: 1500,
+                                showConfirmButton: false
+                            });
+                        } else {
+                            swal({
+                                title: '',
+                                text: msg.info,
+                                type: "warning",
+                                timer: 1500,
+                                showConfirmButton: false
+                            });
+                        }
+                    }
+                })
+            }
+            function TimeDown(obj) {
+                if (time == 0) {
+                    $(obj).removeClass('disable');
+                    $(obj).attr('disabled', false);
+                    $(obj).text('发送验证码');
+                    time = 60;
+                    return
+                } else {
+                    $(obj).addClass('disable')
+                    $(obj).attr('disabled', true);
+                    $(obj).text('重新发送' + time);
+                    time--;
+                }
+                setTimeout(function () {
+                    TimeDown(obj)
+                }, 1000)
+            }
+            function submitMobile() {
+                formData    = new FormData();
+                token       = $('input[name=token]').val()
+                omobile      = $('input[name=omobile]').val();
+                mobile      = $('input[name=mobile]').val();
+                code        = $('input[name=code]').val();
+                formData.append('mobile', mobile);
+                formData.append('omobile', omobile);
+                formData.append('token',token);
+                formData.append('code',code);
+                if(!mobile){
+                    layer.tips('请输入手机号！', $('input[name=mobile]'), {tips: [2, '#ff0000'], time: 1500});
+                    return false;
+                }
+                if (!isPhone(mobile)) {
+                    layer.tips('手机号码格式不正确！', $('input[name=email]'), {tips: [2, '#ff0000'], time: 1500});
+                    return false;
+                }
+
+                if (!omobile) {
+                    layer.tips('请输入预留手机号！', $('input[name=omobile]'), {tips: [2, '#ff0000'], time: 1500});
+                    return false;
+                }
+                if (!isPhone(omobile)) {
+                    layer.tips('手机号码格式不正确！', $('input[name=omobile]'), {tips: [2, '#ff0000'], time: 1500});
+                    return false;
+                }
+                if (!code) {
+                    layer.tips('请输入验证码！', $('input[name=code]'), {tips: [2, '#ff0000'], time: 1500});
+                    return false;
+                }
+                $.ajax({
+                    url: '',
+                    type: 'post',
+                    data: formData,
+                    contentType: false,
+                    processData: false,
+                    beforeSend: function () {
+                        layer.load()
+                    },
+                    success: function (msg) {
+                        layer.closeAll('loading')
+                        if (msg.code) {
+                            swal({
+                                title: '',
+                                text: msg.info,
+                                type: "success",
+                                timer: 1500,
+                                showConfirmButton: false
+                            })
+                            setTimeout(function () {
+                                window.location.reload()
+                            }, 1500)
+                        } else {
+                            swal({
+                                title: '',
+                                text: msg.info,
+                                type: "warning",
+                                timer: 1500,
+                                showConfirmButton: false
+                            })
+                            return false;
+                        }
+                    }
+                })
+            }
+            function isPhone(str) {
+                var regMobile = /^0{0,1}(13[0-9]|14[0-9]|15[0-9]|18[0-9])[0-9]{8}$/;
+                if (regMobile.test(str)) {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+
+            window.onload = function () {
+                $(".edui-upload-video").attr("preload", "");
+                var oTop = document.getElementById("to_top");
+
+                var screenw = document.documentElement.clientWidth || document.body.clientWidth;
+                var screenh = document.documentElement.clientHeight || document.body.clientHeight;
+                window.onscroll = function () {
+                    var scrolltop = document.documentElement.scrollTop || document.body.scrollTop;
+
+                    if (scrolltop <= screenh) {
+                        oTop.style.display = "none";
+                    } else {
+                        oTop.style.display = "block";
+                    }
+                    if (scrolltop > 30) {
+
+                        $(".scrollshow").show();
+                    } else {
+                        $(".scrollshow").hide();
+                    }
+                }
+                oTop.onclick = function () {
+                    document.documentElement.scrollTop = document.body.scrollTop = 0;
+                }
+            }
+
+        </script>
+
+        <footer id="footer">
+            <div class="footer-wrapper">
+                <div class="footer-wrapper-top">
+                    <div class="footer-wrapper-top-left">
+                        <a href="https://www.ask2.cn/tags.html"><i class="hide"></i>标签大全</a>
+                        <a href="https://www.ask2.cn/new.html">站内问题</a>
+                        <a href="https://www.ask2.cn/topic/default.html">专栏文章</a>
+                        <a href="https://www.ask2.cn/expert/default.html">站内专家</a>
+                        <a href="https://www.ask2.cn/category/viewtopic/hot.html">站内话题</a>
+                        <a href="https://www.ask2.cn/note/list.html">站内公告</a>
+                        <a href="https://www.ask2.cn/rule/index.html">财富值规则</a>
+                    </div>
+
+                </div>
+
+
+                <div class="footer-wrapper-bottom space-footer-bottom">
+                    <a href="http://www.12377.cn/" target="_blank">网上有害信息举报专区</a>
+                    <i></i>
+                    <a href="http://www.miibeian.gov.cn/" target="_blank">京ICP备15032243号-1</a>
+                    <i></i>
+                    <span><a href="https://www.ask2.cn/rss/articlelist.xml" target="_blank">站内文章地图xml</a></span>
+                    <i></i>
+                    <span><a href="https://www.ask2.cn/rss/list.xml" target="_blank">站内问答地图xml</a></span>
+                    <i></i>
+                    <span><a href="https://www.ask2.cn/rss/userspace.xml" target="_blank">站内作者地图xml</a></span>
+                    <i></i>
+                    <span><a href="https://www.ask2.cn/rss/tag.xml" target="_blank">站内标签地图xml</a></span>
+
+                    <span class="copyrightLink">Copyright © 2016-2018 <a href="https://www.whatsns.com/"
+                                                                         target="_blank">WHATSNSV4.0</a></span>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    {include file="common/footer" /}
+</body>
+</html>

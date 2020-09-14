@@ -1,0 +1,1 @@
+document.writeln('<a href="http://www.netnic.com.cn/zn/index-xj.html" target="_blank"><img src="http://www.newhua.com/adimg/qs.gif" width="970" height="80" /></a>');   

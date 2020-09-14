@@ -1,0 +1,1281 @@
+<div class="ad_c">
+  <div class="ad_c_t"><h2><img src="{dede:global.cfg_templets_skin/}/images/tuijian.png" width="250" height="60"></h2>
+
+  </div>
+
+  <div class="ad_c_box">
+
+      {dede:arclist row='5' titlelen=26 flag=p typeid='20'}
+
+      <ul>
+
+      <h2><a href="[field:arcurl/]" class="focusimg" target="_blank"><img src="[field:litpic/]" width="160" height="110"></a></h2>
+
+      <p><a href="[field:arcurl/]" target="_blank">[field:title/]</a></p>
+
+      </ul>
+
+       {/dede:arclist}
+
+ 
+  </div>
+
+</div>
+
+
+
+
+<div class="softzone">
+
+  <div class="softzone_t">
+    <h2>开发专区</h2>
+
+</div>
+
+  <div class="softzone_box">
+
+    <div class="softzone_box_l">
+
+      <div class="softzonetest_t"><h2>操作系统</h2></div>
+
+      <div class="softzonetest">
+
+      <ul>
+
+        {dede:arclist row='5' titlelen=38 typeid='72'}
+
+		<li><i>[field:typename/]</i><a href="[field:arcurl/]" target="_blank">[field:title/]</a></li>
+
+        {/dede:arclist}    
+
+       </ul>
+
+      </div>
+
+      
+
+      <!--softzonetest end-->
+
+      
+
+      <div class="skill_t"><h2>安全网络</h2></div>
+
+      <div class="skill">
+
+      <ol>
+
+              {dede:arclist row='3' titlelen=36 typeid='89'}
+
+			  <li>[field:typelink/]┊<a href="[field:arcurl/]" target="_blank">[field:title/]</a></li>
+
+			  {/dede:arclist}
+
+        </ol>
+
+          
+
+          <ol>
+
+              {dede:arclist row='3' titlelen=36 typeid='90'}
+
+			  <li>[field:typelink/]┊<a href="[field:arcurl/]" target="_blank">[field:title/]</a></li>
+
+			  {/dede:arclist}
+
+        </ol>
+
+		   <ol>
+
+              {dede:arclist limit='3,3' titlelen=36 typeid='91'}
+
+			  <li>[field:typelink/]┊<a href="[field:arcurl/]" target="_blank">[field:title/]</a></li>
+
+			  {/dede:arclist}
+
+           </ol>
+
+
+
+      </div>
+
+      
+
+      <!--skill end-->
+
+    </div>
+
+    <div class="softzone_box_c">
+
+    <ul style="height:50px;">
+
+        {dede:arclist row='1' titlelen=32 flag=h}
+
+        <li>
+
+        <a href="[field:arcurl/]" target="_blank">[field:title/]</a>
+
+        </li>
+
+        {/dede:arclist}
+
+   <!--软件专区头条-->
+
+    <p>{dede:arclist row='2' titlelen=26 flag=c}[<a href="[field:arcurl/]">[field:title/]</a>]
+
+        [field:global name=autoindex runphp="yes"]
+
+         if(@me==2)@me="";
+
+          else @me=",";
+
+          [/field:global]
+
+        {/dede:arclist}
+
+	</p>
+
+<!--软件专区头条-相关-->
+
+    </ul>
+
+    <ol>
+
+	    {dede:arclist row='4'  typeid='98' titlelen=42 flag=h}
+
+		  <li><i>[field:pubdate function="MyDate('d日',@me)"/]</i><a href="[field:arcurl/]" target="_blank">[field:title/]</a></li>
+
+		{/dede:arclist}
+
+      </ol>
+
+ 
+
+    <h2>oracle</h2>
+
+    <ol>
+
+	    {dede:arclist row='4'  typeid='64' titlelen=42 flag=h}
+
+		 <li><i>[field:pubdate function="MyDate('d日',@me)"/]</i><a href="[field:arcurl/]" target="_blank">[field:title/]</a></li>
+
+		{/dede:arclist}
+
+      </ol>
+
+    
+
+    <h2>Sql server</h2>
+
+     <ol>
+
+	    {dede:arclist row='4'  typeid='65' titlelen=42 flag=h}
+
+		 <li><i>[field:pubdate function="MyDate('d日',@me)"/]</i><a href="[field:arcurl/]" target="_blank">[field:title/]</a></li>
+
+		{/dede:arclist}
+
+      </ol>
+
+    </div>
+
+    
+
+    <!--softzone_box_c end-->
+
+    
+
+    <div class="softzone_box_r">
+
+      <div class="safe_t">
+        <h2>Mysql</h2></div>
+
+      <div class="safe">
+
+      <ul>
+
+	    {dede:arclist row='5' titlelen=30 typeid='66'}
+
+		   <li><i>[field:pubdate function="MyDate('d日',@me)"/]</i><a href="[field:arcurl/]" target="_blank">[field:title/]</a></li>
+
+		{/dede:arclist} 
+
+        </ul>
+
+      </div>
+
+      
+
+      <!--safe end-->
+
+      
+
+      <div class="school_t"><h2>其他数据库</h2></div>
+
+      <div class="school">
+
+      <ol>
+
+            {dede:arclist limit='0,3' titlelen=32 typeid='67'}
+
+		    <li><a href="[field:arcurl/]" target="_blank">[field:title/]</a></li>
+
+		    {/dede:arclist} 
+
+        </ol>
+
+        <ol>
+
+            {dede:arclist limit='0,3' titlelen=32 typeid='68'}
+
+		    <li><a href="[field:arcurl/]" target="_blank">[field:title/]</a></li>
+
+		    {/dede:arclist} 
+
+        </ol>
+
+		  <ol>
+
+            {dede:arclist limit='3,3' titlelen=32 typeid='69'}
+
+		     <li><a href="[field:arcurl/]" target="_blank">[field:title/]</a></li>
+
+		     {/dede:arclist} 
+
+        </ol>
+
+      </div>
+
+      
+
+      <!--school end-->
+
+      
+
+    </div>
+
+  </div>
+
+</div>
+
+
+
+<!--soft end-->
+
+
+<div class="ad_center">
+<!-- 广告位：662p_pc_index_midd96090B -->
+<script>
+(function() {
+    var s = "_" + Math.random().toString(36).slice(2);
+    document.write('<div id="' + s + '"></div>');
+    (window.slotbydup=window.slotbydup || []).push({
+        id: '2013758',
+        container: s,
+        size: '960,90',
+        display: 'inlay-fix'
+    });
+})();
+</script></div>
+<!--ad_center end-->
+
+
+<div class="pep">
+
+  <div class="pep_t">
+    <h2>图吧</h2>
+
+      {dede:channel type='top'}
+
+      <h3 class="t_txt"><a href='#'></a></h3>
+
+      {/dede:channel}
+
+</div>
+
+
+  <div class="hdm01">
+
+  <div class="content">
+
+      {dede:arclist row='5' titlelen=26 flag=p typeid='28'}
+
+      <ul>
+
+      <h2><a href="[field:arcurl/]" class="focusimg" target="_blank"><img src="[field:litpic/]" width="160" height="110"></a></h2>
+
+      <p><a href="[field:arcurl/]" target="_blank">[field:title/]</a></p>
+
+      </ul>
+
+       {/dede:arclist} 
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="int">
+
+  <div class="in_t"> 
+
+      <h3 class="t_txt"><a href="" target="_blank">安卓源码</a></h3>
+      <h3 class="t_txt"><a href="" target="_blank">安卓教程</a></h3>
+
+
+
+ </div> 
+
+  <div class="int_box">
+
+    <div class="int_box_l">
+
+      <div class="l_all"><h2>站 长</h2></div>
+
+      <div class="int_l">
+
+        <div class="eco">
+
+        <ul>
+
+            {dede:arclist row='1' flag=p titlelen=26 typeid='10' infolen='80'}
+
+			  <h2><a href="[field:arcurl/]" class="focusimg" target="_blank"><img src="[field:litpic/]" width="100" height="75"></a></h2>
+
+            <h3><a href="[field:arcurl/]" target="_blank">[field:title/]</a></h3>
+
+             <p>[field:info/]<a href="[field:arcurl/]" target="_blank">...[详细]</a></p>
+
+			 {/dede:arclist}  
+
+    <!--电商专区图片-->
+
+        </ul>
+
+          
+
+          <ol>
+
+              {dede:arclist row='5' titlelen=36 typeid='10'}
+
+			  <li>[field:typelink/]┊<a href="[field:arcurl/]" target="_blank">[field:title/]</a></li>
+
+			  {/dede:arclist}
+
+          </ol>
+
+        </div>
+
+   <!--eco end-->
+
+   
+
+   <div class="softnews_t">
+
+     <h2>PHP教程</h2></div>
+
+   <div class="softnews">
+
+      {dede:arclist row='3' titlelen=28 flag=p typeid=' '}
+
+
+	  <ol>
+
+      <h2><a href="[field:arcurl/]" class="focusimg" target="_blank"><img src="[field:litpic/]" width="80" height="60"></a></h2>
+
+      <p><a href="[field:arcurl/]" target="_blank">[field:title/]</a></p>
+
+      </ol>
+
+	  {/dede:arclist}
+
+     <!--移动互联图片-->
+
+   <ul>
+
+       <script type="text/javascript" src="http://php.662p.com/api.php?mod=js&bid=157"></script>
+
+<!--移动互联列表-->
+
+   </ul>
+
+   </div>
+
+   
+
+   <!--softnews end-->
+
+      </div>
+
+    </div>
+
+    
+
+    <!--int_box_l end-->
+
+    
+
+    <div class="int_box_c">
+
+    <ul style="height:50px;">
+
+      
+
+        {dede:arclist row='1' titlelen=32 flag=h}
+
+        <li><a href="[field:arcurl/]" target="_blank">[field:title/]</a></li>
+
+        {/dede:arclist}
+
+   <!--专区头条-->
+
+    <p>{dede:arclist row='2' titlelen=26 flag=c}[<a href="[field:arcurl/]">[field:title/]</a>]
+
+        [field:global name=autoindex runphp="yes"]
+
+         if(@me==2)@me="";
+
+          else @me=",";
+
+          [/field:global]
+
+        {/dede:arclist}
+
+	</p>
+
+   
+
+<!--互联网头条-相关-->
+
+    </ul>
+
+    <ol>
+
+		{dede:arclist row='2'  typeid='83' titlelen=42 flag=h}
+
+		  <li><i>[field:pubdate function="MyDate('d日',@me)"/]</i><a href="[field:arcurl/]" target="_blank">[field:title/]</a></li>
+
+		{/dede:arclist}
+
+      </ol>
+
+    
+
+    <h2>安卓教程</h2>
+
+    
+
+    <ol>
+
+	<script type="text/javascript" src="http://android.662p.com/api.php?mod=js&bid=265"></script>
+
+      </ol>
+
+    
+
+    <h2>安卓视频</h2>
+
+    <ol>
+
+		<script type="text/javascript" src="http://android.662p.com/api.php?mod=js&bid=267"></script>
+
+      </ol>
+
+    
+
+    <h2>安卓精华</h2>
+
+     <ol>
+
+	<script type="text/javascript" src="http://android.662p.com/api.php?mod=js&bid=268"></script>
+
+      </ol>
+
+    </div>
+
+    
+
+    <!--int_box_c end-->
+
+    
+
+    
+
+    <div class="int_box_r">
+
+      <div class="toplist">
+
+        <div class="toplist_t">
+
+        <ul id="tab2"> 
+
+        <li class="cur" onmouseover="changeTab(this,'tab2');">安卓排行</li> 
+
+        <li style="margin-left:1px;" onmouseover="changeTab(this,'tab2');">评测排行</li> 
+
+        </ul> 
+
+        </div>
+
+        
+
+        <div class="toplist_box">
+
+        <div id="tab2_con1" class="dis">
+
+        <ul>
+
+             <script type="text/javascript" src="http://android.662p.com/api.php?mod=js&bid=266"></script>
+
+            </ul>
+
+        </div>
+
+        <div id="tab2_con2" class="undis">
+
+        <ul>
+
+		         {dede:arclist row='8' titlelen=32 orderby=click typeid='83'}
+
+				   <li><a href="[field:arcurl/]" target="_blank">[field:title/]</a></li>
+
+				  {/dede:arclist}
+
+            </ul>
+
+        </div>
+
+        
+
+        <!--undis end-->
+
+        
+
+        <div class="video_t"><h2>SEO网站优化</h2></div>
+
+        <div class="video">
+
+	  
+
+        {dede:arclist row='4' titlelen=32 flag=p typeid='121' infolen='40'}
+
+         <ol>
+
+          <h2><a href="[field:arcurl/]" class="focusimg" target="_blank"><img src="[field:litpic/]" width="95" height="70"></a></h2>
+
+          <p><a href="[field:arcurl/]" target="_blank">[field:title/]</a></p>
+
+         </ol>
+
+        {/dede:arclist}
+
+    <!--互联网-网络视频-->
+
+        </div>
+
+        </div>
+
+      </div>
+
+    
+
+    </div>
+
+  </div>
+
+</div>
+
+
+
+<!--int end-->
+
+
+
+<div class="ad_center">
+<!-- 广告位：662p_pc_index_midd96090C -->
+<script>
+(function() {
+    var s = "_" + Math.random().toString(36).slice(2);
+    document.write('<div id="' + s + '"></div>');
+    (window.slotbydup=window.slotbydup || []).push({
+        id: '2013760',
+        container: s,
+        size: '960,90',
+        display: 'inlay-fix'
+    });
+})();
+</script></div>
+
+<!--ad_center end-->
+
+
+
+
+<div class="foen">
+
+  <div class="foen_t"><h2>焦点企业</h2>
+      <h3 class="t_txt"><a href='[field:typeurl/]'></a></h3>
+
+     
+
+</div>
+
+  <div class="foen_box">
+
+       {dede:arclist row='5' titlelen=26 flag=p typeid='10'}
+
+      <ul>
+
+      <h2><a href="[field:arcurl/]" class="focusimg" target="_blank"><img src="[field:litpic/]" width="160" height="110"></a></h2>
+
+      <p><a href="[field:arcurl/]" target="_blank">[field:title/]</a></p>
+
+      </ul>
+
+       {/dede:arclist}
+
+    <!--焦点企业-->
+
+  </div>
+
+</div>
+<!--foen end-->
+
+
+<div class="ad_center">
+<!-- 广告位：360_662p_pc_index_midd96090B -->
+<script>QIHOO_UNION_SLOT={w:960, h:90, ls:"s5b128b4781"};</script><script src="http://s.lianmeng.360.cn/so/inlay.js" charset="utf-8"></script>
+</div>
+
+
+<div class="com">
+
+  <div class="com_t">
+
+      <h3 class="t_txt"><a href=""></a></h3>
+
+
+
+</div>
+
+  <div class="com_box">
+
+    <div class="com_box_l">
+
+      <div class="app_t"><h2>应用平台</h2></div>
+
+      <div class="app">
+
+      <ul>
+
+            {dede:arclist row='1' flag=p titlelen=26 typeid='' infolen='98'}
+
+			<h2><a href="[field:arcurl/]" class="focusimg" target="_blank"><img src="[field:litpic/]" width="75" height="75"></a></h2>
+
+            <h3><a href="[field:arcurl/]" target="_blank">[field:title/]</a></h3>
+
+             <p>[field:info/]<a href="[field:arcurl/]" target="_blank">...[详细]</a></p>
+
+			 {/dede:arclist}  
+
+    <!--应用平台图文-->
+
+        </ul>
+
+          
+
+          <ol>
+
+          {dede:arclist row='5' titlelen=50 typeid=' '}
+
+		   <li><a href="[field:arcurl/]" target="_blank">[field:title/]</a></li>
+
+		{/dede:arclist} 
+
+<!--应用平台列表-->
+
+          </ol>
+
+      </div>
+
+      
+
+      <!--app end-->
+
+      
+
+      <div class="data_t">
+
+        <h2>数据研报</h2></div>
+
+      <div class="data">
+
+        {dede:arclist row='2' flag=p titlelen=26 typeid='136' infolen='80'}
+
+			<ul><h2><a href="[field:arcurl/]" class="focusimg" target="_blank"><img src="[field:litpic/]" width="100" height="75"></a></h2>
+
+            <h3><a href="[field:arcurl/]" target="_blank">[field:title/]</a></h3>
+
+             <p>[field:info/]<a href="[field:arcurl/]" target="_blank">...[详细]</a></p>
+
+			</ul>
+
+		 {/dede:arclist}  
+
+    <!--数据研报图文-->
+
+        <ol>
+
+        {dede:arclist row='2' titlelen=50 typeid=' '}
+
+		   <li><a href="[field:arcurl/]" target="_blank">[field:title/]</a></li>
+
+		{/dede:arclist} 
+
+<!--数据研报列表-->
+
+        </ol>
+
+      </div>
+
+    <!--data end-->
+
+    </div>
+
+    <div class="com_box_c">
+
+    <ul style="height:50px;">
+
+      {dede:arclist row='1' titlelen=32 flag=h}
+
+        <li><a href="[field:arcurl/]" target="_blank">[field:title/]</a></li>
+
+        {/dede:arclist}
+
+   <!--专区头条-->
+
+    <p>{dede:arclist row='2' titlelen=26 flag=c}[<a href="[field:arcurl/]">[field:title/]</a>]
+
+        [field:global name=autoindex runphp="yes"]
+
+         if(@me==2)@me="";
+
+          else @me=",";
+
+          [/field:global]
+
+        {/dede:arclist}
+
+	</p>
+
+   
+
+<!--互联网头条-相关-->
+
+<!--通信其他头条-相关-->
+
+    </ul>
+
+    <ol>
+
+		{dede:arclist row='2'  typeid=' ' titlelen=42 flag=h}
+
+		 <li><i>[field:pubdate function="MyDate('d日',@me)"/]</i><a href="[field:arcurl/]" target="_blank">[field:title/]</a></li>
+
+		{/dede:arclist}
+
+      </ol>
+
+    
+
+    <h2>最新IOS教程</h2>
+
+    
+
+    <ol>
+
+	<script type="text/javascript" src="http://ios.662p.com/api.php?mod=js&bid=211"></script>
+
+      </ol>
+
+    
+
+    <h2>IOS视频</h2>
+
+    <ol>
+   
+<script type="text/javascript" src="http://ios.662p.com/api.php?mod=js&bid=212"></script>
+      </ol>
+
+    
+
+    <h2>IOS博客</h2>
+
+    
+
+    <ol>
+
+		<script type="text/javascript" src="http://ios.662p.com/api.php?mod=js&bid=218"></script>
+
+
+
+      </ol>
+
+    </div>
+
+    
+
+    <!--com_box_c end-->
+
+
+    <div class="com_box_r">
+
+    
+
+      <div class="hdm03">
+
+      <h3><a href="javascript:void(0);" class="current">帖子排行</a><a href="javascript:void(0);" class="">评测排行</a></h3>
+
+      <div class="content" style="display: block; ">
+
+        <ul>
+<script type="text/javascript" src="http://ios.662p.com/api.php?mod=js&bid=217"></script>
+
+          </ul>
+
+      </div>
+
+      <div class="content" style="display: none; ">
+
+        <ul>
+
+               <script type="text/javascript" src="http://php.662p.com/api.php?mod=js&bid=158"></script>
+
+          </ul>
+
+      </div>
+
+      
+      <!--com content end-->
+
+      
+
+      <div class="mobi_t"><h2>手机新品</h2></div>
+
+      <div class="mobi">
+
+
+
+	  {dede:arclist row='2' titlelen=32 flag=p typeid='132'}
+
+       <ol><h2><a href="[field:arcurl/]" class="focusimg" target="_blank"><img src="[field:litpic/]" width="95" height="70"></a></h2>
+
+       <p><a href="[field:arcurl/]" class="spctxt" target="_blank">[field:title/]</a> </p></ol>
+
+	   {/dede:arclist}
+
+
+
+ 
+
+    <!--手机新品图文-->
+
+        <ul>
+
+		  {dede:arclist row='4' titlelen=36 typeid=' '}
+
+		   <li><a href="[field:arcurl/]" target="_blank">[field:title/]</a></li>
+
+		  {/dede:arclist} 
+
+         </ul>
+
+      </div>
+
+      <span style="clear:both;">
+
+      </span></div>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+
+<!--com end-->
+
+
+
+<div class="ad_center">
+<!-- 广告位：662p_pc_index_midd96090D -->
+<script>
+(function() {
+    var s = "_" + Math.random().toString(36).slice(2);
+    document.write('<div id="' + s + '"></div>');
+    (window.slotbydup=window.slotbydup || []).push({
+        id: '2013762',
+        container: s,
+        size: '960,90',
+        display: 'inlay-fix'
+    });
+})();
+</script></div>
+<!--ad_center end-->
+
+
+
+<!--new_add start-->
+<div class="foen">
+  <div class="foen_t"><h2>焦点企业</h2>
+      {dede:channel type='top'}
+      <h3 class="t_txt"><a href='[field:typeurl/]'>[field:typename/]</a></h3>
+      {/dede:channel}
+</div>
+
+  <div class="foen_box">
+       {dede:arclist row='5' titlelen=26 flag=p typeid='98'}
+      <ul>
+      <h2><a href="[field:arcurl/]" class="focusimg" target="_blank"><img src="[field:litpic/]" width="160" height="110"></a></h2>
+      <p><a href="[field:arcurl/]" target="_blank">[field:title/]</a></p>
+      </ul>
+       {/dede:arclist}
+    <!--焦点企业-->
+  </div>
+</div>
+<!--foen2 end-->
+
+<div class="ad_center">
+<script>QIHOO_UNION_SLOT={w:960, h:90, ls:"s5e358b4682"};</script><script src="http://s.lianmeng.360.cn/so/inlay.js" charset="utf-8"></script>
+</div>
+<!--ad_center end-->
+<!--javady star-->
+<!--javady end-->
+
+
+<div class="com">
+  <div class="com_t">
+      <h3 class="t_txt"><a href=""></a></h3>
+</div>
+
+  <div class="com_box">
+
+    <div class="com_box_l">
+
+      <div class="app_t"><h2>应用平台</h2></div>
+
+      <div class="app">
+
+      <ul>
+
+            {dede:arclist row='1' flag=p titlelen=26 typeid='' infolen='98'}
+
+			<h2><a href="[field:arcurl/]" class="focusimg" target="_blank"><img src="[field:litpic/]" width="75" height="75"></a></h2>
+
+            <h3><a href="[field:arcurl/]" target="_blank">[field:title/]</a></h3>
+
+             <p>[field:info/]<a href="[field:arcurl/]" target="_blank">...[详细]</a></p>
+
+			 {/dede:arclist}  
+
+    <!--应用平台图文-->
+
+        </ul>
+
+          
+
+          <ol>
+
+          {dede:arclist row='5' titlelen=50 typeid=' '}
+
+		   <li><a href="[field:arcurl/]" target="_blank">[field:title/]</a></li>
+
+		{/dede:arclist} 
+
+<!--应用平台列表-->
+
+          </ol>
+
+      </div>
+
+      
+
+      <!--app end-->
+
+      
+
+      <div class="data_t">
+
+        <h2>数据研报</h2></div>
+
+      <div class="data">
+
+        {dede:arclist row='2' flag=p titlelen=26 typeid='136' infolen='80'}
+
+			<ul><h2><a href="[field:arcurl/]" class="focusimg" target="_blank"><img src="[field:litpic/]" width="100" height="75"></a></h2>
+
+            <h3><a href="[field:arcurl/]" target="_blank">[field:title/]</a></h3>
+
+             <p>[field:info/]<a href="[field:arcurl/]" target="_blank">...[详细]</a></p>
+
+			</ul>
+
+		 {/dede:arclist}  
+
+    <!--数据研报图文-->
+
+        <ol>
+
+        {dede:arclist row='2' titlelen=50 typeid=' '}
+
+		   <li><a href="[field:arcurl/]" target="_blank">[field:title/]</a></li>
+
+		{/dede:arclist} 
+
+<!--数据研报列表-->
+
+        </ol>
+
+      </div>
+
+    <!--data end-->
+    </div>
+
+  
+  <div class="com_box_c">
+    <ul style="height:50px;">
+      {dede:arclist row='1' titlelen=32 flag=h}
+
+        <li><a href="[field:arcurl/]" target="_blank">[field:title/]</a></li>
+
+        {/dede:arclist}
+
+   <!--专区头条-->
+
+    <p>{dede:arclist row='2' titlelen=26 flag=c}[<a href="[field:arcurl/]">[field:title/]</a>]
+
+        [field:global name=autoindex runphp="yes"]
+
+         if(@me==2)@me="";
+
+          else @me=",";
+
+          [/field:global]
+
+        {/dede:arclist}
+
+	</p>
+
+   
+
+<!--互联网头条-相关-->
+
+<!--通信其他头条-相关-->
+
+    </ul>
+
+    <ol>
+
+		{dede:arclist row='2'  typeid=' ' titlelen=42 flag=h}
+
+		 <li><i>[field:pubdate function="MyDate('d日',@me)"/]</i><a href="[field:arcurl/]" target="_blank">[field:title/]</a></li>
+
+		{/dede:arclist}
+
+      </ol>
+
+    
+
+    <h2>最新java教程</h2>
+
+    
+
+    <ol>
+<script type="text/javascript" src="http://java.662p.com/api.php?mod=js&bid=50"></script>
+
+      </ol>
+
+    
+
+    <h2>JAVA视频</h2>
+
+    <ol>
+   
+<script type="text/javascript" src="http://java.662p.com/api.php?mod=js&bid=95"></script>
+      </ol>
+
+    
+
+    <h2>JAVA博客</h2>
+
+    
+
+    <ol>
+
+		<script type="text/javascript" src="http://java.662p.com/api.php?mod=js&bid=96"></script>
+
+
+      </ol>
+
+    </div>
+
+    
+
+    <!--com_box_c end-->
+
+    <div class="com_box_r">
+
+    
+
+      <div class="hdm03">
+
+      <h3><a href="http://www.662p.com" class="current">帖子排行</a><a href="http://www.662p.com" style="margin-left:1px;" class="">评测排行</a></h3>
+
+      <div class="content" style="display: block; ">
+
+        <ul>
+<script type="text/javascript" src="http://java.662p.com/api.php?mod=js&bid=97"></script>
+
+          </ul>
+
+      </div>
+
+      <div class="content" style="display: none; ">
+
+        <ul>
+
+               <script type="text/javascript" src="http://php.662p.com/api.php?mod=js&bid=158"></script>
+
+          </ul>
+
+      </div>
+
+      
+
+      <!--com content end-->
+
+      
+
+      <div class="mobi_t"><h2>手机新品</h2></div>
+
+      <div class="mobi">
+
+
+
+	  {dede:arclist row='2' titlelen=32 flag=p typeid='132'}
+
+       <ol><h2><a href="[field:arcurl/]" class="focusimg" target="_blank"><img src="[field:litpic/]" width="95" height="70"></a></h2>
+
+       <p><a href="[field:arcurl/]" class="spctxt" target="_blank">[field:title/]</a> </p></ol>
+
+	   {/dede:arclist}
+
+
+
+ 
+
+    <!--手机新品图文-->
+
+        <ul>
+
+		  {dede:arclist row='4' titlelen=36 typeid=' '}
+
+		   <li><a href="[field:arcurl/]" target="_blank">[field:title/]</a></li>
+
+		  {/dede:arclist} 
+
+         </ul>
+
+      </div>
+
+      <span style="clear:both;">
+
+      </span></div>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<!--new_add ent-->
+<div class="ad_center">
+<!-- 广告位：662p_pc_index_midd96090E -->
+<script>
+(function() {
+    var s = "_" + Math.random().toString(36).slice(2);
+    document.write('<div id="' + s + '"></div>');
+    (window.slotbydup=window.slotbydup || []).push({
+        id: '2013764',
+        container: s,
+        size: '960,90',
+        display: 'inlay-fix'
+    });
+})();
+</script></div>
+
+
+<div class="vision">
+
+  <div class="vision_t">
+      <h3 class="t_txt"><a href="">科技</a></h3>
+      
+
+  </div>
+
+  <div class="vision_box">
+
+    <div class="vision_box_l">
+
+      <ul>
+
+	{dede:arclist row='1' titlelen=36 flag=p typeid=' ' infolen='90'}
+
+      <h2><a href="[field:arcurl/]" class="focusimg" target="_blank"><img src="[field:litpic/]" width="290" height="230"></a></h2>
+
+      <h3><a href="[field:arcurl/]" target="_blank">[field:title/]</a></h3>
+
+      <p>[field:info/]<a href="[field:arcurl/]" target="_blank">...[详细]</a></p>
+
+    {/dede:arclist}
+
+   </ul>
+
+    <!--科技大视野图片-->
+
+    </div>
+
+    
+
+    <!--vision_box_l end-->
+
+
+
+
+
+    <div class="vision_box_r">
+
+
+     {dede:arclist limit='1,6' titlelen=32 flag=p typeid=' '}
+
+      <ul><h2><a href="[field:arcurl/]" class="focusimg" target="_blank"><img src="[field:litpic/]" width="180" height="120"></a></h2>
+
+      <p><a href="[field:arcurl/]" class="spctxt" target="_blank">[field:title/]</a></p></ul>
+
+    {/dede:arclist}
+
+
+
+
+
+    <!--科技大视野-图片-->
+
+    </div>
+ 
+
+    <!--vision_box_r end-->
+
+  </div>
+</div>

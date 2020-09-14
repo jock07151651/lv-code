@@ -1,0 +1,117 @@
+
+<div class="footer">
+    <div id="side_func">
+        <a class="sfa block3" id="gotop" href="javascript:;" title="返回顶部" onFocus="this.blur()" style="display: none;">
+      <span>返回
+        <br>顶部</span></a>
+    </div>
+    <div class="wrap clear_fix">
+  <div class="wrap footnav clear_fix">
+   <a href="http://www.662p.com/help/2015/0820/3170.html" target="_blank">关于我们</a>
+    <a href="http://www.662p.com/help/2015/0820/3173.html" target="_blank">免责申明</a>
+    <a href="http://www.662p.com/help/2015/0820/3172.html" target="_blank">联系我们</a>
+    <a href="http://www.662p.com/help/2015/0820/ad.html.html" target="_blank">广告投放</a>
+    <a href="http://www.662p.com/help/2015/0820/3174.html" target="_blank">友情链接</a></div>
+  <div class="wrap footnav clear_fix">
+    <p>备案号：<a href="http://www.miitbeian.gov.cn/" target="_blank">粤ICP备12089784号</a>
+    </p>
+    <p>Copyright &copy; 2012-2019 662p开源网 版权所有</p>
+  </div>
+</div>
+</div>
+    <script type="text/javascript">lastScrollY = 0;
+      function gotop() {
+        var diffY;
+        if (document.documentElement && document.documentElement.scrollTop)
+        diffY = document.documentElement.scrollTop;
+        else if (document.body)
+        diffY = document.body.scrollTop;
+        else
+        {
+          /*Netscape stuff*/
+        }
+        percent = .1 * (diffY - lastScrollY);
+        if (percent > 0) percent = Math.ceil(percent);
+        else percent = Math.floor(percent);
+        lastScrollY = lastScrollY + percent;
+        if (lastScrollY < 100) {
+          $("#gotop").fadeOut('fast');
+        } else {
+          $("#gotop").fadeIn('fast');
+        }
+      }
+      $("#gotop").click(function() {
+        $("html,body").animate({
+          scrollTop: 0
+        },
+        200);
+        return false;
+      });
+      $('#side_func a.joinus').hover(
+      function() {
+        $(this).find('span.text1').css({
+          'display': 'none'
+        });
+        $(this).find('span.text2').css({
+          'display': 'block'
+        });
+      },
+      function() {
+        $(this).find('span.text2').css({
+          'display': 'none'
+        });
+        $(this).find('span.text1').css({
+          'display': 'block'
+        });
+      }
+      );
+</script>
+
+<script type="text/javascript" src="http://tajs.qq.com/stats?sId=22262376" charset="UTF-8"></script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?12bbb84876fc9180a0b34de73a454f23";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<!-- Baidu Button BEGIN -->
+<script type="text/javascript" id="bdshare_js" data="type=slide&img=6&pos=left&uid=6435355" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+var bds_config={"snsKey":{'tsina':'3024734324','tqq':'801378648','t163':'9aex68YqMlZMgyoZ','tsohu':'c20e9076297f49f5'}}
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000);
+</script>
+<!-- 图片分享 -->
+<script id="bdimgshare_shell"></script>
+<script>
+var bdShare_config_imgshare = {
+  "type":"list"
+  ,"size":"small"
+  ,"pos":"top"
+  ,"color":"white"
+  ,"list":["qzone","tsina","tqq","t163","renren","sqq","tieba"]
+  ,"uid":"6435355"
+};
+document.getElementById("bdimgshare_shell").src="http://bdimg.share.baidu.com/static/js/imgshare_shell.js?cdnversion=" + Math.ceil(new Date()/3600000);
+</script>
+<!-- 图片分享 -->
+<!-- Baidu Button END -->
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    bp.src = '//push.zhanzhang.baidu.com/push.js';
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<script>
+(function(){
+var src = (document.location.protocol == "http:") ? "http://js.passport.qihucdn.com/11.0.1.js?05a4a6a2d55938e7b4ad1baa89f005cd":"https://jspassport.ssl.qhimg.com/11.0.1.js?05a4a6a2d55938e7b4ad1baa89f005cd";
+document.write('<script src="' + src + '" id="sozz"><\/script>');
+})();
+</script>

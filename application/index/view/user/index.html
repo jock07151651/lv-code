@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="mobile-agent" content="format=html5;url=https://m.ask2.cn/"/>
+    <title>{$Think.session.username} - {$titleConf}</title>
+    <meta name="description" content=""/>
+    <meta name="keywords" content="{$Think.session.username}-会员中心-源码天堂"/>
+    <meta name="applicable-device" content="pc"/>
+    <link href="/static/ask/css/zui.min.css" rel="stylesheet">
+    <link rel="stylesheet" media="all" href="/static/ask/css/animate.min.css"/>
+    <link rel="stylesheet" media="all" href="/static/ask/css/greenzhongchou.css"/>
+    <link rel="stylesheet" media="all" href="/static/ask/css/greencommon.css"/>
+
+    <link rel="stylesheet" href="/static/ask/css/whatsns.css" media="screen" type="text/css">
+    <link rel="stylesheet" media="all" href="/static/ask/css/greencustom.css"/>
+    <link href="/static/ask/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/ask/css/green_main.css">
+    <link rel="stylesheet" href="/static/ask/css/slider.css">
+    <link rel="stylesheet" href="/static/ask/css/basepage.css">
+    <link rel="stylesheet" media="all" href="/static/ask/css/index.css"/>
+    <link rel="icon" href="/favicon.ico" type="image/gif"/>
+    <link href="__ARTICLE__/css/css.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/static/index/css/index.css"/>
+    <script src="__ARTICLE__/js/jquery_002.js" type="text/javascript"></script>
+    <!--<script src="/static/ask/js/jquery-1.11.3.min.js" type="text/javascript"></script>-->
+    <!--<script src="/static/ask/js/ie.js" type="text/javascript"></script>-->
+    <!-- ZUI Javascript组件 -->
+    <!--<script src="/static/ask/js/zui.min.js" type="text/javascript"></script>-->
+    <!--<script src="/static/ask/js/common.js" type="text/javascript"></script>-->
+    <!--<script src="/static/ask/js/jquery.qrcode.min.js" type="text/javascript"></script>-->
+    <!--&lt;!&ndash;[if lt IE 9]>-->
+    <!--<script src="/static/ask/js/html5shiv.js" type="text/javascript"></script>-->
+    <!--<script src="/static/ask/js/respond.js" type="text/javascript"></script>-->
+    <script src="__ARTICLE__/js/js.js" type="text/javascript"></script>
+    <script src="/static/index/js/carousel.js" type="text/javascript" charset="utf-8"></script>
+    <script src="http://dup.baidustatic.com/js/ds.js"></script>
+    <script src="__ARTICLE__/js/js.js" type="text/javascript"></script>
+    <script src="/static/index/js/carousel.js" type="text/javascript" charset="utf-8"></script>
+    <script src="http://dup.baidustatic.com/js/ds.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+        var g_site_url = "https://www.ask2.cn/";
+        var g_site_name = "ask2问答系统官网";
+        var g_prefix = "";
+        var g_suffix = ".html";
+        var g_uid = 0;
+        var qid = 0;
+    </script>
+    <style>
+        #body{
+            padding-bottom: 0px;
+        }
+        .navigation-v3 h2 {
+            height: 48px;
+        }
+        .navigation-v3 a{
+            line-height: 48px;
+        }
+    </style>
+</head>
+<body>
+{include file="common/header1" /}
+<div id="body">
+
+    <script type="text/javascript">
+        $(".sear-btn").click(function () {
+            var _txt = $.trim($("#search-kw").val());
+            if (_txt == '') {
+                alert("关键词不能为空");
+                return;
+            }
+            document.searchform.action = "https://www.ask2.cn/question/search.html";
+            document.searchform.submit();
+        });
+
+
+    </script>
+
+    <div class="main-wrapper index">
+        <div class="container person">
+            <div class="row">
+                <div class="col-md-17 main ">
+                    <!-- 用户title部分导航 -->
+
+                    <link rel="stylesheet" media="all" href="/static/ask/css/space.css"/>
+                    <div class="main-top">
+                        <a class="avatar" target="_self">
+                            <img src="{empty name='Think.session.userpic'}/static/ask/picture/avatar.gif{else/}{$Think.session.userpic}{/empty}" alt="240" class="myavatar">
+                            <img src="https://www.ask2.cn/static/images/zxj.png" onclick="window.location.href='https://www.ask2.cn/user/editimg.html'" class="usereditavatar" title="修改头像" alt="240">
+                        </a>
+                        <a class="btn btn-success  follow" href="http://my.662p.com/set" target="_self"><i class="fa fa-gear"></i><span>个人设置</span></a>
+
+
+                        <div class="title">
+                            <a class="name" target="_self">{$Think.session.username}         </a>
+                        </div>
+                        <div class="mysignnature">这个人很懒，什么都没留下<i title="修改个人签名" onclick="window.location.href='https://www.ask2.cn/user/profile.html'" class="fa fa-edit hand" style="margin-left:5px;"></i></div>
+
+                        <div class="info">
+                            <ul>
+                                <li>
+                                    <div class="meta-block">
+                                        <a href="https://www.ask2.cn/user/answer/1.html" target="_self">
+                                            <p>0</p>
+                                            回答 <i class="fa fa-angle-right"></i>
+                                        </a>        </div>
+                                </li>
+                                <li>
+                                    <div class="meta-block">
+                                        <a href="https://www.ask2.cn/user/ask/1.html" target="_self">
+                                            <p>0</p>
+                                            提问 <i class="fa fa-angle-right"></i>
+                                        </a>        </div>
+                                </li>
+                                <li>
+                                    <div class="meta-block">
+                                        <a href="https://www.ask2.cn/ut-162507.html" target="_self">
+                                            <p>0</p>
+                                            文章 <i class="fa fa-angle-right"></i>
+                                        </a>        </div>
+                                </li>
+                                <li>
+                                    <div class="meta-block">
+
+                                        <p>0</p>
+                                        粉丝
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="meta-block">
+
+                                        <p>0</p>
+                                        关注用户
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="meta-block">
+                                        <p>0</p>
+                                        <div>赞同</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="meta-block">
+                                        <p>20</p>
+                                        <div>经验</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="meta-block">
+                                        <p>20</p>
+                                        <div>财富</div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="invateaddress">
+                            <p>复制邀请注册地址分享给好友:<span>https://www.ask2.cn/user/register/3lOzcJqb.html</span></p>
+                            <p>邀请注册可获得经验值：3点，财富值：5点  </p></div>
+                    </div>
+                    <ul class="trigger-menu" data-pjax-container="#list-container">
+                        <li class="active"><a href="https://www.ask2.cn/user/default.html" target="_self"><i class="fa fa-clipboard"></i> 动态</a></li>
+                        <li class=""><a href="https://www.ask2.cn/user/default.html" target="_self"><i class="fa fa-user"></i> 会员信息</a></li>
+                        <li class=""><a href="https://www.ask2.cn/user/ask.html" target="_self"><i class="fa fa-question-circle-o"></i> 提问</a></li>
+                        <li class=""><a href="https://www.ask2.cn/user/answer.html" target="_self"><i class="fa fa-comments"></i>回答</a></li>
+                        <li class=""><a href="https://www.ask2.cn/ut-162507.html" target="_self"><i class="fa fa-rss"></i>文章</a></li>
+                        <li class=""><a href="https://www.ask2.cn/user/recommend.html" target="_self"><i class="fa fa-newspaper-o"></i>推荐</a></li>
+                    </ul>
+                    <div id="list-container">
+                        <!-- 文章列表模块 -->
+                        <ul class="note-list spacedoinglist">
+                            <li id="note-" data-note-id="" class="">
+                                <div class="content">
+                                    <div class="author">
+
+
+                                        <a class="avatar" target="_self" href="https://www.ask2.cn/u-162499.html">
+                                            <img src="/static/ask/picture/avatar.gif" alt="96">
+                                        </a>
+                                        <div class="name">
+                                            <a class="blue-link" target="_self"
+                                               href="https://www.ask2.cn/u-162499.html">弦山提出了问题</a>
+
+
+                                            <span class="time" data-shared-at="2019-05-13 08:55">2019-05-13 08:55</span>
+                                        </div>
+                                    </div>
+
+
+                                    <a class="title" target="_self" href="https://www.ask2.cn/q-315500.html">txt添加了1000个马甲人名，后台无法查看添加的马甲号</a>
+                                    <p class="abstract">
+                                        提示已经存在相同的用户名，不会被添加找不到已经添加的马甲号 </p>
+                                </div>
+                            </li>
+
+                            <li id="note-" data-note-id="" class="">
+                                <div class="content">
+                                    <div class="author">
+
+
+                                        <a class="avatar" target="_self" href="https://www.ask2.cn/u-162499.html">
+                                            <img src="/static/ask/picture/avatar.gif" alt="96">
+                                        </a>
+                                        <div class="name">
+                                            <a class="blue-link" target="_self"
+                                               href="https://www.ask2.cn/u-162499.html">弦山评论该回答</a>
+
+
+                                            <span class="time" data-shared-at="2019-05-10 16:05">2019-05-10 16:05</span>
+                                        </div>
+                                    </div>
+
+
+                                    <a class="title" target="_self"
+                                       href="https://www.ask2.cn/q-314634.html">为什么导入马甲失败？</a>
+                                    <p class="abstract">
+                                        我按照要求提交的马甲文件导入失败 </p>
+                                </div>
+                            </li>
+
+                            <li id="note-" data-note-id="" class="">
+                                <div class="content">
+                                    <div class="author">
+
+
+                                        <a class="avatar" target="_self" href="https://www.ask2.cn/u-162499.html">
+                                            <img src="/static/ask/picture/avatar.gif" alt="96">
+                                        </a>
+                                        <div class="name">
+                                            <a class="blue-link" target="_self"
+                                               href="https://www.ask2.cn/u-162499.html">弦山赞同了该回答</a>
+
+
+                                            <span class="time" data-shared-at="2019-05-10 16:04">2019-05-10 16:04</span>
+                                        </div>
+                                    </div>
+
+
+                                    <a class="title" target="_self"
+                                       href="https://www.ask2.cn/q-314634.html">为什么导入马甲失败？</a>
+                                    <p class="abstract">
+                                        我按照要求提交的马甲文件导入失败 </p>
+                                </div>
+                            </li>
+
+                            <li id="note-" data-note-id="" class="">
+                                <div class="content">
+                                    <div class="author">
+
+
+                                        <a class="avatar" target="_self" href="https://www.ask2.cn/u-162499.html">
+                                            <img src="/static/ask/picture/avatar.gif" alt="96">
+                                        </a>
+                                        <div class="name">
+                                            <a class="blue-link" target="_self"
+                                               href="https://www.ask2.cn/u-162499.html">弦山注册了网站</a>
+
+
+                                            <span class="time" data-shared-at="2019-05-10 09:10">2019-05-10 09:10</span>
+                                        </div>
+                                    </div>
+
+
+                                    <a class="title" target="_self" href="https://www.ask2.cn/index.html">欢迎您注册了ask2问答系统官网</a>
+                                    <p class="abstract">
+                                    </p>
+                                </div>
+                            </li>
+
+
+                        </ul>
+                        <div class="pages"></div>
+                    </div>
+                </div>
+
+                <div class="col-md-7  aside">
+
+
+                    <div class="recommend bb">
+                        <div class="title">
+                            <i class="fa fa-jieshao"></i>
+                            <span class="title_text">个人介绍</span>
+
+                        </div>
+
+                        <div class="description">
+                            <div class="js-intro">暂无介绍</div>
+
+
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+        <link rel="stylesheet" type="text/css" href="/static/ask/css/tomorrow-night-eighties.css">
+        <script src="/static/ask/js/highlight.pack.js" type="text/javascript"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+        <script src="/static/ask/js/jquery.lazyload.min.js" type="text/javascript"></script>
+        <script>
+
+            $("a").attr("target", "_self");
+
+
+            $("img.lazy").lazyload({effect: "fadeIn"});
+
+        </script>
+
+        <div class="side-tool" id="to_top">
+            <ul>
+                <li data-placement="left" data-toggle="tooltip" data-container="body" data-original-title="回到顶部">
+                    <a href="#" class="function-button"><i class="fa fa-angle-up"></i></a>
+                </li>
+
+
+            </ul>
+        </div>
+
+        <script>
+            window.onload = function () {
+                $(".edui-upload-video").attr("preload", "");
+                var oTop = document.getElementById("to_top");
+
+                var screenw = document.documentElement.clientWidth || document.body.clientWidth;
+                var screenh = document.documentElement.clientHeight || document.body.clientHeight;
+                window.onscroll = function () {
+                    var scrolltop = document.documentElement.scrollTop || document.body.scrollTop;
+
+                    if (scrolltop <= screenh) {
+                        oTop.style.display = "none";
+                    } else {
+                        oTop.style.display = "block";
+                    }
+                    if (scrolltop > 30) {
+
+                        $(".scrollshow").show();
+                    } else {
+                        $(".scrollshow").hide();
+                    }
+                }
+                oTop.onclick = function () {
+                    document.documentElement.scrollTop = document.body.scrollTop = 0;
+                }
+            }
+
+        </script>
+    </div>
+    {include file="common/footer" /}
+</body>
+</html>

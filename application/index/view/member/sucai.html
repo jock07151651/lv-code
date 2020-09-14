@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{$title} - 662p开源网</title>
+    <meta name="keywords" content="{$keywords}"/>
+   <meta name="description" content="{$description}"/>
+    <meta name="applicable-device" content="pc"/>
+
+    <!--<link href="/static/ask/css/zui.min.css" rel="stylesheet">-->
+    <link rel="stylesheet" media="all" href="/static/ask/css/animate.min.css"/>
+    <!--<link rel="stylesheet" media="all" href="/static/ask/css/greenzhongchou.css"/>-->
+    <!--<link rel="stylesheet" media="all" href="/static/ask/css/greencommon.css"/>-->
+    <link rel="stylesheet" href="/static/ask/css/whatsns.css" media="screen" type="text/css">
+    <!--<link rel="stylesheet" media="all" href="/static/ask/css/greencustom.css"/>-->
+    <link href="/static/ask/css/font-awesome.css" rel="stylesheet">
+    <!--<link rel="stylesheet" href="/static/ask/css/green_main.css">-->
+    <link rel="stylesheet" href="/static/ask/css/slider.css">
+    <link rel="stylesheet" href="/static/ask/css/basepage.css">
+    <link rel="stylesheet" media="all" href="/static/ask/css/index.css"/>
+    <link rel="icon" href="/favicon.ico" type="image/gif"/>
+    <link href="__ARTICLE__/css/css.css" rel="stylesheet">
+    <link href="/static/icon/iconfont.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/static/index/css/index.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/member/css/semantic.min.css" />
+    <link type="text/css" rel="stylesheet" href="/static/member/css/space.975be7e2.css" />
+    <script src="__ARTICLE__/js/jquery_002.js" type="text/javascript"></script>
+    <script src="http://dup.baidustatic.com/js/ds.js"></script>
+    <script src="__ARTICLE__/js/js.js" type="text/javascript"></script>
+    <script src="/static/index/js/carousel.js" type="text/javascript" charset="utf-8"></script>
+    <style>
+
+        #body{
+            padding-bottom: 0px;
+        }
+        .navigation-v3 h2 {
+            height: 48px;
+        }
+        .navigation-v3 a{
+            line-height: 48px;
+        }
+        .template,#top{
+            display: none;
+        }
+        .space-sidebar .header{
+            background: none !important;
+        }
+        .content .header{
+            background: none !important;
+        }
+        #mainScreen{
+
+            background: transparent;
+
+        }
+
+        .dropdown-more{
+
+            top: 14px;
+
+        }
+
+        .statistic{
+
+            background: transparent;
+
+            border: none;
+
+        }
+
+        .icon-shixiangxiajiantou-{
+
+            margin-left: 0.5em;
+
+        }
+
+        .icon-combinedshapecopy2{
+
+            margin-right: 0.3em;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+{include file="common/header1" /}
+<div id="mainScreen">
+    <div class="ui container">
+        <val data-name="g_space_title" data-value="{$user_info.username}的个人主页"></val>
+        <x-foo-define data-define="space-home-index"></x-foo-define>
+        <div class="ui grid space-home">
+            <div class="row">
+                {include file="common/memberleft" /}
+                
+                        <div class="ui basic segment article-list" id="newestBlogList">
+
+                            <div class="ui relaxed divided items list-container space-list-container">
+                                
+                                 <div class="item blog-item" data-id="3107478">
+                                    <div class="content">
+                                        <a class="header" href="http://code.662p.com/view/" target="_blank">
+                                            <!-- <div class="ui blue label horizontal" data-tooltip="置顶">顶</div>
+                                            <div class="ui teal label horizontal" data-tooltip="原创">原</div>
+                                            <div class="ui orange label horizontal" data-tooltip="推荐">荐</div>  -->
+                                        </a>
+                                        <div class="description">
+                                            <p class="line-clamp"></p>
+                                        </div>
+                                        <!-- <div class="extra">
+                                            <div class="ui horizontal list">
+                                                <div class="item">
+                                                    <a class="ui horizontal label"></a>
+                                                </div>
+                                               
+                                            </div>
+
+                                            <div>
+
+                                                <div class="ui horizontal small list">
+                                                    <div class="item">
+                                                        <a href="https://my.662p.com/" class="catalog-name-link">博客</a>
+                                                    </div>
+                                                    <div class="item">
+                                                        
+                                                    </div>
+                                                    <div class="item">
+                                                        <i class="eye icon"></i>  
+                                                    </div>
+                                                    <div class="item">
+                                                        <a href="#" target="_blank"><i class="comment outline icon"></i>   </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div> -->
+                                    </div>
+                                    
+                                    <div class="images">
+                                        <a class="ui small image" href="http://code.662p.com/view/" target="_blank"> <img src="" alt="" data-img-render="" /> </a>
+                                                                         </div>
+                                </div> 
+                            
+                              <!-- <div class="item blog-item" data-id="3099914">
+                                    <div class="content">
+                                        <a class="header" href="https://my.662p.com/liyuj/blog/3099914" target="_blank">
+                                            <div class="ui blue label horizontal" data-tooltip="置顶">
+                                                顶
+                                            </div>
+                                            <div class="ui teal label horizontal" data-tooltip="原创">
+                                                原
+                                            </div> Kafka连接器之在2.3版本中的改进 </a>
+                                        <div class="description">
+                                            <p class="line-clamp">在Kafka的2.3版本中，对Kafka连接器做了很大的改进。首先就是在添加和删除连接器时，修改了Kafka连接器处理任务的方式。之前这个动作造成了整个系统的停顿，这是一直被开发和运维人员诟病的地...</p>
+                                        </div>
+                                        <div class="extra">
+                                            <div class="ui horizontal list">
+                                                <div class="item">
+                                                    <a class="ui horizontal label" href="https://my.662p.com/liyuj?q=curl">curl</a>
+                                                    <a class="ui horizontal label" href="https://my.662p.com/liyuj?q=ElasticSearch">ElasticSearch</a>
+                                                    <a class="ui horizontal label" href="https://my.662p.com/liyuj?q=jq">jq</a>
+                                                    <a class="ui horizontal label" href="https://my.662p.com/liyuj?q=Elastic">Elastic</a>
+                                                    <a class="ui horizontal label" href="https://my.662p.com/liyuj?q=Kafka">Kafka</a>
+                                                </div>
+                                            </div>
+                                            <div>
+
+                                                <div class="ui horizontal small list">
+
+                                                    <div class="item">
+                                                        <a href="https://my.662p.com/liyuj?tab=newest&amp;catalogId=6400291" class="catalog-name-link">Kafka</a>
+                                                    </div>
+
+                                                    <div class="item">
+
+                                                        08/30 16:57
+
+                                                    </div>
+                                                    <div class="item">
+                                                        <i class="eye icon"></i> 44
+                                                    </div>
+
+                                                    <div class="item">
+                                                        <a href="https://my.662p.com/liyuj/blog/3099914#comments" target="_blank"><i class="comment outline icon"></i> 0</a>
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                    <div class="images">
+                                        <a class="ui small image" href="https://my.662p.com/liyuj/blog/3099914" target="_blank"> <img src="/static/member/picture/kibana_rebalance_kafka_2.2_vs_2.3.png" alt="" data-img-render="" /> </a>
+                                    </div>
+                                </div>  -->
+
+                            </div>
+                            <div class="page-load-status">
+                                <p class="infinite-scroll-request"> <i class="ui active small inline loader"></i> </p>
+                                <p class="infinite-scroll-last">没有更多内容</p>
+                                <p class="infinite-scroll-error">加载失败，请刷新页面</p>
+                            </div>
+
+                            <a class="ui fluid button load-more-button" style="display: none">加载更多</a>
+
+                            <p class="pagination"> <a class="pagination__next" style="display: none" href="https://my.662p.com/liyuj/widgets/_space_index_newest_blog?catalogId=0&amp;q=&amp;p=2&amp;type=ajax">下一页</a> </p>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+        <div class="ui mini delete-blog modal">
+            <div class="header">
+                删除文章
+            </div>
+            <div class="content">
+                <p>文章删除后无法恢复，确定删除此文章吗？</p>
+            </div>
+            <div class="actions">
+                <div class="ui cancel button">
+                    取消
+                </div>
+
+                <div class="ui red ok button">
+                    确定
+                </div>
+            </div>
+
+        </div>
+
+        <div class="ui mini delete-tweet modal">
+            <div class="header">
+                删除动弹
+            </div>
+
+            <div class="content">
+                <p>动弹删除后，数据将无法恢复</p>
+            </div>
+
+            <div class="actions">
+                <div class="ui cancel button">
+                    取消
+                </div>
+                <div class="ui red ok button">
+                    确定
+                </div>
+            </div>
+        </div>
+
+        <div class="ui mini delete-tweet-comment modal">
+            <div class="header">
+                删除一条评论
+            </div>
+
+            <div class="content">
+                <p>评论删除后，数据将无法恢复</p>
+            </div>
+
+            <div class="actions">
+                <div class="ui cancel button">
+                    取消
+                </div>
+                <div class="ui red ok button">
+                    确定
+                </div>
+            </div>
+        </div>
+    
+
+    </div>
+</div>
+
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="back-to-top back-to-top-toggle">
+    <div class="icon">
+        <img src="/static/member/picture/back-to-top.svg" alt="返回顶部" />
+    </div>
+    <div class="text">
+        顶部
+    </div>
+</div>
+<!-- <script src="/static/member/js/semantic.min.js"></script>
+<script src="/static/member/js/jweixin-1.2.0.js"></script>
+<script type="text/javascript" src="/static/member/js/space.9864f7b8.js"></script> 
+    <script type="text/javascript" src="/static/member/js/831ad044d2c04e488eaa1e9e5ad8f460.js"></script>
+-->
+{include file="common/footer" /}
+</body>
+</html>
+
